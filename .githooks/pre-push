@@ -1,0 +1,17 @@
+#!/bin/sh
+# DevLogix Branch Protection Client-Side Hook
+# Blocks direct pushes to 'main' and 'staging'
+
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [ "$remote_ref" = "refs/heads/main" ] || [ "$remote_ref" = "refs/heads/staging" ]; then
+    echo "=========================================================="
+    echo "🛑 [BLOCKED BY DEVLOGIX BRANCH GOVERNANCE]"
+    echo "Direct pushes to '$remote_ref' are strictly forbidden."
+    echo "Please push to your feature branch (e.g. feature/<task-id>-<slug>)"
+    echo "and open a Pull Request targeting 'staging'."
+    echo "=========================================================="
+    exit 1
+  fi
+done
+exit 0

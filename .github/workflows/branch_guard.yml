@@ -1,0 +1,18 @@
+name: Branch Protection Guard
+on:
+  push:
+    branches: [ main, staging ]
+
+jobs:
+  enforce_branch_policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Authorized Direct Push
+        run: |
+          echo "Validating push event to protected branch: ${{ github.ref_name }} by ${{ github.actor }}..."
+          if [ "${{ github.actor }}" != "devlogix-bot" ] && [ "${{ github.actor }}" != "muhammadaliqamar" ]; then
+            echo "::error::[BLOCKED BY DEVLOGIX GOVERNANCE] Direct pushes to '${{ github.ref_name }}' are strictly forbidden."
+            echo "::error::All code changes must be submitted via Pull Request from a 'feature/' branch targeting 'staging'."
+            exit 1
+          fi
+          echo "Push authorized."

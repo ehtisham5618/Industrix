@@ -1,0 +1,285 @@
+# Textile Defect Detection - repository ignore rules
+
+# Dataset directories
+dataset/
+data/
+raw/
+raw_dataset/
+processed/
+processed_dataset/
+final_dataset/
+kaggle_cache/
+content_runtime/
+*/content_runtime/
+combined_dataset/
+*/combined_dataset/
+hazard_reports/
+*/hazard_reports/
+
+# Dataset/image file formats
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.gif
+!SED_3_Stress_Testing/reports/*.png
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.7z
+*.rar
+
+# YOLO training output and checkpoints
+runs/
+weights/
+*.pt
+*.onnx
+*.engine
+
+# Kaggle, Google, and local credentials
+kaggle.json
+*.json
+!package.json
+!Confidence_Calibration/benchmark/annotations/*.json
+!SED_1_Multi_Camera/reports/*.json
+!SED_2_Alert_Escalation/reports/*.json
+!SED_3_Stress_Testing/reports/*.json
+token.json
+credentials.json
+service_account*.json
+.env
+.env.*
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python cache/build output
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary/scratch files
+tmp/
+temp/
+scratch/
+*.tmp
+*.log
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+
+# CME-2 temporal benchmark local media and generated outputs
+Confidence_Calibration/benchmark/media/
+Confidence_Calibration/benchmark/clips/
+Confidence_Calibration/outputs/
+Confidence_Calibration/reports/*.tmp.*
+SED_2_Alert_Escalation/runtime/
+SED_3_Stress_Testing/reports/smoke_*/
+
+# Experiment tracking generated/local state
+Experiment_Tracking/mlruns/
+Experiment_Tracking/exports/
+.gitignore
+
+# CME-OPT1: lightweight review evidence only; runtime datasets stay ignored
+CME_OPT1_Hard_Negative_Augmentation/runtime/
+CME_OPT1_Hard_Negative_Augmentation/review_*/
+!CME_OPT1_Hard_Negative_Augmentation/reports/*.png
+!CME_OPT1_Hard_Negative_Augmentation/reports/*.json
+!CME_OPT1_Hard_Negative_Augmentation/reports/before/*.json
+!CME_OPT1_Hard_Negative_Augmentation/reports/after/*.json
+
+# CME-OPT2: measured reports only, no datasets, credentials or checkpoints
+CME_OPT2_Model_Fine_Tuning/runtime/
+CME_OPT2_Model_Fine_Tuning/reports/*_terminal.txt
+!CME_OPT2_Model_Fine_Tuning/reports/*.json
+!CME_OPT2_Model_Fine_Tuning/reports/*.png
+!CME_OPT2_Model_Fine_Tuning/reports/*/*.png
+
+# CME-OPT3: source video, cached detections and local service state stay local
+CME_OPT3_ByteTrack/runtime/
+ESE_CPU1_Quantization/runtime/
+ESE_CPU1_Quantization/backups/
+!ESE_CPU1_Quantization/reports/*.json
+!ESE_CPU1_Quantization/reports/*.png
+!SED_3_Stress_Testing/reports/quantization/*.json
+!CME_OPT3_ByteTrack/reports/*.json
+!CME_OPT3_ByteTrack/reports/*.png
+
+# ESE-CPU2: portable source/config and measured reports only
+ESE_CPU2_Async_RTSP/runtime/
+ESE_CPU2_Async_RTSP/backups/
+!SED_1_Multi_Camera/configs/3_cameras.json
+!SED_1_Multi_Camera/reports/ESE_CPU2/*.json
+!SED_1_Multi_Camera/reports/ESE_CPU2/*.png
+
+# ESE-CPU3: no source media, deployment weights or full allocation dumps
+ESE_CPU3_Soak_Test/runtime/
+ESE_CPU3_Soak_Test/backups/
+!ESE_CPU3_Soak_Test/reports/*.json
+
+# IFE-UI1: local browser/runtime and offline archives stay local
+IFE_UI1_Streamlit_Console/runtime/
+IFE_UI1_Streamlit_Console/backups/
+!Frontend/reports/*.json
+!Frontend/reports/*.png
+!IFE_UI1_Streamlit_Console/reports/*.json
+
+# IFE-UI2 runtime evidence and databases remain local.
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+IFE_UI2_Incident_Audit/runtime/
+IFE_UI2_Incident_Audit/backups/
+!reports/sample_incident.pdf
+!reports/ife_ui2_metrics.json
+!reports/ife_ui2_ui_export.png
+!IFE_UI2_Incident_Audit/reports/*.json
+
+# IFE-UI3 recording, local fixture, database and verified recovery archives.
+IFE_UI3_Demo_Packaging/runtime/
+IFE_UI3_Demo_Packaging/backups/
+!IFE_UI3_Demo_Packaging/configs/*.json
+!IFE_UI3_Demo_Packaging/reports/*.json
+!reports/ife_ui3_*.json
+!reports/ife_ui3_*.png
+!tests/assets/ife_ui3_fire.png
+!tests/assets/ife_ui3_textile.png
+
+# QCI-1: source data, prepared pairs, scan index and recovery archives stay local.
+QCI_1_Surface_Defect_Segmentation/runtime/
+QCI_1_Surface_Defect_Segmentation/backups/
+reports/qci1/index*.sqlite*
+reports/qci1/samples.jsonl
+reports/qci1/issues.jsonl
+reports/qci1/orphan_annotations.jsonl
+reports/qci1/leakage.jsonl
+reports/qci1/processed/
+!reports/qci1/*.json
+!reports/qci1/*.png
+!reports/qci1/**/*.json
+!reports/qci1/**/*.png
+reports/qci1/**/index*.sqlite*
+reports/qci1/**/samples.jsonl
+reports/qci1/**/issues.jsonl
+reports/qci1/**/orphan_annotations.jsonl
+reports/qci1/**/leakage.jsonl
+reports/qci1/**/processed/
+!QCI_1_Surface_Defect_Segmentation/reports/*.json
+
+# QCI-2: large weights, runtime state and offline recovery stay local.
+QCI_2_Defect_Classifier/runtime/
+QCI_2_Defect_Classifier/backups/
+!reports/qci2/*.json
+!reports/qci2/*.png
+!reports/qci2/heatmaps/*.png
+
+# QCI-3: local audit state, experiments and recovery archives.
+QCI_3_Severity_IoT/runtime/
+QCI_3_Severity_IoT/backups/
+!reports/qci3/*.json
+!reports/qci3/*.png
+!QCI_3_Severity_IoT/configs/*.json
+
+# QCI-4: owned local spool/profile state and independent recovery archives.
+QCI_4_Edge_Telemetry/runtime/
+QCI_4_Edge_Telemetry/backups/
+!QCI_4_Edge_Telemetry/configs/*.json
+!reports/qci4/*.json
+!reports/qci4/*.png
+
+# QCI-5: operational PDFs/evidence stay local; explicit research sample only.
+QCI_5_Incident_PDF/runtime/
+QCI_5_Incident_PDF/backups/
+reports/incidents/
+!QCI_5_Incident_PDF/configs/*.json
+!reports/qci5/*.json
+!reports/qci5/*.png
+!reports/qci5/sample_incident_report.pdf
+
+# EAP-1: robustness datasets, checkpoints and test scratch stay local; measured evidence only.
+EAP_1_LowLight_IR_Robustness/runtime/
+EAP_1_LowLight_IR_Robustness/backups/
+EAP_1_LowLight_IR_Robustness/*.log
+!reports/eap1/*.json
+!reports/eap1/*.png
+!reports/eap1/remote/*.json
+!reports/eap1/remote/*.png
+
+# EAP-2: versioned baseline/golden/threshold manifests and measured reports only.
+EAP_2_CI_Model_Regression/runtime/
+EAP_2_CI_Model_Regression/backups/
+!EAP_2_CI_Model_Regression/thresholds.json
+!EAP_2_CI_Model_Regression/baselines/*.json
+!EAP_2_CI_Model_Regression/golden/*.json
+!reports/eap2/*.json
+
+# EAP-3: container test scratch stays local; measured reports are committed.
+EAP_3_Lightweight_Docker/runtime/
+!reports/eap3/*.json
+
+# EAP-4: harness scratch stays local; measured run artifacts are committed.
+EAP_4_Load_Test/runtime/
+!reports/eap4/*.json
+!reports/eap4/runs/*/*.json
+# The global runs/ rule targets YOLO training output; EAP-4 load-run evidence is committed.
+!reports/eap4/runs/
+
+# EAP-5: watchdog runtime state stays local; measured soak/recovery evidence is committed.
+EAP_5_Watchdog/runtime/
+!EAP_5_Watchdog/configs/*.json
+!reports/eap5/*.json
+!reports/eap5/soak/*.json
+
+# FDD-1: generated gate artifacts stay local except the committed reports below.
+FDD_1_Release_Regression/runtime/
+!reports/fdd1/*.json
+!reports/fdd1/load/
+!reports/fdd1/load/*/*.json
+
+# FDD-2: machine-readable taxonomy is a versioned specification; probe reports are evidence.
+!docs/specifications/*.json
+!reports/fdd2/*.json
+
+# FDD-3: deployment validation evidence.
+!reports/fdd3/*.json
+
+# FDD-4: raw captures stay local; only the final take, its keyframes and recording reports are committed.
+FDD_4_Demo/runtime/
+reports/fdd4/demo/*.mp4
+!reports/fdd4/demo/industrix_demo_20261022T175557Z.mp4
+!reports/fdd4/demo/*.png
+!reports/fdd4/demo/*.json
+!reports/fdd4/*.json
+!FDD_4_Demo/*.json
+
+# FDD-5: rehearsal reports and screenshots are evidence; temporary failure fixtures stay local.
+FDD_5_Dry_Run/runtime/
+!reports/fdd5/*.json
+!reports/fdd5/rehearsal/*.json
+!reports/fdd5/rehearsal/*/*.png
