@@ -1,0 +1,7 @@
+# Existing CME-OPT1 v3 dataset, resolved relative to the repository root.
+path: Hazard_Expansion/content_runtime/combined_dataset_augmented_v3
+train: images/train
+val: images/val
+test: images/test
+nc: 12
+names: [baekra, color issues, contamination, cut, gray stitch, selvet, stain, chemical hazard, fire, no helmet, smoke, water leak]
