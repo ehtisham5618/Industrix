@@ -1,0 +1,1117 @@
+{
+  "status": "completed",
+  "failure_reason": null,
+  "started_at_utc": "2026-10-08T16:45:23.020009+00:00",
+  "finished_at_utc": "2026-10-08T17:46:26.178552+00:00",
+  "duration_requested_seconds": 3600.0,
+  "duration_actual_seconds": 3600.060514200013,
+  "capture_wall_seconds": 3660.060514200013,
+  "wall_seconds_with_shutdown": 3663.155897299992,
+  "warmup_seconds": 60,
+  "sample_interval_seconds": 1,
+  "engine": "openvino",
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "temporary_sleep_inhibition": "SetThreadExecutionState ES_CONTINUOUS | ES_SYSTEM_REQUIRED",
+  "config_version": "ESECPU3-soak60-v1",
+  "ingestion_config_version": "ESECPU2-async-ring15-sample4-v1",
+  "source_config": "SED_1_Multi_Camera/configs/3_cameras.json",
+  "source_config_sha256": "83e2b3d6f15b61c69cb2633ffc9cfa1c70a900d84600d72ea808b1dd55d58343",
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "ram_bytes": 17049018368,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "openvino": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "opencv": "5.0.0",
+    "psutil": "7.2.2"
+  },
+  "engine_verification": {
+    "device": "CPU",
+    "execution_devices": [
+      "CPU"
+    ],
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "output_shape": [
+      1,
+      16,
+      8400
+    ],
+    "class_names": {
+      "0": "baekra",
+      "1": "color issues",
+      "2": "contamination",
+      "3": "cut",
+      "4": "gray stitch",
+      "5": "selvet",
+      "6": "stain",
+      "7": "chemical hazard",
+      "8": "fire",
+      "9": "no helmet",
+      "10": "smoke",
+      "11": "water leak"
+    },
+    "artifact_manifest": {
+      "source_model_version": "cme-opt2-focal-cosine-12class-v1",
+      "source_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+      "dataset_version": "combined-12class-v3-hardnegative",
+      "artifacts": {
+        "onnx_fp16": {
+          "path": "Backend/weights/onnx_fp16/best_fp16.onnx",
+          "bytes": 22409010,
+          "sha256": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf"
+        },
+        "openvino_xml": {
+          "path": "Backend/weights/openvino_int8/model.xml",
+          "bytes": 470147,
+          "sha256": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a"
+        },
+        "openvino_bin": {
+          "path": "Backend/weights/openvino_int8/model.bin",
+          "bytes": 11303236,
+          "sha256": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa"
+        },
+        "metadata": {
+          "path": "Backend/weights/openvino_int8/metadata.yaml",
+          "bytes": 659,
+          "sha256": "f8245629ade1077bcff9c960a025459c4e8683910a1fd82c05868cddf2d2a96a"
+        }
+      },
+      "combined_core_bytes": 11773383,
+      "combined_core_decimal_mb": 11.773383,
+      "combined_core_mib": 11.227972984313965,
+      "required_metadata_bytes": 659,
+      "complete_runtime_bytes": 11774042,
+      "size_target_bytes": 6500000,
+      "size_pass": false,
+      "nncf_fake_quantize_ops": 67,
+      "constant_bytes_by_precision": {
+        "<Type: 'int64_t'>": 400,
+        "<Type: 'float32'>": 183848,
+        "<Type: 'int8_t'>": 11119984,
+        "<Type: 'int32_t'>": 44
+      },
+      "export_api": "Ultralytics8.4.24 FP32 OpenVINO conversion; NNCF quantize_with_accuracy_control; absolute max_drop0.0079;targetCPU;MIXED;exactly300 training samples",
+      "detection_head_policy": "Unmodified upstream ignored Add/Sub/Mul/Div detection-head patterns and Sigmoid; MIXED preset",
+      "onnx_fp16_policy": "CPU FP32 ONNX export, onnxconverter-common FP16 conversion with FP32 IO; CPU EP may promote unsupported kernels",
+      "versions": {
+        "ultralytics": "8.4.24",
+        "torch": "2.10.0",
+        "onnx": "1.23.2",
+        "onnxruntime": "1.24.4",
+        "openvino": "2026.4.1",
+        "nncf": "3.4.0",
+        "numpy": "2.4.6",
+        "mlflow": "2.22.2"
+      },
+      "selected_ptq": "accuracy_aware"
+    },
+    "runtime_precision_counts": {
+      "f32": 160,
+      "i32": 94,
+      "u8": 98,
+      "i8": 64
+    },
+    "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "settings": {
+      "performance_hint": "LATENCY",
+      "num_streams": 1,
+      "threads": 2
+    },
+    "compilation_seconds": 0.8122128999093547
+  },
+  "sources": {
+    "camera_01": {
+      "name": "Fabric Weaving Feed",
+      "path": "data/test_factory_clip.mp4",
+      "sha256": "6a79429f1fceced1560aa446bbdd17fd2b46ab6622f98156e7a94082f94eb67c",
+      "encoded_fps": 25.0,
+      "width": 352.0,
+      "height": 288.0,
+      "loop": true
+    },
+    "camera_02": {
+      "name": "Chemical Storage Bay",
+      "path": "Confidence_Calibration/benchmark/media/chemical_hazard_01_hazmat_training.webm",
+      "sha256": "6fb8d14fc46fe37161b23ff8a7bdaa982fd9f7c627894f9774d09251b489e872",
+      "encoded_fps": 29.946,
+      "width": 1280.0,
+      "height": 720.0,
+      "loop": true
+    },
+    "camera_03": {
+      "name": "Loading Bay",
+      "path": "Confidence_Calibration/benchmark/media/no_helmet_01_workers_roof.webm",
+      "sha256": "e027cc1e91f6e6cb573edb465c5036f4227019d9675ef9ca21d9949b392b1a51",
+      "encoded_fps": 23.976023976023978,
+      "width": 1920.0,
+      "height": 1080.0,
+      "loop": true
+    }
+  },
+  "counts_at_soak_start": {
+    "camera_01": 62,
+    "camera_02": 61,
+    "camera_03": 61
+  },
+  "evaluated_at_deadline": {
+    "camera_01": 3008,
+    "camera_02": 3007,
+    "camera_03": 3007
+  },
+  "thread_counts": {
+    "before": 15,
+    "before_shutdown": 35,
+    "after_shutdown": 10
+  },
+  "threads_after_shutdown": [],
+  "scheduler_after_shutdown": false,
+  "sensor_warnings": {
+    "temperature": "No supported temperature API on this platform"
+  },
+  "exceptions": [],
+  "manager_metrics": {
+    "camera_01": {
+      "captured": 91502,
+      "evaluated": 3013,
+      "intentional_skips": 68626,
+      "selected": 22876,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 6,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 91502,
+        "reads": 3013,
+        "intentional_skips": 68626,
+        "selected": 22876,
+        "circular_reuses": 88478,
+        "normal_reuses": 68615,
+        "true_overruns": 19863,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.949618587571857
+      }
+    },
+    "camera_02": {
+      "captured": 109604,
+      "evaluated": 3011,
+      "intentional_skips": 82203,
+      "selected": 27401,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 55,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 109604,
+        "reads": 3011,
+        "intentional_skips": 82203,
+        "selected": 27401,
+        "circular_reuses": 106581,
+        "normal_reuses": 82191,
+        "true_overruns": 24390,
+        "pending_selected": 0,
+        "final_occupancy": 12,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.958258822670706
+      }
+    },
+    "camera_03": {
+      "captured": 87753,
+      "evaluated": 3012,
+      "intentional_skips": 65814,
+      "selected": 21939,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 146,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 87753,
+        "reads": 3012,
+        "intentional_skips": 65814,
+        "selected": 21939,
+        "circular_reuses": 84730,
+        "normal_reuses": 65803,
+        "true_overruns": 18927,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.94777386528096
+      }
+    }
+  },
+  "event_store": {
+    "retention_limit": 1024,
+    "retained_events": 0,
+    "archived_events": 0,
+    "log_bytes": 0
+  },
+  "traced_end_bytes": [
+    109787909,
+    179041239
+  ],
+  "code_base_commit": "79a1d8cff0a95f6b2d1e0014c36dd60a4752c018",
+  "code_file_hashes": {
+    "ESE_CPU3_Soak_Test/engine.py": "8ff3856ba6c27d795916118399ca27e3f3ec40c54074dd7debf3505eb44f3186",
+    "ESE_CPU3_Soak_Test/soak.py": "97529126c0a348169cd44e148a8cc452043b61b88bcab0f2663de25efa83327f",
+    "SED_1_Multi_Camera/scripts/stream_manager.py": "89a6068acc56b0ad1417c1e24d11cf7b1a1929c1405c80be2301c3f6d1a86259"
+  },
+  "telemetry_path": "SED_3_Stress_Testing/reports/cpu_soak_timeseries.csv",
+  "inference_path": "SED_3_Stress_Testing/reports/cpu_soak_inference.csv",
+  "frame_timings_path": "SED_3_Stress_Testing/reports/cpu_soak_frames.csv",
+  "streams": 3,
+  "stream_results": {
+    "camera_01": {
+      "evaluated_during_soak": 2946,
+      "operational_fps": 0.8183195777903874,
+      "source": {
+        "name": "Fabric Weaving Feed",
+        "path": "data/test_factory_clip.mp4",
+        "sha256": "6a79429f1fceced1560aa446bbdd17fd2b46ab6622f98156e7a94082f94eb67c",
+        "encoded_fps": 25.0,
+        "width": 352.0,
+        "height": 288.0,
+        "loop": true
+      },
+      "captured": 91502,
+      "evaluated": 3013,
+      "intentional_skips": 68626,
+      "selected": 22876,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 6,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 91502,
+        "reads": 3013,
+        "intentional_skips": 68626,
+        "selected": 22876,
+        "circular_reuses": 88478,
+        "normal_reuses": 68615,
+        "true_overruns": 19863,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.949618587571857
+      }
+    },
+    "camera_02": {
+      "evaluated_during_soak": 2946,
+      "operational_fps": 0.8183195777903874,
+      "source": {
+        "name": "Chemical Storage Bay",
+        "path": "Confidence_Calibration/benchmark/media/chemical_hazard_01_hazmat_training.webm",
+        "sha256": "6fb8d14fc46fe37161b23ff8a7bdaa982fd9f7c627894f9774d09251b489e872",
+        "encoded_fps": 29.946,
+        "width": 1280.0,
+        "height": 720.0,
+        "loop": true
+      },
+      "captured": 109604,
+      "evaluated": 3011,
+      "intentional_skips": 82203,
+      "selected": 27401,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 55,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 109604,
+        "reads": 3011,
+        "intentional_skips": 82203,
+        "selected": 27401,
+        "circular_reuses": 106581,
+        "normal_reuses": 82191,
+        "true_overruns": 24390,
+        "pending_selected": 0,
+        "final_occupancy": 12,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.958258822670706
+      }
+    },
+    "camera_03": {
+      "evaluated_during_soak": 2946,
+      "operational_fps": 0.8183195777903874,
+      "source": {
+        "name": "Loading Bay",
+        "path": "Confidence_Calibration/benchmark/media/no_helmet_01_workers_roof.webm",
+        "sha256": "e027cc1e91f6e6cb573edb465c5036f4227019d9675ef9ca21d9949b392b1a51",
+        "encoded_fps": 23.976023976023978,
+        "width": 1920.0,
+        "height": 1080.0,
+        "loop": true
+      },
+      "captured": 87753,
+      "evaluated": 3012,
+      "intentional_skips": 65814,
+      "selected": 21939,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 146,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 87753,
+        "reads": 3012,
+        "intentional_skips": 65814,
+        "selected": 21939,
+        "circular_reuses": 84730,
+        "normal_reuses": 65803,
+        "true_overruns": 18927,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.94777386528096
+      }
+    }
+  },
+  "throughput": {
+    "operational_mean_fps": 2.4549587333711624,
+    "operational_p50_fps": 2.9648874309212068,
+    "operational_p95_fps": 5.9159649016903915,
+    "inference_capacity_fps_if_measured": 5.405878126335157,
+    "capacity_details": {
+      "timestamp_utc": "2026-10-08T16:43:59.790701+00:00",
+      "device": "CPU",
+      "model": "Selected CPU1 INT8",
+      "mode": "Separate synchronous static batch1 ready-tensor inference; no camera pacing/preprocessing/NMS/tracker inside capacity timing",
+      "caveat": "THROUGHPUT hint profile here remains synchronous; it is not a measurement of multi-request asynchronous peak capacity",
+      "selected_configuration": {
+        "configuration": "LATENCY-threads2-streams1",
+        "settings": {
+          "performance_hint": "LATENCY",
+          "num_streams": 1,
+          "threads": 2
+        },
+        "frames": 488,
+        "wall_seconds": 90.27210539998487,
+        "capacity_fps": 5.405878126335157,
+        "pure_runtime_latency_ms": {
+          "mean": 184.85891229508198,
+          "p50": 132.5439,
+          "p95": 413.142,
+          "p99": 760.8901,
+          "min": 116.8454,
+          "max": 1783.044
+        },
+        "selected_for_soak": true
+      },
+      "configuration_profiles": [
+        {
+          "configuration": "LATENCY-threads2-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 2
+          },
+          "frames": 488,
+          "wall_seconds": 90.27210539998487,
+          "capacity_fps": 5.405878126335157,
+          "pure_runtime_latency_ms": {
+            "mean": 184.85891229508198,
+            "p50": 132.5439,
+            "p95": 413.142,
+            "p99": 760.8901,
+            "min": 116.8454,
+            "max": 1783.044
+          },
+          "selected_for_soak": true
+        },
+        {
+          "configuration": "LATENCY-threads1-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 1
+          },
+          "frames": 40,
+          "wall_seconds": 11.272977899992839,
+          "capacity_fps": 3.548308207011158,
+          "pure_runtime_latency_ms": {
+            "mean": 281.68793500000004,
+            "p50": 232.3592,
+            "p95": 597.1718,
+            "p99": 795.0275,
+            "min": 225.7405,
+            "max": 795.0275
+          },
+          "selected_for_soak": false
+        },
+        {
+          "configuration": "LATENCY-threads4-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 2
+          },
+          "frames": 40,
+          "wall_seconds": 6.45154989999719,
+          "capacity_fps": 6.20006054669397,
+          "pure_runtime_latency_ms": {
+            "mean": 161.153115,
+            "p50": 131.3621,
+            "p95": 257.0513,
+            "p99": 553.2306,
+            "min": 119.6313,
+            "max": 553.2306
+          },
+          "selected_for_soak": false
+        },
+        {
+          "configuration": "THROUGHPUT-threads2-streams2",
+          "settings": {
+            "performance_hint": "THROUGHPUT",
+            "num_streams": 2,
+            "threads": 2
+          },
+          "frames": 40,
+          "wall_seconds": 9.573246599989943,
+          "capacity_fps": 4.1783108355364025,
+          "pure_runtime_latency_ms": {
+            "mean": 239.21808500000003,
+            "p50": 230.394,
+            "p95": 260.1704,
+            "p99": 343.1437,
+            "min": 226.3702,
+            "max": 343.1437
+          },
+          "selected_for_soak": false
+        }
+      ],
+      "target_45_fps_met": false,
+      "operational_sampler_unchanged": true
+    },
+    "sampling_ceiling_fps": 19.730505994005995,
+    "target": 45,
+    "target_metric": "operational integrated pipeline FPS; separate ready-tensor engine capacity also evaluated",
+    "definition_conflict": "Three nominal 30 FPS feeds sampled 1-in-4 cap operational FPS at 22.5; these native-rate feeds cap it at 19.7305. Neither cap reaches 45. The sampler remains enabled."
+  },
+  "latency": {
+    "mean_ms": 392.376654791266,
+    "p50_ms": 300.2246,
+    "p95_ms": 844.4891,
+    "p99_ms": 1183.9616,
+    "min_ms": 164.4812,
+    "max_ms": 4034.1063
+  },
+  "pipeline_timing": {
+    "preprocess_ms": {
+      "mean": 8.0249305690689,
+      "p50": 7.312,
+      "p95": 13.3537,
+      "p99": 22.662,
+      "min": 4.4183,
+      "max": 121.923
+    },
+    "nms_ms": {
+      "mean": 2.1581036316325375,
+      "p50": 1.4206,
+      "p95": 5.5231,
+      "p99": 9.7494,
+      "min": 0.7524,
+      "max": 325.6606
+    },
+    "routing_ms": {
+      "mean": 3.8408998190246195,
+      "p50": 2.97220004722476,
+      "p95": 10.987799963913858,
+      "p99": 18.985599977895617,
+      "min": 0.1311999512836337,
+      "max": 122.5753000471741
+    },
+    "end_to_end_ms": {
+      "mean": 1727.0252150714732,
+      "p50": 1621.6047999914736,
+      "p95": 2628.3915999811143,
+      "p99": 3578.324000001885,
+      "min": 949.7937000123784,
+      "max": 11087.926899897866
+    }
+  },
+  "cpu": {
+    "process_mean_pct": 46.694608256107834,
+    "process_p95_pct": 58.5,
+    "process_peak_pct": 81.425,
+    "system_mean_pct": 87.56969952260602,
+    "system_peak_pct": 100.0,
+    "process_normalized": {
+      "mean": 46.694608256107834,
+      "p50": 47.275,
+      "p95": 58.5,
+      "p99": 61.525,
+      "min": 5.05,
+      "max": 81.425
+    },
+    "process_raw": {
+      "mean": 186.77843302443134,
+      "p50": 189.1,
+      "p95": 234.0,
+      "p99": 246.1,
+      "min": 20.2,
+      "max": 325.7
+    },
+    "system": {
+      "mean": 87.56969952260602,
+      "p50": 88.2,
+      "p95": 100.0,
+      "p99": 100.0,
+      "min": 61.5,
+      "max": 100.0
+    },
+    "normalization": "Process CPU divided by four logical CPUs; machine normalized 0-100%, raw percent also retained"
+  },
+  "memory": {
+    "rss_start_mb": 556.01953125,
+    "rss_mean_mb": 557.4147744225639,
+    "rss_peak_mb": 584.56640625,
+    "rss_end_mb": 484.55859375,
+    "rss_slope_mb_per_hour": -8.500439841970135,
+    "tracemalloc_start_mb": 149.84399700164795,
+    "tracemalloc_peak_mb": 170.74703121185303,
+    "tracemalloc_end_mb": 151.63624668121338,
+    "leak_detected": false,
+    "analysis": {
+      "process_rss_mb": {
+        "leak_detected": false,
+        "evidence_sufficient": true,
+        "slope_mb_per_hour": -8.500439841970135,
+        "final_twenty_minute_slope_mb_per_hour": -186.6098193520659,
+        "early_window_mean_mb": 554.9041622899159,
+        "final_window_mean_mb": 541.8729087752525,
+        "window_growth_mb": -13.031253514663376,
+        "material_growth_threshold_mb": 27.745208114495796,
+        "slope_threshold_mb_per_hour": 11.09808324579832,
+        "reason": "No sustained material upward trend supported by all indicators; bounded cache/history fill is allowed"
+      },
+      "tracemalloc_current_mb": {
+        "leak_detected": false,
+        "evidence_sufficient": true,
+        "slope_mb_per_hour": 2.0007871447969934,
+        "final_twenty_minute_slope_mb_per_hour": -2.7188639395936827,
+        "early_window_mean_mb": 149.70904844268028,
+        "final_window_mean_mb": 151.05740051397973,
+        "window_growth_mb": 1.3483520712994448,
+        "material_growth_threshold_mb": 7.485452422134014,
+        "slope_threshold_mb_per_hour": 2.994180968853606,
+        "reason": "No sustained material upward trend supported by all indicators; bounded cache/history fill is allowed"
+      }
+    },
+    "system_ram": {
+      "mean": 71.46503791069924,
+      "p50": 71.2,
+      "p95": 73.0,
+      "p99": 73.2,
+      "min": 69.6,
+      "max": 74.0
+    },
+    "conclusion": "No evidence of sustained memory growth/leak during the 60-minute run.",
+    "tracemalloc_mean_mb": 150.64883507292313
+  },
+  "thermal": {
+    "temperature_available": false,
+    "frequency_available": true,
+    "temperature": null,
+    "frequency": {
+      "mean": 2511.0,
+      "p50": 2511.0,
+      "p95": 2511.0,
+      "p99": 2511.0,
+      "min": 2511.0,
+      "max": 2511.0
+    },
+    "mean_temp_c": null,
+    "peak_temp_c": null,
+    "mean_freq_mhz": 2511.0,
+    "min_freq_mhz": 2511.0,
+    "throttling_detected": null,
+    "throttling_evidence": "Unable to determine due to unavailable telemetry: no exposed CPU thermal-limit or OS throttling counter. Frequency variation alone is not evidence of thermal throttling.",
+    "frequency_source": "psutil.cpu_freq; on Windows reported frequency may be nominal and is not a per-core real-time thermal counter"
+  },
+  "streams_health": {
+    "crashes": 0,
+    "reconnects": 0,
+    "read_failures": 0,
+    "buffer_overruns": 63180,
+    "capture_threads_stable": true,
+    "native_thread_growth_suspected": false,
+    "native_thread_trend": {
+      "leak_detected": false,
+      "evidence_sufficient": true,
+      "slope_mb_per_hour": 0.07619768559758493,
+      "final_twenty_minute_slope_mb_per_hour": 0.0,
+      "early_window_mean_mb": 34.87563025210084,
+      "final_window_mean_mb": 35.0,
+      "window_growth_mb": 0.12436974789915922,
+      "material_growth_threshold_mb": 2,
+      "slope_threshold_mb_per_hour": 2,
+      "reason": "No sustained material upward trend supported by all indicators; bounded cache/history fill is allowed"
+    },
+    "native_threads_min": 34.0,
+    "native_threads_max": 37.0,
+    "ring_capacity_bounded": true,
+    "clean_shutdown": true
+  },
+  "windows": [
+    {
+      "window": "0-10 min",
+      "samples": 594,
+      "aggregate_fps": 2.5962711676828927,
+      "system_cpu": {
+        "mean": 87.29494949494949,
+        "p50": 87.6,
+        "p95": 99.6,
+        "p99": 100.0,
+        "min": 62.5,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 46.847811447811445,
+        "p50": 47.35,
+        "p95": 57.025,
+        "p99": 60.95,
+        "min": 25.75,
+        "max": 62.725
+      },
+      "rss": {
+        "mean": 554.907604692761,
+        "p50": 552.79296875,
+        "p95": 563.5703125,
+        "p99": 569.42578125,
+        "min": 537.27734375,
+        "max": 572.62109375
+      },
+      "python_alloc": {
+        "mean": 149.7082235500066,
+        "p50": 150.02400016784668,
+        "p95": 152.92561149597168,
+        "p99": 156.0988893508911,
+        "min": 136.8060703277588,
+        "max": 160.36889362335205
+      },
+      "python_peak": {
+        "mean": 169.16938128936974,
+        "p50": 169.20731163024902,
+        "p95": 169.3621015548706,
+        "p99": 169.3621015548706,
+        "min": 168.91398239135742,
+        "max": 169.3621015548706
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 371.1585879254977,
+        "p50": 296.3098,
+        "p95": 776.227,
+        "p99": 1042.2658,
+        "min": 164.4812,
+        "max": 1669.9726
+      }
+    },
+    {
+      "window": "10-20 min",
+      "samples": 594,
+      "aggregate_fps": 2.534651982566401,
+      "system_cpu": {
+        "mean": 87.10723905723906,
+        "p50": 86.9,
+        "p95": 99.2,
+        "p99": 100.0,
+        "min": 65.6,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 47.377104377104374,
+        "p50": 48.075,
+        "p95": 57.025,
+        "p99": 60.15,
+        "min": 24.65,
+        "max": 61.725
+      },
+      "rss": {
+        "mean": 557.2704979482323,
+        "p50": 558.71484375,
+        "p95": 564.8359375,
+        "p99": 568.44921875,
+        "min": 540.9296875,
+        "max": 572.09375
+      },
+      "python_alloc": {
+        "mean": 150.04808675399934,
+        "p50": 150.35908699035645,
+        "p95": 153.18195915222168,
+        "p99": 156.56290340423584,
+        "min": 137.2614631652832,
+        "max": 161.12890243530273
+      },
+      "python_peak": {
+        "mean": 169.60376921085395,
+        "p50": 169.536301612854,
+        "p95": 170.03258228302002,
+        "p99": 170.03258228302002,
+        "min": 169.3621015548706,
+        "max": 170.03258228302002
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 379.7097103086014,
+        "p50": 322.3586,
+        "p95": 733.014,
+        "p99": 1046.7047,
+        "min": 166.6273,
+        "max": 1406.9827
+      }
+    },
+    {
+      "window": "20-30 min",
+      "samples": 594,
+      "aggregate_fps": 2.5437307148336394,
+      "system_cpu": {
+        "mean": 86.4060606060606,
+        "p50": 87.3,
+        "p95": 99.6,
+        "p99": 100.0,
+        "min": 64.1,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 47.76982323232323,
+        "p50": 48.05,
+        "p95": 59.25,
+        "p99": 61.725,
+        "min": 25.85,
+        "max": 63.05
+      },
+      "rss": {
+        "mean": 560.4201323127104,
+        "p50": 559.546875,
+        "p95": 565.48828125,
+        "p99": 568.125,
+        "min": 546.2421875,
+        "max": 571.37109375
+      },
+      "python_alloc": {
+        "mean": 150.6464515406676,
+        "p50": 150.7357358932495,
+        "p95": 153.53890705108643,
+        "p99": 156.78423309326172,
+        "min": 137.63174152374268,
+        "max": 156.86725425720215
+      },
+      "python_peak": {
+        "mean": 170.1215555049755,
+        "p50": 170.03258228302002,
+        "p95": 170.2728099822998,
+        "p99": 170.2728099822998,
+        "min": 170.03258228302002,
+        "max": 170.2728099822998
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 379.1235957377049,
+        "p50": 286.0188,
+        "p95": 819.1314,
+        "p99": 1079.2856,
+        "min": 170.741,
+        "max": 1871.3189
+      }
+    },
+    {
+      "window": "30-40 min",
+      "samples": 593,
+      "aggregate_fps": 2.422851246882415,
+      "system_cpu": {
+        "mean": 87.50556492411468,
+        "p50": 88.8,
+        "p95": 100.0,
+        "p99": 100.0,
+        "min": 63.5,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 46.96543001686341,
+        "p50": 46.75,
+        "p95": 59.2,
+        "p99": 61.9,
+        "min": 27.5,
+        "max": 63.675
+      },
+      "rss": {
+        "mean": 563.3629650611299,
+        "p50": 562.76171875,
+        "p95": 568.7109375,
+        "p99": 573.125,
+        "min": 549.421875,
+        "max": 574.640625
+      },
+      "python_alloc": {
+        "mean": 150.74399201423682,
+        "p50": 151.00893211364746,
+        "p95": 156.5443000793457,
+        "p99": 157.06578254699707,
+        "min": 137.83454513549805,
+        "max": 164.2330493927002
+      },
+      "python_peak": {
+        "mean": 170.27711123841206,
+        "p50": 170.2728099822998,
+        "p95": 170.2957887649536,
+        "p99": 170.2957887649536,
+        "min": 170.2728099822998,
+        "max": 170.2957887649536
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 396.8649278846154,
+        "p50": 298.5329,
+        "p95": 867.3532,
+        "p99": 1117.2628,
+        "min": 175.6336,
+        "max": 1613.9153
+      }
+    },
+    {
+      "window": "40-50 min",
+      "samples": 592,
+      "aggregate_fps": 2.0638790453740747,
+      "system_cpu": {
+        "mean": 90.4347972972973,
+        "p50": 93.4,
+        "p95": 100.0,
+        "p99": 100.0,
+        "min": 63.6,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 43.949957770270274,
+        "p50": 44.65,
+        "p95": 58.825,
+        "p99": 63.05,
+        "min": 5.05,
+        "max": 81.425
+      },
+      "rss": {
+        "mean": 566.69580078125,
+        "p50": 567.26953125,
+        "p95": 575.28125,
+        "p99": 579.0859375,
+        "min": 554.125,
+        "max": 584.56640625
+      },
+      "python_alloc": {
+        "mean": 151.69253038715672,
+        "p50": 151.24020195007324,
+        "p95": 157.2562198638916,
+        "p99": 159.91422080993652,
+        "min": 138.06015586853027,
+        "max": 164.48096561431885
+      },
+      "python_peak": {
+        "mean": 170.50365036242718,
+        "p50": 170.33419609069824,
+        "p95": 170.7014741897583,
+        "p99": 170.7014741897583,
+        "min": 170.2957887649536,
+        "max": 170.7014741897583
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 467.4647496758509,
+        "p50": 316.3759,
+        "p95": 1116.0069,
+        "p99": 2163.1152,
+        "min": 174.9262,
+        "max": 4034.1063
+      }
+    },
+    {
+      "window": "50-60 min",
+      "samples": 594,
+      "aggregate_fps": 2.564802588427343,
+      "system_cpu": {
+        "mean": 86.67912457912458,
+        "p50": 87.7,
+        "p95": 99.6,
+        "p99": 100.0,
+        "min": 61.5,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 47.24873737373738,
+        "p50": 47.275,
+        "p95": 58.875,
+        "p99": 61.2,
+        "min": 25.325,
+        "max": 64.05
+      },
+      "rss": {
+        "mean": 541.8729087752525,
+        "p50": 566.8125,
+        "p95": 572.7578125,
+        "p99": 575.62890625,
+        "min": 471.7421875,
+        "max": 577.9765625
+      },
+      "python_alloc": {
+        "mean": 151.05740051397973,
+        "p50": 151.44538974761963,
+        "p95": 154.2082166671753,
+        "p99": 157.49121189117432,
+        "min": 137.38414573669434,
+        "max": 162.11013412475586
+      },
+      "python_peak": {
+        "mean": 170.711981449063,
+        "p50": 170.7014741897583,
+        "p95": 170.74703121185303,
+        "p99": 170.74703121185303,
+        "min": 170.7014741897583,
+        "max": 170.74703121185303
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 375.11342091968913,
+        "p50": 288.4348,
+        "p95": 824.2059,
+        "p99": 1050.3804,
+        "min": 171.3573,
+        "max": 1861.9219
+      }
+    }
+  ],
+  "telemetry_samples": 3561,
+  "dod": {
+    "completed_60_minutes": true,
+    "no_crashes": true,
+    "no_memory_leak_evidence": true,
+    "throughput_target_met": false,
+    "inference_capacity_target_met": false,
+    "clean_shutdown": true,
+    "overall_pass": false
+  },
+  "overall": "FAIL",
+  "instrumentation": "tracemalloc started before live warmup, psutil RSS, persisted one-second telemetry; histories bounded, full latency series persisted instead of retained in RAM",
+  "actual_rtsp_protocol_test": "NOT RUN; local video simulation",
+  "cpu1_previous_acceptance": "Selected INT8 artifact had CPU1 accuracy/size/latency shortfalls; this soak does not override those results",
+  "window_degradation": {
+    "fps_change_pct": -1.212068278816747,
+    "latency_change_pct": 1.0655372454928314,
+    "rss_change_pct": -2.3489849133939034
+  },
+  "acceptance": {
+    "Required Git branch used": "PASS",
+    "OpenVINO INT8 engine verified": "PASS",
+    "3 concurrent simulated feeds active": "PASS",
+    "ESE-CPU2 async ingestion reused": "PASS",
+    "60-minute / 3600-second continuous run completed": "PASS",
+    "No unrecoverable crashes": "PASS",
+    "Process RSS monitored": "PASS",
+    "tracemalloc monitored": "PASS",
+    "No evidence of sustained RSS growth": "PASS",
+    "No evidence of sustained Python allocation growth": "PASS",
+    "Thread/worker count stable": "PASS",
+    "Ring buffers stable": "PASS",
+    "CPU utilization recorded": "PASS",
+    "CPU frequency recorded": "PASS",
+    "CPU temperature recorded": "UNAVAILABLE",
+    "Thermal throttling analyzed": "UNAVAILABLE",
+    "Operational aggregate FPS documented": "PASS",
+    "Inference-capacity FPS documented where required": "PASS",
+    ">=45 FPS task target": "FAIL",
+    "Latency mean/P95/P99 documented": "PASS",
+    "cpu_soak_report.json generated": "PASS",
+    "CPU/RAM telemetry graphs generated": "PASS",
+    "Final soak report generated": "PASS",
+    "CME-3 tracking updated": "PASS",
+    "ESE-CPU3 OVERALL": "FAIL"
+  },
+  "tests": {
+    "sed1": {
+      "file": "ESE_CPU3_Soak_Test/reports/updated_sed1_tests_terminal.txt",
+      "tests": 28,
+      "passed": 28
+    },
+    "sed2": {
+      "file": "ESE_CPU3_Soak_Test/reports/existing_sed2_tests_terminal.txt",
+      "tests": 35,
+      "passed": 35
+    },
+    "sed3": {
+      "file": "ESE_CPU3_Soak_Test/reports/combined_sed3_tests_terminal.txt",
+      "tests": 23,
+      "passed": 23
+    }
+  },
+  "source_commit": "137bb0b32840631c70f6c7be61d4d54f99a09d2e",
+  "mlflow_run_id": "fe9542a0ce14495d9ec4ffeab152dedd"
+}

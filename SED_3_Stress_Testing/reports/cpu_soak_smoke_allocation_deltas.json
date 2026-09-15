@@ -1,0 +1,67 @@
+[
+  {
+    "soak_elapsed_seconds": 60.05901800002903,
+    "top_growth": [
+      {
+        "file": "SED_1_Multi_Camera/scripts/camera_source.py",
+        "line": 80,
+        "size_delta_bytes": 6220896,
+        "count_delta": 2
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 120,
+        "size_delta_bytes": 39600,
+        "count_delta": 75
+      },
+      {
+        "file": "ESE_CPU3_Soak_Test/engine.py",
+        "line": 97,
+        "size_delta_bytes": 6416,
+        "count_delta": 93
+      },
+      {
+        "file": "csv.py",
+        "line": 164,
+        "size_delta_bytes": 6221,
+        "count_delta": 47
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 298,
+        "size_delta_bytes": 5808,
+        "count_delta": 179
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 297,
+        "size_delta_bytes": 5808,
+        "count_delta": 179
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 296,
+        "size_delta_bytes": 5760,
+        "count_delta": 177
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 374,
+        "size_delta_bytes": 4296,
+        "count_delta": 179
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 310,
+        "size_delta_bytes": 4296,
+        "count_delta": 179
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 558,
+        "size_delta_bytes": 3336,
+        "count_delta": 51
+      }
+    ]
+  }
+]

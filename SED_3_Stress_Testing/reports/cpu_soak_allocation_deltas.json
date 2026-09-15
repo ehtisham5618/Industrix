@@ -1,0 +1,262 @@
+[
+  {
+    "soak_elapsed_seconds": 901.4295397999231,
+    "top_growth": [
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 307,
+        "size_delta_bytes": 74592,
+        "count_delta": 2352
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 308,
+        "size_delta_bytes": 74592,
+        "count_delta": 2352
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 306,
+        "size_delta_bytes": 74568,
+        "count_delta": 2351
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 122,
+        "size_delta_bytes": 57552,
+        "count_delta": 109
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 384,
+        "size_delta_bytes": 55584,
+        "count_delta": 2316
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 320,
+        "size_delta_bytes": 55584,
+        "count_delta": 2316
+      },
+      {
+        "file": "CME_OPT3_ByteTrack/pipeline.py",
+        "line": 203,
+        "size_delta_bytes": 33616,
+        "count_delta": 467
+      },
+      {
+        "file": "_pswindows.py",
+        "line": 265,
+        "size_delta_bytes": 24336,
+        "count_delta": 338
+      },
+      {
+        "file": "ESE_CPU1_Quantization/runtime/venv/Lib/site-packages/ultralytics/utils/ops.py",
+        "line": 216,
+        "size_delta_bytes": 20688,
+        "count_delta": 299
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 402,
+        "size_delta_bytes": 19008,
+        "count_delta": 36
+      }
+    ]
+  },
+  {
+    "soak_elapsed_seconds": 1800.762748899986,
+    "top_growth": [
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 307,
+        "size_delta_bytes": 148608,
+        "count_delta": 4680
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 308,
+        "size_delta_bytes": 148608,
+        "count_delta": 4680
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 306,
+        "size_delta_bytes": 148584,
+        "count_delta": 4679
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 115,
+        "size_delta_bytes": 123760,
+        "count_delta": 1547
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 384,
+        "size_delta_bytes": 110592,
+        "count_delta": 4608
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 320,
+        "size_delta_bytes": 110592,
+        "count_delta": 4608
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 193,
+        "size_delta_bytes": 95520,
+        "count_delta": 1990
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 122,
+        "size_delta_bytes": 57552,
+        "count_delta": 109
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 402,
+        "size_delta_bytes": 38016,
+        "count_delta": 72
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 401,
+        "size_delta_bytes": 38016,
+        "count_delta": 72
+      }
+    ]
+  },
+  {
+    "soak_elapsed_seconds": 2701.556713299942,
+    "top_growth": [
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 307,
+        "size_delta_bytes": 214704,
+        "count_delta": 6741
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 308,
+        "size_delta_bytes": 214704,
+        "count_delta": 6741
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 306,
+        "size_delta_bytes": 214680,
+        "count_delta": 6740
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 384,
+        "size_delta_bytes": 159264,
+        "count_delta": 6636
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 320,
+        "size_delta_bytes": 159264,
+        "count_delta": 6636
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 115,
+        "size_delta_bytes": 125920,
+        "count_delta": 1574
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 193,
+        "size_delta_bytes": 95424,
+        "count_delta": 1988
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 122,
+        "size_delta_bytes": 57552,
+        "count_delta": 109
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 402,
+        "size_delta_bytes": 55440,
+        "count_delta": 105
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 401,
+        "size_delta_bytes": 55440,
+        "count_delta": 105
+      }
+    ]
+  },
+  {
+    "soak_elapsed_seconds": 3600.060514200013,
+    "top_growth": [
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 307,
+        "size_delta_bytes": 285240,
+        "count_delta": 8987
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 308,
+        "size_delta_bytes": 285240,
+        "count_delta": 8987
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 306,
+        "size_delta_bytes": 285216,
+        "count_delta": 8986
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 384,
+        "size_delta_bytes": 212448,
+        "count_delta": 8852
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 320,
+        "size_delta_bytes": 212448,
+        "count_delta": 8852
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 115,
+        "size_delta_bytes": 126240,
+        "count_delta": 1578
+      },
+      {
+        "file": "tracemalloc.py",
+        "line": 193,
+        "size_delta_bytes": 95472,
+        "count_delta": 1989
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 402,
+        "size_delta_bytes": 72864,
+        "count_delta": 138
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 401,
+        "size_delta_bytes": 72864,
+        "count_delta": 138
+      },
+      {
+        "file": "SED_1_Multi_Camera/scripts/stream_manager.py",
+        "line": 400,
+        "size_delta_bytes": 72864,
+        "count_delta": 138
+      }
+    ]
+  }
+]

@@ -1,0 +1,658 @@
+{
+  "status": "completed",
+  "failure_reason": null,
+  "started_at_utc": "2026-10-08T16:38:56.852982+00:00",
+  "finished_at_utc": "2026-10-08T16:40:14.885524+00:00",
+  "duration_requested_seconds": 60.0,
+  "duration_actual_seconds": 60.05901800002903,
+  "capture_wall_seconds": 75.05901800002903,
+  "wall_seconds_with_shutdown": 78.02964600000996,
+  "warmup_seconds": 15.0,
+  "sample_interval_seconds": 1,
+  "engine": "openvino",
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "config_version": "ESECPU3-soak60-v1",
+  "ingestion_config_version": "ESECPU2-async-ring15-sample4-v1",
+  "source_config": "SED_1_Multi_Camera/configs/3_cameras.json",
+  "source_config_sha256": "83e2b3d6f15b61c69cb2633ffc9cfa1c70a900d84600d72ea808b1dd55d58343",
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "ram_bytes": 17049018368,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "openvino": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "opencv": "5.0.0",
+    "psutil": "7.2.2"
+  },
+  "engine_verification": {
+    "device": "CPU",
+    "execution_devices": [
+      "CPU"
+    ],
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "output_shape": [
+      1,
+      16,
+      8400
+    ],
+    "class_names": {
+      "0": "baekra",
+      "1": "color issues",
+      "2": "contamination",
+      "3": "cut",
+      "4": "gray stitch",
+      "5": "selvet",
+      "6": "stain",
+      "7": "chemical hazard",
+      "8": "fire",
+      "9": "no helmet",
+      "10": "smoke",
+      "11": "water leak"
+    },
+    "artifact_manifest": {
+      "source_model_version": "cme-opt2-focal-cosine-12class-v1",
+      "source_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+      "dataset_version": "combined-12class-v3-hardnegative",
+      "artifacts": {
+        "onnx_fp16": {
+          "path": "Backend/weights/onnx_fp16/best_fp16.onnx",
+          "bytes": 22409010,
+          "sha256": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf"
+        },
+        "openvino_xml": {
+          "path": "Backend/weights/openvino_int8/model.xml",
+          "bytes": 470147,
+          "sha256": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a"
+        },
+        "openvino_bin": {
+          "path": "Backend/weights/openvino_int8/model.bin",
+          "bytes": 11303236,
+          "sha256": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa"
+        },
+        "metadata": {
+          "path": "Backend/weights/openvino_int8/metadata.yaml",
+          "bytes": 659,
+          "sha256": "f8245629ade1077bcff9c960a025459c4e8683910a1fd82c05868cddf2d2a96a"
+        }
+      },
+      "combined_core_bytes": 11773383,
+      "combined_core_decimal_mb": 11.773383,
+      "combined_core_mib": 11.227972984313965,
+      "required_metadata_bytes": 659,
+      "complete_runtime_bytes": 11774042,
+      "size_target_bytes": 6500000,
+      "size_pass": false,
+      "nncf_fake_quantize_ops": 67,
+      "constant_bytes_by_precision": {
+        "<Type: 'int64_t'>": 400,
+        "<Type: 'float32'>": 183848,
+        "<Type: 'int8_t'>": 11119984,
+        "<Type: 'int32_t'>": 44
+      },
+      "export_api": "Ultralytics8.4.24 FP32 OpenVINO conversion; NNCF quantize_with_accuracy_control; absolute max_drop0.0079;targetCPU;MIXED;exactly300 training samples",
+      "detection_head_policy": "Unmodified upstream ignored Add/Sub/Mul/Div detection-head patterns and Sigmoid; MIXED preset",
+      "onnx_fp16_policy": "CPU FP32 ONNX export, onnxconverter-common FP16 conversion with FP32 IO; CPU EP may promote unsupported kernels",
+      "versions": {
+        "ultralytics": "8.4.24",
+        "torch": "2.10.0",
+        "onnx": "1.23.2",
+        "onnxruntime": "1.24.4",
+        "openvino": "2026.4.1",
+        "nncf": "3.4.0",
+        "numpy": "2.4.6",
+        "mlflow": "2.22.2"
+      },
+      "selected_ptq": "accuracy_aware"
+    },
+    "runtime_precision_counts": {
+      "f32": 160,
+      "i32": 94,
+      "u8": 98,
+      "i8": 64
+    },
+    "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "settings": {
+      "performance_hint": "LATENCY",
+      "num_streams": 1,
+      "threads": 2
+    },
+    "compilation_seconds": 0.8258355000289157
+  },
+  "sources": {
+    "camera_01": {
+      "name": "Fabric Weaving Feed",
+      "path": "data/test_factory_clip.mp4",
+      "sha256": "6a79429f1fceced1560aa446bbdd17fd2b46ab6622f98156e7a94082f94eb67c",
+      "encoded_fps": 25.0,
+      "width": 352.0,
+      "height": 288.0,
+      "loop": true
+    },
+    "camera_02": {
+      "name": "Chemical Storage Bay",
+      "path": "Confidence_Calibration/benchmark/media/chemical_hazard_01_hazmat_training.webm",
+      "sha256": "6fb8d14fc46fe37161b23ff8a7bdaa982fd9f7c627894f9774d09251b489e872",
+      "encoded_fps": 29.946,
+      "width": 1280.0,
+      "height": 720.0,
+      "loop": true
+    },
+    "camera_03": {
+      "name": "Loading Bay",
+      "path": "Confidence_Calibration/benchmark/media/no_helmet_01_workers_roof.webm",
+      "sha256": "e027cc1e91f6e6cb573edb465c5036f4227019d9675ef9ca21d9949b392b1a51",
+      "encoded_fps": 23.976023976023978,
+      "width": 1920.0,
+      "height": 1080.0,
+      "loop": true
+    }
+  },
+  "counts_at_soak_start": {
+    "camera_01": 12,
+    "camera_02": 11,
+    "camera_03": 11
+  },
+  "evaluated_at_deadline": {
+    "camera_01": 67,
+    "camera_02": 66,
+    "camera_03": 66
+  },
+  "thread_counts": {
+    "before": 15,
+    "before_shutdown": 37,
+    "after_shutdown": 12
+  },
+  "threads_after_shutdown": [],
+  "scheduler_after_shutdown": false,
+  "sensor_warnings": {
+    "temperature": "No supported temperature API on this platform"
+  },
+  "exceptions": [],
+  "manager_metrics": {
+    "camera_01": {
+      "captured": 1877,
+      "evaluated": 72,
+      "intentional_skips": 1407,
+      "selected": 470,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 0,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 1877,
+        "reads": 72,
+        "intentional_skips": 1407,
+        "selected": 470,
+        "circular_reuses": 1794,
+        "normal_reuses": 1396,
+        "true_overruns": 398,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.88492274906766
+      }
+    },
+    "camera_02": {
+      "captured": 2248,
+      "evaluated": 70,
+      "intentional_skips": 1686,
+      "selected": 562,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 1,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 2248,
+        "reads": 70,
+        "intentional_skips": 1686,
+        "selected": 562,
+        "circular_reuses": 2166,
+        "normal_reuses": 1674,
+        "true_overruns": 492,
+        "pending_selected": 0,
+        "final_occupancy": 12,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.903024911032029
+      }
+    },
+    "camera_03": {
+      "captured": 1799,
+      "evaluated": 71,
+      "intentional_skips": 1349,
+      "selected": 450,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 3,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 1799,
+        "reads": 71,
+        "intentional_skips": 1349,
+        "selected": 450,
+        "circular_reuses": 1717,
+        "normal_reuses": 1338,
+        "true_overruns": 379,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.879377431906615
+      }
+    }
+  },
+  "event_store": {
+    "retention_limit": 1024,
+    "retained_events": 0,
+    "archived_events": 0,
+    "log_bytes": 0
+  },
+  "traced_end_bytes": [
+    108131541,
+    177139687
+  ],
+  "code_base_commit": "79a1d8cff0a95f6b2d1e0014c36dd60a4752c018",
+  "code_file_hashes": {
+    "ESE_CPU3_Soak_Test/engine.py": "8ff3856ba6c27d795916118399ca27e3f3ec40c54074dd7debf3505eb44f3186",
+    "ESE_CPU3_Soak_Test/soak.py": "a8dc0e5da604ec7fd8faab89033b50b3142455099a302f2ee3d51ca901bb9b6a",
+    "SED_1_Multi_Camera/scripts/stream_manager.py": "cf9cdb1523b68db0350cff144d14194cdd7aeafd7927391abe7dd8d989bf8b97"
+  },
+  "telemetry_path": "SED_3_Stress_Testing/reports/cpu_soak_smoke_timeseries.csv",
+  "inference_path": "SED_3_Stress_Testing/reports/cpu_soak_smoke_inference.csv",
+  "frame_timings_path": "SED_3_Stress_Testing/reports/cpu_soak_smoke_frames.csv",
+  "streams": 3,
+  "stream_results": {
+    "camera_01": {
+      "evaluated_during_soak": 55,
+      "operational_fps": 0.915765888812458,
+      "source": {
+        "name": "Fabric Weaving Feed",
+        "path": "data/test_factory_clip.mp4",
+        "sha256": "6a79429f1fceced1560aa446bbdd17fd2b46ab6622f98156e7a94082f94eb67c",
+        "encoded_fps": 25.0,
+        "width": 352.0,
+        "height": 288.0,
+        "loop": true
+      },
+      "captured": 1877,
+      "evaluated": 72,
+      "intentional_skips": 1407,
+      "selected": 470,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 0,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 1877,
+        "reads": 72,
+        "intentional_skips": 1407,
+        "selected": 470,
+        "circular_reuses": 1794,
+        "normal_reuses": 1396,
+        "true_overruns": 398,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.88492274906766
+      }
+    },
+    "camera_02": {
+      "evaluated_during_soak": 55,
+      "operational_fps": 0.915765888812458,
+      "source": {
+        "name": "Chemical Storage Bay",
+        "path": "Confidence_Calibration/benchmark/media/chemical_hazard_01_hazmat_training.webm",
+        "sha256": "6fb8d14fc46fe37161b23ff8a7bdaa982fd9f7c627894f9774d09251b489e872",
+        "encoded_fps": 29.946,
+        "width": 1280.0,
+        "height": 720.0,
+        "loop": true
+      },
+      "captured": 2248,
+      "evaluated": 70,
+      "intentional_skips": 1686,
+      "selected": 562,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 1,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 2248,
+        "reads": 70,
+        "intentional_skips": 1686,
+        "selected": 562,
+        "circular_reuses": 2166,
+        "normal_reuses": 1674,
+        "true_overruns": 492,
+        "pending_selected": 0,
+        "final_occupancy": 12,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.903024911032029
+      }
+    },
+    "camera_03": {
+      "evaluated_during_soak": 55,
+      "operational_fps": 0.915765888812458,
+      "source": {
+        "name": "Loading Bay",
+        "path": "Confidence_Calibration/benchmark/media/no_helmet_01_workers_roof.webm",
+        "sha256": "e027cc1e91f6e6cb573edb465c5036f4227019d9675ef9ca21d9949b392b1a51",
+        "encoded_fps": 23.976023976023978,
+        "width": 1920.0,
+        "height": 1080.0,
+        "loop": true
+      },
+      "captured": 1799,
+      "evaluated": 71,
+      "intentional_skips": 1349,
+      "selected": 450,
+      "read_failures": 0,
+      "reconnects": 0,
+      "loop_rewinds": 3,
+      "worker_crashes": 0,
+      "inference_drops": 0,
+      "status": "stopped",
+      "ring": {
+        "capacity": 15,
+        "writes": 1799,
+        "reads": 71,
+        "intentional_skips": 1349,
+        "selected": 450,
+        "circular_reuses": 1717,
+        "normal_reuses": 1338,
+        "true_overruns": 379,
+        "pending_selected": 0,
+        "final_occupancy": 11,
+        "max_occupancy": 15,
+        "mean_occupancy_per_write": 14.879377431906615
+      }
+    }
+  },
+  "throughput": {
+    "operational_mean_fps": 2.7472976664373743,
+    "operational_p50_fps": 2.9615902475010403,
+    "operational_p95_fps": 5.997467269836007,
+    "inference_capacity_fps_if_measured": null,
+    "capacity_details": null,
+    "sampling_ceiling_fps": 19.730505994005995,
+    "target": 45,
+    "target_metric": "operational integrated pipeline FPS; separate ready-tensor engine capacity also evaluated",
+    "definition_conflict": "Three nominal 30 FPS feeds sampled 1-in-4 cap operational FPS at 22.5; these native-rate feeds cap it at 19.7305. Neither cap reaches 45. The sampler remains enabled."
+  },
+  "latency": {
+    "mean_ms": 353.3983539393939,
+    "p50_ms": 243.35,
+    "p95_ms": 834.2312,
+    "p99_ms": 1164.5143,
+    "min_ms": 159.7333,
+    "max_ms": 1348.0123
+  },
+  "pipeline_timing": {
+    "preprocess_ms": {
+      "mean": 7.22835393939394,
+      "p50": 7.0284,
+      "p95": 10.8464,
+      "p99": 16.1449,
+      "min": 4.5921,
+      "max": 17.0944
+    },
+    "nms_ms": {
+      "mean": 1.9499896969696968,
+      "p50": 1.2525,
+      "p95": 4.9641,
+      "p99": 13.8074,
+      "min": 0.7393,
+      "max": 25.5462
+    },
+    "routing_ms": {
+      "mean": 2.7677781809347146,
+      "p50": 2.239400055259466,
+      "p95": 7.945899968035519,
+      "p99": 14.568799990229309,
+      "min": 0.13219995889812708,
+      "max": 15.503700007684529
+    },
+    "end_to_end_ms": {
+      "mean": 1579.3647848365997,
+      "p50": 1471.9003000063822,
+      "p95": 2578.908700030297,
+      "p99": 3051.1780000524595,
+      "min": 990.3306999476627,
+      "max": 3067.5554999615997
+    }
+  },
+  "cpu": {
+    "process_mean_pct": 46.37875,
+    "process_p95_pct": 57.975,
+    "process_peak_pct": 60.55,
+    "system_mean_pct": 87.34333333333333,
+    "system_peak_pct": 100.0,
+    "process_normalized": {
+      "mean": 46.37875,
+      "p50": 46.875,
+      "p95": 57.975,
+      "p99": 60.55,
+      "min": 25.4,
+      "max": 60.55
+    },
+    "process_raw": {
+      "mean": 185.515,
+      "p50": 187.5,
+      "p95": 231.9,
+      "p99": 242.2,
+      "min": 101.6,
+      "max": 242.2
+    },
+    "system": {
+      "mean": 87.34333333333333,
+      "p50": 86.0,
+      "p95": 100.0,
+      "p99": 100.0,
+      "min": 70.5,
+      "max": 100.0
+    },
+    "normalization": "Process CPU divided by four logical CPUs; machine normalized 0-100%, raw percent also retained"
+  },
+  "memory": {
+    "rss_start_mb": 554.2421875,
+    "rss_mean_mb": 560.5889973958333,
+    "rss_peak_mb": 571.234375,
+    "rss_end_mb": 564.68359375,
+    "rss_slope_mb_per_hour": 354.0533690608904,
+    "tracemalloc_start_mb": 149.69797706604004,
+    "tracemalloc_peak_mb": 168.9335699081421,
+    "tracemalloc_end_mb": 149.81135654449463,
+    "leak_detected": false,
+    "analysis": {
+      "process_rss_mb": {
+        "leak_detected": false,
+        "evidence_sufficient": true,
+        "slope_mb_per_hour": 354.0533690608904,
+        "final_twenty_minute_slope_mb_per_hour": 566.3844687764388,
+        "early_window_mean_mb": 558.5671875,
+        "final_window_mean_mb": 563.3875,
+        "window_growth_mb": 4.8203125,
+        "material_growth_threshold_mb": 27.928359375000003,
+        "slope_threshold_mb_per_hour": 11.171343750000002,
+        "reason": "No sustained material upward trend supported by all indicators; bounded cache/history fill is allowed"
+      },
+      "tracemalloc_current_mb": {
+        "leak_detected": false,
+        "evidence_sufficient": true,
+        "slope_mb_per_hour": 4.196800156599361,
+        "final_twenty_minute_slope_mb_per_hour": 120.86684506328656,
+        "early_window_mean_mb": 149.5421692530314,
+        "final_window_mean_mb": 149.83716570536296,
+        "window_growth_mb": 0.29499645233156,
+        "material_growth_threshold_mb": 7.477108462651571,
+        "slope_threshold_mb_per_hour": 2.990843385060628,
+        "reason": "No sustained material upward trend supported by all indicators; bounded cache/history fill is allowed"
+      }
+    },
+    "system_ram": {
+      "mean": 72.86833333333334,
+      "p50": 73.0,
+      "p95": 73.2,
+      "p99": 73.5,
+      "min": 72.3,
+      "max": 73.5
+    },
+    "conclusion": "Full-duration leak conclusion unavailable for incomplete/short run"
+  },
+  "thermal": {
+    "temperature_available": false,
+    "frequency_available": true,
+    "temperature": null,
+    "frequency": {
+      "mean": 2511.0,
+      "p50": 2511.0,
+      "p95": 2511.0,
+      "p99": 2511.0,
+      "min": 2511.0,
+      "max": 2511.0
+    },
+    "mean_temp_c": null,
+    "peak_temp_c": null,
+    "mean_freq_mhz": 2511.0,
+    "min_freq_mhz": 2511.0,
+    "throttling_detected": null,
+    "throttling_evidence": "Unable to determine due to unavailable telemetry: no exposed CPU thermal-limit or OS throttling counter. Frequency variation alone is not evidence of thermal throttling.",
+    "frequency_source": "psutil.cpu_freq; on Windows reported frequency may be nominal and is not a per-core real-time thermal counter"
+  },
+  "streams_health": {
+    "crashes": 0,
+    "reconnects": 0,
+    "read_failures": 0,
+    "buffer_overruns": 1269,
+    "capture_threads_stable": true,
+    "native_threads_min": 37.0,
+    "native_threads_max": 40.0,
+    "ring_capacity_bounded": true,
+    "clean_shutdown": true
+  },
+  "windows": [
+    {
+      "window": "0-10 min",
+      "samples": 60,
+      "aggregate_fps": 2.720449776282776,
+      "system_cpu": {
+        "mean": 87.34333333333333,
+        "p50": 86.0,
+        "p95": 100.0,
+        "p99": 100.0,
+        "min": 70.5,
+        "max": 100.0
+      },
+      "process_cpu": {
+        "mean": 46.37875,
+        "p50": 46.875,
+        "p95": 57.975,
+        "p99": 60.55,
+        "min": 25.4,
+        "max": 60.55
+      },
+      "rss": {
+        "mean": 560.5889973958333,
+        "p50": 560.26171875,
+        "p95": 566.0,
+        "p99": 571.234375,
+        "min": 552.0078125,
+        "max": 571.234375
+      },
+      "python_alloc": {
+        "mean": 149.6047284603119,
+        "p50": 149.76740074157715,
+        "p95": 155.56972122192383,
+        "p99": 155.74141216278076,
+        "min": 140.44270420074463,
+        "max": 155.74141216278076
+      },
+      "python_peak": {
+        "mean": 167.34260686238608,
+        "p50": 166.2843542098999,
+        "p95": 168.9335699081421,
+        "p99": 168.9335699081421,
+        "min": 166.1069746017456,
+        "max": 168.9335699081421
+      },
+      "frequency": {
+        "mean": 2511.0,
+        "p50": 2511.0,
+        "p95": 2511.0,
+        "p99": 2511.0,
+        "min": 2511.0,
+        "max": 2511.0
+      },
+      "temperature": null,
+      "inference_latency_ms": {
+        "mean": 353.3983539393939,
+        "p50": 243.35,
+        "p95": 834.2312,
+        "p99": 1164.5143,
+        "min": 159.7333,
+        "max": 1348.0123
+      }
+    }
+  ],
+  "telemetry_samples": 60,
+  "dod": {
+    "completed_60_minutes": false,
+    "no_crashes": true,
+    "no_memory_leak_evidence": false,
+    "throughput_target_met": false,
+    "inference_capacity_target_met": false,
+    "clean_shutdown": true,
+    "overall_pass": false
+  },
+  "overall": "FAIL",
+  "instrumentation": "tracemalloc started before live warmup, psutil RSS, persisted one-second telemetry; histories bounded, full latency series persisted instead of retained in RAM",
+  "actual_rtsp_protocol_test": "NOT RUN; local video simulation",
+  "cpu1_previous_acceptance": "Selected INT8 artifact had CPU1 accuracy/size/latency shortfalls; this soak does not override those results",
+  "acceptance": {
+    "Required Git branch used": "PASS",
+    "OpenVINO INT8 engine verified": "PASS",
+    "3 concurrent simulated feeds active": "PASS",
+    "ESE-CPU2 async ingestion reused": "PASS",
+    "60-minute / 3600-second continuous run completed": "FAIL",
+    "No unrecoverable crashes": "PASS",
+    "Process RSS monitored": "PASS",
+    "tracemalloc monitored": "PASS",
+    "No evidence of sustained RSS growth": "FAIL",
+    "No evidence of sustained Python allocation growth": "FAIL",
+    "Thread/worker count stable": "PASS",
+    "Ring buffers stable": "PASS",
+    "CPU utilization recorded": "PASS",
+    "CPU frequency recorded": "PASS",
+    "CPU temperature recorded": "UNAVAILABLE",
+    "Thermal throttling analyzed": "UNAVAILABLE",
+    "Operational aggregate FPS documented": "PASS",
+    "Inference-capacity FPS documented where required": "FAIL",
+    ">=45 FPS task target": "FAIL",
+    "Latency mean/P95/P99 documented": "PASS",
+    "cpu_soak_report.json generated": "PASS",
+    "CPU/RAM telemetry graphs generated": "PASS",
+    "Final soak report generated": "PASS",
+    "CME-3 tracking updated": "PENDING until offline finalization",
+    "ESE-CPU3 OVERALL": "FAIL"
+  }
+}
