@@ -1,0 +1,20 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "SED_1_Multi_Camera/scripts/stream_manager.py", "--config", "SED_1_Multi_Camera/configs/3_cameras.json", "--test-duration", "180"]
+{
+  "phase": "optimized",
+  "capture_duration_seconds": 180.01520889997482,
+  "cpu": {
+    "system_mean": 96.70227272727271,
+    "system_peak": 100.0,
+    "normalized_process_mean": 74.68650568181819,
+    "normalized_process_peak": 88.525,
+    "process_raw_mean": 298.74602272727276,
+    "samples": 176
+  },
+  "captured": 14206,
+  "evaluated": 307,
+  "unintentional_drop_count": 3246,
+  "buffer_overrun_count": 3246,
+  "status": "FAIL"
+}
+
+Exit code: 2

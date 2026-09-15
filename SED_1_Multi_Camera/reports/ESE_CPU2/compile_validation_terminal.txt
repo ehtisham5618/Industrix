@@ -1,0 +1,3 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-m", "compileall", "-q", "ESE_CPU2_Async_RTSP", "SED_1_Multi_Camera/scripts", "Backend/main.py"]
+
+Exit code: 0

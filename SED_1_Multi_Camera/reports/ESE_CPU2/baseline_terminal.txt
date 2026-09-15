@@ -1,0 +1,17 @@
+{
+  "phase": "baseline",
+  "capture_duration_seconds": 180.01466420001816,
+  "cpu": {
+    "system_mean": 97.38228571428573,
+    "system_peak": 100.0,
+    "normalized_process_mean": 73.10857142857142,
+    "normalized_process_peak": 88.05,
+    "process_raw_mean": 292.4342857142857,
+    "samples": 175
+  },
+  "captured": 14205,
+  "evaluated": 301,
+  "unintentional_drop_count": 2128,
+  "buffer_overrun_count": 2128,
+  "status": "FAIL"
+}

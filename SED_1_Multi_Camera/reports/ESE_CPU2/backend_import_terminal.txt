@@ -1,0 +1,6 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-c", "import Backend.main as m; print('Backend import PASS'); print('Stream API defaults',m.start_streams.__defaults__); print('Default detector path',m.PROJECT_ROOT / 'Backend/best.pt')"]
+Backend import PASS
+Stream API defaults (Query(3), Query(15), Query(640), Query(None), Query(15), Query(C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\configs\bytetrack.yaml), Query(10.0))
+Default detector path C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\best.pt
+
+Exit code: 0

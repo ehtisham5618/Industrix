@@ -1,0 +1,37 @@
+{
+  "architecture_version": "ESECPU2-async-ring15-sample4-v1",
+  "source_protocol": "local-video simulation; no RTSP endpoints available",
+  "scene_note": "Camera names identify deployment roles. Public documentary, hazmat exercise and rooftop-worker clips are stand-ins, not footage of three installed factory bays.",
+  "ring_capacity": 15,
+  "sample_every": 4,
+  "sampling_phase": 0,
+  "cameras": {
+    "camera_01": {
+      "name": "Textile Weaving Inspection",
+      "source": "data/test_factory_clip.mp4",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": ["baekra", "selvet", "stain"]
+    },
+    "camera_02": {
+      "name": "Chemical Storage Bay",
+      "source": "Confidence_Calibration/benchmark/media/chemical_hazard_01_hazmat_training.webm",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": ["chemical hazard", "smoke", "fire"]
+    },
+    "camera_03": {
+      "name": "Loading Dock",
+      "source": "Confidence_Calibration/benchmark/media/no_helmet_01_workers_roof.webm",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": ["no helmet"]
+    }
+  }
+}

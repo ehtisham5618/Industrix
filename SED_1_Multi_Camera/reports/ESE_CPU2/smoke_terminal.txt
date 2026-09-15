@@ -1,0 +1,17 @@
+{
+  "phase": "smoke",
+  "capture_duration_seconds": 20.00406499998644,
+  "cpu": {
+    "system_mean": 96.2578947368421,
+    "system_peak": 100.0,
+    "normalized_process_mean": 79.8578947368421,
+    "normalized_process_peak": 84.575,
+    "process_raw_mean": 319.4315789473684,
+    "samples": 19
+  },
+  "captured": 1577,
+  "evaluated": 51,
+  "unintentional_drop_count": 344,
+  "buffer_overrun_count": 344,
+  "status": "FAIL"
+}
