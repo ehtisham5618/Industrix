@@ -1,0 +1,14 @@
+test_queue_overflow_drops_old_frames (test_frame_drop.FrameDropTests.test_queue_overflow_drops_old_frames) ... ok
+test_stream_failure_is_recorded_without_exception (test_frame_drop.FrameDropTests.test_stream_failure_is_recorded_without_exception) ... ok
+test_camera_geofence_isolation (test_geofence.GeofenceTests.test_camera_geofence_isolation) ... ok
+test_polygon_filter_accepts_center_inside (test_geofence.GeofenceTests.test_polygon_filter_accepts_center_inside) ... ok
+test_polygon_filter_rejects_center_outside (test_geofence.GeofenceTests.test_polygon_filter_rejects_center_outside) ... ok
+test_results_and_alert_state_are_per_camera (test_stream_isolation.StreamIsolationTests.test_results_and_alert_state_are_per_camera) ... ok
+test_shutdown_terminates_workers (test_stream_isolation.StreamIsolationTests.test_shutdown_terminates_workers) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.654s
+
+OK
+
+Exit code: 0

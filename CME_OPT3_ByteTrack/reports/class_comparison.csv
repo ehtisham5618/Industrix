@@ -1,0 +1,5 @@
+class_name,baseline_false_alerts,tracked_false_alerts,fp_reduction_pct,true_events,baseline_events_triggered,tracked_events_triggered,tracked_events_within_2s,tracked_missed_events
+chemical hazard,3,0,100.0,0,0,0,0,0
+fire,1,0,100.0,0,0,0,0,0
+no helmet,4,0,100.0,17,8,0,0,17
+water leak,1,0,100.0,0,0,0,0,0

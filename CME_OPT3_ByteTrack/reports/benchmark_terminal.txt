@@ -1,0 +1,130 @@
+WARNING ⚠️ user config directory '/root/.config/Ultralytics' is not writable, using '/tmp/Ultralytics'. Set YOLO_CONFIG_DIR to override.
+Creating new Ultralytics Settings v0.0.6 file ✅
+View Ultralytics Settings with 'yolo settings' or at '/tmp/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+Processed 500 frames; video time=49.920s
+Processed 1000 frames; video time=99.920s
+Processed 1500 frames; video time=149.920s
+Processed 2000 frames; video time=199.920s
+Processed 2500 frames; video time=249.920s
+Processed 3000 frames; video time=299.920s
+Processed 3500 frames; video time=349.920s
+Processed 4000 frames; video time=399.920s
+Processed 4500 frames; video time=449.920s
+Processed 5000 frames; video time=499.920s
+Processed 5500 frames; video time=549.920s
+Processed 6000 frames; video time=599.920s
+{
+  "video_duration_seconds": 600.0,
+  "full_source_duration_seconds": 600.0,
+  "execution_sources_sha256": {
+    "CME_OPT3_ByteTrack/pipeline.py": "2029b941cdcb612ad7b4ec1770ff7d2fc302081706444c7bb4aa0ef5d1f44013",
+    "CME_OPT3_ByteTrack/benchmark.py": "d236f7461a6368342596801b17e05bc29f7edf25b2076dab17a5e43f33bc4321",
+    "Backend/configs/bytetrack.yaml": "9037c64725a4c36910eb7aebd2801ea12360807055d7cbba92ae735002351f87",
+    "SED_1_Multi_Camera/scripts/models.py": "db6dc0b905800f1b754971be10b1ed742abe70b08cb6f6e84c42c792203151da",
+    "SED_1_Multi_Camera/scripts/stream_manager.py": "f28148525c69e8baae45ec57574fbabe01676dea7c8b68b8f29ced730b6d8c01",
+    "SED_1_Multi_Camera/scripts/geofence.py": "6b34ea60f9bd69236e519ec1da783d6d82f875b6bff1f4cd2e9e808dbf54f2bb",
+    "SED_1_Multi_Camera/scripts/detector.py": "50240a8a9027b6c36818e33522dd20895f22a8bbe24de1aa0557c9eb1f067dd9",
+    "Confidence_Calibration/scripts/alert_policy.py": "5a30b02ddb15125ba9212ebf36ede7ae005169e1a9a78b538bb378bb2f2b02f6",
+    "Confidence_Calibration/configs/calibrated_thresholds.yaml": "c1d763d7f8489e2620ed4397011d936c068fd7d24e8be390381c9eb5df7435db",
+    "SED_2_Alert_Escalation/scripts/escalation_state.py": "51d41f37a484f191b785d8d48579aebbc68794e7d0ea9ec749c543f22730bf52"
+  },
+  "segment_start_seconds": 0,
+  "source_fps": 25.0,
+  "evaluated_fps": 10.0,
+  "evaluated_frames": 6000,
+  "actual_processing_fps": 125.20881784067403,
+  "persist_frames": 15,
+  "theoretical_15_frame_seconds": 1.5,
+  "tracker": "ByteTRACK",
+  "tracker_config": "/opt/project/Backend/configs/bytetrack.yaml",
+  "tracker_sha256": "9037c64725a4c36910eb7aebd2801ea12360807055d7cbba92ae735002351f87",
+  "detector_version": "cme-opt2-focal-cosine-12class-v1",
+  "detector_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "names": {
+    "0": "baekra",
+    "1": "color issues",
+    "2": "contamination",
+    "3": "cut",
+    "4": "gray stitch",
+    "5": "selvet",
+    "6": "stain",
+    "7": "chemical hazard",
+    "8": "fire",
+    "9": "no helmet",
+    "10": "smoke",
+    "11": "water leak"
+  },
+  "video_sha256": "6a79429f1fceced1560aa446bbdd17fd2b46ab6622f98156e7a94082f94eb67c",
+  "annotation_sha256": "045ea0721c68fefdc22fd482e48b676fa28fadf2d3f7ff3d2e0aaed816c4c2a5",
+  "baseline": {
+    "formal_alerts": 30,
+    "false_alerts": 9,
+    "true_alerts": 21
+  },
+  "bytetrack": {
+    "formal_alerts": 0,
+    "false_alerts": 0,
+    "true_alerts": 0
+  },
+  "false_alert_reduction_pct": 100.0,
+  "true_events": 17,
+  "events_triggered": 0,
+  "events_within_2s": 0,
+  "missed_events": 17,
+  "trigger_delay": {
+    "mean": null,
+    "p50": null,
+    "p95": null,
+    "max": null
+  },
+  "annotation_onset_uncertainty_seconds": 1.0,
+  "events_within_2s_conservative": 0,
+  "tracking": {
+    "tracks_created": 34,
+    "tracks_confirmed": 0,
+    "candidate_tracks_expired": 34,
+    "tracks_cleared": 0,
+    "max_live_states": 2,
+    "live_states_at_video_end": 0,
+    "id_switches": null,
+    "fragmentation": null,
+    "live_states_after_cleanup": 0
+  },
+  "performance": {
+    "fps_before": 132.62045038036004,
+    "fps_after": 125.20881784067403,
+    "tracking_and_escalation_ms_per_frame": 0.48582660966717306,
+    "baseline_and_escalation_ms_per_frame": 0.03948387933344222,
+    "shared_inference_seconds": 39.513670795997726,
+    "decode_seconds": 5.491317226001231,
+    "actual_run_seconds": 599.93262049
+  },
+  "environment": {
+    "python": "3.11.12",
+    "ultralytics": "8.4.24",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA A10"
+  },
+  "timing_basis": "Paced source occurrence times and actual monotonic confirmation clock",
+  "matching": "Same class; alert confirmation point falls within verified event interval; zero temporal tolerance. Multiple independently confirmed tracks inside one scene event remain true alerts.",
+  "status": "FAIL",
+  "sed2_active_events_after_cleanup": 0
+}
+2026/10/04 18:44:23 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet

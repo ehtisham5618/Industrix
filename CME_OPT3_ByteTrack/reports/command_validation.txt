@@ -1,0 +1,27 @@
+C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:71: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @api_app.on_event("startup")
+usage: main.py [-h] [--source SOURCE] [--tracker TRACKER]
+               [--persist-frames PERSIST_FRAMES] [--device DEVICE]
+               [--conf CONF] [--output OUTPUT] [--evaluated-fps EVALUATED_FPS]
+               [--debug-tracker]
+
+YOLO + calibrated ByteTRACK + track-aware SED-2 alerts
+
+options:
+  -h, --help            show this help message and exit
+  --source SOURCE       Video path; without it, serve the existing FastAPI API
+  --tracker TRACKER
+  --persist-frames PERSIST_FRAMES
+  --device DEVICE
+  --conf CONF           Detector floor; per-class calibrated thresholds still
+                        apply
+  --output OUTPUT
+  --evaluated-fps EVALUATED_FPS
+  --debug-tracker
+
+Exit code: 0

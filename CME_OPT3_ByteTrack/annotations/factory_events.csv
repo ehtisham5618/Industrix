@@ -1,0 +1,18 @@
+event_id,class_name,start_seconds,end_seconds,notes,verified
+factory-01,no helmet,151.0,154.5,Bare-headed worker at production machinery; manually reviewed source images; onset uncertainty up to 1 second,true
+factory-02,no helmet,159.0,164.8,Bare-headed worker at cotton processing machine; manually reviewed source images,true
+factory-03,no helmet,169.0,177.4,Bare-headed workers handling cotton; manually reviewed source images,true
+factory-04,no helmet,196.0,205.8,Bare-headed worker handling cotton; manually reviewed source images,true
+factory-05,no helmet,209.0,215.8,Workers at carding machine without visible hardhats; manually reviewed source images,true
+factory-06,no helmet,220.5,244.0,Workers moving cotton rolls; cloth caps do not count as hardhats; manually reviewed source images,true
+factory-07,no helmet,244.3,265.0,Workers at carding machinery without visible hardhats; manually reviewed source images,true
+factory-08,no helmet,294.0,319.3,Bare-headed worker at spinning machinery; manually reviewed source images,true
+factory-09,no helmet,334.0,349.0,Workers at spinning machinery without visible hardhats; manually reviewed source images,true
+factory-10,no helmet,353.5,394.5,Workers at spinning machinery without visible hardhats; manually reviewed source images,true
+factory-11,no helmet,414.0,418.8,Worker at weaving machine without visible hardhat; manually reviewed source images,true
+factory-12,no helmet,421.5,455.9,Workers at weaving machinery without visible hardhats; manually reviewed source images,true
+factory-13,no helmet,458.0,464.3,Close view of worker head without helmet at weaving machine; manually reviewed source images,true
+factory-14,no helmet,469.0,483.8,Worker at loom without visible hardhat; manually reviewed source images,true
+factory-15,no helmet,524.0,545.8,Workers at weaving machinery without visible hardhats; manually reviewed source images,true
+factory-16,no helmet,560.0,569.0,Worker at loom without visible hardhat; manually reviewed source images,true
+factory-17,no helmet,573.3,600.0,Workers handling fabric rolls without visible hardhats; manually reviewed source images,true

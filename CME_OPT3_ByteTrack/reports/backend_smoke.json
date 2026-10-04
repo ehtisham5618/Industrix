@@ -1,0 +1,35 @@
+{
+  "source": "Confidence_Calibration/benchmark/media/fire_01_campfire.ogv",
+  "command": "python Backend/main.py --source Confidence_Calibration/benchmark/media/fire_01_campfire.ogv --tracker bytetrack.yaml --persist-frames 15 --device cpu",
+  "evaluated_frames": 95,
+  "formal_alerts": 1,
+  "persistent_ids": [
+    1
+  ],
+  "alerts": [
+    {
+      "class_id": 8,
+      "class_name": "fire",
+      "confidence": 0.7816218733787537,
+      "coordinates": {
+        "x1": 96.3133544921875,
+        "y1": 128.08810424804688,
+        "x2": 355.516357421875,
+        "y2": 479.6473693847656
+      },
+      "threshold": 0.25,
+      "track_id": 1,
+      "camera_id": "video_01",
+      "frame_id": 43,
+      "timestamp": 1.4014,
+      "state": "confirmed",
+      "event_id": "CMEOPT3-72cbfb8fe12a4fc5a03ccc4e0c30ae87",
+      "timestamp_sec": 1.4014,
+      "first_seen": 0.0,
+      "confirmed_at": 1.4014,
+      "persistence_frames": 15
+    }
+  ],
+  "cpu_processing_fps": 2.1305890126822784,
+  "timing_limitation": "CPU throughput cannot sustain the requested 10 FPS; source-media confirmation at 1.4014s does not demonstrate wall-clock 2s on CPU"
+}

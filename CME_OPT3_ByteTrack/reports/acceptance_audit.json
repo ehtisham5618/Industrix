@@ -1,0 +1,20 @@
+{
+  "structural_checks": {
+    "unchanged_selected_detector": true,
+    "executed_sources_match": true,
+    "video_bytes_verified": true,
+    "independent_annotations_verified": true,
+    "all_12_classes": true,
+    "full_10_minute_video": true,
+    "persist_frames_15": true,
+    "paced_wall_clock_timing": true,
+    "sustainable_cadence": true,
+    "state_cleanup": true,
+    "mlflow_logged": true,
+    "related_tests_pass": true
+  },
+  "false_positive_reduction_target": true,
+  "true_event_latency_target_conservative": false,
+  "accepted": false,
+  "limitations": "Historical factory documentary and scene-level visual PPE labels; operational hardhat requirements not established; no other true hazard classes in this segment."
+}

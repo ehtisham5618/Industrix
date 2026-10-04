@@ -1,0 +1,21 @@
+{
+  "pr": {
+    "baseRefName": "feature/atlantis-model-finetune",
+    "headRefName": "feature/atlantis-bytetrack-filter",
+    "isDraft": false,
+    "number": 3,
+    "state": "OPEN",
+    "url": "https://github.com/devlogixtechnology/industirx/pull/3"
+  },
+  "code_commit": "ae32de91570722df382bf2d3af650731f3f46ef1",
+  "gpu_containers_at_completion": [],
+  "configured_idle_seconds": 600,
+  "evidence_commit_message": "CME-OPT3: record factory benchmark and tracking evidence",
+  "independent_peer_approval": "not asserted",
+  "overall_acceptance": "FAIL",
+  "governance_review": {
+    "state": "CHANGES_REQUESTED",
+    "reason": "No independent teammate peer review found",
+    "review_url": "https://github.com/devlogixtechnology/industirx/pull/3#pullrequestreview-5407677845"
+  }
+}

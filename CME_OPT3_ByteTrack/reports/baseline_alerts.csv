@@ -1,0 +1,31 @@
+camera_id,class_name,track_id,event_id,timestamp_sec,confirmation_wall_seconds,persistence_frames,matched_events,false_alert
+factory_01,no helmet,,,44.0,44.007690823000004,,,True
+factory_01,no helmet,,,144.92,144.928049332,,,True
+factory_01,no helmet,,,146.2,146.208753372,,,True
+factory_01,no helmet,,,156.0,156.007759535,,,True
+factory_01,no helmet,,,172.0,172.007914744,,factory-03,False
+factory_01,no helmet,,,173.72,173.727963538,,factory-03,False
+factory_01,no helmet,,,175.52,175.527068081,,factory-03,False
+factory_01,no helmet,,,176.92,176.927449346,,factory-03,False
+factory_01,no helmet,,,213.6,213.60787088200001,,factory-05,False
+factory_01,no helmet,,,225.92,225.927779066,,factory-06,False
+factory_01,no helmet,,,230.32,230.327874221,,factory-06,False
+factory_01,no helmet,,,236.0,236.00771957,,factory-06,False
+factory_01,no helmet,,,240.0,240.00680767,,factory-06,False
+factory_01,no helmet,,,241.0,241.007233795,,factory-06,False
+factory_01,no helmet,,,334.92,334.927103456,,factory-09,False
+factory_01,no helmet,,,365.4,365.40995369599995,,factory-10,False
+factory_01,no helmet,,,369.52,369.52959184499997,,factory-10,False
+factory_01,no helmet,,,376.4,376.408650723,,factory-10,False
+factory_01,water leak,,,410.52,410.532812015,,,True
+factory_01,no helmet,,,431.72,431.728044766,,factory-12,False
+factory_01,no helmet,,,481.4,481.408892816,,factory-14,False
+factory_01,chemical hazard,,,550.12,550.128942133,,,True
+factory_01,chemical hazard,,,553.72,553.728843726,,,True
+factory_01,chemical hazard,,,556.12,556.128102428,,,True
+factory_01,fire,,,571.12,571.128826203,,,True
+factory_01,no helmet,,,577.72,577.729735331,,factory-17,False
+factory_01,no helmet,,,587.2,587.2091092090001,,factory-17,False
+factory_01,no helmet,,,589.92,589.9298080440001,,factory-17,False
+factory_01,no helmet,,,593.52,593.528732527,,factory-17,False
+factory_01,no helmet,,,594.72,594.728006249,,factory-17,False
