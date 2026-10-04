@@ -1,0 +1,12 @@
+{
+  "model": "Backend/best.pt",
+  "model_sha256": "6e64a19d83f09b7b2a92fddf23a5161734295c2a183af08ee1802065bd36995b",
+  "imgsz": 640,
+  "confidence": 0.15,
+  "device": "cpu",
+  "images_measured": 205,
+  "images_with_assigned_target_error": 24,
+  "chemical_images_with_assigned_target_error": 4,
+  "smoke_images_with_assigned_target_error": 20,
+  "note": "Errors measured only after independent visual/source review established target absence. Sources without a prediction remain could-cause visual confusers, not observed errors."
+}

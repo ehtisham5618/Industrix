@@ -1,0 +1,14 @@
+{
+  "model": "Backend\\best.pt",
+  "model_sha256": "6e64a19d83f09b7b2a92fddf23a5161734295c2a183af08ee1802065bd36995b",
+  "model_version": "cme1-expanded-12class-v1",
+  "dataset": "Hazard_Expansion\\content_runtime\\combined_dataset",
+  "images_scanned": 4974,
+  "confidence": 0.15,
+  "imgsz": 320,
+  "near_distance": 4,
+  "deduplicated_candidates": 322,
+  "near_duplicates_rejected": 72,
+  "verified_hard_negatives": 0,
+  "note": "Prediction/annotation disagreement does not prove target absence."
+}

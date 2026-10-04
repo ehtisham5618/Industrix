@@ -1,0 +1,136 @@
+Executed: C:\Python314\python.exe -m unittest discover -s CME_OPT1_Hard_Negative_Augmentation/tests -v
+
+test_end_to_end_labels_splits_manifest_and_reproducibility (test_augmentation.AugmentationTests.test_end_to_end_labels_splits_manifest_and_reproducibility) ... ok
+test_invalid_boxes_and_quality (test_augmentation.AugmentationTests.test_invalid_boxes_and_quality) ... ok
+test_mosaic_geometry_and_minimum_size (test_augmentation.AugmentationTests.test_mosaic_geometry_and_minimum_size) ... ok
+test_overlay_refuses_negative_smoke (test_augmentation.AugmentationTests.test_overlay_refuses_negative_smoke) ... ok
+test_overlay_stays_inside_existing_smoke_box (test_augmentation.AugmentationTests.test_overlay_stays_inside_existing_smoke_box) ... ok
+test_photometric_determinism_and_dimensions (test_augmentation.AugmentationTests.test_photometric_determinism_and_dimensions) ... ok
+test_qualifying_requires_review_and_deduplicates (test_augmentation.AugmentationTests.test_qualifying_requires_review_and_deduplicates) ... ok
+test_split_and_digest_protection (test_augmentation.AugmentationTests.test_split_and_digest_protection) ... ok
+test_validator_rejects_orphan_and_cross_split_duplicates (test_augmentation.AugmentationTests.test_validator_rejects_orphan_and_cross_split_duplicates) ...
+  data.yaml      : FOUND
+  Classes (1)    : ['a']
+
+  -- Split: train (1 images) --
+
+  -- Split: val (1 images) --
+
+  -- Split: test (1 images) --
+
+  -- Cross-split duplicate check --
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 3
+Annotations:            3
+Classes:                1
+
+Train images:          1
+Val images:          1
+Test images:          1
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            PASS
+data.yaml:              PASS
+==================================================
+OVERALL:  PASS
+==================================================
+
+  data.yaml      : FOUND
+  Classes (1)    : ['a']
+
+  -- Split: train (1 images) --
+
+  -- Split: val (1 images) --
+
+  -- Split: test (1 images) --
+
+  -- Cross-split duplicate check --
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 3
+Annotations:            3
+Classes:                1
+
+Train images:          1
+Val images:          1
+Test images:          1
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            FAIL
+data.yaml:              PASS
+==================================================
+OVERALL:  FAIL
+==================================================
+
+Errors (first 20):
+  - ORPHAN_LABEL (no image): orphan.txt
+
+  data.yaml      : FOUND
+  Classes (1)    : ['a']
+
+  -- Split: train (1 images) --
+
+  -- Split: val (1 images) --
+
+  -- Split: test (1 images) --
+
+  -- Cross-split duplicate check --
+    [LEAK] train<->val: a.png
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 3
+Annotations:            3
+Classes:                1
+
+Train images:          1
+Val images:          1
+Test images:          1
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 1
+
+YOLO format:            FAIL
+data.yaml:              PASS
+==================================================
+OVERALL:  FAIL
+==================================================
+
+Errors (first 20):
+  - CROSS_SPLIT_DUPLICATE [train<->val]: C:\Users\ehtis\AppData\Local\Temp\tmpfnk50inf\images\train\a.png
+
+  Scanning train:   0%|          | 0/1 [00:00<?, ?it/s]
+  Scanning train: 100%|██████████| 1/1 [00:00<00:00, 1094.55it/s]
+
+  Scanning val:   0%|          | 0/1 [00:00<?, ?it/s]
+  Scanning val: 100%|██████████| 1/1 [00:00<00:00, 1287.78it/s]
+
+  Scanning test:   0%|          | 0/1 [00:00<?, ?it/s]
+  Scanning test: 100%|██████████| 1/1 [00:00<00:00, 1376.99it/s]
+ok
+test_capture_day_and_filename_series_are_conservative (test_reference_ingestion.ReferenceTests.test_capture_day_and_filename_series_are_conservative) ... ok
+test_own_work_and_homepages_are_not_capture_identifiers (test_reference_ingestion.ReferenceTests.test_own_work_and_homepages_are_not_capture_identifiers) ... ok
+test_review_is_bound_to_bytes_and_all_class_absence (test_reference_ingestion.ReferenceTests.test_review_is_bound_to_bytes_and_all_class_absence) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.154s
+
+OK
+
+Exit code: 0

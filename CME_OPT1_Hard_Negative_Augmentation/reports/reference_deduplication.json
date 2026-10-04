@@ -1,0 +1,46 @@
+{
+  "accepted": 205,
+  "rejected": [
+    {
+      "sample_id": "218a121e8a1dbc8b73d5",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "87cc028291fecab1c52e",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "2fc8b7afefb259c37f8c",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "9310e89a872ed4ef72b2",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "fd212e1fb0ebabdda249",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "e7714b0a3d03629fc7ec",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "954e9ff8376526d35c37",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "239ac030e00f982ae7ed",
+      "reason": "same capture day/author or filename series"
+    },
+    {
+      "sample_id": "577e11c189b2d1c0bc4a",
+      "reason": "same capture day/author or filename series"
+    }
+  ],
+  "perceptual_distance_selected": 6,
+  "perceptual_distance_evaluation": 4,
+  "event_policy": "one capture day per author or one normalized filename series",
+  "all_original_bytes_preserved": true,
+  "evaluation_unchanged": true
+}

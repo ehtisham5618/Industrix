@@ -1,0 +1,91 @@
+"\xEF\xBB\xBFtask": CME-OPT1
+sprint: Sprint 4
+owners:
+- Ehtisham Abid
+- Muhammad Taha Khan
+experiment_type: dataset_augmentation
+model_version: cme1-expanded-12class-v1
+model: Backend/best.pt
+source_dataset: Hazard_Expansion/content_runtime/combined_dataset
+source_dataset_version: combined_dataset.zip
+output_dataset: Hazard_Expansion/content_runtime/combined_dataset_augmented_v3
+output_dataset_version: combined-12class-v3-hardnegative
+reports: CME_OPT1_Hard_Negative_Augmentation/reports
+reviewed_selection: CME_OPT1_Hard_Negative_Augmentation/reports/reviewed_selection_v3.csv
+target_classes:
+- chemical hazard
+- smoke
+target_class_ids:
+- 7
+- 10
+augmentation_seed: 42
+augmentation_count: 300
+mining_confidence: 0.15
+mining_image_size: 320
+mining_device: cpu
+mining_threads: 4
+near_hash_distance: 4
+strategies:
+- color_jitter
+- hsv
+- chemical_sheen
+- mosaic
+- smoke_overlay
+parameters:
+  color_jitter:
+    brightness_delta:
+    - -18
+    - 18
+    contrast_multiplier:
+    - 0.85
+    - 1.15
+    saturation_multiplier:
+    - 0.85
+    - 1.15
+    hue_delta_opencv:
+    - -3
+    - 3
+  hsv:
+    hue_delta_opencv:
+    - -5
+    - 5
+    saturation_multiplier:
+    - 0.75
+    - 1.15
+    value_multiplier:
+    - 0.85
+    - 1.15
+  chemical_sheen:
+    peak_intensity_delta:
+    - 8
+    - 24
+    band_center_relative_y:
+    - 0.45
+    - 0.85
+    ir_like_gray_mix: 0.65
+  mosaic:
+    output_size: 640
+    min_box_pixels: 2
+    sources: train_only_reviewed_selection
+  smoke_overlay:
+    max_opacity_range:
+    - 0.12
+    - 0.28
+    region: existing_real_smoke_annotation_only
+verified_target_count: 238
+validation_status: PASS
+completion_status: technical_acceptance_pass_peer_review_pending
+count_policy: unique_verified_real_negative_source_hashes_used_in_output; observed
+  errors and could-cause visual confusers; positives and derivatives excluded
+augmentation_source_dataset: Hazard_Expansion/content_runtime/combined_dataset_reviewed_v3_final
+observed_negative_count: 28
+verified_visual_confuser_count: 210
+new_real_reference_count: 205
+supplemental_mining:
+  confidence: 0.1
+  imgsz: 640
+  images_scanned: 4974
+reference_detector_check:
+  confidence: 0.15
+  imgsz: 640
+  images_scanned: 205

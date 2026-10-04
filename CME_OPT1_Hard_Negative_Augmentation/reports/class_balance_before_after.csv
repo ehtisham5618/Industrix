@@ -1,0 +1,13 @@
+class_id,class,train_before,added,train_after,val,test
+0,baekra,490,0,490,79,24
+1,color issues,464,0,464,30,21
+2,contamination,338,0,338,55,17
+3,cut,692,0,692,102,47
+4,gray stitch,666,0,666,87,48
+5,selvet,841,0,841,121,58
+6,stain,1925,72,1997,312,153
+7,chemical hazard,340,154,494,53,4
+8,fire,501,0,501,92,22
+9,no helmet,860,9,869,216,45
+10,smoke,901,113,1014,154,51
+11,water leak,150,4,154,33,8

@@ -1,0 +1,57 @@
+Validating dataset: C:\Users\ehtis\Desktop\Textile Defect Detection\Hazard_Expansion\content_runtime\combined_dataset
+WARNING: stale data.yaml path; validating explicitly supplied dataset root
+
+  data.yaml      : FOUND
+  Classes (12)    : ['baekra', 'color issues', 'contamination', 'cut', 'gray stitch', 'selvet', 'stain', 'chemical hazard', 'fire', 'no helmet', 'smoke', 'water leak']
+
+  ── Split: train (4974 images) ──
+
+  ── Split: val (777 images) ──
+
+  ── Split: test (334 images) ──
+
+  ── Cross-split duplicate check ──
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 6085
+Annotations:            10000
+Classes:                12
+
+Train images:          4974
+Val images:          777
+Test images:          334
+
+Corrupted images:       0
+Invalid labels:         252
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            FAIL
+data.yaml:              PASS
+==================================================
+OVERALL: ❌ FAIL
+==================================================
+
+Errors (first 20):
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard142_jpg.rf.90b6ee890b8af26978546fc11f188f95.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard172_jpg.rf.fdf69c6aa8d73a4eb3e721a483c91567.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard188_jpg.rf.8248cb6ab0d8abdb2e6edd47e8b2a10d.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard229_jpg.rf.50ad18278e254d94f514fed1ee4c5732.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard240_jpg.rf.2f87522305311dcfca99c28870192a6e.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard241_jpg.rf.45d4fae6464b0ff4f126f22ff1ba2b5a.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard247_jpg.rf.274701274ee3cb9868bcc436ad3dbfaf.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard270_jpg.rf.0c5313fbe86e0a0b66c942472132c4cc.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard270_jpg.rf.0c5313fbe86e0a0b66c942472132c4cc.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard278_jpg.rf.9a471183e466926bc4a7cfd25da88095.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard286_jpg.rf.81034445f2ff3c6af889de2362149837.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard292_jpg.rf.a363fbdcd094fa3578552fb5d49a165a.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard301_jpg.rf.dcfce149fe226178be1f6f73bdba5c64.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard301_jpg.rf.dcfce149fe226178be1f6f73bdba5c64.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard308_jpg.rf.8f855ce8b20f88bcc71c6d71ccee59df.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard338_jpg.rf.91cd6d3fd9a79b25b0b56bb249ed38f1.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard352_jpg.rf.76455d1367e5585f3a2d2440bdeeb98e.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard35_jpg.rf.df2270a504c661066258e853ef51afde.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard39_jpg.rf.db0b6ce4d4e9b49763b82d1ce23b1815.txt
+  • INVALID_LABEL [Box extends outside image]: hazard_Chimney_smoke_smokehazard68_jpg.rf.f81f27e7947b6c41251b27ab1e27168f.txt

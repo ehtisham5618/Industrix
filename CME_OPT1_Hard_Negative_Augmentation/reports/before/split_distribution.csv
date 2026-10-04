@@ -1,0 +1,4 @@
+split,image_count,annotation_count
+train,4974,8168
+val,777,1334
+test,334,498

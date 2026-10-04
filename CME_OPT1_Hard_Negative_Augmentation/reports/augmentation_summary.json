@@ -1,0 +1,20 @@
+{
+  "version": "combined-12class-v3-hardnegative",
+  "source_version": "combined_dataset.zip",
+  "seed": 42,
+  "source_dataset": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\Hazard_Expansion\\content_runtime\\combined_dataset_reviewed_v3_final",
+  "output_dataset": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\Hazard_Expansion\\content_runtime\\combined_dataset_augmented_v3",
+  "added_images": 300,
+  "verified_chemical_examples": 142,
+  "verified_smoke_examples": 96,
+  "verified_potential_confuser_images": 234,
+  "hard_positive_images": 50,
+  "verified_combined_qualifying_examples": 238,
+  "requirement_150": "PASS",
+  "verified_observed_negative_images": 4,
+  "verified_potential_negative_images": 234,
+  "count_definition": "Unique reviewed real negative source image hashes used in train augmentation: observed errors and verified visual confusers under task section 13 (causes or could cause); derivatives and positives excluded",
+  "evaluation_unchanged": true,
+  "source_preserved": true,
+  "validation_status": "PASS"
+}

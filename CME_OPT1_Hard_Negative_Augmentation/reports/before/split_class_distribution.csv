@@ -1,0 +1,37 @@
+split,class_id,class_name,annotation_count,image_count
+train,0,baekra,490,350
+train,1,color issues,464,172
+train,2,contamination,338,296
+train,3,cut,692,544
+train,4,gray stitch,666,460
+train,5,selvet,841,436
+train,6,stain,1925,1329
+train,7,chemical hazard,340,156
+train,8,fire,501,262
+train,9,no helmet,860,283
+train,10,smoke,901,411
+train,11,water leak,150,112
+val,0,baekra,79,48
+val,1,color issues,30,15
+val,2,contamination,55,53
+val,3,cut,102,75
+val,4,gray stitch,87,63
+val,5,selvet,121,64
+val,6,stain,312,208
+val,7,chemical hazard,53,34
+val,8,fire,92,52
+val,9,no helmet,216,55
+val,10,smoke,154,81
+val,11,water leak,33,24
+test,0,baekra,24,17
+test,1,color issues,21,14
+test,2,contamination,17,14
+test,3,cut,47,41
+test,4,gray stitch,48,33
+test,5,selvet,58,30
+test,6,stain,153,112
+test,7,chemical hazard,4,4
+test,8,fire,22,13
+test,9,no helmet,45,11
+test,10,smoke,51,26
+test,11,water leak,8,7

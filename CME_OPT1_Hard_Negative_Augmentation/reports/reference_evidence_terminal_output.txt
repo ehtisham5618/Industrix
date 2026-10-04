@@ -1,0 +1,5 @@
+Executed: C:\Python314\python.exe CME_OPT1_Hard_Negative_Augmentation/scripts/build_reference_evidence.py
+
+{"reviewed_reference_photos": 205, "contact_sheets": 11, "attribution_in_source_and_output": true, "independent_source_count_excludes_derivatives": true}
+
+Exit code: 0

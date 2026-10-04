@@ -1,0 +1,72 @@
+Executed: C:\Python314\python.exe CME_OPT1_Hard_Negative_Augmentation/scripts/build_report.py --source Hazard_Expansion/content_runtime/combined_dataset_reviewed_v3_final --dataset Hazard_Expansion/content_runtime/combined_dataset_augmented_v3 --selection CME_OPT1_Hard_Negative_Augmentation/reports/reviewed_selection_v3.csv
+
+{
+  "source_version": "combined_dataset.zip",
+  "output_version": "combined-12class-v3-hardnegative",
+  "seed": 42,
+  "source_dataset": "Hazard_Expansion\\content_runtime\\combined_dataset_reviewed_v3_final",
+  "output_dataset": "Hazard_Expansion\\content_runtime\\combined_dataset_augmented_v3",
+  "before_images": {
+    "train": 4974,
+    "val": 777,
+    "test": 334
+  },
+  "after_images": {
+    "train": 5479,
+    "val": 777,
+    "test": 334
+  },
+  "augmentation_counts": {
+    "mosaic": 89,
+    "color_jitter": 79,
+    "hsv": 80,
+    "chemical_sheen": 40,
+    "smoke_overlay": 12
+  },
+  "target_breakdown": {
+    "chemical hazard": {
+      "observed_verified_hard_negative_images": 0,
+      "observed_after_640_reference_check": 4,
+      "potential_confuser_images": 142,
+      "hard_positive_images": 25,
+      "augmented_real_images": 134,
+      "mosaics": 41,
+      "synthetic_overlays": 0
+    },
+    "smoke": {
+      "observed_verified_hard_negative_images": 4,
+      "observed_after_640_reference_check": 24,
+      "potential_confuser_images": 92,
+      "hard_positive_images": 25,
+      "augmented_real_images": 65,
+      "mosaics": 48,
+      "synthetic_overlays": 12
+    }
+  },
+  "chemical_qualifying_examples": 142,
+  "smoke_qualifying_examples": 96,
+  "combined_qualifying_examples": 238,
+  "requirement_150": "PASS",
+  "count_definition": "Unique reviewed real negative source image hashes used in train augmentation: observed errors and verified visual confusers under task section 13 (causes or could cause); derivatives and positives excluded",
+  "dataset_validation": "PASS",
+  "all_12_classes_represented_in_each_split": true,
+  "overall": "PASS",
+  "hard_negative_images": 238,
+  "hard_negative_regions": 238,
+  "hard_positive_images": 50,
+  "hard_positive_annotations": 132,
+  "augmented_positive_annotations": 267,
+  "observed_negative_images": 28,
+  "verified_visual_confuser_images": 210,
+  "new_real_reference_images": 205,
+  "limitations": [
+    "Observed detector errors and verified could-cause visual confusers are reported separately; count follows task section 13, and excludes positives/derivatives.",
+    "Initial mining used 320 pixels; additional full-source 640-pixel mining and reference measurements screen failures, not deployment accuracy.",
+    "Some unmatched smoke predictions overlap visible unlabelled smoke; excluded from negative selection.",
+    "Licensed outdoor references are supplemental negatives; domain transfer to textile factories is unproven.",
+    "Verification was performed by Codex visual review, not by a human peer reviewer.",
+    "No proof of model accuracy improvement without follow-up retraining/evaluation."
+  ]
+}
+
+Exit code: 0

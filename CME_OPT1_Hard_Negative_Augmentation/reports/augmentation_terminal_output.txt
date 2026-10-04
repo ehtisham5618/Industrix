@@ -1,0 +1,90 @@
+Executed: C:\Python314\python.exe Preprocessing/scripts/augment_hard_negatives.py --dataset Hazard_Expansion/content_runtime/combined_dataset_reviewed_v3_final --output Hazard_Expansion/content_runtime/combined_dataset_augmented_v3 --manifest CME_OPT1_Hard_Negative_Augmentation/reports/reviewed_selection_v3.csv --reports CME_OPT1_Hard_Negative_Augmentation/reports --seed 42 --count 300 --version combined-12class-v3-hardnegative
+
+
+  data.yaml      : FOUND
+  Classes (12)    : ['baekra', 'color issues', 'contamination', 'cut', 'gray stitch', 'selvet', 'stain', 'chemical hazard', 'fire', 'no helmet', 'smoke', 'water leak']
+
+  -- Split: train (5179 images) --
+
+  -- Split: val (777 images) --
+
+  -- Split: test (334 images) --
+
+  -- Cross-split duplicate check --
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 6290
+Annotations:            10000
+Classes:                12
+
+Train images:          5179
+Val images:          777
+Test images:          334
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            PASS
+data.yaml:              PASS
+==================================================
+OVERALL:  PASS
+==================================================
+
+  data.yaml      : FOUND
+  Classes (12)    : ['baekra', 'color issues', 'contamination', 'cut', 'gray stitch', 'selvet', 'stain', 'chemical hazard', 'fire', 'no helmet', 'smoke', 'water leak']
+
+  -- Split: train (5479 images) --
+
+  -- Split: val (777 images) --
+
+  -- Split: test (334 images) --
+
+  -- Cross-split duplicate check --
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 6590
+Annotations:            10352
+Classes:                12
+
+Train images:          5479
+Val images:          777
+Test images:          334
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            PASS
+data.yaml:              PASS
+==================================================
+OVERALL:  PASS
+==================================================
+{
+  "version": "combined-12class-v3-hardnegative",
+  "source_version": "combined_dataset.zip",
+  "seed": 42,
+  "source_dataset": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\Hazard_Expansion\\content_runtime\\combined_dataset_reviewed_v3_final",
+  "output_dataset": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\Hazard_Expansion\\content_runtime\\combined_dataset_augmented_v3",
+  "added_images": 300,
+  "verified_chemical_examples": 142,
+  "verified_smoke_examples": 96,
+  "verified_potential_confuser_images": 234,
+  "hard_positive_images": 50,
+  "verified_combined_qualifying_examples": 238,
+  "requirement_150": "PASS",
+  "verified_observed_negative_images": 4,
+  "verified_potential_negative_images": 234,
+  "count_definition": "Unique reviewed real negative source image hashes used in train augmentation: observed errors and verified visual confusers under task section 13 (causes or could cause); derivatives and positives excluded",
+  "evaluation_unchanged": true,
+  "source_preserved": true,
+  "validation_status": "PASS"
+}
+
+Exit code: 0

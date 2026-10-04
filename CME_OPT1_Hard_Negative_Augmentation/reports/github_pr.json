@@ -1,0 +1,8 @@
+{
+  "baseRefName": "staging",
+  "headRefName": "feature/atlantis-dataset-augmentation",
+  "isDraft": true,
+  "state": "OPEN",
+  "title": "CME-OPT1: targeted chemical and smoke dataset augmentation",
+  "url": "https://github.com/devlogixtechnology/industirx/pull/1"
+}

@@ -1,0 +1,38 @@
+Executed: C:\Python314\python.exe Preprocessing/scripts/validate_yolo_dataset.py --dataset Hazard_Expansion/content_runtime/combined_dataset_augmented_v3 --report CME_OPT1_Hard_Negative_Augmentation/reports/after/validation.json
+
+Validating dataset: C:\Users\ehtis\Desktop\Textile Defect Detection\Hazard_Expansion\content_runtime\combined_dataset_augmented_v3
+
+  data.yaml      : FOUND
+  Classes (12)    : ['baekra', 'color issues', 'contamination', 'cut', 'gray stitch', 'selvet', 'stain', 'chemical hazard', 'fire', 'no helmet', 'smoke', 'water leak']
+
+  -- Split: train (5479 images) --
+
+  -- Split: val (777 images) --
+
+  -- Split: test (334 images) --
+
+  -- Cross-split duplicate check --
+
+==================================================
+FINAL DATASET VALIDATION
+==================================================
+Images:                 6590
+Annotations:            10352
+Classes:                12
+
+Train images:          5479
+Val images:          777
+Test images:          334
+
+Corrupted images:       0
+Invalid labels:         0
+Missing labels:         0
+Cross-split duplicates: 0
+
+YOLO format:            PASS
+data.yaml:              PASS
+==================================================
+OVERALL:  PASS
+==================================================
+
+Exit code: 0

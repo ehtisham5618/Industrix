@@ -1,0 +1,15 @@
+{
+  "evaluation_bytes_unchanged": true,
+  "all_original_image_label_bytes_retained": true,
+  "original_combined_dataset_bytes_retained": true,
+  "photometric_label_bytes_unchanged": true,
+  "all_sources_train_and_hash_verified": true,
+  "all_output_hashes_verified": true,
+  "no_augmented_source_evaluation_family_overlap": true,
+  "known_original_filename_family_cross_split_overlap": {
+    "train-val": 335,
+    "train-test": 188,
+    "val-test": 106
+  },
+  "note": "Filename families cover known _aug and Roboflow derivatives, not unknown renamed derivatives."
+}
