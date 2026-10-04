@@ -1,0 +1,8 @@
+{
+  "baseline_sha256": "6e64a19d83f09b7b2a92fddf23a5161734295c2a183af08ee1802065bd36995b",
+  "archive_sha256": "2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5",
+  "dependency_commit": "2c3353b0a74c5e4537328880ff0617ff8f9214ee",
+  "dataset_version": "combined-12class-v3-hardnegative",
+  "dataset": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\Hazard_Expansion\\content_runtime\\combined_dataset_augmented_v3",
+  "sealed_evaluation_files": 2222
+}

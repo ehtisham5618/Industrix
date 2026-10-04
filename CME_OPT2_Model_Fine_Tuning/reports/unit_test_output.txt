@@ -1,0 +1,10 @@
+...CME-OPT2 idle watchdog: GPU idle continuously for 600 seconds; stopping worker.
+.CME-OPT2 idle watchdog: GPU idle continuously for 600 seconds; stopping worker.
+.Overriding model.yaml nc=80 with nc=12
+.
+----------------------------------------------------------------------
+Ran 6 tests in 0.822s
+
+OK
+
+Exit code: 0

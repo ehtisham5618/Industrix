@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5",
+  "sealed_evaluation_files": 2222,
+  "all_evaluation_hashes_match": true,
+  "dataset_yaml": "/tmp/cme_opt2_data/dataset/data.yaml",
+  "train_images": 5479,
+  "val_images": 777,
+  "test_images": 334
+}

@@ -1,0 +1,42 @@
+{
+  "registered_version": "cme1-expanded-12class-v1",
+  "checkpoint_sha256": "6e64a19d83f09b7b2a92fddf23a5161734295c2a183af08ee1802065bd36995b",
+  "date": "2026-09-10T00:51:55.526983+05:00",
+  "ultralytics_training_version": "8.4.131",
+  "training_args": {
+    "model": "/home/talha/Downloads/expanded_training_20260909_2302/content_runtime/runs/expanded_12class_phase2/weights/last.pt",
+    "data": "/home/talha/Downloads/expanded_training_20260909_2302/content_runtime/combined_dataset_from_zip/combined_dataset/data.yaml",
+    "epochs": 60,
+    "optimizer": "SGD",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "batch": 5,
+    "imgsz": 640,
+    "name": "expanded_12class_phase2",
+    "patience": 15
+  },
+  "checkpoint_training_metrics": {
+    "metrics/precision(B)": 0.81243,
+    "metrics/recall(B)": 0.70664,
+    "metrics/mAP50(B)": 0.76605,
+    "metrics/mAP50-95(B)": 0.44003,
+    "val/box_loss": 1.4345,
+    "val/cls_loss": 0.92253,
+    "val/dfl_loss": 1.53513,
+    "fitness": 0.44003
+  },
+  "names": {
+    "0": "baekra",
+    "1": "color issues",
+    "2": "contamination",
+    "3": "cut",
+    "4": "gray stitch",
+    "5": "selvet",
+    "6": "stain",
+    "7": "chemical hazard",
+    "8": "fire",
+    "9": "no helmet",
+    "10": "smoke",
+    "11": "water leak"
+  }
+}

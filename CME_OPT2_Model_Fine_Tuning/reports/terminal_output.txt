@@ -1,0 +1,293 @@
+CME-OPT2 actual terminal excerpts. Full logs persist on Modal industirx-cme-opt2:/reports.
+Batch progress bars omitted; epoch/loss/LR records and final class metrics retained.
+
+=== smoke: smoke_terminal.txt ===
+DATASET /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/dataset chemical=7 smoke=10 evaluation bytes verified
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10G, 22587MiB)
+Model summary: 130 layers, 11,140,244 parameters, 11,140,228 gradients, 28.7 GFLOPs
+Transferred 349/355 items from pretrained weights
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+optimizer: SGD(lr=0.01, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+CME-OPT2 classification focal loss ACTIVE: gamma=1.5 alpha=0.25; box/DFL unchanged
+all        777       1334    0.00472     0.0271    0.00279    0.00117
+CME-OPT2 EPOCH {'epoch': 1, 'lr_pg0': np.float64(0.00030000000000000003), 'lr_pg1': np.float64(0.00030000000000000003), 'lr_pg2': np.float64(0.09730000000000001)} LOSSES [2.012331962585449, 0.7313762307167053, 2.165832042694092]
+1 epochs completed in 0.003 hours.
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/smoke/weights/last.pt, 22.5MB
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/smoke/weights/best.pt, 22.5MB
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10G, 22587MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334    0.00473     0.0271    0.00278    0.00117
+baekra         48         79     0.0213     0.0759     0.0166    0.00731
+color issues         15         30    0.00928        0.1    0.00252    0.00109
+contamination         53         55          0          0    0.00192    0.00069
+cut         75        102          0          0   0.000506   0.000185
+gray stitch         63         87    0.00811     0.0115    0.00444    0.00219
+selvet         64        121          0          0    0.00113   0.000259
+stain        208        312    0.00942    0.00321    0.00227   0.000657
+chemical hazard         34         53          0          0   0.000147   6.83e-05
+fire         52         92    0.00293     0.0435    0.00132   0.000525
+no helmet         55        216          0          0    0.00012    1.2e-05
+smoke         81        154          0          0          0          0
+water leak         24         33    0.00576     0.0909    0.00244    0.00109
+
+=== train: train_terminal.txt ===
+DATASET /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/dataset chemical=7 smoke=10 evaluation bytes verified
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary: 130 layers, 11,140,244 parameters, 11,140,228 gradients, 28.7 GFLOPs
+Transferred 349/355 items from pretrained weights
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+optimizer: SGD(lr=0.01, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+CME-OPT2 classification focal loss ACTIVE: gamma=1.5 alpha=0.25; box/DFL unchanged
+all        777       1334      0.214      0.211      0.137     0.0646
+CME-OPT2 EPOCH {'epoch': 1, 'lr_pg0': np.float64(0.0033236151603498543), 'lr_pg1': np.float64(0.0033236151603498543), 'lr_pg2': np.float64(0.0700874635568513)} LOSSES [1.9324620962142944, 0.5083244442939758, 1.9959759712219238]
+all        777       1334      0.148      0.167      0.114     0.0513
+CME-OPT2 EPOCH {'epoch': 2, 'lr_pg0': np.float64(0.006650387078058274), 'lr_pg1': np.float64(0.006650387078058274), 'lr_pg2': np.float64(0.04008090214122641)} LOSSES [1.777803659439087, 0.3366590440273285, 1.8813966512680054]
+all        777       1334      0.586     0.0842     0.0681     0.0287
+CME-OPT2 EPOCH {'epoch': 3, 'lr_pg0': np.float64(0.009950933037115315), 'lr_pg1': np.float64(0.009950933037115315), 'lr_pg2': np.float64(0.010048114766950111)} LOSSES [1.8999826908111572, 0.33965691924095154, 2.0644686222076416]
+all        777       1334      0.495      0.065     0.0354     0.0115
+CME-OPT2 EPOCH {'epoch': 4, 'lr_pg0': np.float64(0.0099115248173898), 'lr_pg1': np.float64(0.0099115248173898), 'lr_pg2': np.float64(0.0099115248173898)} LOSSES [1.9885075092315674, 0.35254308581352234, 2.2355265617370605]
+all        777       1334      0.426     0.0879     0.0495     0.0208
+CME-OPT2 EPOCH {'epoch': 5, 'lr_pg0': 0.009843072889837512, 'lr_pg1': 0.009843072889837512, 'lr_pg2': 0.009843072889837512} LOSSES [1.9325674772262573, 0.35942307114601135, 2.25510835647583]
+all        777       1334      0.712     0.0983     0.0781     0.0327
+CME-OPT2 EPOCH {'epoch': 6, 'lr_pg0': 0.009755527298894293, 'lr_pg1': 0.009755527298894293, 'lr_pg2': 0.009755527298894293} LOSSES [1.8739688396453857, 0.3579883575439453, 2.2153871059417725]
+all        777       1334      0.646     0.0806      0.097     0.0403
+CME-OPT2 EPOCH {'epoch': 7, 'lr_pg0': 0.009649233547011816, 'lr_pg1': 0.009649233547011816, 'lr_pg2': 0.009649233547011816} LOSSES [1.8065463304519653, 0.36007630825042725, 2.1944222450256348]
+all        777       1334      0.527      0.115      0.109     0.0481
+CME-OPT2 EPOCH {'epoch': 8, 'lr_pg0': 0.009524611127067768, 'lr_pg1': 0.009524611127067768, 'lr_pg2': 0.009524611127067768} LOSSES [1.7578152418136597, 0.3571853041648865, 2.153323173522949]
+all        777       1334      0.561      0.143      0.124     0.0536
+CME-OPT2 EPOCH {'epoch': 9, 'lr_pg0': 0.0093821518668191, 'lr_pg1': 0.0093821518668191, 'lr_pg2': 0.0093821518668191} LOSSES [1.709439754486084, 0.3539579510688782, 2.107414960861206]
+all        777       1334      0.287      0.168      0.134     0.0611
+CME-OPT2 EPOCH {'epoch': 10, 'lr_pg0': 0.009222417987882566, 'lr_pg1': 0.009222417987882566, 'lr_pg2': 0.009222417987882566} LOSSES [1.676856279373169, 0.3510147035121918, 2.067638635635376]
+all        777       1334       0.41      0.187      0.151       0.07
+CME-OPT2 EPOCH {'epoch': 11, 'lr_pg0': 0.009046039886902862, 'lr_pg1': 0.009046039886902862, 'lr_pg2': 0.009046039886902862} LOSSES [1.6382018327713013, 0.35010281205177307, 2.0495193004608154]
+all        777       1334      0.452      0.174      0.164      0.077
+CME-OPT2 EPOCH {'epoch': 12, 'lr_pg0': 0.008853713647665067, 'lr_pg1': 0.008853713647665067, 'lr_pg2': 0.008853713647665067} LOSSES [1.6137523651123047, 0.3493088185787201, 2.0219902992248535]
+all        777       1334      0.235      0.204      0.138     0.0646
+CME-OPT2 EPOCH {'epoch': 13, 'lr_pg0': 0.008646198293969952, 'lr_pg1': 0.008646198293969952, 'lr_pg2': 0.008646198293969952} LOSSES [1.5833128690719604, 0.3475176692008972, 1.9920884370803833]
+all        777       1334      0.418      0.205      0.151     0.0686
+CME-OPT2 EPOCH {'epoch': 14, 'lr_pg0': 0.0084243127941138, 'lr_pg1': 0.0084243127941138, 'lr_pg2': 0.0084243127941138} LOSSES [1.5572385787963867, 0.34694910049438477, 1.98173189163208]
+all        777       1334      0.408      0.172      0.173     0.0846
+CME-OPT2 EPOCH {'epoch': 15, 'lr_pg0': 0.008188932828794706, 'lr_pg1': 0.008188932828794706, 'lr_pg2': 0.008188932828794706} LOSSES [1.5357227325439453, 0.34302109479904175, 1.9536781311035156]
+all        777       1334      0.347      0.212      0.187      0.093
+CME-OPT2 EPOCH {'epoch': 16, 'lr_pg0': 0.007940987335200904, 'lr_pg1': 0.007940987335200904, 'lr_pg2': 0.007940987335200904} LOSSES [1.500744342803955, 0.3413349390029907, 1.93367600440979]
+all        777       1334      0.292      0.217      0.172     0.0862
+CME-OPT2 EPOCH {'epoch': 17, 'lr_pg0': 0.007681454840920088, 'lr_pg1': 0.007681454840920088, 'lr_pg2': 0.007681454840920088} LOSSES [1.4905139207839966, 0.3372780978679657, 1.909574031829834]
+all        777       1334      0.302      0.248       0.22      0.116
+CME-OPT2 EPOCH {'epoch': 18, 'lr_pg0': 0.007411359602138068, 'lr_pg1': 0.007411359602138068, 'lr_pg2': 0.007411359602138068} LOSSES [1.4790822267532349, 0.3349902033805847, 1.8980834484100342]
+
+=== resume: resume_terminal.txt ===
+DATASET /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/dataset chemical=7 smoke=10 evaluation bytes verified
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary: 130 layers, 11,140,244 parameters, 11,140,228 gradients, 28.7 GFLOPs
+Transferred 355/355 items from pretrained weights
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+optimizer: SGD(lr=0.01, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Resuming training /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_yolov8s_focal_cosine/weights/last.pt from epoch 20 to 50 total epochs
+CME-OPT2 classification focal loss ACTIVE: gamma=1.5 alpha=0.25; box/DFL unchanged
+all        777       1334      0.401      0.255      0.231      0.119
+CME-OPT2-A RESUMED EPOCH {'epoch': 20, 'lr_pg0': 0.006843782140659968, 'lr_pg1': 0.006843782140659968, 'lr_pg2': 0.006843782140659968} LOSSES [1.416132926940918, 0.32930904626846313, 1.8512892723083496]
+all        777       1334      0.343      0.275      0.251      0.134
+CME-OPT2-A RESUMED EPOCH {'epoch': 21, 'lr_pg0': 0.006548539886902863, 'lr_pg1': 0.006548539886902863, 'lr_pg2': 0.006548539886902863} LOSSES [1.4013725519180298, 0.32856497168540955, 1.8371800184249878]
+all        777       1334      0.402      0.278       0.28      0.147
+CME-OPT2-A RESUMED EPOCH {'epoch': 22, 'lr_pg0': 0.006247205986388449, 'lr_pg1': 0.006247205986388449, 'lr_pg2': 0.006247205986388449} LOSSES [1.390913486480713, 0.324129194021225, 1.8193217515945435]
+all        777       1334       0.33      0.294      0.268      0.142
+CME-OPT2-A RESUMED EPOCH {'epoch': 23, 'lr_pg0': 0.005940969666355695, 'lr_pg1': 0.005940969666355695, 'lr_pg2': 0.005940969666355695} LOSSES [1.3650400638580322, 0.32317468523979187, 1.783227562904358]
+all        777       1334      0.378      0.307      0.294      0.156
+CME-OPT2-A RESUMED EPOCH {'epoch': 24, 'lr_pg0': 0.005631039501653701, 'lr_pg1': 0.005631039501653701, 'lr_pg2': 0.005631039501653701} LOSSES [1.3486689329147339, 0.3228587508201599, 1.7742139101028442]
+all        777       1334      0.474      0.297      0.292      0.157
+CME-OPT2-A RESUMED EPOCH {'epoch': 25, 'lr_pg0': 0.005318638645048921, 'lr_pg1': 0.005318638645048921, 'lr_pg2': 0.005318638645048921} LOSSES [1.3255738019943237, 0.3173177242279053, 1.756058931350708]
+all        777       1334      0.361      0.321      0.295      0.158
+CME-OPT2-A RESUMED EPOCH {'epoch': 26, 'lr_pg0': 0.005005000000000001, 'lr_pg1': 0.005005000000000001, 'lr_pg2': 0.005005000000000001} LOSSES [1.3246660232543945, 0.31629765033721924, 1.7543764114379883]
+all        777       1334      0.456      0.307      0.303      0.167
+CME-OPT2-A RESUMED EPOCH {'epoch': 27, 'lr_pg0': 0.00469136135495108, 'lr_pg1': 0.00469136135495108, 'lr_pg2': 0.00469136135495108} LOSSES [1.2989031076431274, 0.3107816278934479, 1.731361746788025]
+all        777       1334      0.344      0.318      0.309      0.166
+CME-OPT2-A RESUMED EPOCH {'epoch': 28, 'lr_pg0': 0.0043789604983463, 'lr_pg1': 0.0043789604983463, 'lr_pg2': 0.0043789604983463} LOSSES [1.2799856662750244, 0.3096417784690857, 1.7079980373382568]
+all        777       1334      0.392      0.326      0.343      0.186
+CME-OPT2-A RESUMED EPOCH {'epoch': 29, 'lr_pg0': 0.004069030333644306, 'lr_pg1': 0.004069030333644306, 'lr_pg2': 0.004069030333644306} LOSSES [1.2705821990966797, 0.30515652894973755, 1.6946605443954468]
+all        777       1334       0.42      0.346      0.342      0.186
+CME-OPT2-A RESUMED EPOCH {'epoch': 30, 'lr_pg0': 0.00376279401361155, 'lr_pg1': 0.00376279401361155, 'lr_pg2': 0.00376279401361155} LOSSES [1.2423323392868042, 0.30400216579437256, 1.6799986362457275]
+all        777       1334      0.503      0.343      0.347      0.193
+CME-OPT2-A RESUMED EPOCH {'epoch': 31, 'lr_pg0': 0.00346146011309714, 'lr_pg1': 0.00346146011309714, 'lr_pg2': 0.00346146011309714} LOSSES [1.2346162796020508, 0.3011317849159241, 1.6684813499450684]
+all        777       1334      0.459      0.332      0.365      0.204
+CME-OPT2-A RESUMED EPOCH {'epoch': 32, 'lr_pg0': 0.0031662178593400347, 'lr_pg1': 0.0031662178593400347, 'lr_pg2': 0.0031662178593400347} LOSSES [1.2138392925262451, 0.2977624535560608, 1.637141227722168]
+all        777       1334      0.493      0.372      0.388      0.214
+CME-OPT2-A RESUMED EPOCH {'epoch': 33, 'lr_pg0': 0.002878232438632462, 'lr_pg1': 0.002878232438632462, 'lr_pg2': 0.002878232438632462} LOSSES [1.201119303703308, 0.29596033692359924, 1.63483726978302]
+all        777       1334      0.551      0.358      0.408      0.223
+CME-OPT2-A RESUMED EPOCH {'epoch': 34, 'lr_pg0': 0.002598640397861931, 'lr_pg1': 0.002598640397861931, 'lr_pg2': 0.002598640397861931} LOSSES [1.1834818124771118, 0.2910548150539398, 1.6130764484405518]
+all        777       1334      0.473      0.377      0.396      0.224
+CME-OPT2-A RESUMED EPOCH {'epoch': 35, 'lr_pg0': 0.00232854515907991, 'lr_pg1': 0.00232854515907991, 'lr_pg2': 0.00232854515907991} LOSSES [1.15916907787323, 0.28981515765190125, 1.5999596118927002]
+all        777       1334      0.497      0.389      0.409      0.225
+CME-OPT2-A RESUMED EPOCH {'epoch': 36, 'lr_pg0': 0.002069012664799098, 'lr_pg1': 0.002069012664799098, 'lr_pg2': 0.002069012664799098} LOSSES [1.1531404256820679, 0.28535351157188416, 1.5846017599105835]
+all        777       1334      0.522      0.392      0.424      0.243
+CME-OPT2-A RESUMED EPOCH {'epoch': 37, 'lr_pg0': 0.0018210671712052952, 'lr_pg1': 0.0018210671712052952, 'lr_pg2': 0.0018210671712052952} LOSSES [1.1420495510101318, 0.2839387059211731, 1.5809916257858276]
+all        777       1334      0.553      0.406      0.436      0.249
+CME-OPT2-A RESUMED EPOCH {'epoch': 38, 'lr_pg0': 0.0015856872058861993, 'lr_pg1': 0.0015856872058861993, 'lr_pg2': 0.0015856872058861993} LOSSES [1.124877691268921, 0.28344258666038513, 1.565838098526001]
+all        777       1334      0.483      0.397      0.434      0.249
+CME-OPT2-A RESUMED EPOCH {'epoch': 39, 'lr_pg0': 0.00136380170603005, 'lr_pg1': 0.00136380170603005, 'lr_pg2': 0.00136380170603005} LOSSES [1.131163239479065, 0.28085553646087646, 1.5697468519210815]
+all        777       1334      0.535       0.43      0.449      0.259
+CME-OPT2-A RESUMED EPOCH {'epoch': 40, 'lr_pg0': 0.0011562863523349343, 'lr_pg1': 0.0011562863523349343, 'lr_pg2': 0.0011562863523349343} LOSSES [1.11881685256958, 0.2779194712638855, 1.5531119108200073]
+all        777       1334      0.573      0.406      0.455      0.261
+CME-OPT2-A RESUMED EPOCH {'epoch': 41, 'lr_pg0': 0.0009639601130971376, 'lr_pg1': 0.0009639601130971376, 'lr_pg2': 0.0009639601130971376} LOSSES [1.0954877138137817, 0.26060572266578674, 1.5351275205612183]
+all        777       1334      0.551      0.427      0.457      0.261
+CME-OPT2-A RESUMED EPOCH {'epoch': 42, 'lr_pg0': 0.000787582012117436, 'lr_pg1': 0.000787582012117436, 'lr_pg2': 0.000787582012117436} LOSSES [1.0815564393997192, 0.25503695011138916, 1.5177009105682373]
+all        777       1334      0.591      0.427      0.465      0.267
+CME-OPT2-A RESUMED EPOCH {'epoch': 43, 'lr_pg0': 0.0006278481331809016, 'lr_pg1': 0.0006278481331809016, 'lr_pg2': 0.0006278481331809016} LOSSES [1.0687551498413086, 0.2540523409843445, 1.5056884288787842]
+all        777       1334      0.565       0.43      0.463      0.268
+CME-OPT2-A RESUMED EPOCH {'epoch': 44, 'lr_pg0': 0.0004853888729322331, 'lr_pg1': 0.0004853888729322331, 'lr_pg2': 0.0004853888729322331} LOSSES [1.0598934888839722, 0.2513822615146637, 1.5002881288528442]
+all        777       1334      0.559      0.428      0.465      0.269
+CME-OPT2-A RESUMED EPOCH {'epoch': 45, 'lr_pg0': 0.0003607664529881849, 'lr_pg1': 0.0003607664529881849, 'lr_pg2': 0.0003607664529881849} LOSSES [1.0403635501861572, 0.25010043382644653, 1.4889360666275024]
+all        777       1334      0.586      0.425      0.472      0.275
+CME-OPT2-A RESUMED EPOCH {'epoch': 46, 'lr_pg0': 0.000254472701105708, 'lr_pg1': 0.000254472701105708, 'lr_pg2': 0.000254472701105708} LOSSES [1.0397228002548218, 0.2484835386276245, 1.487902045249939]
+all        777       1334      0.581      0.432      0.474      0.275
+CME-OPT2-A RESUMED EPOCH {'epoch': 47, 'lr_pg0': 0.00016692711016248808, 'lr_pg1': 0.00016692711016248808, 'lr_pg2': 0.00016692711016248808} LOSSES [1.0367817878723145, 0.24829699099063873, 1.4849295616149902]
+all        777       1334      0.582      0.428      0.473      0.276
+CME-OPT2-A RESUMED EPOCH {'epoch': 48, 'lr_pg0': 9.847518261019928e-05, 'lr_pg1': 9.847518261019928e-05, 'lr_pg2': 9.847518261019928e-05} LOSSES [1.0328330993652344, 0.24698017537593842, 1.4753934144973755]
+all        777       1334      0.587      0.425      0.472      0.275
+CME-OPT2-A RESUMED EPOCH {'epoch': 49, 'lr_pg0': 4.9387066934183375e-05, 'lr_pg1': 4.9387066934183375e-05, 'lr_pg2': 4.9387066934183375e-05} LOSSES [1.0304971933364868, 0.24694369733333588, 1.4755877256393433]
+all        777       1334       0.59      0.428      0.474      0.276
+CME-OPT2-A RESUMED EPOCH {'epoch': 50, 'lr_pg0': 1.9856491500783724e-05, 'lr_pg1': 1.9856491500783724e-05, 'lr_pg2': 1.9856491500783724e-05} LOSSES [1.0316696166992188, 0.24723169207572937, 1.4762976169586182]
+31 epochs completed in 0.523 hours.
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_yolov8s_focal_cosine/weights/last.pt, 22.5MB
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_yolov8s_focal_cosine/weights/best.pt, 22.5MB
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334      0.583      0.428      0.474      0.276
+baekra         48         79      0.582       0.43      0.472      0.322
+color issues         15         30      0.248        0.2      0.186      0.093
+contamination         53         55      0.646      0.945       0.91       0.49
+cut         75        102      0.595        0.5      0.548      0.336
+gray stitch         63         87      0.566      0.529      0.585      0.403
+selvet         64        121       0.47      0.405      0.373      0.195
+stain        208        312      0.691       0.74      0.727      0.456
+chemical hazard         34         53      0.667     0.0377      0.217      0.137
+fire         52         92      0.568      0.348       0.37      0.155
+no helmet         55        216      0.796      0.532      0.671      0.371
+smoke         81        154      0.569       0.24       0.34      0.143
+water leak         24         33      0.601      0.229      0.284      0.212
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334      0.588      0.427      0.474      0.277
+
+=== followup: followup_terminal.txt ===
+DATASET /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/dataset chemical=7 smoke=10 evaluation bytes verified
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary: 130 layers, 11,140,244 parameters, 11,140,228 gradients, 28.7 GFLOPs
+Transferred 355/355 items from pretrained weights
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+optimizer: SGD(lr=0.01, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+CME-OPT2 classification focal loss ACTIVE: gamma=1.5 alpha=0.25; box/DFL unchanged
+all        777       1334      0.767      0.742      0.773      0.455
+CME-OPT2-B EPOCH {'epoch': 1, 'lr_pg0': np.float64(0.0033236151603498543), 'lr_pg1': np.float64(0.0033236151603498543), 'lr_pg2': np.float64(0.0700874635568513)} LOSSES [1.023102045059204, 0.41671913862228394, 1.2401615381240845]
+all        777       1334      0.738       0.73       0.76      0.439
+CME-OPT2-B EPOCH {'epoch': 2, 'lr_pg0': np.float64(0.006650387078058274), 'lr_pg1': np.float64(0.006650387078058274), 'lr_pg2': np.float64(0.04008090214122641)} LOSSES [1.0211557149887085, 0.44081029295921326, 1.24568510055542]
+all        777       1334        0.7      0.681      0.693      0.389
+CME-OPT2-B EPOCH {'epoch': 3, 'lr_pg0': np.float64(0.009950933037115315), 'lr_pg1': np.float64(0.009950933037115315), 'lr_pg2': np.float64(0.010048114766950111)} LOSSES [1.094050645828247, 0.5303770899772644, 1.3025568723678589]
+all        777       1334      0.681       0.62      0.654      0.355
+CME-OPT2-B EPOCH {'epoch': 4, 'lr_pg0': np.float64(0.0099115248173898), 'lr_pg1': np.float64(0.0099115248173898), 'lr_pg2': np.float64(0.0099115248173898)} LOSSES [1.1590428352355957, 0.6268706917762756, 1.362305760383606]
+all        777       1334      0.691       0.59      0.642       0.35
+CME-OPT2-B EPOCH {'epoch': 5, 'lr_pg0': 0.009843072889837512, 'lr_pg1': 0.009843072889837512, 'lr_pg2': 0.009843072889837512} LOSSES [1.1778937578201294, 0.6713549494743347, 1.379799723625183]
+all        777       1334      0.671      0.604      0.653       0.37
+CME-OPT2-B EPOCH {'epoch': 6, 'lr_pg0': 0.009755527298894293, 'lr_pg1': 0.009755527298894293, 'lr_pg2': 0.009755527298894293} LOSSES [1.1713523864746094, 0.6782048940658569, 1.3842284679412842]
+all        777       1334      0.701      0.587      0.637      0.366
+CME-OPT2-B EPOCH {'epoch': 7, 'lr_pg0': 0.009649233547011816, 'lr_pg1': 0.009649233547011816, 'lr_pg2': 0.009649233547011816} LOSSES [1.163770318031311, 0.6839302778244019, 1.3710790872573853]
+all        777       1334      0.682      0.646      0.691      0.384
+CME-OPT2-B EPOCH {'epoch': 8, 'lr_pg0': 0.009524611127067768, 'lr_pg1': 0.009524611127067768, 'lr_pg2': 0.009524611127067768} LOSSES [1.1546882390975952, 0.6825422048568726, 1.3661397695541382]
+all        777       1334      0.709      0.594      0.661      0.365
+CME-OPT2-B EPOCH {'epoch': 9, 'lr_pg0': 0.0093821518668191, 'lr_pg1': 0.0093821518668191, 'lr_pg2': 0.0093821518668191} LOSSES [1.1374664306640625, 0.6732975840568542, 1.3516038656234741]
+all        777       1334      0.717      0.625      0.679       0.39
+CME-OPT2-B EPOCH {'epoch': 10, 'lr_pg0': 0.009222417987882566, 'lr_pg1': 0.009222417987882566, 'lr_pg2': 0.009222417987882566} LOSSES [1.1254960298538208, 0.6725330948829651, 1.3560965061187744]
+all        777       1334      0.734      0.638      0.699      0.397
+EarlyStopping: Training stopped early as no improvement observed in last 10 epochs. Best results observed at epoch 1, best model saved as best.pt.
+To update EarlyStopping(patience=10) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+CME-OPT2-B EPOCH {'epoch': 11, 'lr_pg0': 0.009046039886902862, 'lr_pg1': 0.009046039886902862, 'lr_pg2': 0.009046039886902862} LOSSES [1.1090437173843384, 0.6616017818450928, 1.3431565761566162]
+11 epochs completed in 0.137 hours.
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_B_expC_focal_cosine/weights/last.pt, 22.5MB
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_B_expC_focal_cosine/weights/best.pt, 22.5MB
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334      0.766      0.741      0.772      0.455
+baekra         48         79      0.822      0.861      0.893      0.666
+color issues         15         30      0.807        0.6       0.69      0.384
+contamination         53         55       0.94          1      0.995      0.599
+cut         75        102      0.843      0.844      0.872      0.545
+gray stitch         63         87      0.746      0.701      0.803      0.544
+selvet         64        121      0.731      0.868      0.891      0.576
+stain        208        312      0.895      0.875      0.914      0.598
+chemical hazard         34         53      0.672      0.453      0.454      0.219
+fire         52         92      0.642      0.662      0.639      0.269
+no helmet         55        216      0.852      0.878      0.902      0.481
+smoke         81        154       0.62      0.519       0.57      0.231
+water leak         24         33      0.626      0.636      0.646      0.353
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334       0.77      0.742      0.773      0.456
+
+=== targeted: targeted_terminal.txt ===
+DATASET /tmp/cme_opt2_data/dataset 12 classes; all held-out hashes verified on local storage
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary: 130 layers, 11,140,244 parameters, 11,140,228 gradients, 28.7 GFLOPs
+Transferred 355/355 items from pretrained weights
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+optimizer: AdamW(lr=0.001, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+CME-OPT2 classification focal loss ACTIVE: gamma=1.5 alpha=0.25; box/DFL unchanged
+CME-OPT2-C weighted classification focal ACTIVE: chemical=4 smoke=2 others=1; gamma=1.5 alpha=.25; box/DFL unchanged
+all        777       1334      0.661      0.654       0.68      0.388
+CME-OPT2-C EPOCH {'epoch': 1, 'lr_pg0': np.float64(0.0003323615160349854), 'lr_pg1': np.float64(0.0003323615160349854), 'lr_pg2': np.float64(0.0003323615160349854)} LOSSES [1.0610146522521973, 0.17098857462406158, 1.2719606161117554]
+all        777       1334      0.643      0.587      0.621       0.34
+CME-OPT2-C EPOCH {'epoch': 2, 'lr_pg0': np.float64(0.0006650387078058274), 'lr_pg1': np.float64(0.0006650387078058274), 'lr_pg2': np.float64(0.0006650387078058274)} LOSSES [1.1612790822982788, 0.22819440066814423, 1.3738726377487183]
+all        777       1334      0.674       0.47      0.534      0.276
+CME-OPT2-C EPOCH {'epoch': 3, 'lr_pg0': np.float64(0.0009950933037115315), 'lr_pg1': np.float64(0.0009950933037115315), 'lr_pg2': np.float64(0.0009950933037115315)} LOSSES [1.2555851936340332, 0.27549880743026733, 1.4779064655303955]
+all        777       1334      0.548      0.478      0.499      0.262
+CME-OPT2-C EPOCH {'epoch': 4, 'lr_pg0': np.float64(0.00099115248173898), 'lr_pg1': np.float64(0.00099115248173898), 'lr_pg2': np.float64(0.00099115248173898)} LOSSES [1.2791237831115723, 0.29433563351631165, 1.5134069919586182]
+all        777       1334      0.631      0.505       0.52      0.274
+CME-OPT2-C EPOCH {'epoch': 5, 'lr_pg0': 0.0009843072889837512, 'lr_pg1': 0.0009843072889837512, 'lr_pg2': 0.0009843072889837512} LOSSES [1.278929591178894, 0.29646748304367065, 1.5139027833938599]
+all        777       1334      0.646      0.527      0.572      0.309
+CME-OPT2-C EPOCH {'epoch': 6, 'lr_pg0': 0.0009755527298894293, 'lr_pg1': 0.0009755527298894293, 'lr_pg2': 0.0009755527298894293} LOSSES [1.247809886932373, 0.29501640796661377, 1.495288610458374]
+all        777       1334      0.613      0.495      0.533      0.298
+CME-OPT2-C EPOCH {'epoch': 7, 'lr_pg0': 0.0009649233547011816, 'lr_pg1': 0.0009649233547011816, 'lr_pg2': 0.0009649233547011816} LOSSES [1.2285462617874146, 0.2940274775028229, 1.4720592498779297]
+all        777       1334      0.638      0.555      0.588      0.314
+CME-OPT2-C EPOCH {'epoch': 8, 'lr_pg0': 0.0009524611127067768, 'lr_pg1': 0.0009524611127067768, 'lr_pg2': 0.0009524611127067768} LOSSES [1.204668641090393, 0.29051733016967773, 1.45563805103302]
+all        777       1334      0.594      0.559      0.576      0.323
+CME-OPT2-C EPOCH {'epoch': 9, 'lr_pg0': 0.0009382151866819099, 'lr_pg1': 0.0009382151866819099, 'lr_pg2': 0.0009382151866819099} LOSSES [1.1880398988723755, 0.283041775226593, 1.4390157461166382]
+all        777       1334      0.627      0.551      0.593      0.335
+CME-OPT2-C EPOCH {'epoch': 10, 'lr_pg0': 0.0009222417987882565, 'lr_pg1': 0.0009222417987882565, 'lr_pg2': 0.0009222417987882565} LOSSES [1.1627599000930786, 0.2798370122909546, 1.420666217803955]
+all        777       1334      0.624      0.572      0.598      0.339
+EarlyStopping: Training stopped early as no improvement observed in last 10 epochs. Best results observed at epoch 1, best model saved as best.pt.
+To update EarlyStopping(patience=10) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+CME-OPT2-C EPOCH {'epoch': 11, 'lr_pg0': 0.0009046039886902862, 'lr_pg1': 0.0009046039886902862, 'lr_pg2': 0.0009046039886902862} LOSSES [1.137650489807129, 0.278145968914032, 1.4040194749832153]
+11 epochs completed in 0.146 hours.
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_C_targeted_focal_cosine/weights/last.pt, 22.5MB
+Optimizer stripped from /__modal/volumes/vo-mGfQgI2JSR3Hn9Abh7h8Vc/runs/cme_opt2_C_targeted_focal_cosine/weights/best.pt, 22.5MB
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334       0.66      0.654       0.68      0.388
+baekra         48         79      0.779      0.785      0.853      0.594
+color issues         15         30      0.536      0.309      0.479      0.305
+contamination         53         55      0.806      0.982      0.969      0.515
+cut         75        102      0.856      0.814      0.849       0.52
+gray stitch         63         87      0.679       0.69      0.728      0.458
+selvet         64        121      0.674      0.702      0.718      0.424
+stain        208        312      0.877      0.865      0.909      0.585
+chemical hazard         34         53      0.114      0.233     0.0901     0.0321
+fire         52         92      0.538      0.685      0.584      0.221
+no helmet         55        216      0.928      0.713      0.885      0.474
+smoke         81        154      0.547      0.519      0.516      0.213
+water leak         24         33      0.589      0.545      0.577      0.314
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10, 22588MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        777       1334      0.658      0.657       0.68      0.386
+
+=== evaluate: evaluate_terminal.txt ===
+DATASET /tmp/cme_opt2_data/dataset 12 classes; all held-out hashes verified on local storage
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10G, 22587MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        334        498      0.777      0.759      0.778      0.489
+Ultralytics 8.4.24 🚀 Python-3.11.12 torch-2.10.0+cu128 CUDA:0 (NVIDIA A10G, 22587MiB)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+all        334        498      0.738      0.764      0.782      0.491
+2026/10/04 16:54:12 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.

@@ -1,0 +1,15 @@
+{
+  "official_A": {
+    "last_completed_epoch": 19,
+    "exception": "TimeoutError [Errno 10060] connect failed to function server",
+    "stopped_at": "2026-10-04T20:52:14+05:00",
+    "recovery": "Resume optimizer/scaler/model from last.pt; original configuration unchanged"
+  },
+  "controlled_B_startup": {
+    "completed_training_epochs": 0,
+    "exception": "ConnectionError [Errno 11001] getaddrinfo failed",
+    "stopped_at": "2026-10-04T20:50:41+05:00",
+    "recovery": "Retry same B configuration in detached mode"
+  },
+  "idle_shutdown_seconds": 600
+}

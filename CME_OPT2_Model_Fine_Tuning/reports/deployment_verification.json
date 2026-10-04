@@ -1,0 +1,24 @@
+{
+  "candidate_load": true,
+  "classes": {
+    "0": "baekra",
+    "1": "color issues",
+    "2": "contamination",
+    "3": "cut",
+    "4": "gray stitch",
+    "5": "selvet",
+    "6": "stain",
+    "7": "chemical hazard",
+    "8": "fire",
+    "9": "no helmet",
+    "10": "smoke",
+    "11": "water leak"
+  },
+  "inference": true,
+  "exported": true,
+  "candidate_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "baseline_backup": "CME_OPT2_Model_Fine_Tuning\\runtime\\baseline.pt",
+  "baseline_sha256": "6e64a19d83f09b7b2a92fddf23a5161734295c2a183af08ee1802065bd36995b",
+  "deployed_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "idle_shutdown_seconds": 600
+}

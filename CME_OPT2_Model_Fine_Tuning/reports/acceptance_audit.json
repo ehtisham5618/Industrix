@@ -1,0 +1,28 @@
+{
+  "accepted": false,
+  "checks": {
+    "official_requested_configuration": true,
+    "genuine_training": true,
+    "controlled_variants_documented": true,
+    "classification_focal": true,
+    "test_comparison": true,
+    "all_12_classes": true,
+    "mean_ap_consistent": true,
+    "checkpoint_identity": true,
+    "last_checkpoint_retained": true,
+    "baseline_retained": true,
+    "execution_sources": true,
+    "evaluation_bytes_unchanged": true,
+    "backend_smoke": true,
+    "deployment_policy": true,
+    "deployed_hash": true,
+    "mlflow_recorded": true,
+    "model_registry": true,
+    "experiment_registry": true,
+    "measured_plots": true,
+    "chemical_target": false,
+    "overall_target": true
+  },
+  "chemical_ap50": 0.42390880053222396,
+  "overall_map50": 0.7815605782787363
+}

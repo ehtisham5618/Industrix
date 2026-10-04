@@ -1,0 +1,8 @@
+{
+  "python": "3.11.12",
+  "torch": "2.10.0+cu128",
+  "ultralytics": "8.4.24",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A10",
+  "vram_bytes": 23684841472
+}

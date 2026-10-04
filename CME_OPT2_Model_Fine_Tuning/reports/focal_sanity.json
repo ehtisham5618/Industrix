@@ -1,0 +1,11 @@
+{
+  "gamma": 1.5,
+  "alpha": 0.25,
+  "finite_loss": true,
+  "nonzero_gradient": true,
+  "elementwise_loss": [
+    1.5460508429043784e-09,
+    0.061266131699085236,
+    5.149096704570866e-10
+  ]
+}

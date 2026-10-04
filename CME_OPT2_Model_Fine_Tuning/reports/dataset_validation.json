@@ -1,0 +1,19 @@
+{
+  "box_edge_tolerance": 0.0001,
+  "rounded_edge_boxes": 494,
+  "total_images": 6590,
+  "total_annotations": 10352,
+  "corrupted_images": 0,
+  "invalid_labels": 0,
+  "missing_labels": 0,
+  "missing_images": 0,
+  "invalid_class_ids": 0,
+  "cross_split_duplicates": 0,
+  "split_counts": {
+    "train": 5479,
+    "val": 777,
+    "test": 334
+  },
+  "errors": [],
+  "passed": true
+}

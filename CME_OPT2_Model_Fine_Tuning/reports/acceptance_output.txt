@@ -1,0 +1,24 @@
+official_requested_configuration: PASS
+genuine_training: PASS
+controlled_variants_documented: PASS
+classification_focal: PASS
+test_comparison: PASS
+all_12_classes: PASS
+mean_ap_consistent: PASS
+checkpoint_identity: PASS
+last_checkpoint_retained: PASS
+baseline_retained: PASS
+execution_sources: PASS
+evaluation_bytes_unchanged: PASS
+backend_smoke: PASS
+deployment_policy: PASS
+deployed_hash: PASS
+mlflow_recorded: PASS
+model_registry: PASS
+experiment_registry: PASS
+measured_plots: PASS
+chemical_target: FAIL
+overall_target: PASS
+CME-OPT2 acceptance: FAIL
+
+Exit code: 1
