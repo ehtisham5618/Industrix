@@ -1,0 +1,16 @@
+test_high_latency_tail_is_preserved (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_high_latency_tail_is_preserved) ... ok
+test_invalid_accuracy_scale_is_rejected (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_invalid_accuracy_scale_is_rejected) ... ok
+test_no_accuracy_regression_is_valid (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_no_accuracy_regression_is_valid) ... ok
+test_percentage_points_are_not_relative_percentage (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_percentage_points_are_not_relative_percentage) ... ok
+test_strict_threshold_and_dod_are_separate (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_strict_threshold_and_dod_are_separate) ... ok
+test_unmeasured_latency_is_rejected (ESE_CPU1_Quantization.tests.test_quantization.QuantizationCalculations.test_unmeasured_latency_is_rejected) ... ok
+test_selected_artifact_hashes (ESE_CPU1_Quantization.tests.test_quantization.MeasuredQuantizationAcceptance.test_selected_artifact_hashes) ... ok
+test_openvino_int8_loads_and_runs_batch_one_on_cpu (ESE_CPU1_Quantization.tests.test_quantization.MeasuredQuantizationAcceptance.test_openvino_int8_loads_and_runs_batch_one_on_cpu) ... ok
+test_fp16_onnx_loads_and_runs_batch_one_on_cpu (ESE_CPU1_Quantization.tests.test_quantization.MeasuredQuantizationAcceptance.test_fp16_onnx_loads_and_runs_batch_one_on_cpu) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.651s
+
+OK
+
+Exit code: 0

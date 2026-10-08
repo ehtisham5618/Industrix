@@ -1,0 +1,53 @@
+test_api_export_snapshot_unknown_id_and_persistent_history (test_incidents.ApiTests.test_api_export_snapshot_unknown_id_and_persistent_history) ... C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:120: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @api_app.on_event('shutdown')
+C:\Users\ehtis\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py:4495: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  return self.router.on_event(event_type)
+C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:133: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @api_app.on_event("startup")
+ok
+test_backend_process_declines_sdk_telemetry_without_user_setting_write (test_incidents.AuditTests.test_backend_process_declines_sdk_telemetry_without_user_setting_write) ... WARNING:root:Telemetry will not be sent as TID is not specified.
+ok
+test_candidate_and_short_confirmation_produce_zero_rows (test_incidents.AuditTests.test_candidate_and_short_confirmation_produce_zero_rows) ... ok
+test_concurrent_same_event_and_distinct_events (test_incidents.AuditTests.test_concurrent_same_event_and_distinct_events) ... ok
+test_confirmed_creates_one_row_and_valid_native_crop (test_incidents.AuditTests.test_confirmed_creates_one_row_and_valid_native_crop) ... ok
+test_crop_edges_outside_tiny_and_invalid (test_incidents.AuditTests.test_crop_edges_outside_tiny_and_invalid) ... ok
+test_database_failure_does_not_crash_detection_callback (test_incidents.AuditTests.test_database_failure_does_not_crash_detection_callback) ... ERROR:Backend.incidents.service:INCIDENT_LOG_FAILED event_id=SED2-000001 timestamp=2026-10-08T21:50:00.188461+00:00 error_type=OSError
+ok
+test_escalation_preserves_confirmation_confidence_and_image (test_incidents.AuditTests.test_escalation_preserves_confirmation_confidence_and_image) ... ok
+test_existing_unrelated_data_preserved_and_incompatible_schema_rejected (test_incidents.AuditTests.test_existing_unrelated_data_preserved_and_incompatible_schema_rejected) ... ok
+test_invalid_id_sql_injection_and_path_traversal (test_incidents.AuditTests.test_invalid_id_sql_injection_and_path_traversal) ... ok
+test_missing_corrupt_image_graceful (test_incidents.AuditTests.test_missing_corrupt_image_graceful) ... ok
+test_network_storage_rejected_and_privacy_claim_suppressed (test_incidents.AuditTests.test_network_storage_rejected_and_privacy_claim_suppressed) ... ok
+test_offline_creation_and_export_block_all_socket_connects (test_incidents.AuditTests.test_offline_creation_and_export_block_all_socket_connects) ... ok
+test_pdf_content_images_signoff_and_readonly (test_incidents.AuditTests.test_pdf_content_images_signoff_and_readonly) ... ok
+test_pdf_escapes_untrusted_markup_and_flows_long_text (test_incidents.AuditTests.test_pdf_escapes_untrusted_markup_and_flows_long_text) ... ok
+test_production_publish_hook_calls_audit_after_display (test_incidents.AuditTests.test_production_publish_hook_calls_audit_after_display) ... ok
+test_reopen_preserves_incident_and_sequence (test_incidents.AuditTests.test_reopen_preserves_incident_and_sequence) ... ok
+test_resolved_event_and_new_episode (test_incidents.AuditTests.test_resolved_event_and_new_episode) ... ok
+test_restart_sed_counter_cannot_collide (test_incidents.AuditTests.test_restart_sed_counter_cannot_collide) ... ok
+test_same_event_exactly_once_no_snapshot_rewrite (test_incidents.AuditTests.test_same_event_exactly_once_no_snapshot_rewrite) ... ok
+test_schema_wal_required_fields (test_incidents.AuditTests.test_schema_wal_required_fields) ... ok
+test_snapshot_failure_retains_row_then_recovers (test_incidents.AuditTests.test_snapshot_failure_retains_row_then_recovers) ... ERROR:Backend.incidents.service:SNAPSHOT_WRITE_FAILED event_id=SED2-000001 timestamp=2026-10-08T21:50:01.995590+00:00 error_type=OSError
+ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 3.370s
+
+OK
+
+Exit code: 0

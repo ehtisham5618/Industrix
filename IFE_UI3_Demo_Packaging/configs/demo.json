@@ -1,0 +1,48 @@
+{
+  "architecture_version": "ESECPU2-async-ring15-sample4-v1",
+  "source_protocol": "local-video simulation; no RTSP endpoints available",
+  "scene_note": "DEMO: Camera 01 repeats a letterboxed textile dataset image. Camera 02 repeats a dataset fire image after 75 seconds black standby. Camera 03 uses a resized existing public stand-in video. These are not installed factory bays.",
+  "ring_capacity": 15,
+  "sample_every": 4,
+  "sampling_phase": 0,
+  "cameras": {
+    "camera_01": {
+      "name": "Textile Weaving Inspection",
+      "source": "IFE_UI3_Demo_Packaging/runtime/textile_demo.mp4",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": [
+        "baekra",
+        "selvet",
+        "stain"
+      ]
+    },
+    "camera_02": {
+      "name": "Chemical Storage Bay",
+      "source": "IFE_UI3_Demo_Packaging/runtime/hazard_timed.mp4",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": [
+        "chemical hazard",
+        "smoke",
+        "fire"
+      ]
+    },
+    "camera_03": {
+      "name": "Loading Dock",
+      "source": "IFE_UI3_Demo_Packaging/runtime/workers_demo.mp4",
+      "enabled": true,
+      "loop": true,
+      "sampling_fps": 5.0,
+      "sample_every": 4,
+      "monitored_classes": [
+        "no helmet"
+      ]
+    }
+  },
+  "demo_version": "IFEUI3-local-demo-v1"
+}

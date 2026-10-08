@@ -1,0 +1,47 @@
+{
+  "archive": "CME_OPT2_Model_Fine_Tuning\\runtime\\dataset.zip",
+  "archive_member": "images/train/hazard_Fire_hazards_firehazard236_jpg.rf.3cf90c0c8e7c44ac818e2b46d30d33fb.jpg",
+  "source_sha256": "4bc271ebc7abfeecf51d0f96e0dc226cf3ae7354071639a01379b05aa63fb1dd",
+  "detections": [
+    {
+      "class_id": 8,
+      "class_name": "fire",
+      "confidence": 0.8020410537719727,
+      "coordinates": {
+        "x1": 172.31167602539062,
+        "y1": 182.85617065429688,
+        "x2": 487.2283020019531,
+        "y2": 377.6672668457031
+      }
+    },
+    {
+      "class_id": 10,
+      "class_name": "smoke",
+      "confidence": 0.4034883379936218,
+      "coordinates": {
+        "x1": 1.1773681640625,
+        "y1": 1.49627685546875,
+        "x2": 640.0,
+        "y2": 220.5853271484375
+      }
+    },
+    {
+      "class_id": 10,
+      "class_name": "smoke",
+      "confidence": 0.31152841448783875,
+      "coordinates": {
+        "x1": 202.03575134277344,
+        "y1": 0.378814697265625,
+        "x2": 638.451416015625,
+        "y2": 197.60813903808594
+      }
+    }
+  ],
+  "fixture_sha256": "959c077bb07cf206a1629b6bb442f0ec3791b363479624a5596338037a6271c2",
+  "shape": [
+    640,
+    640,
+    3
+  ],
+  "provenance": "Existing dataset image, shown as a repeated still-image demonstration clip. Real model predictions, no injected detections. Not held-out accuracy evidence."
+}

@@ -1,0 +1,14 @@
+test_alert_clears_after_absence (test_alert_policy.AlertPolicyTests.test_alert_clears_after_absence) ... ok
+test_classes_are_independent (test_alert_policy.AlertPolicyTests.test_classes_are_independent) ... ok
+test_intermittent_real_detection_triggers (test_alert_policy.AlertPolicyTests.test_intermittent_real_detection_triggers) ... ok
+test_low_confidence_is_filtered (test_alert_policy.AlertPolicyTests.test_low_confidence_is_filtered) ... ok
+test_persistent_violation_triggers_once (test_alert_policy.AlertPolicyTests.test_persistent_violation_triggers_once) ... ok
+test_single_false_spike_does_not_trigger (test_alert_policy.AlertPolicyTests.test_single_false_spike_does_not_trigger) ... ok
+test_empty_frames_prevent_single_spike_alert (test_benchmark_alerts.BenchmarkAlertTests.test_empty_frames_prevent_single_spike_alert) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.023s
+
+OK
+
+Exit code: 0

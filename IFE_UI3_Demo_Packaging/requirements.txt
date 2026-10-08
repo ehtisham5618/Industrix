@@ -1,0 +1,6 @@
+# Install before entering guarded offline mode. Runtime never installs packages.
+pytest>=9,<10
+playwright>=1.58,<2
+pypdf>=6,<7
+PyMuPDF>=1.28,<2
+# Existing backend/frontend dependencies remain in their original requirements.

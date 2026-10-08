@@ -1,0 +1,35 @@
+test_queue_overflow_drops_old_frames (test_frame_drop.FrameDropTests.test_queue_overflow_drops_old_frames) ... ok
+test_stream_failure_is_recorded_without_exception (test_frame_drop.FrameDropTests.test_stream_failure_is_recorded_without_exception) ... ok
+test_camera_geofence_isolation (test_geofence.GeofenceTests.test_camera_geofence_isolation) ... ok
+test_polygon_filter_accepts_center_inside (test_geofence.GeofenceTests.test_polygon_filter_accepts_center_inside) ... ok
+test_polygon_filter_rejects_center_outside (test_geofence.GeofenceTests.test_polygon_filter_rejects_center_outside) ... ok
+test_results_and_alert_state_are_per_camera (test_stream_isolation.StreamIsolationTests.test_results_and_alert_state_are_per_camera) ... ok
+test_shutdown_terminates_workers (test_stream_isolation.StreamIsolationTests.test_shutdown_terminates_workers) ... ok
+test_blocked_camera_does_not_hold_other_cameras (test_stream_manager.LifecycleTests.test_blocked_camera_does_not_hold_other_cameras) ... ok
+test_blocked_read_shutdown_refuses_overlapping_restart (test_stream_manager.LifecycleTests.test_blocked_read_shutdown_refuses_overlapping_restart) ... ok
+test_detector_exception_is_explicit_and_shutdown_joins (test_stream_manager.LifecycleTests.test_detector_exception_is_explicit_and_shutdown_joins) ... ok
+test_double_start_rejected (test_stream_manager.LifecycleTests.test_double_start_rejected) ... ok
+test_failed_factory_is_isolated (test_stream_manager.LifecycleTests.test_failed_factory_is_isolated) ... ok
+test_single_frame_batches_rotate_fairly (test_stream_manager.LifecycleTests.test_single_frame_batches_rotate_fairly) ... ok
+test_stop_restart_uses_fresh_counters_and_rings (test_stream_manager.LifecycleTests.test_stop_restart_uses_fresh_counters_and_rings) ... ok
+test_three_workers_all_evaluate_only_phase_zero (test_stream_manager.LifecycleTests.test_three_workers_all_evaluate_only_phase_zero) ... ok
+test_boundary (test_stream_manager.RingTests.test_boundary) ... ok
+test_duplicate_or_reordered_raw_sequences_rejected (test_stream_manager.RingTests.test_duplicate_or_reordered_raw_sequences_rejected) ... ok
+test_exact_capacity (test_stream_manager.RingTests.test_exact_capacity) ... ok
+test_hundred_raw_frames_have_25_selected_and_75_skips (test_stream_manager.RingTests.test_hundred_raw_frames_have_25_selected_and_75_skips) ... ok
+test_independent_buffers (test_stream_manager.RingTests.test_independent_buffers) ... ok
+test_threaded_producer_consumer_accounting_and_order (test_stream_manager.RingTests.test_threaded_producer_consumer_accounting_and_order) ... ok
+test_unread_selected_overwrites_are_true_losses (test_stream_manager.RingTests.test_unread_selected_overwrites_are_true_losses) ... ok
+test_file_loop_increments_session_and_stop_wait_is_cancelled (test_stream_manager.SourceTests.test_file_loop_increments_session_and_stop_wait_is_cancelled) ... ok
+test_live_read_failure_reopens_and_records_session_change (test_stream_manager.SourceTests.test_live_read_failure_reopens_and_records_session_change) ... ok
+test_network_config_not_resolved_as_local_path (test_stream_manager.SourceTests.test_network_config_not_resolved_as_local_path) ... ok
+test_network_open_failures_reconnect_with_cancelable_backoff (test_stream_manager.SourceTests.test_network_open_failures_reconnect_with_cancelable_backoff) ... ok
+test_rtsp_open_has_native_read_and_open_timeouts (test_stream_manager.SourceTests.test_rtsp_open_has_native_read_and_open_timeouts) ... ok
+test_15_evaluated_observations_not_15_raw_frames (test_stream_manager.TemporalIntegrationTests.test_15_evaluated_observations_not_15_raw_frames) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 8.628s
+
+OK
+
+Exit code: 0

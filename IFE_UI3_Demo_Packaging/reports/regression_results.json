@@ -1,0 +1,47 @@
+{
+  "e2e": {
+    "collected": 5,
+    "passed_count": 5,
+    "passed": true,
+    "exit_code": 0,
+    "duration_seconds": 14.43,
+    "skipped": 0
+  },
+  "audit": {
+    "collected": 22,
+    "duration_seconds": 3.37,
+    "passed": true,
+    "exit_code": 0
+  },
+  "cme2": {
+    "collected": 7,
+    "duration_seconds": 0.023,
+    "passed": true,
+    "exit_code": 0
+  },
+  "streams": {
+    "collected": 28,
+    "duration_seconds": 8.628,
+    "passed": true,
+    "exit_code": 0
+  },
+  "tracking_severity": {
+    "collected": 35,
+    "duration_seconds": 7.481,
+    "passed": true,
+    "exit_code": 0
+  },
+  "console": {
+    "collected": 21,
+    "duration_seconds": 2.08,
+    "passed": true,
+    "exit_code": 0
+  },
+  "quantization_functional": {
+    "collected": 9,
+    "duration_seconds": 2.651,
+    "passed": true,
+    "exit_code": 0
+  },
+  "scope_note": "Functional integration regressions. Existing CPU1 measured accuracy/size and CPU2/CPU3 throughput acceptance gates remain FAILED in their original evidence; this task does not retrain or requalify those hardware gates."
+}

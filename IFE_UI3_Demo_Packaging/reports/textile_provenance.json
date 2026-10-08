@@ -1,0 +1,25 @@
+{
+  "archive": "CME_OPT2_Model_Fine_Tuning\\runtime\\dataset.zip",
+  "archive_member": "images/train/textile_Snapchat-1693966967_jpg.rf.3902ff477b6cc2d5771bba055699660f_aug0.jpg",
+  "source_sha256": "01aab904db219f554ca5ec604f68428b9a1b2f441b4eb44d7c72753f694626ee",
+  "detections": [
+    {
+      "class_id": 0,
+      "class_name": "baekra",
+      "confidence": 0.933850884437561,
+      "coordinates": {
+        "x1": 10.943838119506836,
+        "y1": 410.41973876953125,
+        "x2": 686.0,
+        "y2": 1094.87451171875
+      }
+    }
+  ],
+  "fixture_sha256": "d8ce7226b08c26cc70f7c25b3e0c92bdfe58ed8dec6c9d1fb3d0ca379ca3fcd3",
+  "shape": [
+    1098,
+    686,
+    3
+  ],
+  "provenance": "Existing dataset image, shown as a repeated still-image demonstration clip. Real model predictions, no injected detections. Not held-out accuracy evidence."
+}
