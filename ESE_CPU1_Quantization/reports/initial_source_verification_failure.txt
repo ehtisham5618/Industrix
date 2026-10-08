@@ -1,0 +1,18 @@
+WARNING Ultralytics settings reset to default values. This may be due to a possible problem with your settings or a recent ultralytics package update.
+View Ultralytics Settings with 'yolo settings' or at 'C:\Users\ehtis\AppData\Roaming\Ultralytics\settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+Traceback (most recent call last):
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\scripts\export_quantized_models.py", line 25, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\scripts\export_quantized_models.py", line 22, in main
+    run(parser.parse_args())
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\export.py", line 33, in run
+    model=source_model(args.weights)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\common.py", line 38, in source_model
+    assert model.model.yaml.get('scale')=='s', model.model.yaml
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'nc': 12, 'depth_multiple': 0.33, 'width_multiple': 0.5, 'backbone': [[-1, 1, 'Conv', [64, 3, 2]], [-1, 1, 'Conv', [128, 3, 2]], [-1, 3, 'C2f', [128, True]], [-1, 1, 'Conv', [256, 3, 2]], [-1, 6, 'C2f', [256, True]], [-1, 1, 'Conv', [512, 3, 2]], [-1, 6, 'C2f', [512, True]], [-1, 1, 'Conv', [1024, 3, 2]], [-1, 3, 'C2f', [1024, True]], [-1, 1, 'SPPF', [1024, 5]]], 'head': [[-1, 1, 'nn.Upsample', ['None', 2, 'nearest']], [[-1, 6], 1, 'Concat', [1]], [-1, 3, 'C2f', [512]], [-1, 1, 'nn.Upsample', ['None', 2, 'nearest']], [[-1, 4], 1, 'Concat', [1]], [-1, 3, 'C2f', [256]], [-1, 1, 'Conv', [256, 3, 2]], [[-1, 12], 1, 'Concat', [1]], [-1, 3, 'C2f', [512]], [-1, 1, 'Conv', [512, 3, 2]], [[-1, 9], 1, 'Concat', [1]], [-1, 3, 'C2f', [1024]], [[15, 18, 21], 1, 'Detect', ['nc']]], 'ch': 3, 'channels': 3}
+
+Exit code: 1

@@ -1,0 +1,55 @@
+{
+  "source_model_version": "cme-opt2-focal-cosine-12class-v1",
+  "source_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "dataset_version": "combined-12class-v3-hardnegative",
+  "artifacts": {
+    "onnx_fp16": {
+      "path": "Backend/weights/onnx_fp16/best_fp16.onnx",
+      "bytes": 22409010,
+      "sha256": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf"
+    },
+    "openvino_xml": {
+      "path": "Backend/weights/openvino_int8/model.xml",
+      "bytes": 470147,
+      "sha256": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a"
+    },
+    "openvino_bin": {
+      "path": "Backend/weights/openvino_int8/model.bin",
+      "bytes": 11303236,
+      "sha256": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa"
+    },
+    "metadata": {
+      "path": "Backend/weights/openvino_int8/metadata.yaml",
+      "bytes": 659,
+      "sha256": "f8245629ade1077bcff9c960a025459c4e8683910a1fd82c05868cddf2d2a96a"
+    }
+  },
+  "combined_core_bytes": 11773383,
+  "combined_core_decimal_mb": 11.773383,
+  "combined_core_mib": 11.227972984313965,
+  "required_metadata_bytes": 659,
+  "complete_runtime_bytes": 11774042,
+  "size_target_bytes": 6500000,
+  "size_pass": false,
+  "nncf_fake_quantize_ops": 67,
+  "constant_bytes_by_precision": {
+    "<Type: 'int64_t'>": 400,
+    "<Type: 'float32'>": 183848,
+    "<Type: 'int8_t'>": 11119984,
+    "<Type: 'int32_t'>": 44
+  },
+  "export_api": "Ultralytics8.4.24 FP32 OpenVINO conversion; NNCF quantize_with_accuracy_control; absolute max_drop0.0079;targetCPU;MIXED;exactly300 training samples",
+  "detection_head_policy": "Unmodified upstream ignored Add/Sub/Mul/Div detection-head patterns and Sigmoid; MIXED preset",
+  "onnx_fp16_policy": "CPU FP32 ONNX export, onnxconverter-common FP16 conversion with FP32 IO; CPU EP may promote unsupported kernels",
+  "versions": {
+    "ultralytics": "8.4.24",
+    "torch": "2.10.0",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.24.4",
+    "openvino": "2026.4.1",
+    "nncf": "3.4.0",
+    "numpy": "2.4.6",
+    "mlflow": "2.22.2"
+  },
+  "selected_ptq": "accuracy_aware"
+}

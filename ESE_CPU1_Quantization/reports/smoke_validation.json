@@ -1,0 +1,259 @@
+{
+  "images": [
+    {
+      "image": "images/train/cmeopt1_00000_2811363265.png",
+      "source_shape": [
+        1,
+        16,
+        8400
+      ],
+      "formats": {
+        "onnx_fp16": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 1.2783203125,
+          "mean_absolute_delta": 0.012592011131346226,
+          "max_confidence_delta": 0.0009376406669616699,
+          "detected_boxes": 5,
+          "detected_classes": [
+            "stain",
+            "no helmet",
+            "chemical hazard",
+            "chemical hazard",
+            "smoke"
+          ]
+        },
+        "openvino_int8": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 106.53604125976562,
+          "mean_absolute_delta": 0.4101739525794983,
+          "max_confidence_delta": 0.04855090379714966,
+          "detected_boxes": 5,
+          "detected_classes": [
+            "stain",
+            "no helmet",
+            "chemical hazard",
+            "smoke",
+            "chemical hazard"
+          ]
+        }
+      }
+    },
+    {
+      "image": "images/train/hazard_Fire_hazards_firehazard17_jpg.rf.5d2f93f7e168e440e8cb9d2419d32182.jpg",
+      "source_shape": [
+        1,
+        16,
+        8400
+      ],
+      "formats": {
+        "onnx_fp16": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 1.09857177734375,
+          "mean_absolute_delta": 0.013816810213029385,
+          "max_confidence_delta": 0.0007072947919368744,
+          "detected_boxes": 9,
+          "detected_classes": [
+            "no helmet",
+            "no helmet",
+            "fire",
+            "fire",
+            "fire",
+            "fire",
+            "smoke",
+            "fire",
+            "smoke"
+          ]
+        },
+        "openvino_int8": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 78.7489013671875,
+          "mean_absolute_delta": 0.4504939019680023,
+          "max_confidence_delta": 0.05349738895893097,
+          "detected_boxes": 8,
+          "detected_classes": [
+            "no helmet",
+            "no helmet",
+            "fire",
+            "fire",
+            "fire",
+            "fire",
+            "smoke",
+            "smoke"
+          ]
+        }
+      }
+    },
+    {
+      "image": "images/train/hazard_Fire_hazards_firehazard16_jpg.rf.1395efb9f2ad248ec3048c0e50413902.jpg",
+      "source_shape": [
+        1,
+        16,
+        8400
+      ],
+      "formats": {
+        "onnx_fp16": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 1.0457763671875,
+          "mean_absolute_delta": 0.013669565320014954,
+          "max_confidence_delta": 0.0013075768947601318,
+          "detected_boxes": 7,
+          "detected_classes": [
+            "no helmet",
+            "fire",
+            "fire",
+            "fire",
+            "fire",
+            "smoke",
+            "fire"
+          ]
+        },
+        "openvino_int8": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 93.75686645507812,
+          "mean_absolute_delta": 0.5720869898796082,
+          "max_confidence_delta": 0.1539701223373413,
+          "detected_boxes": 8,
+          "detected_classes": [
+            "no helmet",
+            "fire",
+            "fire",
+            "fire",
+            "fire",
+            "smoke",
+            "fire",
+            "fire"
+          ]
+        }
+      }
+    },
+    {
+      "image": "images/train/cmeopt1_00279_851280673.png",
+      "source_shape": [
+        1,
+        16,
+        8400
+      ],
+      "formats": {
+        "onnx_fp16": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 1.591217041015625,
+          "mean_absolute_delta": 0.013426234945654869,
+          "max_confidence_delta": 0.006024092435836792,
+          "detected_boxes": 3,
+          "detected_classes": [
+            "water leak",
+            "smoke",
+            "chemical hazard"
+          ]
+        },
+        "openvino_int8": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 107.68658447265625,
+          "mean_absolute_delta": 0.4743831753730774,
+          "max_confidence_delta": 0.1077955812215805,
+          "detected_boxes": 3,
+          "detected_classes": [
+            "water leak",
+            "smoke",
+            "chemical hazard"
+          ]
+        }
+      }
+    },
+    {
+      "image": "images/train/cmeopt1_00002_865305067.png",
+      "source_shape": [
+        1,
+        16,
+        8400
+      ],
+      "formats": {
+        "onnx_fp16": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 0.78839111328125,
+          "mean_absolute_delta": 0.012991240248084068,
+          "max_confidence_delta": 0.0005763769149780273,
+          "detected_boxes": 2,
+          "detected_classes": [
+            "water leak",
+            "water leak"
+          ]
+        },
+        "openvino_int8": {
+          "output_shape": [
+            1,
+            16,
+            8400
+          ],
+          "finite": true,
+          "max_absolute_delta": 69.09133911132812,
+          "mean_absolute_delta": 0.4268842935562134,
+          "max_confidence_delta": 0.053419217467308044,
+          "detected_boxes": 2,
+          "detected_classes": [
+            "water leak",
+            "water leak"
+          ]
+        }
+      }
+    }
+  ],
+  "onnx_provider": [
+    "CPUExecutionProvider"
+  ],
+  "onnx_checker_pass": true,
+  "openvino_execution_devices": [
+    "CPU"
+  ],
+  "selected_artifact_hashes": {
+    "onnx_fp16": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf",
+    "openvino_xml": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a",
+    "openvino_bin": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa",
+    "metadata": "f8245629ade1077bcff9c960a025459c4e8683910a1fd82c05868cddf2d2a96a"
+  }
+}

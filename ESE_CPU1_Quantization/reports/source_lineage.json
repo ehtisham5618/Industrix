@@ -1,0 +1,28 @@
+{
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "dataset_version": "combined-12class-v3-hardnegative",
+  "checkpoint_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "names": [
+    "baekra",
+    "color issues",
+    "contamination",
+    "cut",
+    "gray stitch",
+    "selvet",
+    "stain",
+    "chemical hazard",
+    "fire",
+    "no helmet",
+    "smoke",
+    "water leak"
+  ],
+  "parameters": 11140244,
+  "architecture": "YOLOv8s",
+  "source_bytes": 22498282,
+  "dataset_yaml": "Hazard_Expansion/configs/12class_data.yaml",
+  "train": "images/train",
+  "val": "images/val",
+  "test": "images/test",
+  "no_retraining": true,
+  "source_model_known_shortfall": "CME-OPT2 chemical/smoke targets not met"
+}

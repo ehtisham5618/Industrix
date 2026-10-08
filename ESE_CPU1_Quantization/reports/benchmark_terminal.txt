@@ -1,0 +1,7 @@
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+fp32_cpu {'mean_ms': 371.73873699999996, 'p50_ms': 350.3044, 'p95_ms': 489.5332, 'p99_ms': 570.8206, 'min_ms': 301.76, 'max_ms': 1522.9029, 'p90_ms': 435.6571, 'iterations': 200, 'warmup_iterations': 30, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 2}
+onnx_fp16_cpu {'mean_ms': 282.8476865, 'p50_ms': 262.2139, 'p95_ms': 393.2754, 'p99_ms': 489.3873, 'min_ms': 239.6479, 'max_ms': 579.6065, 'p90_ms': 340.0695, 'iterations': 200, 'warmup_iterations': 30, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 2}
+openvino_int8_cpu {'mean_ms': 168.2992095, 'p50_ms': 131.6267, 'p95_ms': 299.4049, 'p99_ms': 647.9702, 'min_ms': 124.8153, 'max_ms': 1431.8159, 'p90_ms': 225.1194, 'iterations': 200, 'warmup_iterations': 30, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 2}
+Official CPU quantization benchmark: FAIL {'accuracy': False, 'accuracy_test': False, 'size': False, 'latency': False}
+
+Exit code: 0

@@ -1,0 +1,37 @@
+test_actual_cpu_targets_and_real_int8 (test_quantization.MeasuredQuantizationAcceptance.test_actual_cpu_targets_and_real_int8) ... ok
+test_actual_ir_size_below_6_5_decimal_mb (test_quantization.MeasuredQuantizationAcceptance.test_actual_ir_size_below_6_5_decimal_mb) ... FAIL
+test_actual_map_drop_below_one_percentage_point (test_quantization.MeasuredQuantizationAcceptance.test_actual_map_drop_below_one_percentage_point) ... FAIL
+test_combined_ir_size_counts_xml_and_bin (test_quantization.MeasuredQuantizationAcceptance.test_combined_ir_size_counts_xml_and_bin) ... ok
+test_current_source_checkpoint_loads_with_twelve_classes (test_quantization.MeasuredQuantizationAcceptance.test_current_source_checkpoint_loads_with_twelve_classes) ... ok
+test_evaluation_protocol_parity (test_quantization.MeasuredQuantizationAcceptance.test_evaluation_protocol_parity) ... ok
+test_exact_training_only_calibration_and_coverage (test_quantization.MeasuredQuantizationAcceptance.test_exact_training_only_calibration_and_coverage) ... ok
+test_fp16_onnx_loads_and_runs_batch_one_on_cpu (test_quantization.MeasuredQuantizationAcceptance.test_fp16_onnx_loads_and_runs_batch_one_on_cpu) ... ok
+test_openvino_int8_loads_and_runs_batch_one_on_cpu (test_quantization.MeasuredQuantizationAcceptance.test_openvino_int8_loads_and_runs_batch_one_on_cpu) ... ok
+test_selected_artifact_hashes (test_quantization.MeasuredQuantizationAcceptance.test_selected_artifact_hashes) ... ok
+test_high_latency_tail_is_preserved (test_quantization.QuantizationCalculations.test_high_latency_tail_is_preserved) ... ok
+test_invalid_accuracy_scale_is_rejected (test_quantization.QuantizationCalculations.test_invalid_accuracy_scale_is_rejected) ... ok
+test_no_accuracy_regression_is_valid (test_quantization.QuantizationCalculations.test_no_accuracy_regression_is_valid) ... ok
+test_percentage_points_are_not_relative_percentage (test_quantization.QuantizationCalculations.test_percentage_points_are_not_relative_percentage) ... ok
+test_strict_threshold_and_dod_are_separate (test_quantization.QuantizationCalculations.test_strict_threshold_and_dod_are_separate) ... ok
+test_unmeasured_latency_is_rejected (test_quantization.QuantizationCalculations.test_unmeasured_latency_is_rejected) ... ok
+
+======================================================================
+FAIL: test_actual_ir_size_below_6_5_decimal_mb (test_quantization.MeasuredQuantizationAcceptance.test_actual_ir_size_below_6_5_decimal_mb)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\tests\test_quantization.py", line 92, in test_actual_ir_size_below_6_5_decimal_mb
+    self.assertLess(size,6500000,'Genuine measured size gate; do not suppress this failure')
+AssertionError: 11773383 not less than 6500000 : Genuine measured size gate; do not suppress this failure
+
+======================================================================
+FAIL: test_actual_map_drop_below_one_percentage_point (test_quantization.MeasuredQuantizationAcceptance.test_actual_map_drop_below_one_percentage_point)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\tests\test_quantization.py", line 49, in test_actual_map_drop_below_one_percentage_point
+    self.assertLess((delta['fp32']['map50']-delta['int8']['map50'])*100,1.0)
+AssertionError: 1.0255145781941644 not less than 1.0
+
+----------------------------------------------------------------------
+Ran 16 tests in 8.458s
+
+FAILED (failures=2)

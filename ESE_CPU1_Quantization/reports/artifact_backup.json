@@ -1,0 +1,14 @@
+{
+  "path": "ESE_CPU1_Quantization/backups/ESE_CPU1_deployment_artifacts.zip",
+  "bytes": 50933835,
+  "sha256": "7d09ab2e2f315a3631d3fd19980aba583f22175751473a8544971e6d3d260541",
+  "verified": true,
+  "files": {
+    "Backend/best.pt": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+    "Backend/weights/onnx_fp16/best_fp16.onnx": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf",
+    "Backend/weights/openvino_int8/model.xml": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a",
+    "Backend/weights/openvino_int8/model.bin": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa",
+    "Backend/weights/openvino_int8/metadata.yaml": "f8245629ade1077bcff9c960a025459c4e8683910a1fd82c05868cddf2d2a96a"
+  },
+  "contents": "Source checkpoint and selected deployment models; no images or credentials"
+}

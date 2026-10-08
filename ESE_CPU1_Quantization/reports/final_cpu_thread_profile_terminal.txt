@@ -1,0 +1,5 @@
+Thread profile 1 {'mean_ms': 237.19089, 'p50_ms': 229.6844, 'p95_ms': 261.1386, 'p99_ms': 413.5817, 'min_ms': 225.6797, 'max_ms': 413.5817, 'p90_ms': 245.7156, 'iterations': 50, 'warmup_iterations': 20, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 1}
+Thread profile 2 {'mean_ms': 124.52083, 'p50_ms': 119.5407, 'p95_ms': 168.4413, 'p99_ms': 183.8526, 'min_ms': 117.4633, 'max_ms': 183.8526, 'p90_ms': 131.5524, 'iterations': 50, 'warmup_iterations': 20, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 2}
+Thread profile 4 {'mean_ms': 131.685012, 'p50_ms': 121.0488, 'p95_ms': 193.6761, 'p99_ms': 243.1521, 'min_ms': 116.925, 'max_ms': 243.1521, 'p90_ms': 167.2932, 'iterations': 50, 'warmup_iterations': 20, 'batch': 1, 'imgsz': 640, 'device': 'CPU', 'threads': 4}
+
+Exit code: 0

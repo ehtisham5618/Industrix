@@ -1,0 +1,30 @@
+{
+  "precision": 0.7688071834239624,
+  "recall": 0.7760577035990864,
+  "map50": 0.7786282634341811,
+  "map50_95": 0.49242193611176904,
+  "per_class_ap50": {
+    "baekra": 0.9670000000000003,
+    "color issues": 0.7511277027992732,
+    "contamination": 0.9339375000000003,
+    "cut": 0.6817697321866272,
+    "gray stitch": 0.7684926405369953,
+    "selvet": 0.9019965597188873,
+    "stain": 0.9121411665322898,
+    "chemical hazard": 0.4151343296506964,
+    "fire": 0.6226894692487489,
+    "no helmet": 0.881802354206994,
+    "smoke": 0.5124477063296625,
+    "water leak": 0.995
+  },
+  "split": "test",
+  "imgsz": 640,
+  "batch": 1,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "rect": false,
+  "artifact_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "evaluation_yaml_sha256": "e0bcc20b3f8e90a6643262318e32e24b6aa8ee0563aeacb74516d453e07801b8",
+  "checkpoint_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061"
+}

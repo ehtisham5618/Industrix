@@ -1,0 +1,11 @@
+test_failed_run_cannot_be_treated_as_pass (test_completion_status.CompletionStatusTests.test_failed_run_cannot_be_treated_as_pass) ... ok
+test_continuously_growing_memory_flags_leak (test_leak_analysis.LeakAnalysisTests.test_continuously_growing_memory_flags_leak) ... ok
+test_stable_memory_not_leak (test_leak_analysis.LeakAnalysisTests.test_stable_memory_not_leak) ... ok
+test_latency_percentiles (test_metrics.MetricTests.test_latency_percentiles) ... ok
+test_windowed_summary (test_metrics.MetricTests.test_windowed_summary) ... ok
+test_sample_generated_without_gpu (test_resource_monitor.ResourceMonitorTests.test_sample_generated_without_gpu) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.033s
+
+OK

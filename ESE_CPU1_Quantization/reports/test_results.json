@@ -1,0 +1,21 @@
+{
+  "quantization_tests": {
+    "run": 16,
+    "passed": 14,
+    "failed": 2,
+    "errors": 0,
+    "skipped": 0,
+    "failures": [
+      "test_quantization.MeasuredQuantizationAcceptance.test_actual_ir_size_below_6_5_decimal_mb",
+      "test_quantization.MeasuredQuantizationAcceptance.test_actual_map_drop_below_one_percentage_point"
+    ]
+  },
+  "sed3_regression_tests": {
+    "run": 6,
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "failures": []
+  }
+}

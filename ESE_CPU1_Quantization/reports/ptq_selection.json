@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "type": "standard_nncf_ptq",
+      "selection_split": "val",
+      "drop_pp": -0.1208191042198159,
+      "relative_change_pct": 0.15911346689931147,
+      "strict_0_8pp_pass": true,
+      "dod_1_0pp_pass": true
+    },
+    {
+      "attempt": 2,
+      "type": "nncf_accuracy_control",
+      "selection_split": "val",
+      "trigger": "strict held-out target shortfall",
+      "max_drop": 0.0079,
+      "drop_pp": -0.3622068021354452,
+      "relative_change_pct": 0.47701048931325574,
+      "strict_0_8pp_pass": true,
+      "dod_1_0pp_pass": true
+    }
+  ],
+  "selected": "accuracy_aware",
+  "test_not_used_for_selection": true
+}

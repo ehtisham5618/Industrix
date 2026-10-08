@@ -1,0 +1,22 @@
+{
+  "count": 300,
+  "seed": 42,
+  "strategy": "Seeded greedy inverse-current-image-class-coverage; training only",
+  "image_class_coverage": {
+    "baekra": 29,
+    "color issues": 29,
+    "contamination": 29,
+    "cut": 29,
+    "gray stitch": 29,
+    "selvet": 29,
+    "stain": 29,
+    "chemical hazard": 29,
+    "fire": 63,
+    "no helmet": 38,
+    "smoke": 53,
+    "water leak": 28
+  },
+  "byte_identical_holdout_images_excluded": 0,
+  "dataset_version": "combined-12class-v3-hardnegative",
+  "manifest_sha256": "31bfc86e6eeefd2c07ee14cf444fbcbc417f09f83d758e2be053797701a0c23f"
+}
