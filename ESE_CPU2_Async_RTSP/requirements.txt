@@ -1,0 +1,7 @@
+# Use Python 3.12 and the already installed CPU1 environment.
+# No GPU, media server, replacement model or new inference runtime is required.
+ultralytics==8.4.24
+lap==0.5.13
+psutil==7.2.2
+mlflow==2.22.2
+PyYAML>=6.0
