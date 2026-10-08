@@ -1,0 +1,109 @@
+{
+  "scope": "Short supplemental responsive-layout and recovery regression; not the 180-second acceptance benchmark",
+  "status": "completed",
+  "started_at_utc": "2026-10-08T19:11:02.440717+00:00",
+  "finished_at_utc": "2026-10-08T19:12:39.845644+00:00",
+  "duration_actual_seconds": 5.094000000040978,
+  "delivery_latency_ms": {
+    "count": 18,
+    "mean": 35.081787109375,
+    "p50": 30.84033203125,
+    "p95": 98.10108642578125,
+    "max": 98.94091796875,
+    "min": 8.890380859375
+  },
+  "layout": {
+    "desktop": {
+      "overflow": false,
+      "canvases": [
+        {
+          "width": 352,
+          "height": 288
+        },
+        {
+          "width": 960,
+          "height": 540
+        },
+        {
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "engine": "OpenVINO INT8 (CPU)",
+      "privacy": "0% \u00b7 On-Premise"
+    },
+    "tablet": {
+      "overflow": false,
+      "columns": "348px 348px"
+    },
+    "mobile": {
+      "overflow": false,
+      "columns": "354px"
+    }
+  },
+  "failure_tests": {
+    "single_camera_transport": {
+      "counts": {
+        "camera_01": 5,
+        "camera_03": 5
+      },
+      "states": [
+        "LIVE",
+        "CONNECTING",
+        "LIVE"
+      ],
+      "kind": "Intentionally silent browser camera_02 transport; actual backend still runs all cameras",
+      "pass": true
+    },
+    "stop_control": {
+      "seconds": 4.640999999945052,
+      "state": {
+        "engine": "Idle",
+        "states": [
+          "OFFLINE",
+          "OFFLINE",
+          "OFFLINE"
+        ]
+      }
+    },
+    "backend_offline": {
+      "backend": "Backend offline",
+      "engine": "Unavailable",
+      "privacy": "Unavailable",
+      "states": [
+        "OFFLINE",
+        "OFFLINE",
+        "OFFLINE"
+      ]
+    },
+    "reconnected": {
+      "engine": "OpenVINO INT8 (CPU)",
+      "states": [
+        "LIVE",
+        "LIVE",
+        "LIVE"
+      ]
+    }
+  },
+  "recovery_layout_result": "PASS",
+  "raw_harness_overall": "FAIL",
+  "raw_full_task_gates": {
+    "real_three_feed_180_seconds": false,
+    "mean_delivery_below_50ms": true,
+    "p95_delivery_below_50ms": false,
+    "genuine_focus_detection_overlays": false,
+    "independent_camera_failure": true,
+    "backend_offline_no_live_claim": true,
+    "responsive_without_horizontal_overflow": true,
+    "no_browser_or_component_errors": true,
+    "truthful_local_engine_and_privacy": true,
+    "image_upload_preserved": true,
+    "actual_backend_reconnection": true
+  },
+  "explanation": "The harness evaluates all full-task predicates even in short mode. Its 180-second and real-focus-detection gates intentionally cannot be established from this five-second scene window. Its P95 was 98.10ms, so no universal P95<50ms claim is made. Primary 180-second measurements remain separately preserved.",
+  "changes_validated": [
+    "Content-based iframe height can shrink after viewport reflow",
+    "Bounded 25-second stream shutdown; incomplete shutdown retains manager and returns HTTP409"
+  ],
+  "source_app_commit": "a03b20e38d3d9650bac295cee0f9e28af4b94413"
+}

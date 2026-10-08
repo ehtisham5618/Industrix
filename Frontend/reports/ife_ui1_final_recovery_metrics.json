@@ -1,0 +1,464 @@
+{
+  "task": "IFE-UI1",
+  "config_version": "IFEUI1-multistream-console-v1",
+  "experiment_type": "frontend_integration",
+  "started_at_utc": "2026-10-08T19:16:39.059434+00:00",
+  "finished_at_utc": "2026-10-08T19:18:21.089364+00:00",
+  "status": "completed",
+  "duration_requested_seconds": 5.0,
+  "duration_actual_seconds": 5.140999999945052,
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "logical_cpus": 4
+  },
+  "browser": "Fresh headless Microsoft Edge via Playwright; no existing profile or authenticated session",
+  "versions": {
+    "python_backend": "3.12.9",
+    "python_frontend": "3.14.3",
+    "streamlit": "1.63.0",
+    "playwright": "1.58.0"
+  },
+  "engine": {
+    "name": "OpenVINO",
+    "precision": "INT8",
+    "device": "CPU",
+    "active": true,
+    "version": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "model_version": "cme-opt2-focal-cosine-12class-v1"
+  },
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "measurement": {
+    "start": "Backend DetectionResult.result_ready_at after calibration/tracking/SED-2",
+    "end": "Browser timestamp immediately after JPEG decode and canvas drawImage + overlays",
+    "includes": "Notification, bounded latest-only transport, JPEG encoding, WebSocket transfer, browser decoding and canvas update",
+    "excluded": "Earlier capture/sampling/inference; subsequent display paint/scan-out is not measured",
+    "clock": "Browser performance.timeOrigin + performance.now aligned to backend epoch using lowest-RTT midpoint",
+    "clock_offset_ms": 1.934814453125,
+    "clock_uncertainty_ms": 5.449951171875
+  },
+  "delivery_latency_ms": {
+    "count": 12,
+    "mean": 25.138264973958332,
+    "p50": 29.123779296875,
+    "p95": 33.74830322265625,
+    "max": 33.765625,
+    "min": 11.21728515625
+  },
+  "inference_pipeline_ms": {
+    "count": 12,
+    "mean": 424.8645749952023,
+    "p50": 338.2877833209932,
+    "p95": 753.7956666589404,
+    "max": 753.7956666589404,
+    "min": 269.0870666798825
+  },
+  "capture_to_canvas_ms": {
+    "count": 12,
+    "mean": 1823.3573811848958,
+    "p50": 1560.5098876953125,
+    "p95": 2839.0838745117185,
+    "max": 2883.3388671875,
+    "min": 1326.058837890625
+  },
+  "encoding_ms": {
+    "count": 12,
+    "mean": 8.048400011224052,
+    "p50": 5.103650037199259,
+    "p95": 17.546739976387467,
+    "max": 19.076399970799685,
+    "min": 0.7570000598207116
+  },
+  "transport_ms": {
+    "count": 12,
+    "mean": 9.89288330078125,
+    "p50": 8.22265625,
+    "p95": 16.60969238281249,
+    "max": 22.94140625,
+    "min": 5.416015625
+  },
+  "per_camera_update_fps": {
+    "camera_01": 0.7780587434434454,
+    "camera_03": 0.7780587434434454,
+    "camera_02": 0.7780587434434454
+  },
+  "aggregate_ui_update_fps": 2.3341762303303364,
+  "telemetry": {
+    "updates": 5,
+    "system_cpu_percent": {
+      "count": 5,
+      "mean": 90.88,
+      "p50": 91.4,
+      "p95": 98.38,
+      "max": 99.6,
+      "min": 78.6
+    },
+    "backend_rss_mib": {
+      "count": 5,
+      "mean": 702.67421875,
+      "p50": 699.90625,
+      "p95": 711.05859375,
+      "max": 711.08203125,
+      "min": 691.51171875
+    },
+    "backend_evaluated_fps": {
+      "count": 5,
+      "mean": 2.9429603051723885,
+      "p50": 2.9167012012179536,
+      "p95": 3.7749555880571775,
+      "max": 3.8201432013285315,
+      "min": 2.1901001584086464
+    },
+    "frontend_cpu_raw_percent": {
+      "count": 5,
+      "mean": 0.6,
+      "p50": 0.0,
+      "p95": 2.3999999999999995,
+      "max": 3.0,
+      "min": 0.0
+    },
+    "frontend_rss_mib": {
+      "count": 5,
+      "mean": 94.28515625,
+      "p50": 94.28515625,
+      "p95": 94.28515625,
+      "max": 94.28515625,
+      "min": 94.28515625
+    }
+  },
+  "baseline_without_browser": {
+    "seconds": 15,
+    "system_cpu_percent": {
+      "count": 15,
+      "mean": 91.22,
+      "p50": 89.7,
+      "p95": 100.0,
+      "max": 100.0,
+      "min": 76.0
+    },
+    "evaluated_fps": {
+      "count": 15,
+      "mean": 2.469576100234797,
+      "p50": 2.2205707755498394,
+      "p95": 4.896834240955434,
+      "max": 5.939156313100483,
+      "min": 0.0
+    },
+    "limitation": "Short sequential observational comparison, not an isolated causal CPU overhead test"
+  },
+  "reliability": {
+    "browser_errors": [],
+    "component_errors": [],
+    "network_errors": 0,
+    "external_browser_requests": [],
+    "out_of_order": 0,
+    "stale_events": 0,
+    "camera_states": [],
+    "detected_frames": {},
+    "confirmation_states": {},
+    "backend_track_ids": {}
+  },
+  "backend_start": {
+    "cameras": [
+      {
+        "camera_id": "camera_01",
+        "name": "Textile Weaving Inspection",
+        "source": "data\\test_factory_clip.mp4",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "baekra",
+          "selvet",
+          "stain"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_01",
+          "name": "Textile Weaving Inspection",
+          "enabled": true,
+          "status": "running",
+          "captured": 700,
+          "eligible": 175,
+          "processed": 20,
+          "overload_drops": 151,
+          "drop_rate_pct": 86.28571428571429,
+          "processed_fps": 0.7141604173901155,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 24.99560059571943,
+          "read_failures": 0,
+          "buffer_overruns": 151,
+          "intentional_skips": 525,
+          "last_frame_age_ms": 564.5174999954179,
+          "connected": true
+        }
+      },
+      {
+        "camera_id": "camera_02",
+        "name": "Chemical Storage Bay",
+        "source": "Confidence_Calibration\\benchmark\\media\\chemical_hazard_01_hazmat_training.webm",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "chemical hazard",
+          "fire",
+          "smoke"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_02",
+          "name": "Chemical Storage Bay",
+          "enabled": true,
+          "status": "running",
+          "captured": 838,
+          "eligible": 210,
+          "processed": 19,
+          "overload_drops": 186,
+          "drop_rate_pct": 88.57142857142857,
+          "processed_fps": 0.6784651930354818,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 29.92387893684608,
+          "read_failures": 0,
+          "buffer_overruns": 186,
+          "intentional_skips": 628,
+          "last_frame_age_ms": 483.53269998915493,
+          "connected": true
+        }
+      },
+      {
+        "camera_id": "camera_03",
+        "name": "Loading Dock",
+        "source": "Confidence_Calibration\\benchmark\\media\\no_helmet_01_workers_roof.webm",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "no helmet"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_03",
+          "name": "Loading Dock",
+          "enabled": true,
+          "status": "running",
+          "captured": 670,
+          "eligible": 168,
+          "processed": 19,
+          "overload_drops": 144,
+          "drop_rate_pct": 85.71428571428571,
+          "processed_fps": 0.6785354807309218,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 23.92729832544647,
+          "read_failures": 0,
+          "buffer_overruns": 144,
+          "intentional_skips": 502,
+          "last_frame_age_ms": 539.36860000249,
+          "connected": true
+        }
+      }
+    ]
+  },
+  "backend_end": {
+    "cameras": [
+      {
+        "camera_id": "camera_01",
+        "name": "Textile Weaving Inspection",
+        "source": "data\\test_factory_clip.mp4",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "baekra",
+          "selvet",
+          "stain"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_01",
+          "name": "Textile Weaving Inspection",
+          "enabled": true,
+          "status": "running",
+          "captured": 834,
+          "eligible": 209,
+          "processed": 24,
+          "overload_drops": 180,
+          "drop_rate_pct": 86.1244019138756,
+          "processed_fps": 0.71908809921446,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 24.988300217210817,
+          "read_failures": 0,
+          "buffer_overruns": 180,
+          "intentional_skips": 625,
+          "last_frame_age_ms": 561.0702999401838,
+          "connected": true
+        }
+      },
+      {
+        "camera_id": "camera_02",
+        "name": "Chemical Storage Bay",
+        "source": "Confidence_Calibration\\benchmark\\media\\chemical_hazard_01_hazmat_training.webm",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "chemical hazard",
+          "fire",
+          "smoke"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_02",
+          "name": "Chemical Storage Bay",
+          "enabled": true,
+          "status": "running",
+          "captured": 999,
+          "eligible": 250,
+          "processed": 23,
+          "overload_drops": 222,
+          "drop_rate_pct": 88.8,
+          "processed_fps": 0.689136881553029,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 29.93250373207852,
+          "read_failures": 0,
+          "buffer_overruns": 222,
+          "intentional_skips": 749,
+          "last_frame_age_ms": 372.75430001318455,
+          "connected": true
+        }
+      },
+      {
+        "camera_id": "camera_03",
+        "name": "Loading Dock",
+        "source": "Confidence_Calibration\\benchmark\\media\\no_helmet_01_workers_roof.webm",
+        "simulation": true,
+        "enabled": true,
+        "monitored_classes": [
+          "no helmet"
+        ],
+        "geofences": [],
+        "status": {
+          "camera_id": "camera_03",
+          "name": "Loading Dock",
+          "enabled": true,
+          "status": "running",
+          "captured": 799,
+          "eligible": 200,
+          "processed": 23,
+          "overload_drops": 172,
+          "drop_rate_pct": 86.0,
+          "processed_fps": 0.6891967150395065,
+          "queue_depth": 15,
+          "last_error": null,
+          "capture_fps": 23.942089556957388,
+          "read_failures": 0,
+          "buffer_overruns": 172,
+          "intentional_skips": 599,
+          "last_frame_age_ms": 491.4011999499053,
+          "connected": true
+        }
+      }
+    ]
+  },
+  "progress_snapshots": [],
+  "layout": {
+    "desktop": {
+      "overflow": false,
+      "canvases": [
+        {
+          "width": 352,
+          "height": 288
+        },
+        {
+          "width": 960,
+          "height": 540
+        },
+        {
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "engine": "OpenVINO INT8 (CPU)",
+      "privacy": "0% \u00b7 On-Premise"
+    },
+    "tablet": {
+      "overflow": false,
+      "columns": "348px 348px"
+    },
+    "mobile": {
+      "overflow": false,
+      "columns": "354px"
+    }
+  },
+  "failure_tests": {
+    "single_camera_transport": {
+      "counts": {
+        "camera_01": 5,
+        "camera_03": 5
+      },
+      "states": [
+        "LIVE",
+        "CONNECTING",
+        "LIVE"
+      ],
+      "kind": "Intentionally silent browser camera_02 transport; actual backend still runs all cameras",
+      "pass": true
+    },
+    "stop_control": {
+      "seconds": 3.780999999959022,
+      "state": {
+        "engine": "Idle",
+        "states": [
+          "OFFLINE",
+          "OFFLINE",
+          "OFFLINE"
+        ]
+      }
+    },
+    "backend_offline": {
+      "backend": "Backend offline",
+      "engine": "Unavailable",
+      "privacy": "Unavailable",
+      "states": [
+        "OFFLINE",
+        "OFFLINE",
+        "OFFLINE"
+      ]
+    },
+    "reconnected": {
+      "engine": "OpenVINO INT8 (CPU)",
+      "states": [
+        "LIVE",
+        "LIVE",
+        "LIVE"
+      ]
+    }
+  },
+  "image_upload_navigation_preserved": true,
+  "acceptance": {
+    "real_three_feed_180_seconds": false,
+    "mean_delivery_below_50ms": true,
+    "p95_delivery_below_50ms": true,
+    "genuine_focus_detection_overlays": false,
+    "independent_camera_failure": true,
+    "backend_offline_no_live_claim": true,
+    "responsive_without_horizontal_overflow": true,
+    "no_browser_or_component_errors": true,
+    "truthful_local_engine_and_privacy": true,
+    "image_upload_preserved": true,
+    "actual_backend_reconnection": true
+  },
+  "overall": "FAIL",
+  "scope": "Final short real-browser recovery/layout verification after serialized stream controls; not the primary 180-second benchmark",
+  "scope_acceptance": {
+    "independent_camera_failure": true,
+    "backend_offline_no_live_claim": true,
+    "responsive_without_horizontal_overflow": true,
+    "no_browser_or_component_errors": true,
+    "truthful_local_engine_and_privacy": true,
+    "image_upload_preserved": true,
+    "actual_backend_reconnection": true
+  },
+  "scope_result": "PASS",
+  "full_task_overall_explanation": "Raw overall FAIL is expected because this five-second regression window does not meet the separate 180-second benchmark gate and contains no focus-class detections. Full primary measurements are retained in ife_ui1_metrics.json."
+}

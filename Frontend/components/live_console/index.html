@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="console.css"></head>
+<body><div class="console"><div class="topline"><span class="eyebrow">OPERATIONS / LIVE MONITOR</span><span id="connection" class="badge offline">Backend Offline</span></div>
+<section class="telemetry" aria-label="Hardware telemetry"><div><small>ACTIVE ENGINE</small><strong id="engine">Unavailable</strong></div><div><small>SYSTEM CPU</small><strong id="cpu">—</strong></div><div><small>BACKEND RAM · MiB</small><strong id="ram">—</strong></div><div><small>EVALUATED FPS</small><strong id="fps">—</strong></div><div class="privacy"><small>CLOUD DEPENDENCY</small><strong id="privacy">Unverified</strong></div></section>
+<p id="model-meta" class="note">Start feeds to verify the active model</p><div class="telemetry-latency"><small>PURE MODEL INFERENCE · MEAN / P95</small><strong id="latency">Unavailable</strong></div>
+<div class="section-head"><h2>Camera overview</h2><span id="feed-count">Connecting to backend</span></div>
+<main id="cameras" class="grid" aria-label="Camera feeds"></main><section id="alerts" class="alerts" aria-label="Active safety events"><h3>Safety events</h3><p id="alert-text">Waiting for live status</p></section>
+<p id="iot-state" class="note">Software-only IoT status unavailable</p>
+<p class="note">Local-video simulation • Camera names identify deployment roles. Forklift proximity is not available in the active model.</p>
+</div><script src="console.js"></script></body></html>

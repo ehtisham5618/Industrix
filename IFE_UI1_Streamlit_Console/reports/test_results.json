@@ -1,0 +1,26 @@
+{
+  "console": {
+    "count": 21,
+    "exit_code": 0,
+    "passed": true
+  },
+  "sed1": {
+    "count": 28,
+    "exit_code": 0,
+    "passed": true
+  },
+  "sed2": {
+    "count": 35,
+    "exit_code": 0,
+    "passed": true
+  },
+  "sed3": {
+    "count": 23,
+    "exit_code": 0,
+    "passed": true
+  },
+  "registry": {
+    "exit_code": 0,
+    "passed": true
+  }
+}

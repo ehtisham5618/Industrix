@@ -1,0 +1,67 @@
+Command: C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe -m unittest discover -s SED_3_Stress_Testing/tests -v
+test_failed_run_cannot_be_treated_as_pass (test_completion_status.CompletionStatusTests.test_failed_run_cannot_be_treated_as_pass) ... ok
+test_resolved_archives_bounded_while_live_incidents_retained (test_cpu_soak.RetentionTests.test_resolved_archives_bounded_while_live_incidents_retained) ... ok
+test_bounded_cache_growth_then_plateau (test_cpu_soak.SoakAnalysisTests.test_bounded_cache_growth_then_plateau) ... ok
+test_capacity_cannot_replace_operational_throughput (test_cpu_soak.SoakAnalysisTests.test_capacity_cannot_replace_operational_throughput) ... ok
+test_duration_and_official_cli (test_cpu_soak.SoakAnalysisTests.test_duration_and_official_cli) ... ok
+test_frequency_probe_exception_is_nonfatal (test_cpu_soak.SoakAnalysisTests.test_frequency_probe_exception_is_nonfatal) ... ok
+test_insufficient_telemetry_not_claimed_leak_free (test_cpu_soak.SoakAnalysisTests.test_insufficient_telemetry_not_claimed_leak_free) ... ok
+test_interrupted_or_short_run_cannot_pass (test_cpu_soak.SoakAnalysisTests.test_interrupted_or_short_run_cannot_pass) ... ok
+test_invalid_duration_and_non_cpu_engine_rejected (test_cpu_soak.SoakAnalysisTests.test_invalid_duration_and_non_cpu_engine_rejected) ... usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: argument --engine: invalid choice: 'pytorch' (choose from openvino)
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: argument --streams: invalid choice: '2' (choose from 3)
+ok
+test_material_continuous_growth_is_flagged (test_cpu_soak.SoakAnalysisTests.test_material_continuous_growth_is_flagged) ... ok
+test_missing_cpu_sensor_apis_are_nonfatal (test_cpu_soak.SoakAnalysisTests.test_missing_cpu_sensor_apis_are_nonfatal) ... ok
+test_missing_engine_never_falls_back_to_pytorch (test_cpu_soak.SoakAnalysisTests.test_missing_engine_never_falls_back_to_pytorch) ... ok
+test_persisted_csv_keeps_missing_temperature_null (test_cpu_soak.SoakAnalysisTests.test_persisted_csv_keeps_missing_temperature_null) ... ok
+test_python_growth_has_separate_material_threshold (test_cpu_soak.SoakAnalysisTests.test_python_growth_has_separate_material_threshold) ... ok
+test_relative_camera_config_resolves_before_long_run (test_cpu_soak.SoakAnalysisTests.test_relative_camera_config_resolves_before_long_run) ... ok
+test_six_windows_do_not_include_warmup (test_cpu_soak.SoakAnalysisTests.test_six_windows_do_not_include_warmup) ... ok
+test_stable_memory_is_not_unbounded (test_cpu_soak.SoakAnalysisTests.test_stable_memory_is_not_unbounded) ... ok
+test_throttling_unavailable_with_no_temperature (test_cpu_soak.SoakAnalysisTests.test_throttling_unavailable_with_no_temperature) ... ok
+test_continuously_growing_memory_flags_leak (test_leak_analysis.LeakAnalysisTests.test_continuously_growing_memory_flags_leak) ... ok
+test_stable_memory_not_leak (test_leak_analysis.LeakAnalysisTests.test_stable_memory_not_leak) ... ok
+test_latency_percentiles (test_metrics.MetricTests.test_latency_percentiles) ... ok
+test_windowed_summary (test_metrics.MetricTests.test_windowed_summary) ... ok
+test_sample_generated_without_gpu (test_resource_monitor.ResourceMonitorTests.test_sample_generated_without_gpu) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 4.545s
+
+OK
+
+Exit code: 0

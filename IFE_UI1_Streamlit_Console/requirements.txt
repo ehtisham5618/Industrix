@@ -1,0 +1,5 @@
+# Benchmark only; inference retains ESE_CPU1_Quantization runtime requirements.
+playwright==1.58.0
+psutil>=7,<8
+requests>=2.32,<3
+numpy>=2,<3

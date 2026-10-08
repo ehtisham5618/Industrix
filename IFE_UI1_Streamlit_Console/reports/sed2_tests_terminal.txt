@@ -1,0 +1,43 @@
+Command: C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe -m unittest discover -s SED_2_Alert_Escalation/tests -v
+test_critical_iot_trigger_is_idempotent_for_one_event (test_actions.ActionTests.test_critical_iot_trigger_is_idempotent_for_one_event) ... ok
+test_info_warning_critical_distinct_actions (test_actions.ActionTests.test_info_warning_critical_distinct_actions) ... ok
+test_mock_iot_reset (test_actions.ActionTests.test_mock_iot_reset) ... ok
+test_info_to_warning_after_threshold (test_escalation.EscalationTests.test_info_to_warning_after_threshold) ... ok
+test_jsonl_log_records_transition (test_escalation.EscalationTests.test_jsonl_log_records_transition) ... ok
+test_no_premature_escalation (test_escalation.EscalationTests.test_no_premature_escalation) ... ok
+test_resolution_and_recurrence_gets_new_event_id (test_escalation.EscalationTests.test_resolution_and_recurrence_gets_new_event_id) ... ok
+test_warning_to_critical_after_threshold (test_escalation.EscalationTests.test_warning_to_critical_after_threshold) ... ok
+test_process_frame_preserves_camera_isolation (test_multicamera_alerts.MultiCameraAlertTests.test_process_frame_preserves_camera_isolation) ... ok
+test_three_tiers_can_coexist_across_cameras (test_multicamera_alerts.MultiCameraAlertTests.test_three_tiers_can_coexist_across_cameras) ... ok
+test_stream_manager_routes_confirmed_violation_to_sed2 (test_sed1_integration.SED1IntegrationTests.test_stream_manager_routes_confirmed_violation_to_sed2) ... ok
+test_action_mapping_is_distinct_by_tier (test_severity_rules.SeverityRuleTests.test_action_mapping_is_distinct_by_tier) ... ok
+test_all_safety_hazards_have_rules (test_severity_rules.SeverityRuleTests.test_all_safety_hazards_have_rules) ... ok
+test_geofence_override_can_raise_severity (test_severity_rules.SeverityRuleTests.test_geofence_override_can_raise_severity) ... ok
+test_initial_bucket_rules (test_severity_rules.SeverityRuleTests.test_initial_bucket_rules) ... ok
+test_actual_two_camera_scheduler_smoke (test_tracker.TrackerTests.test_actual_two_camera_scheduler_smoke) ... ok
+test_cameras_never_combine (test_tracker.TrackerTests.test_cameras_never_combine) ... ok
+test_class_change_resets (test_tracker.TrackerTests.test_class_change_resets) ... ok
+test_expiration_and_new_incident (test_tracker.TrackerTests.test_expiration_and_new_incident) ... ok
+test_fifteenth_frame_exactly_once (test_tracker.TrackerTests.test_fifteenth_frame_exactly_once) ... ok
+test_frame_duplicates_rejected_and_raw_skips_are_allowed (test_tracker.TrackerTests.test_frame_duplicates_rejected_and_raw_skips_are_allowed) ... ok
+test_geofence_exit_resets_candidate (test_tracker.TrackerTests.test_geofence_exit_resets_candidate) ... ok
+test_ids_never_combine (test_tracker.TrackerTests.test_ids_never_combine) ... ok
+test_lost_tracker_prediction_is_not_a_positive_frame (test_tracker.TrackerTests.test_lost_tracker_prediction_is_not_a_positive_frame) ... ok
+test_low_confidence_never_advances_confirmation (test_tracker.TrackerTests.test_low_confidence_never_advances_confirmation) ... ok
+test_missing_detection_resets_consecutive (test_tracker.TrackerTests.test_missing_detection_resets_consecutive) ... ok
+test_new_camera_does_not_reset_existing_allocator (test_tracker.TrackerTests.test_new_camera_does_not_reset_existing_allocator) ... ok
+test_no_critical_iot_before_confirmation_and_once_after (test_tracker.TrackerTests.test_no_critical_iot_before_confirmation_and_once_after) ... ok
+test_real_bytetrack_identity_and_class_isolation (test_tracker.TrackerTests.test_real_bytetrack_identity_and_class_isolation) ... ok
+test_real_tracker_to_stream_manager_and_sed2 (test_tracker.TrackerTests.test_real_tracker_to_stream_manager_and_sed2) ... ok
+test_sed2_absence_cleans_active_identity (test_tracker.TrackerTests.test_sed2_absence_cleans_active_identity) ... ok
+test_session_reset_never_inherits_candidate (test_tracker.TrackerTests.test_session_reset_never_inherits_candidate) ... ok
+test_single_eight_and_fourteen_frame_transients (test_tracker.TrackerTests.test_single_eight_and_fourteen_frame_transients) ... ok
+test_two_same_class_tracks_reach_independent_sed2_events (test_tracker.TrackerTests.test_two_same_class_tracks_reach_independent_sed2_events) ... ok
+test_untracked_and_duplicate_boxes_cannot_confirm (test_tracker.TrackerTests.test_untracked_and_duplicate_boxes_cannot_confirm) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 6.950s
+
+OK
+
+Exit code: 0
