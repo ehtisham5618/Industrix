@@ -1,0 +1,258 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "SED_3_Stress_Testing/scripts/soak_test.py", "--duration", "3600", "--engine", "openvino", "--streams", "3"]
+elapsed=60.6s soak=0.6s active=3 evaluated=184 RSS=556.0MiB python=149.8MiB overruns=999
+elapsed=61.6s soak=1.6s active=3 evaluated=187 RSS=557.8MiB python=149.8MiB overruns=1016
+elapsed=120.3s soak=60.3s active=3 evaluated=355 RSS=565.7MiB python=155.8MiB overruns=2004
+elapsed=121.3s soak=61.3s active=3 evaluated=358 RSS=559.8MiB python=149.9MiB overruns=2022
+elapsed=180.8s soak=120.8s active=3 evaluated=529 RSS=560.8MiB python=150.0MiB overruns=3025
+elapsed=181.8s soak=121.8s active=3 evaluated=532 RSS=560.8MiB python=150.0MiB overruns=3042
+elapsed=240.3s soak=180.3s active=3 evaluated=691 RSS=560.9MiB python=150.0MiB overruns=4038
+elapsed=241.3s soak=181.3s active=3 evaluated=694 RSS=560.9MiB python=150.0MiB overruns=4054
+elapsed=300.8s soak=240.8s active=3 evaluated=826 RSS=550.5MiB python=150.1MiB overruns=5097
+elapsed=301.8s soak=241.8s active=3 evaluated=829 RSS=550.5MiB python=150.1MiB overruns=5113
+elapsed=360.5s soak=300.5s active=3 evaluated=976 RSS=551.3MiB python=150.1MiB overruns=6123
+elapsed=361.5s soak=301.5s active=3 evaluated=979 RSS=551.3MiB python=150.1MiB overruns=6140
+elapsed=421.0s soak=361.0s active=3 evaluated=1129 RSS=551.5MiB python=150.2MiB overruns=7164
+elapsed=480.6s soak=420.6s active=3 evaluated=1282 RSS=552.5MiB python=150.2MiB overruns=8186
+elapsed=481.6s soak=421.6s active=3 evaluated=1285 RSS=551.6MiB python=150.2MiB overruns=8203
+elapsed=540.2s soak=480.2s active=3 evaluated=1432 RSS=552.2MiB python=150.2MiB overruns=9212
+elapsed=541.2s soak=481.2s active=3 evaluated=1435 RSS=552.2MiB python=149.7MiB overruns=9229
+elapsed=600.7s soak=540.7s active=3 evaluated=1591 RSS=552.7MiB python=150.3MiB overruns=10248
+elapsed=601.7s soak=541.7s active=3 evaluated=1594 RSS=552.8MiB python=150.3MiB overruns=10264
+elapsed=660.4s soak=600.4s active=3 evaluated=1741 RSS=552.9MiB python=150.2MiB overruns=11275
+elapsed=661.4s soak=601.4s active=3 evaluated=1744 RSS=552.8MiB python=150.2MiB overruns=11292
+elapsed=721.0s soak=661.0s active=3 evaluated=1891 RSS=553.5MiB python=150.3MiB overruns=12320
+elapsed=722.0s soak=662.0s active=3 evaluated=1894 RSS=556.1MiB python=150.3MiB overruns=12337
+elapsed=780.6s soak=720.6s active=3 evaluated=2038 RSS=556.2MiB python=150.3MiB overruns=13349
+elapsed=781.6s soak=721.6s active=3 evaluated=2041 RSS=553.5MiB python=149.8MiB overruns=13366
+elapsed=840.3s soak=780.3s active=3 evaluated=2182 RSS=554.2MiB python=150.3MiB overruns=14383
+elapsed=841.3s soak=781.3s active=3 evaluated=2185 RSS=554.2MiB python=150.3MiB overruns=14401
+elapsed=900.9s soak=840.9s active=3 evaluated=2338 RSS=552.6MiB python=141.0MiB overruns=15426
+elapsed=901.9s soak=841.9s active=3 evaluated=2341 RSS=557.8MiB python=149.9MiB overruns=15442
+elapsed=960.4s soak=900.4s active=3 evaluated=2497 RSS=555.2MiB python=150.4MiB overruns=16439
+elapsed=961.4s soak=901.4s active=3 evaluated=2500 RSS=555.3MiB python=150.4MiB overruns=16456
+elapsed=1020.1s soak=960.1s active=3 evaluated=2647 RSS=568.2MiB python=161.1MiB overruns=17466
+elapsed=1021.1s soak=961.1s active=3 evaluated=2650 RSS=559.6MiB python=150.9MiB overruns=17483
+elapsed=1080.6s soak=1020.6s active=3 evaluated=2812 RSS=559.7MiB python=150.6MiB overruns=18496
+elapsed=1081.6s soak=1021.6s active=3 evaluated=2815 RSS=559.7MiB python=150.9MiB overruns=18513
+elapsed=1140.2s soak=1080.2s active=3 evaluated=2974 RSS=565.7MiB python=150.1MiB overruns=19508
+elapsed=1141.2s soak=1081.2s active=3 evaluated=2977 RSS=559.7MiB python=150.1MiB overruns=19526
+elapsed=1200.8s soak=1140.8s active=3 evaluated=3112 RSS=559.0MiB python=150.7MiB overruns=20566
+elapsed=1201.8s soak=1141.8s active=3 evaluated=3115 RSS=559.0MiB python=150.7MiB overruns=20584
+elapsed=1260.4s soak=1200.4s active=3 evaluated=3265 RSS=559.1MiB python=150.6MiB overruns=21590
+elapsed=1261.5s soak=1201.5s active=3 evaluated=3268 RSS=559.1MiB python=150.6MiB overruns=21608
+elapsed=1320.0s soak=1260.0s active=3 evaluated=3415 RSS=565.2MiB python=150.1MiB overruns=22617
+elapsed=1321.1s soak=1261.1s active=3 evaluated=3418 RSS=559.3MiB python=150.6MiB overruns=22634
+elapsed=1380.8s soak=1320.8s active=3 evaluated=3565 RSS=559.3MiB python=150.7MiB overruns=23666
+elapsed=1381.8s soak=1321.8s active=3 evaluated=3565 RSS=565.2MiB python=156.6MiB overruns=23686
+elapsed=1440.5s soak=1380.5s active=3 evaluated=3718 RSS=565.3MiB python=150.7MiB overruns=24691
+elapsed=1441.6s soak=1381.6s active=3 evaluated=3721 RSS=562.5MiB python=150.7MiB overruns=24707
+elapsed=1500.1s soak=1440.1s active=3 evaluated=3874 RSS=559.5MiB python=150.3MiB overruns=25710
+elapsed=1501.1s soak=1441.1s active=3 evaluated=3877 RSS=559.5MiB python=150.3MiB overruns=25728
+elapsed=1560.7s soak=1500.7s active=3 evaluated=4030 RSS=559.5MiB python=150.8MiB overruns=26750
+elapsed=1561.7s soak=1501.7s active=3 evaluated=4033 RSS=568.1MiB python=150.8MiB overruns=26766
+elapsed=1620.4s soak=1560.4s active=3 evaluated=4186 RSS=559.5MiB python=150.3MiB overruns=27772
+elapsed=1621.4s soak=1561.4s active=3 evaluated=4189 RSS=551.0MiB python=141.5MiB overruns=27791
+elapsed=1680.0s soak=1620.0s active=3 evaluated=4342 RSS=565.5MiB python=150.9MiB overruns=28790
+elapsed=1681.0s soak=1621.0s active=3 evaluated=4345 RSS=559.6MiB python=150.4MiB overruns=28808
+elapsed=1682.0s soak=1622.0s active=3 evaluated=4348 RSS=559.6MiB python=150.4MiB overruns=28825
+elapsed=1740.9s soak=1680.9s active=3 evaluated=4498 RSS=559.6MiB python=150.9MiB overruns=29830
+elapsed=1741.6s soak=1681.6s active=3 evaluated=4498 RSS=559.6MiB python=150.9MiB overruns=29850
+elapsed=1800.3s soak=1740.3s active=3 evaluated=4636 RSS=559.5MiB python=150.9MiB overruns=30870
+elapsed=1801.3s soak=1741.3s active=3 evaluated=4636 RSS=562.2MiB python=150.9MiB overruns=30889
+elapsed=1860.8s soak=1800.8s active=3 evaluated=4792 RSS=559.5MiB python=147.4MiB overruns=31911
+elapsed=1861.8s soak=1801.8s active=3 evaluated=4792 RSS=562.1MiB python=150.9MiB overruns=31929
+elapsed=1920.4s soak=1860.4s active=3 evaluated=4930 RSS=562.8MiB python=150.4MiB overruns=32946
+elapsed=1921.4s soak=1861.4s active=3 evaluated=4930 RSS=562.8MiB python=150.9MiB overruns=32966
+elapsed=1980.0s soak=1920.0s active=3 evaluated=5086 RSS=562.8MiB python=150.4MiB overruns=33967
+elapsed=1981.0s soak=1921.0s active=3 evaluated=5089 RSS=562.8MiB python=150.9MiB overruns=33983
+elapsed=2040.7s soak=1980.7s active=3 evaluated=5227 RSS=562.8MiB python=151.0MiB overruns=35023
+elapsed=2041.7s soak=1981.7s active=3 evaluated=5230 RSS=562.8MiB python=151.0MiB overruns=35039
+elapsed=2100.2s soak=2040.2s active=3 evaluated=5383 RSS=561.8MiB python=151.0MiB overruns=36042
+elapsed=2101.2s soak=2041.2s active=3 evaluated=5386 RSS=562.3MiB python=151.0MiB overruns=36058
+elapsed=2160.8s soak=2100.8s active=3 evaluated=5539 RSS=562.7MiB python=151.1MiB overruns=37081
+elapsed=2161.8s soak=2101.8s active=3 evaluated=5542 RSS=564.0MiB python=151.1MiB overruns=37098
+elapsed=2220.4s soak=2160.4s active=3 evaluated=5671 RSS=564.9MiB python=151.1MiB overruns=38126
+elapsed=2221.4s soak=2161.4s active=3 evaluated=5677 RSS=562.2MiB python=150.6MiB overruns=38140
+elapsed=2280.1s soak=2220.1s active=3 evaluated=5824 RSS=556.4MiB python=141.8MiB overruns=39152
+elapsed=2281.1s soak=2221.1s active=3 evaluated=5827 RSS=562.4MiB python=150.6MiB overruns=39167
+elapsed=2340.8s soak=2280.8s active=3 evaluated=5968 RSS=562.4MiB python=151.2MiB overruns=40203
+elapsed=2342.0s soak=2282.0s active=3 evaluated=5971 RSS=571.0MiB python=153.8MiB overruns=40222
+elapsed=2400.4s soak=2340.4s active=3 evaluated=6091 RSS=562.7MiB python=151.2MiB overruns=41257
+elapsed=2401.4s soak=2341.4s active=3 evaluated=6094 RSS=562.7MiB python=151.2MiB overruns=41273
+elapsed=2460.0s soak=2400.0s active=3 evaluated=6244 RSS=562.7MiB python=151.1MiB overruns=42281
+elapsed=2461.1s soak=2401.1s active=3 evaluated=6247 RSS=570.4MiB python=151.1MiB overruns=42297
+elapsed=2520.9s soak=2460.9s active=3 evaluated=6374 RSS=562.7MiB python=151.2MiB overruns=43351
+elapsed=2521.9s soak=2461.9s active=3 evaluated=6376 RSS=562.7MiB python=151.2MiB overruns=43367
+elapsed=2580.5s soak=2520.5s active=3 evaluated=6529 RSS=562.7MiB python=151.2MiB overruns=44373
+elapsed=2581.6s soak=2521.6s active=3 evaluated=6529 RSS=571.3MiB python=151.2MiB overruns=44392
+elapsed=2640.1s soak=2580.1s active=3 evaluated=6613 RSS=562.7MiB python=151.2MiB overruns=45459
+elapsed=2640.9s soak=2580.9s active=3 evaluated=6613 RSS=562.7MiB python=151.2MiB overruns=45480
+elapsed=2641.9s soak=2581.9s active=3 evaluated=6616 RSS=563.2MiB python=150.7MiB overruns=45497
+elapsed=2700.7s soak=2640.7s active=3 evaluated=6754 RSS=571.1MiB python=156.6MiB overruns=46511
+elapsed=2701.6s soak=2641.6s active=3 evaluated=6754 RSS=562.6MiB python=159.3MiB overruns=46523
+elapsed=2760.5s soak=2700.5s active=3 evaluated=6814 RSS=563.4MiB python=151.2MiB overruns=47639
+elapsed=2761.6s soak=2701.6s active=3 evaluated=6820 RSS=565.2MiB python=150.7MiB overruns=47653
+elapsed=2820.8s soak=2760.8s active=3 evaluated=6928 RSS=584.6MiB python=153.9MiB overruns=48640
+elapsed=2821.9s soak=2761.9s active=3 evaluated=6928 RSS=575.8MiB python=151.3MiB overruns=48670
+elapsed=2880.6s soak=2820.6s active=3 evaluated=7036 RSS=569.2MiB python=151.3MiB overruns=49786
+elapsed=2881.6s soak=2821.6s active=3 evaluated=7039 RSS=571.9MiB python=154.0MiB overruns=49802
+elapsed=2940.1s soak=2880.1s active=3 evaluated=7186 RSS=570.1MiB python=153.5MiB overruns=50811
+elapsed=2941.1s soak=2881.1s active=3 evaluated=7189 RSS=567.5MiB python=150.9MiB overruns=50828
+elapsed=3000.8s soak=2940.8s active=3 evaluated=7330 RSS=567.2MiB python=153.2MiB overruns=51863
+elapsed=3001.8s soak=2941.8s active=3 evaluated=7336 RSS=562.4MiB python=142.3MiB overruns=51879
+elapsed=3060.4s soak=3000.4s active=3 evaluated=7480 RSS=567.0MiB python=151.3MiB overruns=52889
+elapsed=3061.4s soak=3001.4s active=3 evaluated=7483 RSS=567.0MiB python=151.3MiB overruns=52905
+elapsed=3120.9s soak=3060.9s active=3 evaluated=7630 RSS=567.2MiB python=144.6MiB overruns=53935
+elapsed=3121.9s soak=3061.9s active=3 evaluated=7630 RSS=567.2MiB python=151.4MiB overruns=53954
+elapsed=3180.6s soak=3120.6s active=3 evaluated=7771 RSS=569.5MiB python=151.4MiB overruns=54970
+elapsed=3181.6s soak=3121.6s active=3 evaluated=7774 RSS=570.0MiB python=151.4MiB overruns=54986
+elapsed=3240.2s soak=3180.2s active=3 evaluated=7915 RSS=566.7MiB python=150.9MiB overruns=56002
+elapsed=3241.2s soak=3181.2s active=3 evaluated=7918 RSS=570.4MiB python=151.4MiB overruns=56019
+elapsed=3300.8s soak=3240.8s active=3 evaluated=8077 RSS=566.8MiB python=151.5MiB overruns=57037
+elapsed=3301.9s soak=3241.9s active=3 evaluated=8080 RSS=567.7MiB python=151.5MiB overruns=57054
+elapsed=3360.5s soak=3300.5s active=3 evaluated=8245 RSS=560.9MiB python=145.1MiB overruns=58047
+elapsed=3361.5s soak=3301.5s active=3 evaluated=8248 RSS=566.8MiB python=151.5MiB overruns=58063
+elapsed=3420.1s soak=3360.1s active=3 evaluated=8404 RSS=567.0MiB python=151.0MiB overruns=59062
+elapsed=3421.1s soak=3361.1s active=3 evaluated=8407 RSS=567.0MiB python=151.0MiB overruns=59078
+elapsed=3480.7s soak=3420.7s active=3 evaluated=8551 RSS=484.7MiB python=151.1MiB overruns=60112
+elapsed=3481.7s soak=3421.7s active=3 evaluated=8554 RSS=484.7MiB python=151.1MiB overruns=60128
+elapsed=3540.3s soak=3480.3s active=3 evaluated=8707 RSS=480.0MiB python=146.4MiB overruns=61134
+elapsed=3541.3s soak=3481.3s active=3 evaluated=8710 RSS=493.3MiB python=151.1MiB overruns=61148
+elapsed=3600.8s soak=3540.8s active=3 evaluated=8866 RSS=486.2MiB python=151.2MiB overruns=62167
+elapsed=3601.8s soak=3541.8s active=3 evaluated=8869 RSS=483.8MiB python=151.1MiB overruns=62183
+{
+  "status": "completed",
+  "dod": {
+    "completed_60_minutes": true,
+    "no_crashes": true,
+    "no_memory_leak_evidence": true,
+    "throughput_target_met": false,
+    "inference_capacity_target_met": false,
+    "clean_shutdown": true,
+    "overall_pass": false
+  },
+  "duration": 3600.060514200013,
+  "throughput": {
+    "operational_mean_fps": 2.4549587333711624,
+    "operational_p50_fps": 2.9648874309212068,
+    "operational_p95_fps": 5.9159649016903915,
+    "inference_capacity_fps_if_measured": 5.405878126335157,
+    "capacity_details": {
+      "timestamp_utc": "2026-10-08T16:43:59.790701+00:00",
+      "device": "CPU",
+      "model": "Selected CPU1 INT8",
+      "mode": "Separate synchronous static batch1 ready-tensor inference; no camera pacing/preprocessing/NMS/tracker inside capacity timing",
+      "caveat": "THROUGHPUT hint profile here remains synchronous; it is not a measurement of multi-request asynchronous peak capacity",
+      "selected_configuration": {
+        "configuration": "LATENCY-threads2-streams1",
+        "settings": {
+          "performance_hint": "LATENCY",
+          "num_streams": 1,
+          "threads": 2
+        },
+        "frames": 488,
+        "wall_seconds": 90.27210539998487,
+        "capacity_fps": 5.405878126335157,
+        "pure_runtime_latency_ms": {
+          "mean": 184.85891229508198,
+          "p50": 132.5439,
+          "p95": 413.142,
+          "p99": 760.8901,
+          "min": 116.8454,
+          "max": 1783.044
+        },
+        "selected_for_soak": true
+      },
+      "configuration_profiles": [
+        {
+          "configuration": "LATENCY-threads2-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 2
+          },
+          "frames": 488,
+          "wall_seconds": 90.27210539998487,
+          "capacity_fps": 5.405878126335157,
+          "pure_runtime_latency_ms": {
+            "mean": 184.85891229508198,
+            "p50": 132.5439,
+            "p95": 413.142,
+            "p99": 760.8901,
+            "min": 116.8454,
+            "max": 1783.044
+          },
+          "selected_for_soak": true
+        },
+        {
+          "configuration": "LATENCY-threads1-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 1
+          },
+          "frames": 40,
+          "wall_seconds": 11.272977899992839,
+          "capacity_fps": 3.548308207011158,
+          "pure_runtime_latency_ms": {
+            "mean": 281.68793500000004,
+            "p50": 232.3592,
+            "p95": 597.1718,
+            "p99": 795.0275,
+            "min": 225.7405,
+            "max": 795.0275
+          },
+          "selected_for_soak": false
+        },
+        {
+          "configuration": "LATENCY-threads4-streams1",
+          "settings": {
+            "performance_hint": "LATENCY",
+            "num_streams": 1,
+            "threads": 2
+          },
+          "frames": 40,
+          "wall_seconds": 6.45154989999719,
+          "capacity_fps": 6.20006054669397,
+          "pure_runtime_latency_ms": {
+            "mean": 161.153115,
+            "p50": 131.3621,
+            "p95": 257.0513,
+            "p99": 553.2306,
+            "min": 119.6313,
+            "max": 553.2306
+          },
+          "selected_for_soak": false
+        },
+        {
+          "configuration": "THROUGHPUT-threads2-streams2",
+          "settings": {
+            "performance_hint": "THROUGHPUT",
+            "num_streams": 2,
+            "threads": 2
+          },
+          "frames": 40,
+          "wall_seconds": 9.573246599989943,
+          "capacity_fps": 4.1783108355364025,
+          "pure_runtime_latency_ms": {
+            "mean": 239.21808500000003,
+            "p50": 230.394,
+            "p95": 260.1704,
+            "p99": 343.1437,
+            "min": 226.3702,
+            "max": 343.1437
+          },
+          "selected_for_soak": false
+        }
+      ],
+      "target_45_fps_met": false,
+      "operational_sampler_unchanged": true
+    },
+    "sampling_ceiling_fps": 19.730505994005995,
+    "target": 45,
+    "target_metric": "operational integrated pipeline FPS; separate ready-tensor engine capacity also evaluated",
+    "definition_conflict": "Three nominal 30 FPS feeds sampled 1-in-4 cap operational FPS at 22.5; these native-rate feeds cap it at 19.7305. Neither cap reaches 45. The sampler remains enabled."
+  }
+}
+
+Exit code: 2

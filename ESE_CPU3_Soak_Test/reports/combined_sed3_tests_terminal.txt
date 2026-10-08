@@ -1,0 +1,44 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-m", "unittest", "discover", "-s", "SED_3_Stress_Testing/tests", "-t", "."]
+........usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: duration/sample-interval must be positive; warmup must be nonnegative
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: argument --engine: invalid choice: 'pytorch' (choose from openvino)
+usage: python.exe -m unittest [-h] [--duration DURATION] [--engine {openvino}]
+                              [--streams {3}] [--config CONFIG]
+                              [--report REPORT]
+                              [--sample-interval SAMPLE_INTERVAL]
+                              [--warmup WARMUP]
+python.exe -m unittest: error: argument --streams: invalid choice: '2' (choose from 3)
+...............
+----------------------------------------------------------------------
+Ran 23 tests in 4.260s
+
+OK
+
+Exit code: 0

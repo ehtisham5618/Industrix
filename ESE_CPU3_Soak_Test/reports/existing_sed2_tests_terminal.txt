@@ -1,0 +1,8 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-m", "unittest", "discover", "-s", "SED_2_Alert_Escalation/tests", "-t", "."]
+...................................
+----------------------------------------------------------------------
+Ran 35 tests in 7.927s
+
+OK
+
+Exit code: 0

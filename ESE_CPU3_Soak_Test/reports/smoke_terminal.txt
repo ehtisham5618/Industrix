@@ -1,0 +1,29 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "SED_3_Stress_Testing/scripts/soak_test.py", "--duration", "60", "--warmup", "15", "--engine", "openvino", "--streams", "3", "--report", "SED_3_Stress_Testing/reports/cpu_soak_smoke_report.json"]
+elapsed=60.7s soak=45.7s active=3 evaluated=166 RSS=566.4MiB python=149.3MiB overruns=1018
+elapsed=61.6s soak=46.6s active=3 evaluated=166 RSS=561.8MiB python=149.9MiB overruns=1037
+{
+  "status": "completed",
+  "dod": {
+    "completed_60_minutes": false,
+    "no_crashes": true,
+    "no_memory_leak_evidence": false,
+    "throughput_target_met": false,
+    "inference_capacity_target_met": false,
+    "clean_shutdown": true,
+    "overall_pass": false
+  },
+  "duration": 60.05901800002903,
+  "throughput": {
+    "operational_mean_fps": 2.7472976664373743,
+    "operational_p50_fps": 2.9615902475010403,
+    "operational_p95_fps": 5.997467269836007,
+    "inference_capacity_fps_if_measured": null,
+    "capacity_details": null,
+    "sampling_ceiling_fps": 19.730505994005995,
+    "target": 45,
+    "target_metric": "operational integrated pipeline FPS; separate ready-tensor engine capacity also evaluated",
+    "definition_conflict": "Three nominal 30 FPS feeds sampled 1-in-4 cap operational FPS at 22.5; these native-rate feeds cap it at 19.7305. Neither cap reaches 45. The sampler remains enabled."
+  }
+}
+
+Exit code: 2

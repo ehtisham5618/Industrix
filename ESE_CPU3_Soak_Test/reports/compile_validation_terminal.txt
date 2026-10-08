@@ -1,0 +1,3 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-m", "compileall", "-q", "ESE_CPU3_Soak_Test", "SED_3_Stress_Testing/scripts/soak_test.py"]
+
+Exit code: 0

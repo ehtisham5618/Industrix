@@ -1,0 +1,8 @@
+Command: ["ESE_CPU1_Quantization/runtime/venv/Scripts/python.exe", "-m", "unittest", "discover", "-s", "SED_1_Multi_Camera/tests", "-t", "."]
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 10.422s
+
+OK
+
+Exit code: 0
