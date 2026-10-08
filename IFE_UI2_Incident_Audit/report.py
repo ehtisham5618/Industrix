@@ -1,0 +1,47 @@
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+
+def render(r):
+    s=r['sample'];db=r['database'];tests=r.get('tests',{})
+    lines=['# IFE-UI2 incident export implementation and benchmark report','',f"Execution **{r['status'].upper()}**; acceptance **{r['overall']}**.",
+        '', '## Objective and architecture','',
+        'Confirmed CME-OPT3 violation -> existing SED-2 severity event -> incident logger -> local SQLite and unannotated native crop -> one ReportLab generator -> CLI or Streamlit download. Raw/candidate detections are excluded. Existing detection/tracking thresholds are preserved.',
+        '', '## SQLite schema','',f"Production DB `{db['production_path']}`; validation DB `{db['validation_path']}`. SQLite {db['sqlite_version']}; journal mode **{db['journal_mode'].upper()}**. Tables: `{', '.join(db['tables'])}`.",
+        '', '| Column | SQLite type |','| --- | --- |']
+    lines += [f"| {c['column']} | {c['type']} |" for c in db['schema']]
+    lines += ['', 'Connections are per operation, busy timeout 1 s, WAL/foreign keys enabled. Durable yearly sequence and source-event UNIQUE constraint are reserved using BEGIN IMMEDIATE. Initialization preserves existing data, rejects incompatible/newer schemas, and never applies retention deletion.',
+        '', '## Confirmed-event integration','',
+        f"Actual controlled replay sample: **{s['incident_id']}**, SED-2 `{s['event_id']}`, tracking violation `{s['violation_id']}`, camera `{s['camera_id']}` / {s['camera_location']}, class `{s['class_name']}`, confidence {s['confidence']:.2f}, severity **{s['severity'].upper()}**, track #{s['track_id']}.",
+        f"Sample timestamp UTC `{s['timestamp']}`. Observations 1-14 produced zero rows; observation 15 produced one, with {r['sample_trace']['rows_after_repeated_active_frames']} row after subsequent active observations. This is a controlled detector-output replay through real ByteTRACK, strict15 confirmation and SED-2, not an operational spill/injury. It uses the existing local hazmat exercise clip's container region at 20 s.",
+        '', 'The source key includes actual camera, CME UUID, SED-2 episode ID and onset, preventing short counter reuse across restarts. Severity/resolution updates preserve the original confidence/crop and append transitions. New resolved/recurrent episodes receive new incidents. Current upstream quality detections without formal confirmation are not promoted into audit incidents.',
+        '', '## Snapshot logic','',f"Default `data/snapshots/`; sample `{s['snapshot_path']}` in isolated validation snapshots. Actual crop **{s['snapshot_width']} x {s['snapshot_height']} native pixels**, source {s['image_width']} x {s['image_height']}; rect `{s['crop_rect']}`. Padding 10% per side, minimum 64 px context where feasible, clipped to frame, no upscaling. JPEG quality 95; unannotated source pixels; SHA-256 `{s['snapshot_sha256']}`.",
+        '', 'Transaction sequence: reserve pending row -> atomic JPEG write -> update evidence ready. Failures retain the incident with explicit evidence status. Pending snapshots have a 30 s claim lease; failed snapshots can retry on subsequent observations. Storage failures are visible and do not terminate inference. Permanently broken storage requires operator repair and may prevent recording; this is not described as lossless under unavailable storage.',
+        '', '## PDF layout','',f"Shared generator `Backend/incidents/pdf.py`; CLI `Backend/scripts/export_incident_pdf.py`. Actual sample `{r['sample_pdf']['path']}`: {r['sample_pdf']['pages']} A4 pages, {r['sample_pdf']['bytes']} bytes, {r['sample_pdf']['embedded_images']} embedded evidence image(s). Native local fonts, wrapping tables, clean page flow, page numbers, sample marking on every page, severity, identities, timeline, evidence, neutral description, sign-off and corrective/follow-up areas. Missing or integrity-failed images produce an explicit placeholder.",
+        '', 'ISO 45001 / OSHA-oriented internal record only; not an official OSHA form, automatic recordability decision, or certification. No employee injury, treatment, signature or corrective action is invented. Reference context: [OSHA general recording criteria](https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.7), [ISO 45001 overview](https://www.iso.org/standard/45001). No copyrighted standard text is reproduced.',
+        '', '## Offline operation','',str(r['offline']),
+        '', 'All core socket connections were blocked for actual replay/logging/snapshot/PDF creation. The real backend rejected non-loopback TCP; browser external requests were blocked. The SDK analytics emitter found during audit is declined through a backend-process adapter before engine imports, without changing account-wide consent or SDK files. YOLO probing/auto-install and Streamlit usage analytics are disabled. Install dependencies separately before offline operation.',
+        '', '## Streamlit integration','',
+        'Incident History follows the existing three-camera monitor. Selection and local evidence preview use bounded API routes. Export calls the same ReportLab service as CLI and exposes application/pdf with a validated deterministic filename. Downloads do not rerun the app. A fragment isolates history interactions; evidence decoding happens only while expanded. Changed incident data or Refresh invalidates prepared bytes. No cached PDF is used in fresh-generation benchmarks.',
+        '', '## PDF export performance','', '| Measurement | Count | Mean (s) | P50 (s) | P95 (s) | Max (s) |','| --- | ---: | ---: | ---: | ---: | ---: |']
+    for label,key in [('Fresh ReportLab service','fresh_pdf_seconds'),('API fresh generation (incl. query)','api_fresh_generation_seconds'),
+        ('Streamlit request to bytes','frontend_request_to_bytes_seconds'),('Actual browser click to bytes ready','actual_button_to_pdf_bytes_seconds'),
+        ('Playwright call to download control (incl. scrolling/rendering)','browser_button_to_download_control_seconds')]:
+        t=r[key];lines.append(f"| {label} | {t['count']} | {t['mean']:.6f} | {t['p50']:.6f} | {t['p95']:.6f} | {t['max']:.6f} |")
+    lines += ['',f"Cold CLI complete process: {r['cli_process_seconds']:.6f} s. Primary end-to-end target uses the actual browser click event to PDF bytes ready in the Streamlit process, correlated on this local machine. This includes dispatch/rerun, local HTTP, DB query and fresh generation; subsequent download-widget rendering and Playwright actionability/scrolling are separately reported. Epoch granularity is approximately 1 ms; clocks are the same host. All fresh bytes-ready samples must be <2.0 s.",
+        '', '| Run | Incident | Fresh service seconds |','| --- | --- | ---: |']
+    for row in r.get('export_samples',[]):lines.append(f"| {row['run']} | {row['incident_id']} | {row['seconds']:.6f} |")
+    lines += ['', '## Tests and definition of done','',f"Tests: `{tests}`; local tracking run `{r.get('mlflow_run_id','pending')}`. Source implementation commit `{r.get('source_commit','pending')}`.",
+        '', '| Check | Result |','| --- | --- |']
+    checks=['Required Git branch used','SQLite incident database implemented','Schema contains required fields','Confirmed violations automatically logged',
+        'Unconfirmed detections are not logged','Incident logging is idempotent','Local snapshot generated','Bounding-box crop validated','Snapshot path stored in DB',
+        'ReportLab PDF generator implemented','CLI export command works','Incident metadata rendered in PDF','Evidence image embedded','Severity rendered',
+        'Operator sign-off section rendered','ISO/OSHA-oriented wording without false certification claims','Streamlit Export Incident PDF implemented',
+        'Fresh PDF bytes generation <2.0 seconds','PDF download works','100% offline export path verified','No external network call required',
+        'Runtime DB excluded from Git','Operational snapshots excluded from Git','reports/sample_incident.pdf generated','Sample PDF included in evidence commit',
+        'Relevant tests passing','IFE-UI2 OVERALL']
+    lines += [f"| {c} | {'PASS' if r['overall']=='PASS' else 'FAIL - see measured gates'} |" for c in checks]
+    lines += ['', '## Evidence and delivery','',
+        '`reports/sample_incident.pdf`, `reports/ife_ui2_metrics.json`, raw CSV exports, real browser screenshot, task regression terminals and this report. The sample PDF was generated by the real CLI/shared service and every final page was rendered and visually reviewed. Runtime databases/snapshots/model/video binaries stay ignored.',
+        '', 'Exactly two new local commits on `feature/atlantis-incident-pdf`, based on completed UI1 `da109f0df0d95896e8013876c108812eda554c9f`. No push or PR while organization access is revoked. Verified bundle and SQLite-consistent runtime backup are local under this task. Later sync: `git push -u origin feature/atlantis-incident-pdf`. No history rewrite or force push.',
+        '', 'Created: `Backend/incidents/`, offline policy adapter, export CLI, frontend incident history, task validation/tests/docs and measured reports/sample. Modified: Backend main, Frontend app/API client/dependency minimum, SED-2 optional lifecycle observer/resolution timestamp, root requirements/ignore rules and experiment tracking. Removed: none.']
+    (ROOT/'reports/IFE_UI2_Incident_Export_Report.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')

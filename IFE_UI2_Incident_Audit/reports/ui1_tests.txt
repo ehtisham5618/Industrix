@@ -1,0 +1,49 @@
+test_concurrent_stream_control_rejected_without_duplicate_manager (test_console.BackendInterfaceTests.test_concurrent_stream_control_rejected_without_duplicate_manager) ... C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:120: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @api_app.on_event('shutdown')
+C:\Users\ehtis\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py:4495: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  return self.router.on_event(event_type)
+C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:133: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @api_app.on_event("startup")
+Executing <Task finished name='Task-1' coro=<BackendInterfaceTests.asyncSetUp() done, defined at C:\Users\ehtis\Desktop\Textile Defect Detection\IFE_UI1_Streamlit_Console\tests\test_console.py:116> result=None created at C:\Users\ehtis\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py:100> took 1.672 seconds
+ok
+test_engine_selection_validation (test_console.BackendInterfaceTests.test_engine_selection_validation) ... ok
+test_idle_status_actual_class_map_and_capability (test_console.BackendInterfaceTests.test_idle_status_actual_class_map_and_capability) ... ok
+test_incomplete_stop_keeps_existing_manager_and_returns_retry (test_console.BackendInterfaceTests.test_incomplete_stop_keeps_existing_manager_and_returns_retry) ... ok
+test_start_during_incomplete_shutdown_does_not_create_another_session (test_console.BackendInterfaceTests.test_start_during_incomplete_shutdown_does_not_create_another_session) ... ok
+test_stopped_manager_does_not_advertise_active_engine (test_console.BackendInterfaceTests.test_stopped_manager_does_not_advertise_active_engine) ... ok
+test_three_configured_camera_roles (test_console.BackendInterfaceTests.test_three_configured_camera_roles) ... ok
+test_unavailable_stream_endpoints_graceful (test_console.BackendInterfaceTests.test_unavailable_stream_endpoints_graceful) ... ok
+test_camera_online_offline_reconnect (test_console.PresentationTests.test_camera_online_offline_reconnect) ... ok
+test_engine_follows_actual_backend (test_console.PresentationTests.test_engine_follows_actual_backend) ... ok
+test_privacy_never_falsely_zero (test_console.PresentationTests.test_privacy_never_falsely_zero) ... ok
+test_shutdown_retry_detail_reaches_operator (test_console.PresentationTests.test_shutdown_retry_detail_reaches_operator) ... ok
+test_url_rejects_credentials_and_non_http (test_console.PresentationTests.test_url_rejects_credentials_and_non_http) ... ok
+test_valid_and_missing_telemetry (test_console.PresentationTests.test_valid_and_missing_telemetry) ... ok
+test_actual_coords_and_authoritative_tracker_survive_wire (test_console.TransportTests.test_actual_coords_and_authoritative_tracker_survive_wire) ... ok
+test_external_mode_or_sources_no_false_privacy (test_console.TransportTests.test_external_mode_or_sources_no_false_privacy) ... ok
+test_focus_does_not_invent_class (test_console.TransportTests.test_focus_does_not_invent_class) ... ok
+test_latest_only_and_reset_no_stale_frame (test_console.TransportTests.test_latest_only_and_reset_no_stale_frame) ... ok
+test_missing_fields_and_untracked_detection (test_console.TransportTests.test_missing_fields_and_untracked_detection) ... ok
+test_notification_and_unsubscribe (test_console.TransportTests.test_notification_and_unsubscribe) ... ok
+test_telemetry_comes_from_backend_monitor (test_console.TransportTests.test_telemetry_comes_from_backend_monitor) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.010s
+
+OK
+Exit code: 0

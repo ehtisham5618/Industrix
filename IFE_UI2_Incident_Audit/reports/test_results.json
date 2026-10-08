@@ -1,0 +1,22 @@
+{
+  "audit": {
+    "tests": 22,
+    "passed": true
+  },
+  "cme2": {
+    "tests": 7,
+    "passed": true
+  },
+  "sed1": {
+    "tests": 28,
+    "passed": true
+  },
+  "sed2_and_bytetrack": {
+    "tests": 35,
+    "passed": true
+  },
+  "ui1": {
+    "tests": 21,
+    "passed": true
+  }
+}

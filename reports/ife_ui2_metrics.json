@@ -1,0 +1,575 @@
+{
+  "task": "IFE-UI2",
+  "version": "IFEUI2-incident-audit-v1",
+  "status": "completed",
+  "finished_at_utc": "2026-10-08T20:54:08.278388+00:00",
+  "sample": {
+    "id": 1,
+    "incident_id": "INC-2026-001",
+    "source_event_key": "[\"camera_02\",\"CMEOPT3-f0150254d7724da9ba2203c77c1dbed1\",\"SED2-000001\",1791489123.4587991]",
+    "event_id": "SED2-000001",
+    "violation_id": "CMEOPT3-f0150254d7724da9ba2203c77c1dbed1",
+    "timestamp": "2026-10-08T19:52:03.458799+00:00",
+    "camera_id": "camera_02",
+    "camera_location": "Chemical Storage Bay",
+    "class_id": 7,
+    "class_name": "chemical hazard",
+    "confidence": 0.93,
+    "severity": "warning",
+    "bbox_x1": 819.2,
+    "bbox_y1": 453.6,
+    "bbox_x2": 1241.6,
+    "bbox_y2": 684.0,
+    "coordinate_format": "xyxy source-frame pixels",
+    "image_width": 1280,
+    "image_height": 720,
+    "track_id": 1,
+    "geofence_id": null,
+    "confirmation_frames": 15,
+    "first_seen": "2026-10-08T19:52:03.184382+00:00",
+    "confirmed_at": "2026-10-08T19:52:03.458799+00:00",
+    "last_seen": "2026-10-08T19:52:03.655010+00:00",
+    "resolved_at": null,
+    "snapshot_path": "INC-2026-001_camera_02_chemical_hazard.jpg",
+    "snapshot_status": "ready",
+    "snapshot_error": null,
+    "snapshot_sha256": "4dd87d12c66adb5de6c313eaa09dd101ffc88cf466ed2c87b3adbfa309270b5c",
+    "crop_rect": "[773, 430, 1280, 708]",
+    "snapshot_width": 507,
+    "snapshot_height": 278,
+    "evidence_frame_id": 14,
+    "evidence_timestamp": "2026-10-08T19:52:03.458799+00:00",
+    "snapshot_lease_until": 0.0,
+    "status": "OPEN",
+    "created_at": "2026-10-08T19:52:03.477339+00:00",
+    "updated_at": "2026-10-08T19:52:03.668141+00:00",
+    "engine_version": "Controlled detector-output replay; no model inference",
+    "detector_version": "cme-opt2-focal-cosine-12class-v1",
+    "alert_policy_version": "cmeopt3-bytetrack15-v1",
+    "is_sample": 1,
+    "operator_name": null,
+    "operator_notes": null,
+    "corrective_action": null
+  },
+  "sample_trace": {
+    "incident": {
+      "id": 1,
+      "incident_id": "INC-2026-001",
+      "source_event_key": "[\"camera_02\",\"CMEOPT3-f0150254d7724da9ba2203c77c1dbed1\",\"SED2-000001\",1791489123.4587991]",
+      "event_id": "SED2-000001",
+      "violation_id": "CMEOPT3-f0150254d7724da9ba2203c77c1dbed1",
+      "timestamp": "2026-10-08T19:52:03.458799+00:00",
+      "camera_id": "camera_02",
+      "camera_location": "Chemical Storage Bay",
+      "class_id": 7,
+      "class_name": "chemical hazard",
+      "confidence": 0.93,
+      "severity": "warning",
+      "bbox_x1": 819.2,
+      "bbox_y1": 453.6,
+      "bbox_x2": 1241.6,
+      "bbox_y2": 684.0,
+      "coordinate_format": "xyxy source-frame pixels",
+      "image_width": 1280,
+      "image_height": 720,
+      "track_id": 1,
+      "geofence_id": null,
+      "confirmation_frames": 15,
+      "first_seen": "2026-10-08T19:52:03.184382+00:00",
+      "confirmed_at": "2026-10-08T19:52:03.458799+00:00",
+      "last_seen": "2026-10-08T19:52:03.458799+00:00",
+      "resolved_at": null,
+      "snapshot_path": "INC-2026-001_camera_02_chemical_hazard.jpg",
+      "snapshot_status": "ready",
+      "snapshot_error": null,
+      "snapshot_sha256": "4dd87d12c66adb5de6c313eaa09dd101ffc88cf466ed2c87b3adbfa309270b5c",
+      "crop_rect": "[773, 430, 1280, 708]",
+      "snapshot_width": 507,
+      "snapshot_height": 278,
+      "evidence_frame_id": 14,
+      "evidence_timestamp": "2026-10-08T19:52:03.458799+00:00",
+      "snapshot_lease_until": 0.0,
+      "status": "OPEN",
+      "created_at": "2026-10-08T19:52:03.477339+00:00",
+      "updated_at": "2026-10-08T19:52:03.527549+00:00",
+      "engine_version": "Controlled detector-output replay; no model inference",
+      "detector_version": "cme-opt2-focal-cosine-12class-v1",
+      "alert_policy_version": "cmeopt3-bytetrack15-v1",
+      "is_sample": 1,
+      "operator_name": null,
+      "operator_notes": null,
+      "corrective_action": null
+    },
+    "candidate_row_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "rows_after_repeated_active_frames": 1,
+    "image_source": "Confidence_Calibration\\benchmark\\media\\chemical_hazard_01_hazmat_training.webm",
+    "source_frame_seek_ms": 20000,
+    "fixture": "Controlled detector-output replay through real ByteTRACK, strict15 confirmation, SED-2 and SQLite; image is from local training exercise",
+    "logger_failures": 0
+  },
+  "database": {
+    "production_path": "Backend/data/events.db",
+    "validation_path": "IFE_UI2_Incident_Audit\\runtime\\demo_v2\\events.db",
+    "sqlite_version": "3.45.3",
+    "journal_mode": "wal",
+    "tables": [
+      "incidents",
+      "incident_sequence",
+      "incident_transitions"
+    ],
+    "schema": [
+      {
+        "column": "id",
+        "type": "INTEGER"
+      },
+      {
+        "column": "incident_id",
+        "type": "TEXT"
+      },
+      {
+        "column": "source_event_key",
+        "type": "TEXT"
+      },
+      {
+        "column": "event_id",
+        "type": "TEXT"
+      },
+      {
+        "column": "violation_id",
+        "type": "TEXT"
+      },
+      {
+        "column": "timestamp",
+        "type": "TEXT"
+      },
+      {
+        "column": "camera_id",
+        "type": "TEXT"
+      },
+      {
+        "column": "camera_location",
+        "type": "TEXT"
+      },
+      {
+        "column": "class_id",
+        "type": "INTEGER"
+      },
+      {
+        "column": "class_name",
+        "type": "TEXT"
+      },
+      {
+        "column": "confidence",
+        "type": "REAL"
+      },
+      {
+        "column": "severity",
+        "type": "TEXT"
+      },
+      {
+        "column": "bbox_x1",
+        "type": "REAL"
+      },
+      {
+        "column": "bbox_y1",
+        "type": "REAL"
+      },
+      {
+        "column": "bbox_x2",
+        "type": "REAL"
+      },
+      {
+        "column": "bbox_y2",
+        "type": "REAL"
+      },
+      {
+        "column": "coordinate_format",
+        "type": "TEXT"
+      },
+      {
+        "column": "image_width",
+        "type": "INTEGER"
+      },
+      {
+        "column": "image_height",
+        "type": "INTEGER"
+      },
+      {
+        "column": "track_id",
+        "type": "INTEGER"
+      },
+      {
+        "column": "geofence_id",
+        "type": "TEXT"
+      },
+      {
+        "column": "confirmation_frames",
+        "type": "INTEGER"
+      },
+      {
+        "column": "first_seen",
+        "type": "TEXT"
+      },
+      {
+        "column": "confirmed_at",
+        "type": "TEXT"
+      },
+      {
+        "column": "last_seen",
+        "type": "TEXT"
+      },
+      {
+        "column": "resolved_at",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_path",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_status",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_error",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_sha256",
+        "type": "TEXT"
+      },
+      {
+        "column": "crop_rect",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_width",
+        "type": "INTEGER"
+      },
+      {
+        "column": "snapshot_height",
+        "type": "INTEGER"
+      },
+      {
+        "column": "evidence_frame_id",
+        "type": "INTEGER"
+      },
+      {
+        "column": "evidence_timestamp",
+        "type": "TEXT"
+      },
+      {
+        "column": "snapshot_lease_until",
+        "type": "REAL"
+      },
+      {
+        "column": "status",
+        "type": "TEXT"
+      },
+      {
+        "column": "created_at",
+        "type": "TEXT"
+      },
+      {
+        "column": "updated_at",
+        "type": "TEXT"
+      },
+      {
+        "column": "engine_version",
+        "type": "TEXT"
+      },
+      {
+        "column": "detector_version",
+        "type": "TEXT"
+      },
+      {
+        "column": "alert_policy_version",
+        "type": "TEXT"
+      },
+      {
+        "column": "is_sample",
+        "type": "INTEGER"
+      },
+      {
+        "column": "operator_name",
+        "type": "TEXT"
+      },
+      {
+        "column": "operator_notes",
+        "type": "TEXT"
+      },
+      {
+        "column": "corrective_action",
+        "type": "TEXT"
+      }
+    ]
+  },
+  "fresh_pdf_seconds": {
+    "count": 20,
+    "mean": 0.06776639500167221,
+    "p50": 0.060454050020780414,
+    "p95": 0.08673028000048363,
+    "max": 0.10643669997807592,
+    "min": 0.05619400006253272
+  },
+  "cli_process_seconds": 0.6203963999869302,
+  "api_fresh_generation_seconds": {
+    "count": 5,
+    "mean": 0.1820724,
+    "p50": 0.162572,
+    "p95": 0.2573558,
+    "max": 0.27137700000000003,
+    "min": 0.12864699999999998
+  },
+  "frontend_request_to_bytes_seconds": {
+    "count": 5,
+    "mean": 0.19232100000000002,
+    "p50": 0.170267,
+    "p95": 0.26557939999999997,
+    "max": 0.278844,
+    "min": 0.135623
+  },
+  "browser_button_to_download_control_seconds": {
+    "count": 5,
+    "mean": 0.7052925399737433,
+    "p50": 0.4968703999184072,
+    "p95": 1.1468161600176245,
+    "max": 1.1946281000273302,
+    "min": 0.3978398999897763
+  },
+  "actual_button_to_pdf_bytes_seconds": {
+    "count": 5,
+    "mean": 0.2940991401672363,
+    "p50": 0.22497344017028809,
+    "p95": 0.4169970989227295,
+    "max": 0.4180409908294678,
+    "min": 0.19074368476867676
+  },
+  "ui_exports": [
+    {
+      "run": 1,
+      "actual_click_to_pdf_bytes_seconds": 0.41282153129577637,
+      "click_epoch": 1791492804.549,
+      "bytes_ready_epoch": 1791492804.9618216,
+      "button_to_download_control_seconds": 0.9555683999788016,
+      "frontend_caption": "Fresh PDF generation: 271.377 ms. Export request to bytes ready: 278.844 ms.",
+      "filename": "INC-2026-001_incident_report.pdf",
+      "bytes": 44463,
+      "sha256": "4311a298bccce144ee987e0863b45ce6749e9c4d863e9a67d9af0c3fdd7cd349"
+    },
+    {
+      "run": 2,
+      "actual_click_to_pdf_bytes_seconds": 0.4180409908294678,
+      "click_epoch": 1791492806.762,
+      "bytes_ready_epoch": 1791492807.180041,
+      "button_to_download_control_seconds": 1.1946281000273302,
+      "frontend_caption": "Fresh PDF generation: 201.271 ms. Export request to bytes ready: 212.521 ms.",
+      "filename": "INC-2026-001_incident_report.pdf",
+      "bytes": 44464,
+      "sha256": "03024c62188e491fe27b29eedf11ab7dd77cfdaa7acb5fcf64ae3594fb051442"
+    },
+    {
+      "run": 3,
+      "actual_click_to_pdf_bytes_seconds": 0.22391605377197266,
+      "click_epoch": 1791492809.078,
+      "bytes_ready_epoch": 1791492809.3019161,
+      "button_to_download_control_seconds": 0.4968703999184072,
+      "frontend_caption": "Fresh PDF generation: 162.572 ms. Export request to bytes ready: 170.267 ms.",
+      "filename": "INC-2026-001_incident_report.pdf",
+      "bytes": 44464,
+      "sha256": "78e4151a8733f2ce16e8b9472d00bac026f2cf5492aa91c79014c99c83894cb6"
+    },
+    {
+      "run": 4,
+      "actual_click_to_pdf_bytes_seconds": 0.22497344017028809,
+      "click_epoch": 1791492810.628,
+      "bytes_ready_epoch": 1791492810.8529735,
+      "button_to_download_control_seconds": 0.48155589995440096,
+      "frontend_caption": "Fresh PDF generation: 146.495 ms. Export request to bytes ready: 164.350 ms.",
+      "filename": "INC-2026-001_incident_report.pdf",
+      "bytes": 44463,
+      "sha256": "c96a391df8e96c3f917c2cbcf9f996234abdfdb16c45b95e494685717df75faf"
+    },
+    {
+      "run": 5,
+      "actual_click_to_pdf_bytes_seconds": 0.19074368476867676,
+      "click_epoch": 1791492812.076,
+      "bytes_ready_epoch": 1791492812.2667437,
+      "button_to_download_control_seconds": 0.3978398999897763,
+      "frontend_caption": "Fresh PDF generation: 128.647 ms. Export request to bytes ready: 135.623 ms.",
+      "filename": "INC-2026-001_incident_report.pdf",
+      "bytes": 44464,
+      "sha256": "ffcdba025a4fc8c7e2678fb5503f72b5143d644dc94099d02a63b0f933df3ffd"
+    }
+  ],
+  "live_monitor_regression": {
+    "counts": {
+      "camera_01": 7,
+      "camera_02": 7,
+      "camera_03": 7
+    },
+    "engine": "OpenVINO INT8 (CPU)"
+  },
+  "offline": {
+    "sqlite_write": true,
+    "snapshot_save": true,
+    "pdf_generation": true,
+    "streamlit_download": true,
+    "core_socket_connections_attempted": 0,
+    "external_browser_requests": [],
+    "backend_external_attempts": 0,
+    "method": "All Python core sockets blocked; real backend forbids non-loopback TCP; browser blocks all non-loopback page HTTP requests. UI/API calls use only loopback."
+  },
+  "sample_pdf": {
+    "path": "reports/sample_incident.pdf",
+    "pages": 2,
+    "bytes": 44462,
+    "sha256": "0d2efdd3221b4ddd1ed001871d44808af0c699ce9cd01645f47b3caa90aa3627",
+    "embedded_images": 1
+  },
+  "errors": [],
+  "overall": "PASS",
+  "tests": {
+    "audit": {
+      "tests": 22,
+      "passed": true
+    },
+    "cme2": {
+      "tests": 7,
+      "passed": true
+    },
+    "sed1": {
+      "tests": 28,
+      "passed": true
+    },
+    "sed2_and_bytetrack": {
+      "tests": 35,
+      "passed": true
+    },
+    "ui1": {
+      "tests": 21,
+      "passed": true
+    }
+  },
+  "source_commit": "c4db97954eab30ed1a8d533c80d87bee1cb0dde6",
+  "export_samples": [
+    {
+      "run": "1",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.06019600003492087
+    },
+    {
+      "run": "2",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.0580193999921903
+    },
+    {
+      "run": "3",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.05723399994894862
+    },
+    {
+      "run": "4",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.05769220006186515
+    },
+    {
+      "run": "5",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.06544370006304234
+    },
+    {
+      "run": "6",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.080005900003016
+    },
+    {
+      "run": "7",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.056956700049340725
+    },
+    {
+      "run": "8",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.058698999928310513
+    },
+    {
+      "run": "9",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.08017580001614988
+    },
+    {
+      "run": "10",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.10643669997807592
+    },
+    {
+      "run": "11",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.07915649993810803
+    },
+    {
+      "run": "12",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.08542959997430444
+    },
+    {
+      "run": "13",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.0680906999623403
+    },
+    {
+      "run": "14",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.08569310000166297
+    },
+    {
+      "run": "15",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.058581999968737364
+    },
+    {
+      "run": "16",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.06071210000663996
+    },
+    {
+      "run": "17",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.05619400006253272
+    },
+    {
+      "run": "18",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.0655092999804765
+    },
+    {
+      "run": "19",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.05711890000384301
+    },
+    {
+      "run": "20",
+      "incident_id": "INC-2026-001",
+      "seconds": 0.05798230005893856
+    }
+  ],
+  "finalized_at_utc": "2026-10-08T20:55:57.148068+00:00",
+  "mlflow_run_id": "cc24c160be4140b59416bc5b1fe55dd7"
+}
