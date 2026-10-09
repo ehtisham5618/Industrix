@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>QCI-1 actual proof</title><style>body{font:16px system-ui;background:#eef3f7;color:#17344d;margin:30px}main{max-width:1400px;margin:auto}section{background:white;border:1px solid #d8e1eb;padding:22px;margin:16px 0;border-radius:8px}img{max-width:1000px;width:100%}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px Consolas,monospace}.note{background:#fff3d6;padding:18px}</style></head><body><main><h1>QCI-1 / Actual offline segmentation evidence</h1><section><b>366 real image/mask pairs prepared</b><p>47 positive /319 negative.33 original quarantines; item groups stay together. Existing textile boxes audited separately.</p><p>QCI 74 passed /0 failed. Root 247 passed /2 prior CPU1 failures. Genuine-mask RSS drift 0.332%.</p></section><div class="note">Local research/review complete. Commercial dataset use requires permission. GitHub PR pending restored access.</div><section><h2>Actual pytest terminal output</h2><pre>Command: &quot;C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe&quot; -X utf8 -m pytest tests/test_qci1_ingestion.py tests/test_qci1_additional_edges.py tests/test_qci1_decoder_isolation.py tests/test_qci1_acquisition.py -q --durations=5
+........................................................................ [ 97%]
+..                                                                       [100%]
+============================= slowest 5 durations =============================
+0.50s call     tests/test_qci1_ingestion.py::test_corrupted_image_does_not_abort_other_samples
+0.49s call     tests/test_qci1_ingestion.py::test_within_split_duplicate_images_are_quarantined
+0.48s call     tests/test_qci1_ingestion.py::test_unsplit_assignment_is_reproducible_and_grouped_by_content
+0.45s call     tests/test_qci1_ingestion.py::test_existing_splits_and_seed_are_preserved
+0.34s call     tests/test_qci1_ingestion.py::test_cross_split_reencoded_image_is_quarantined
+74 passed in 8.39s
+Exit code: 0
+</pre></section><section><h2>Publisher fine segmentation annotations</h2><p>Original image at left, actual defect mask overlay at right. These are not synthetic fixtures.</p><img src="segmentation/segmentation_sanity_grid.png"></section><section><h2>Original textile source box audit</h2><p>Actual boxes; not segmentation masks.</p><img src="source_annotation_sanity_grid.png"></section></main></body></html>

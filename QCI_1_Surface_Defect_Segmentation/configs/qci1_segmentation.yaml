@@ -1,0 +1,24 @@
+dataset_root: final_dataset
+output_dir: reports/qci1
+annotation_format: yolo
+metadata_file: data.yaml
+image_dir: images
+annotation_dir: labels
+annotation_extension: .txt
+seed: 42
+target_width: 640
+target_height: 640
+# Actual maximum audited source is 5184x3888 (20,155,392 pixels).
+max_pixels: 24000000
+max_image_bytes: 64000000
+max_annotation_bytes: 1000000
+max_records: 200000
+max_instances: 256
+max_polygon_points: 1024
+max_depth: 16
+sanity_capacity: 6
+allow_empty_annotations: true
+empty_yolo_annotation_kind: box
+write_processed: true
+# Only used when source metadata contains no existing splits.
+split_ratios: [0.8, 0.1, 0.1]

@@ -1,0 +1,14 @@
+dataset_root: QCI_1_Surface_Defect_Segmentation/runtime/segmentation_dataset
+output_dir: reports/qci1/segmentation
+annotation_format: indexed_mask
+annotation_dir: masks
+annotation_extension: .png
+metadata_file: data.yaml
+target_width: 640
+target_height: 640
+max_pixels: 2000000
+max_image_bytes: 16000000
+max_annotation_bytes: 16000000
+seed: 42
+sanity_capacity: 6
+write_processed: true

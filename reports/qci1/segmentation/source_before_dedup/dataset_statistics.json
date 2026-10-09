@@ -1,0 +1,65 @@
+{
+  "total_samples": 398,
+  "source_valid_samples": 398,
+  "invalid_source_samples": 0,
+  "valid_segmentation_samples": 366,
+  "boxes_only_samples": 0,
+  "empty_annotations": 347,
+  "split_counts": {
+    "train": 318,
+    "val": 64,
+    "test": 16
+  },
+  "classes": [
+    {
+      "class_id": 0,
+      "name": "defect",
+      "samples": 51,
+      "instances": 51,
+      "foreground_pixels": 154429,
+      "area_fraction": 0.0006705092134285069
+    }
+  ],
+  "issues": {
+    "CROSS_SPLIT_DUPLICATE": 32
+  },
+  "orphan_annotations": 0,
+  "duplicate_sample_ids": 0,
+  "duplicate_hash_groups": 16,
+  "cross_split_hash_groups": 16,
+  "resolution_counts": {
+    "500x1260": 27,
+    "500x1261": 22,
+    "500x1263": 20,
+    "500x1253": 19,
+    "500x1257": 17,
+    "500x1259": 17,
+    "500x1254": 16,
+    "500x1255": 16,
+    "500x1270": 16,
+    "500x1251": 15,
+    "500x1256": 15,
+    "500x1266": 15,
+    "500x1258": 14,
+    "500x1265": 14,
+    "500x1267": 14,
+    "500x1264": 13,
+    "500x1247": 11,
+    "500x1262": 11,
+    "500x1252": 10,
+    "500x1249": 9,
+    "500x1250": 8,
+    "500x1244": 6,
+    "500x1245": 6,
+    "500x1246": 6,
+    "500x1248": 6,
+    "500x1269": 6,
+    "500x1268": 5,
+    "500x1271": 5,
+    "500x1241": 4,
+    "500x1243": 4,
+    "500x1273": 4,
+    "500x1274": 4
+  },
+  "unlisted_resolution_groups": 13
+}

@@ -1,0 +1,166 @@
+{
+  "version": "QCI1-local-segmentation-v1",
+  "dataset_name": "final_dataset",
+  "source_metadata_sha256": "0a755898f30ed873799a8a8782e6ad835959ce8a5c7e4a4d2b96e0de33270be8",
+  "status": "BLOCKED",
+  "dataset_root": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\final_dataset",
+  "annotation_format": "yolo_detection",
+  "class_mapping": {
+    "source": "data.yaml",
+    "names": {
+      "0": "baekra",
+      "1": "color issues",
+      "2": "contamination",
+      "3": "cut",
+      "4": "gray stitch",
+      "5": "selvet",
+      "6": "stain"
+    },
+    "mask_background": 0,
+    "mask_offset": 1
+  },
+  "statistics": {
+    "total_samples": 4742,
+    "source_valid_samples": 4741,
+    "invalid_source_samples": 1,
+    "valid_segmentation_samples": 0,
+    "boxes_only_samples": 4741,
+    "empty_annotations": 379,
+    "split_counts": {
+      "train": 3900,
+      "val": 562,
+      "test": 280
+    },
+    "classes": [
+      {
+        "class_id": 0,
+        "name": "baekra",
+        "samples": 415,
+        "instances": 593,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 1,
+        "name": "color issues",
+        "samples": 201,
+        "instances": 515,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 2,
+        "name": "contamination",
+        "samples": 363,
+        "instances": 410,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 3,
+        "name": "cut",
+        "samples": 660,
+        "instances": 841,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 4,
+        "name": "gray stitch",
+        "samples": 555,
+        "instances": 800,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 5,
+        "name": "selvet",
+        "samples": 530,
+        "instances": 1020,
+        "foreground_pixels": null,
+        "area_fraction": null
+      },
+      {
+        "class_id": 6,
+        "name": "stain",
+        "samples": 1649,
+        "instances": 2390,
+        "foreground_pixels": null,
+        "area_fraction": null
+      }
+    ],
+    "issues": {
+      "BOXES_NOT_SEGMENTATION": 4741,
+      "MALFORMED_BOX": 1
+    },
+    "orphan_annotations": 0,
+    "duplicate_sample_ids": 0,
+    "duplicate_hash_groups": 0,
+    "cross_split_hash_groups": 0,
+    "resolution_counts": {
+      "780x1040": 375,
+      "1152x2048": 170,
+      "1200x1600": 138,
+      "1536x2048": 115,
+      "3000x3000": 110,
+      "1040x780": 105,
+      "512x512": 59,
+      "1600x1200": 57,
+      "2048x1536": 52,
+      "500x500": 46,
+      "734x980": 43,
+      "416x416": 40,
+      "752x1002": 37,
+      "702x936": 31,
+      "744x992": 31,
+      "722x964": 29,
+      "730x974": 29,
+      "764x1018": 29,
+      "720x1280": 28,
+      "760x1012": 28,
+      "710x946": 27,
+      "776x1034": 26,
+      "726x970": 24,
+      "1042x1854": 24,
+      "706x940": 23,
+      "748x996": 23,
+      "738x986": 22,
+      "1106x1474": 22,
+      "714x952": 21,
+      "718x958": 21,
+      "1024x768": 21,
+      "1134x2016": 20
+    },
+    "unlisted_resolution_groups": 1310
+  },
+  "performance": {
+    "duration_seconds": 244.55020329996478,
+    "samples_per_second": 19.39070152472322,
+    "mean_sample_ms": 49.47021906342686,
+    "numeric_sla": null
+  },
+  "manifest_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\dataset_manifest.json",
+  "samples_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\samples.jsonl",
+  "source_sanity_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\source_annotation_sanity_grid.png",
+  "segmentation_sanity_path": null,
+  "generated_at": "2026-10-09T09:39:32.993434Z",
+  "seed": 42,
+  "split_policy": "Preserved source splits",
+  "max_inflight_samples": 1,
+  "sanity_capacity": 6,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "limitations": [
+    "Source boxes are not segmentation ground truth; no synthetic masks are exported"
+  ],
+  "memory": {
+    "start_rss_mib": 59.71484375,
+    "mean_rss_mib": 73.09011806068115,
+    "peak_rss_mib": 258.98046875,
+    "end_rss_mib": 89.0703125,
+    "drift_percent": 3.1965013005697602,
+    "strict_under_5_percent_pass": true,
+    "method": "abs(last_complete_pass_mean_RSS-first_complete_pass_mean_RSS)/first_complete_pass_mean_RSS*100 after warming 64 largest-area sources; identical complete ordered source mix in each window; one sample live; transient peak sampled at 20 Hz",
+    "workload": "Actual source image/annotation validation and RGB preprocessing; no genuine production masks are present"
+  }
+}

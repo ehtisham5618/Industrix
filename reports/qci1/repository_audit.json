@@ -1,0 +1,282 @@
+{
+  "repository_root": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection",
+  "branch": "feature/sprint2-qci1-surface-defect-segmentation",
+  "base_commit": "37f9dd64a5bfe2597cd2385896eb3b92c9652f29",
+  "original_dataset": "final_dataset",
+  "original_mapping": "final_dataset/data.yaml",
+  "original_annotation_format": "YOLO detection boxes",
+  "original_source": "muhammadharisabid/fabricdefectntu (existing notebook)",
+  "original_images": 4742,
+  "original_splits": {
+    "train": 3900,
+    "val": 562,
+    "test": 280
+  },
+  "original_segmentation_truth": 0,
+  "acquired_dataset": {
+    "source_page": "https://www.vicos.si/resources/kolektorsdd/",
+    "download_url": "https://data.vicos.si/datasets/KSDD/KolektorSDD.zip",
+    "archive_sha256": "65dc621693418585de9c4467d1340ea7958a6181816f0dc2883a1e8b61f9d4dc",
+    "archive_bytes": 101831129,
+    "acquired_at": "2026-10-09T09:57:26.539256+00:00",
+    "dataset": "KolektorSDD fine annotations (JIM2019)",
+    "license": "CC BY-NC-SA 4.0",
+    "commercial_permission_obtained": false,
+    "usage": "Local noncommercial research/review; not approved for commercial deployment",
+    "source_masks": "Publisher fine pixel BMP annotations, not bounding-box approximations",
+    "canonical_classes": [
+      "defect"
+    ],
+    "unrelated_to_textile_seven_class_map": true,
+    "original_samples": 399,
+    "quarantined_samples": [
+      {
+        "image": "kos20/Part4.jpg",
+        "mask": "kos20/Part4_label.bmp",
+        "reason": "Publisher mask must contain only background 0 and defect 255"
+      },
+      {
+        "image": "kos26/Part0.jpg",
+        "mask": "kos26\\Part0_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part1.jpg",
+        "mask": "kos26\\Part1_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part2.jpg",
+        "mask": "kos26\\Part2_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part3.jpg",
+        "mask": "kos26\\Part3_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part4.jpg",
+        "mask": "kos26\\Part4_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part5.jpg",
+        "mask": "kos26\\Part5_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part6.jpg",
+        "mask": "kos26\\Part6_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos26/Part7.jpg",
+        "mask": "kos26\\Part7_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part0.jpg",
+        "mask": "kos27\\Part0_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part1.jpg",
+        "mask": "kos27\\Part1_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part2.jpg",
+        "mask": "kos27\\Part2_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part3.jpg",
+        "mask": "kos27\\Part3_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part4.jpg",
+        "mask": "kos27\\Part4_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part5.jpg",
+        "mask": "kos27\\Part5_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part6.jpg",
+        "mask": "kos27\\Part6_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos27/Part7.jpg",
+        "mask": "kos27\\Part7_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part0.jpg",
+        "mask": "kos01\\Part0_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part1.jpg",
+        "mask": "kos01\\Part1_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part2.jpg",
+        "mask": "kos01\\Part2_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part3.jpg",
+        "mask": "kos01\\Part3_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part4.jpg",
+        "mask": "kos01\\Part4_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part5.jpg",
+        "mask": "kos01\\Part5_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part6.jpg",
+        "mask": "kos01\\Part6_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos01/Part7.jpg",
+        "mask": "kos01\\Part7_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part0.jpg",
+        "mask": "kos34\\Part0_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part1.jpg",
+        "mask": "kos34\\Part1_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part2.jpg",
+        "mask": "kos34\\Part2_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part3.jpg",
+        "mask": "kos34\\Part3_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part4.jpg",
+        "mask": "kos34\\Part4_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part5.jpg",
+        "mask": "kos34\\Part5_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part6.jpg",
+        "mask": "kos34\\Part6_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      },
+      {
+        "image": "kos34/Part7.jpg",
+        "mask": "kos34\\Part7_label.bmp",
+        "reason": "Exact decoded-content duplicate: all copies quarantined before export"
+      }
+    ],
+    "total_samples": 366,
+    "positive_samples": 47,
+    "negative_samples": 319,
+    "split_counts": {
+      "train": 302,
+      "val": 48,
+      "test": 16
+    },
+    "physical_item_split_map": {
+      "kos01": "val",
+      "kos02": "train",
+      "kos03": "train",
+      "kos04": "train",
+      "kos05": "val",
+      "kos06": "train",
+      "kos07": "val",
+      "kos08": "train",
+      "kos09": "train",
+      "kos10": "train",
+      "kos11": "train",
+      "kos12": "train",
+      "kos13": "val",
+      "kos14": "train",
+      "kos15": "train",
+      "kos16": "train",
+      "kos17": "train",
+      "kos18": "test",
+      "kos19": "train",
+      "kos20": "train",
+      "kos21": "train",
+      "kos22": "train",
+      "kos23": "train",
+      "kos24": "train",
+      "kos25": "train",
+      "kos26": "train",
+      "kos27": "train",
+      "kos28": "train",
+      "kos29": "train",
+      "kos30": "train",
+      "kos31": "train",
+      "kos32": "train",
+      "kos33": "train",
+      "kos34": "val",
+      "kos35": "train",
+      "kos36": "train",
+      "kos37": "train",
+      "kos38": "train",
+      "kos39": "train",
+      "kos40": "train",
+      "kos41": "train",
+      "kos42": "val",
+      "kos43": "test",
+      "kos44": "val",
+      "kos45": "val",
+      "kos46": "train",
+      "kos47": "train",
+      "kos48": "train",
+      "kos49": "train",
+      "kos50": "train"
+    },
+    "item_group_cross_split_leakage": 0,
+    "source_images_unchanged": true,
+    "mask_conversion": "Exact 0/255 to 0/1 value mapping; geometry unchanged; no invented masks",
+    "ledger_sha256": "7702b69cef337e1b58871158e9a991505e66b8068faa46d6311b85299bec25f0",
+    "runtime_download_dependency": false,
+    "initial_audit": "source_before_dedup/dataset_manifest.json",
+    "duplicate_copies_quarantined": 32
+  },
+  "models_folder_exists": false,
+  "backend_detector_exists": true,
+  "weights_loaded": false,
+  "gpu_used": false,
+  "modal_session_started": false,
+  "versions": {
+    "pydantic": "2.12.5",
+    "Pillow": "12.1.1",
+    "numpy": "2.4.6",
+    "opencv-python": "4.13.0.92",
+    "pytest": "9.1.1",
+    "PyYAML": "6.0.3",
+    "psutil": "7.2.2"
+  },
+  "original_zip_note": "Existing combined training ZIP contains only five-field boxes. Kagglehub 1.archive is 12,582,912 bytes and not a valid ZIP."
+}

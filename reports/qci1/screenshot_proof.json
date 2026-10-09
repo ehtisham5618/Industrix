@@ -1,0 +1,9 @@
+{
+  "browser": "Fresh headless Microsoft Edge context via Playwright",
+  "source": "Local HTML containing actual pytest stdout and real source/mask grids",
+  "title": "QCI-1 actual proof",
+  "in_app_browser_unavailable": "Kernel asset bootstrap failed: system cannot find path (os error 3)",
+  "external_requests_blocked": [],
+  "existing_user_profiles_used": false,
+  "synthetic_capture": false
+}

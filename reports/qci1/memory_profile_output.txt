@@ -1,0 +1,60 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 -m QCI_1_Surface_Defect_Segmentation.profile_memory --passes 2
+Pass 1 profiled 500 actual source evaluations; RSS 70.08 MiB
+Pass 1 profiled 1000 actual source evaluations; RSS 74.28 MiB
+Pass 1 profiled 1500 actual source evaluations; RSS 70.17 MiB
+Pass 1 profiled 2000 actual source evaluations; RSS 71.56 MiB
+Pass 1 profiled 2500 actual source evaluations; RSS 72.16 MiB
+Pass 1 profiled 3000 actual source evaluations; RSS 67.66 MiB
+Pass 1 profiled 3500 actual source evaluations; RSS 77.8 MiB
+Pass 1 profiled 4000 actual source evaluations; RSS 88.83 MiB
+Pass 1 profiled 4500 actual source evaluations; RSS 80.79 MiB
+Pass 2 profiled 5000 actual source evaluations; RSS 80.12 MiB
+Pass 2 profiled 5500 actual source evaluations; RSS 72.64 MiB
+Pass 2 profiled 6000 actual source evaluations; RSS 70.51 MiB
+Pass 2 profiled 6500 actual source evaluations; RSS 73.69 MiB
+Pass 2 profiled 7000 actual source evaluations; RSS 72.75 MiB
+Pass 2 profiled 7500 actual source evaluations; RSS 69.16 MiB
+Pass 2 profiled 8000 actual source evaluations; RSS 75.27 MiB
+Pass 2 profiled 8500 actual source evaluations; RSS 72.2 MiB
+Pass 2 profiled 9000 actual source evaluations; RSS 72.2 MiB
+{
+  "workload": "Actual source image/annotation validation and RGB preprocessing; no genuine production masks are present",
+  "source_index": "index_20261009T085129_1791535889191772900.sqlite",
+  "samples": 9484,
+  "source_valid": 9482,
+  "warmup_largest_samples": 64,
+  "warmup_seconds": 22.87685939995572,
+  "start_rss_mib": 59.71484375,
+  "mean_rss_mib": 73.09011806068115,
+  "peak_rss_mib": 258.98046875,
+  "end_rss_mib": 89.0703125,
+  "stable_window_samples": 4742,
+  "passes": [
+    {
+      "pass_": 1,
+      "samples": 4742,
+      "post_sample_mean_rss_mib": 71.94033124868199
+    },
+    {
+      "pass_": 2,
+      "samples": 4742,
+      "post_sample_mean_rss_mib": 74.2399048726803
+    }
+  ],
+  "stable_start_mean_mib": 71.94033124868199,
+  "stable_end_mean_mib": 74.2399048726803,
+  "drift_percent": 3.1965013005697602,
+  "strict_under_5_percent_pass": true,
+  "continuous_sampling_interval_seconds": 0.05,
+  "continuous_rss_samples": 7971,
+  "continuous_mean_rss_mib": 91.10739418673943,
+  "method": "abs(last_complete_pass_mean_RSS-first_complete_pass_mean_RSS)/first_complete_pass_mean_RSS*100 after warming 64 largest-area sources; identical complete ordered source mix in each window; one sample live; transient peak sampled at 20 Hz",
+  "duration_seconds": 487.7779856000561,
+  "samples_per_second": 19.443271898244742,
+  "mean_sample_processing_ms": 51.2596858821214,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "numeric_latency_sla": null
+}
+
+Exit code: 0

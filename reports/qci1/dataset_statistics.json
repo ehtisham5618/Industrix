@@ -1,0 +1,114 @@
+{
+  "total_samples": 4742,
+  "source_valid_samples": 4741,
+  "invalid_source_samples": 1,
+  "valid_segmentation_samples": 0,
+  "boxes_only_samples": 4741,
+  "empty_annotations": 379,
+  "split_counts": {
+    "train": 3900,
+    "val": 562,
+    "test": 280
+  },
+  "classes": [
+    {
+      "class_id": 0,
+      "name": "baekra",
+      "samples": 415,
+      "instances": 593,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 1,
+      "name": "color issues",
+      "samples": 201,
+      "instances": 515,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 2,
+      "name": "contamination",
+      "samples": 363,
+      "instances": 410,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 3,
+      "name": "cut",
+      "samples": 660,
+      "instances": 841,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 4,
+      "name": "gray stitch",
+      "samples": 555,
+      "instances": 800,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 5,
+      "name": "selvet",
+      "samples": 530,
+      "instances": 1020,
+      "foreground_pixels": null,
+      "area_fraction": null
+    },
+    {
+      "class_id": 6,
+      "name": "stain",
+      "samples": 1649,
+      "instances": 2390,
+      "foreground_pixels": null,
+      "area_fraction": null
+    }
+  ],
+  "issues": {
+    "BOXES_NOT_SEGMENTATION": 4741,
+    "MALFORMED_BOX": 1
+  },
+  "orphan_annotations": 0,
+  "duplicate_sample_ids": 0,
+  "duplicate_hash_groups": 0,
+  "cross_split_hash_groups": 0,
+  "resolution_counts": {
+    "780x1040": 375,
+    "1152x2048": 170,
+    "1200x1600": 138,
+    "1536x2048": 115,
+    "3000x3000": 110,
+    "1040x780": 105,
+    "512x512": 59,
+    "1600x1200": 57,
+    "2048x1536": 52,
+    "500x500": 46,
+    "734x980": 43,
+    "416x416": 40,
+    "752x1002": 37,
+    "702x936": 31,
+    "744x992": 31,
+    "722x964": 29,
+    "730x974": 29,
+    "764x1018": 29,
+    "720x1280": 28,
+    "760x1012": 28,
+    "710x946": 27,
+    "776x1034": 26,
+    "726x970": 24,
+    "1042x1854": 24,
+    "706x940": 23,
+    "748x996": 23,
+    "738x986": 22,
+    "1106x1474": 22,
+    "714x952": 21,
+    "718x958": 21,
+    "1024x768": 21,
+    "1134x2016": 20
+  },
+  "unlisted_resolution_groups": 1310
+}

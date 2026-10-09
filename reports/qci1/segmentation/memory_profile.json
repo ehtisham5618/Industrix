@@ -1,0 +1,39 @@
+{
+  "workload": "Actual image/indexed-mask validation and RGB/mask preprocessing",
+  "source_index": "index_20261009T100154_1791540114669920900.sqlite",
+  "samples": 732,
+  "source_valid": 732,
+  "warmup_largest_samples": 64,
+  "warmup_seconds": 3.6178640000289306,
+  "start_rss_mib": 57.75390625,
+  "mean_rss_mib": 59.22894787397541,
+  "peak_rss_mib": 73.6015625,
+  "end_rss_mib": 59.5390625,
+  "stable_window_samples": 366,
+  "passes": [
+    {
+      "pass_": 1,
+      "samples": 366,
+      "post_sample_mean_rss_mib": 59.130720628415304
+    },
+    {
+      "pass_": 2,
+      "samples": 366,
+      "post_sample_mean_rss_mib": 59.32717511953552
+    }
+  ],
+  "stable_start_mean_mib": 59.130720628415304,
+  "stable_end_mean_mib": 59.32717511953552,
+  "drift_percent": 0.3322376068351307,
+  "strict_under_5_percent_pass": true,
+  "continuous_sampling_interval_seconds": 0.05,
+  "continuous_rss_samples": 611,
+  "continuous_mean_rss_mib": 64.10506597790507,
+  "method": "abs(last_complete_pass_mean_RSS-first_complete_pass_mean_RSS)/first_complete_pass_mean_RSS*100 after warming 64 largest-area sources; identical complete ordered source mix in each window; one sample live; transient peak sampled at 20 Hz",
+  "duration_seconds": 37.59798329998739,
+  "samples_per_second": 19.469129345569062,
+  "mean_sample_processing_ms": 51.24763757069315,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "numeric_latency_sla": null
+}

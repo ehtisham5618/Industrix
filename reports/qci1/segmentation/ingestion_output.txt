@@ -1,0 +1,104 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 Preprocessing/scripts/prepare_surface_segmentation.py --config QCI_1_Surface_Defect_Segmentation/configs/kolektor_segmentation.yaml
+{
+  "version": "QCI1-local-segmentation-v1",
+  "dataset_name": "segmentation_dataset",
+  "source_metadata_sha256": "4f286bae38c4cfcf654ca2517a681c1631cb2a645f20ded04ab2bb3022805e45",
+  "status": "SUCCESS",
+  "dataset_root": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_1_Surface_Defect_Segmentation\\runtime\\segmentation_dataset",
+  "annotation_format": "indexed_mask",
+  "class_mapping": {
+    "source": "data.yaml",
+    "names": {
+      "0": "defect"
+    },
+    "mask_background": 0,
+    "mask_offset": 1
+  },
+  "statistics": {
+    "total_samples": 366,
+    "source_valid_samples": 366,
+    "invalid_source_samples": 0,
+    "valid_segmentation_samples": 366,
+    "boxes_only_samples": 0,
+    "empty_annotations": 319,
+    "split_counts": {
+      "train": 302,
+      "val": 48,
+      "test": 16
+    },
+    "classes": [
+      {
+        "class_id": 0,
+        "name": "defect",
+        "samples": 47,
+        "instances": 47,
+        "foreground_pixels": 154429,
+        "area_fraction": 0.0006705092134285069
+      }
+    ],
+    "issues": {},
+    "orphan_annotations": 0,
+    "duplicate_sample_ids": 0,
+    "duplicate_hash_groups": 0,
+    "cross_split_hash_groups": 0,
+    "resolution_counts": {
+      "500x1260": 23,
+      "500x1261": 20,
+      "500x1253": 19,
+      "500x1259": 17,
+      "500x1255": 16,
+      "500x1263": 16,
+      "500x1257": 15,
+      "500x1266": 15,
+      "500x1258": 14,
+      "500x1265": 14,
+      "500x1267": 14,
+      "500x1251": 13,
+      "500x1256": 13,
+      "500x1264": 13,
+      "500x1254": 12,
+      "500x1270": 12,
+      "500x1262": 11,
+      "500x1252": 10,
+      "500x1247": 9,
+      "500x1249": 9,
+      "500x1244": 6,
+      "500x1245": 6,
+      "500x1246": 6,
+      "500x1248": 6,
+      "500x1250": 6,
+      "500x1269": 6,
+      "500x1268": 5,
+      "500x1241": 4,
+      "500x1273": 4,
+      "500x1274": 4,
+      "500x1240": 3,
+      "500x1242": 3
+    },
+    "unlisted_resolution_groups": 13
+  },
+  "performance": {
+    "duration_seconds": 54.85798630001955,
+    "samples_per_second": 6.671772419759228,
+    "mean_sample_ms": 54.27967486559551,
+    "numeric_sla": null
+  },
+  "manifest_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\dataset_manifest.json",
+  "samples_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\samples.jsonl",
+  "source_sanity_path": null,
+  "segmentation_sanity_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\segmentation_sanity_grid.png",
+  "generated_at": "2026-10-09T10:02:49.522932Z",
+  "seed": 42,
+  "split_policy": "Preserved source splits",
+  "max_inflight_samples": 1,
+  "sanity_capacity": 6,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "limitations": [],
+  "memory": null
+}
+Dataset audit complete: 366 images, source valid=366, source invalid=0, genuine segmentation valid=366
+Status: SUCCESS Manifest: C:\Users\ehtis\Desktop\Textile Defect Detection\reports\qci1\segmentation\dataset_manifest.json
+{"stage": "complete", "status": "SUCCESS", "samples": 366, "segmentation_valid": 366}
+
+Exit code: 0
