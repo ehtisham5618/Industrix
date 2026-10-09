@@ -1,0 +1,9 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 Experiment_Tracking/scripts/validate_registry.py --root .
+Registry validation
+- experiments: 23
+- model versions: 8
+- alert policies: 4
+WARNING: CME1-EXP-002: mAP@50 not recorded in available artifacts
+Result: PASS
+
+Exit code: 0

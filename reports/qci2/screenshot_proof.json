@@ -1,0 +1,8 @@
+{
+  "source": "Actual local HTML with captured pytest stdout, actual classifier metrics and real model attribution",
+  "browser": "Fresh headless Microsoft Edge via Playwright",
+  "existing_user_profiles_used": false,
+  "external_requests_blocked": [],
+  "in_app_browser_unavailable": "Kernel asset bootstrap failed: system cannot find path (os error3)",
+  "synthetic_screenshot": false
+}

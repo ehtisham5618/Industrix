@@ -1,0 +1,10 @@
+{
+  "run_id": "51d850115d9c4dfab76c6cbd05cb39d3",
+  "source_commit": "00c986732afd2ea8dbced39b015aa63d12408c04",
+  "training_base_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+  "model_version": "qci2-kolektor-resnet18-v1",
+  "tracking_uri": "file:///C:/Users/ehtis/Desktop/Textile%20Defect%20Detection/Experiment_Tracking/mlruns",
+  "checkpoint_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+  "overall_dod": "FAIL",
+  "reason": "PR/access and commercial permission pending; existing repository quantitative failures remain"
+}

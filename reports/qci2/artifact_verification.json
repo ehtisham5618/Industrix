@@ -1,0 +1,13 @@
+{
+  "best_checkpoint_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+  "best_checkpoint_bytes": 44783691,
+  "last_checkpoint_sha256": "edf32275896d0dd902d9698900440cf9f9a696d69396381654bbc2eb20833cfc",
+  "starting_copy_sha256_verified": true,
+  "executed_source_snapshot_hashes_verified": true,
+  "selected_test_and_profile_asset_verified": true,
+  "output_classes": {
+    "0": "normal",
+    "1": "defect"
+  },
+  "parameters": 11177538
+}

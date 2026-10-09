@@ -1,0 +1,19 @@
+{
+  "version": "qci2-kolektor-resnet18-v1",
+  "architecture": "resnet18",
+  "checkpoint": "QCI_2_Defect_Classifier/runtime/run_v1/best.pt",
+  "sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+  "classes": {
+    "0": "normal",
+    "1": "defect"
+  },
+  "parameters": 11177538,
+  "trainable_parameters": 4721666,
+  "input_height": 448,
+  "input_width": 192,
+  "starting_weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+  "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+  "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+  "best_epoch": 23
+}

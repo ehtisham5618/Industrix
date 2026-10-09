@@ -1,0 +1,44 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 -m QCI_2_Defect_Classifier.infer --image QCI_1_Surface_Defect_Segmentation/runtime/segmentation_dataset/images/test/kos18/Part0.jpg --json QCI_2_Defect_Classifier/runtime/cli_prediction.json
+{
+  "status": "SUCCESS",
+  "sample_id": "Part0.jpg",
+  "model_version": "qci2-kolektor-resnet18-v1",
+  "predicted_class_id": 0,
+  "predicted_class_name": "normal",
+  "confidence": 0.9999300241470337,
+  "class_scores": [
+    {
+      "class_id": 0,
+      "class_name": "normal",
+      "score": 0.9999300241470337
+    },
+    {
+      "class_id": 1,
+      "class_name": "defect",
+      "score": 0.00006992248381720856
+    }
+  ],
+  "classifier_latency_ms": 120.43060001451522,
+  "heatmap_latency_ms": 307.71279998589307,
+  "combined_latency_ms": 479.06000004149973,
+  "heatmap": {
+    "method": "Grad-CAM",
+    "target_layer": "layer4.1.conv2",
+    "target_class_id": 0,
+    "target_class_name": "normal",
+    "width": 500,
+    "height": 1269,
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "degenerate": false,
+    "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\74f1280195fdb0ea_class0_heatmap.png",
+    "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\74f1280195fdb0ea_class0_overlay.png",
+    "alpha": 0.35
+  },
+  "warnings": [],
+  "error_type": null,
+  "error_message": null
+}
+{"stage": "prediction", "sample_id": "Part0.jpg", "model_version": "qci2-kolektor-resnet18-v1", "prediction": 0, "confidence": 0.9999300241470337, "latency_ms": 479.06000004149973, "heatmap_status": "generated"}
+
+Exit code: 0

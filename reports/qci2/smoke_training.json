@@ -1,0 +1,10 @@
+{
+  "batch_size": 8,
+  "loss": 0.603687584400177,
+  "output_shape": [
+    8,
+    2
+  ],
+  "backward_finite": true,
+  "optimizer_step": false
+}

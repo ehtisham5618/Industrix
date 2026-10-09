@@ -1,0 +1,130 @@
+{
+  "status": "training_completed",
+  "epochs_requested": 40,
+  "epochs_completed": 31,
+  "best_epoch": 23,
+  "best_validation": {
+    "samples": 48,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        42,
+        0
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "per_class": [
+      {
+        "class_id": 0,
+        "class_name": "normal",
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "class_id": 1,
+        "class_name": "defect",
+        "support": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ]
+  },
+  "best_validation_loss": 0.003508060187305299,
+  "class_counts": {
+    "0": 263,
+    "1": 39
+  },
+  "class_weights": [
+    0.5741444826126099,
+    3.8717949390411377
+  ],
+  "training_config": {
+    "manifest": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\dataset_manifest.json",
+    "records": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\samples.jsonl",
+    "output_dir": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_2_Defect_Classifier\\runtime\\run_v1",
+    "starting_weights": "C:\\Users\\ehtis\\.cache\\torch\\hub\\checkpoints\\resnet18-f37072fd.pth",
+    "starting_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "architecture": "resnet18",
+    "height": 448,
+    "width": 192,
+    "batch_size": 8,
+    "epochs": 40,
+    "patience": 8,
+    "learning_rate": 0.0001,
+    "head_learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "workers": 0,
+    "threads": 2,
+    "pin_memory": false,
+    "device": "cpu",
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "class_weights": "inverse_train_frequency",
+    "horizontal_flip": 0.5,
+    "brightness_contrast": 0.08,
+    "low_confidence_threshold": 0.65,
+    "max_samples": 10000
+  },
+  "dataset_version": "QCI1-local-segmentation-v1",
+  "artifact": {
+    "version": "qci2-kolektor-resnet18-v1",
+    "architecture": "resnet18",
+    "checkpoint": "QCI_2_Defect_Classifier/runtime/run_v1/best.pt",
+    "sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+    "classes": {
+      "0": "normal",
+      "1": "defect"
+    },
+    "parameters": 11177538,
+    "trainable_parameters": 4721666,
+    "input_height": 448,
+    "input_width": 192,
+    "starting_weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+    "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+    "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+    "best_epoch": 23
+  },
+  "lineage": {
+    "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+    "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+    "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+    "implementation_sha256": {
+      "common.py": "dad957ba022c456cdfca2c2b686c4d2d36c5ddca1aa4d74c0153ff09c6f788ca",
+      "contracts.py": "15b44993dba5b4769ccb29dc58f0dc2ab71b8aae755b3b9ad5a9e6419c2a9120",
+      "data.py": "77983a7e8ecfd6ba2759024ccceeb27a2f8cddbbb7ae07fae3750fccc91d9f60",
+      "metrics.py": "d0c2d82507fdb7d5532179f685a434550179eda399efc06fd3490ac34f459ae7",
+      "model.py": "a23a2ccccf1734a18d3ca587b34a89f6cf95a5252030cbc85cb9c192dce54c29",
+      "train.py": "0d2ffedbf24dc261d37f1c493f97be4a235e63d81e4b5e3001971ea024589a0e",
+      "__init__.py": "90045a817d886b9fa68dfb22713bcefeb017471118ba38bcc328257b79582e45"
+    }
+  },
+  "duration_seconds": 1976.8045757999644,
+  "deterministic_algorithms": true,
+  "workers": 0,
+  "prefetch": null,
+  "pin_memory": false,
+  "torch_version": "2.10.0+cpu",
+  "train_memory": {
+    "start_rss_mib": 368.609375,
+    "observed_batch_peak_rss_mib": 548.2734375,
+    "end_rss_mib": 440.05859375
+  },
+  "held_out_test_evaluated": false,
+  "checkpoint_reload_verified": true,
+  "numeric_accuracy_target": null,
+  "numeric_latency_sla": null,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "runtime_downloads": 0
+}

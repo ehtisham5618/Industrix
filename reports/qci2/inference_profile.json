@@ -1,0 +1,53 @@
+{
+  "workload": "Actual best checkpoint, full-image classification plus genuine Grad-CAM; no retained maps or disk export",
+  "warmup_calls": 20,
+  "measured_calls": 480,
+  "validation_samples": 48,
+  "repeats_per_cycle": 5,
+  "start_rss_mib": 382.25,
+  "peak_rss_mib": 393.8125,
+  "end_rss_mib": 382.23046875,
+  "cycles": [
+    {
+      "cycle": 1,
+      "samples": 240,
+      "mean_rss_mib": 382.066015625
+    },
+    {
+      "cycle": 2,
+      "samples": 240,
+      "mean_rss_mib": 382.33232421875
+    }
+  ],
+  "drift_percent": 0.06970224591014,
+  "strict_under_5_percent_pass": true,
+  "method": "abs(last matched full-workload mean RSS-first matched mean RSS)/first mean*100 after20 warm calls; identical ordered48-sample mixes,240 calls per window",
+  "continuous_peak_interval_seconds": 0.05,
+  "continuous_rss_samples": 2372,
+  "duration_seconds": 131.07282229990233,
+  "classifier_latency": {
+    "mean_ms": 117.45897354218566,
+    "p95_ms": 169.98950493289158,
+    "minimum_ms": 83.2390000578016,
+    "maximum_ms": 711.0023000277579
+  },
+  "heatmap_latency": {
+    "mean_ms": 129.7483137488598,
+    "p95_ms": 189.498015056597,
+    "minimum_ms": 94.49529997073114,
+    "maximum_ms": 691.3266000337899
+  },
+  "combined_latency": {
+    "mean_ms": 272.066647287041,
+    "p95_ms": 412.96071000979265,
+    "minimum_ms": 199.28760000038892,
+    "maximum_ms": 973.1558000203222
+  },
+  "degenerate_heatmaps": 0,
+  "remaining_hooks": 0,
+  "retained_parameter_gradients": 0,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "runtime_downloads": 0,
+  "numeric_latency_sla": null
+}

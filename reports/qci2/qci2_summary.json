@@ -1,0 +1,389 @@
+{
+  "status": "local_training_and_explanation_completed_release_pending",
+  "overall_dod": "FAIL",
+  "task": "QCI-2",
+  "branch": "feature/sprint2-qci2-defect-classifier",
+  "base_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+  "dataset_version": "QCI1-local-segmentation-v1",
+  "dataset_manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+  "dataset_records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+  "classes": {
+    "0": "normal",
+    "1": "defect"
+  },
+  "split_counts": {
+    "train": 302,
+    "val": 48,
+    "test": 16
+  },
+  "model_version": "qci2-kolektor-resnet18-v1",
+  "architecture": "resnet18",
+  "artifact": {
+    "version": "qci2-kolektor-resnet18-v1",
+    "architecture": "resnet18",
+    "checkpoint": "QCI_2_Defect_Classifier/runtime/run_v1/best.pt",
+    "sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+    "classes": {
+      "0": "normal",
+      "1": "defect"
+    },
+    "parameters": 11177538,
+    "trainable_parameters": 4721666,
+    "input_height": 448,
+    "input_width": 192,
+    "starting_weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+    "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+    "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+    "best_epoch": 23
+  },
+  "training": {
+    "status": "training_completed",
+    "epochs_requested": 40,
+    "epochs_completed": 31,
+    "best_epoch": 23,
+    "best_validation": {
+      "samples": 48,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": [
+        [
+          42,
+          0
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "support": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    "best_validation_loss": 0.003508060187305299,
+    "class_counts": {
+      "0": 263,
+      "1": 39
+    },
+    "class_weights": [
+      0.5741444826126099,
+      3.8717949390411377
+    ],
+    "training_config": {
+      "manifest": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\dataset_manifest.json",
+      "records": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci1\\segmentation\\samples.jsonl",
+      "output_dir": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_2_Defect_Classifier\\runtime\\run_v1",
+      "starting_weights": "C:\\Users\\ehtis\\.cache\\torch\\hub\\checkpoints\\resnet18-f37072fd.pth",
+      "starting_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "architecture": "resnet18",
+      "height": 448,
+      "width": 192,
+      "batch_size": 8,
+      "epochs": 40,
+      "patience": 8,
+      "learning_rate": 0.0001,
+      "head_learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 42,
+      "workers": 0,
+      "threads": 2,
+      "pin_memory": false,
+      "device": "cpu",
+      "optimizer": "AdamW",
+      "scheduler": "CosineAnnealingLR",
+      "class_weights": "inverse_train_frequency",
+      "horizontal_flip": 0.5,
+      "brightness_contrast": 0.08,
+      "low_confidence_threshold": 0.65,
+      "max_samples": 10000
+    },
+    "dataset_version": "QCI1-local-segmentation-v1",
+    "artifact": {
+      "version": "qci2-kolektor-resnet18-v1",
+      "architecture": "resnet18",
+      "checkpoint": "QCI_2_Defect_Classifier/runtime/run_v1/best.pt",
+      "sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+      "classes": {
+        "0": "normal",
+        "1": "defect"
+      },
+      "parameters": 11177538,
+      "trainable_parameters": 4721666,
+      "input_height": 448,
+      "input_width": 192,
+      "starting_weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+      "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+      "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+      "best_epoch": 23
+    },
+    "lineage": {
+      "manifest_sha256": "08921a7c0713103220e9c0aec3d6987c5737c1fcf8c81c8895251b2ae94586bb",
+      "records_sha256": "6801e212b235541cb46988f499983676fa0a1123b9dc08d12d7581e754e77d8f",
+      "source_commit": "d63ff417b363ea8fd81e0027f9ca458afdda4aee",
+      "implementation_sha256": {
+        "common.py": "dad957ba022c456cdfca2c2b686c4d2d36c5ddca1aa4d74c0153ff09c6f788ca",
+        "contracts.py": "15b44993dba5b4769ccb29dc58f0dc2ab71b8aae755b3b9ad5a9e6419c2a9120",
+        "data.py": "77983a7e8ecfd6ba2759024ccceeb27a2f8cddbbb7ae07fae3750fccc91d9f60",
+        "metrics.py": "d0c2d82507fdb7d5532179f685a434550179eda399efc06fd3490ac34f459ae7",
+        "model.py": "a23a2ccccf1734a18d3ca587b34a89f6cf95a5252030cbc85cb9c192dce54c29",
+        "train.py": "0d2ffedbf24dc261d37f1c493f97be4a235e63d81e4b5e3001971ea024589a0e",
+        "__init__.py": "90045a817d886b9fa68dfb22713bcefeb017471118ba38bcc328257b79582e45"
+      }
+    },
+    "duration_seconds": 1976.8045757999644,
+    "deterministic_algorithms": true,
+    "workers": 0,
+    "prefetch": null,
+    "pin_memory": false,
+    "torch_version": "2.10.0+cpu",
+    "train_memory": {
+      "start_rss_mib": 368.609375,
+      "observed_batch_peak_rss_mib": 548.2734375,
+      "end_rss_mib": 440.05859375
+    },
+    "held_out_test_evaluated": false,
+    "checkpoint_reload_verified": true,
+    "numeric_accuracy_target": null,
+    "numeric_latency_sla": null,
+    "offline_verified": true,
+    "external_connection_attempts": 0,
+    "runtime_downloads": 0
+  },
+  "test_metrics": {
+    "samples": 16,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        14,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "per_class": [
+      {
+        "class_id": 0,
+        "class_name": "normal",
+        "support": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "class_id": 1,
+        "class_name": "defect",
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "selected_model_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+    "test_evaluations": 1,
+    "classification_target": "Binary image-level mask presence:0 normal,1 defect",
+    "class_mapping": {
+      "0": "normal",
+      "1": "defect"
+    },
+    "numeric_accuracy_target": null,
+    "numeric_latency_sla": null,
+    "offline_verified": true,
+    "external_connection_attempts": 0,
+    "runtime_downloads": 0,
+    "heatmaps_generated": 16,
+    "finite_image_aligned_maps": 16,
+    "degenerate_heatmaps": 0,
+    "all_test_samples_visualized": true,
+    "model_selection_used_test": false
+  },
+  "latency_and_memory": {
+    "workload": "Actual best checkpoint, full-image classification plus genuine Grad-CAM; no retained maps or disk export",
+    "warmup_calls": 20,
+    "measured_calls": 480,
+    "validation_samples": 48,
+    "repeats_per_cycle": 5,
+    "start_rss_mib": 382.25,
+    "peak_rss_mib": 393.8125,
+    "end_rss_mib": 382.23046875,
+    "cycles": [
+      {
+        "cycle": 1,
+        "samples": 240,
+        "mean_rss_mib": 382.066015625
+      },
+      {
+        "cycle": 2,
+        "samples": 240,
+        "mean_rss_mib": 382.33232421875
+      }
+    ],
+    "drift_percent": 0.06970224591014,
+    "strict_under_5_percent_pass": true,
+    "method": "abs(last matched full-workload mean RSS-first matched mean RSS)/first mean*100 after20 warm calls; identical ordered48-sample mixes,240 calls per window",
+    "continuous_peak_interval_seconds": 0.05,
+    "continuous_rss_samples": 2372,
+    "duration_seconds": 131.07282229990233,
+    "classifier_latency": {
+      "mean_ms": 117.45897354218566,
+      "p95_ms": 169.98950493289158,
+      "minimum_ms": 83.2390000578016,
+      "maximum_ms": 711.0023000277579
+    },
+    "heatmap_latency": {
+      "mean_ms": 129.7483137488598,
+      "p95_ms": 189.498015056597,
+      "minimum_ms": 94.49529997073114,
+      "maximum_ms": 691.3266000337899
+    },
+    "combined_latency": {
+      "mean_ms": 272.066647287041,
+      "p95_ms": 412.96071000979265,
+      "minimum_ms": 199.28760000038892,
+      "maximum_ms": 973.1558000203222
+    },
+    "degenerate_heatmaps": 0,
+    "remaining_hooks": 0,
+    "retained_parameter_gradients": 0,
+    "offline_verified": true,
+    "external_connection_attempts": 0,
+    "runtime_downloads": 0,
+    "numeric_latency_sla": null
+  },
+  "tests": {
+    "qci2": {
+      "command": [
+        "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/test_qci2_classifier.py",
+        "tests/test_qci2_dataset_adapter.py",
+        "tests/test_qci2_registry.py",
+        "-q",
+        "--durations=5"
+      ],
+      "exit_code": 0,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "errors": 0,
+      "collected": 32,
+      "duration_seconds": 14.09
+    },
+    "qci1": {
+      "command": [
+        "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/test_qci1_ingestion.py",
+        "tests/test_qci1_additional_edges.py",
+        "tests/test_qci1_decoder_isolation.py",
+        "tests/test_qci1_acquisition.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "passed": 74,
+      "failed": 0,
+      "skipped": 0,
+      "errors": 0,
+      "collected": 74,
+      "duration_seconds": 8.7
+    },
+    "repository": {
+      "command": [
+        "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "passed": 279,
+      "failed": 2,
+      "skipped": 0,
+      "errors": 0,
+      "collected": 281,
+      "duration_seconds": 88.49
+    },
+    "scope_note": "Full-root prior quantitative failures are visible and unmodified."
+  },
+  "heatmap_method": "Grad-CAM",
+  "target_layer": "layer4.1.conv2",
+  "heatmap_samples": 16,
+  "offline_verified": true,
+  "external_runtime_api_calls": 0,
+  "runtime_downloads": 0,
+  "gpu_used": false,
+  "modal_session_started": false,
+  "numeric_accuracy_target": null,
+  "numeric_latency_sla": null,
+  "pr_created": false,
+  "pr_url": null,
+  "commercial_permission_obtained": false,
+  "artifacts": {
+    "config": "QCI_2_Defect_Classifier/configs/qci2_classifier.yaml",
+    "checkpoint": "QCI_2_Defect_Classifier/runtime/run_v1/best.pt",
+    "test_metrics": "reports/qci2/test_metrics.json",
+    "confusion_matrix": "reports/qci2/confusion_matrix.png",
+    "curves": "reports/qci2/training_curves.png",
+    "sanity_grid": "reports/qci2/classifier_heatmap_sanity_grid.png",
+    "proof": "reports/qci2/proof_of_work.png"
+  },
+  "dod": {
+    "Required feature branch": "PASS",
+    "QCI-1 validated data consumed": "PASS",
+    "Actual target and binary design justified": "PASS",
+    "Verified local starting assets": "PASS",
+    "No runtime cloud API dependency": "PASS",
+    "Pydantic v2 contracts": "PASS",
+    "Typed/documented new functions": "PASS",
+    "Bounded loaders": "PASS",
+    "Deterministic training settings": "PASS",
+    "Train class imbalance handled": "PASS",
+    "Real classifier training completed": "PASS",
+    "Best saved/reloaded": "PASS",
+    "Once-only held-out test evaluated": "PASS",
+    "Per-class metrics/confusion matrix": "PASS",
+    "Real model-gradient heatmaps": "PASS",
+    "Heatmap sanity tests": "PASS",
+    "Typed inference JSON": "PASS",
+    "Malformed inputs controlled": "PASS",
+    "Offline model/heatmap verified": "PASS",
+    "Production inference RSS measured": "PASS",
+    "Stable drift strict<5%": "PASS",
+    "QCI-2 tests100% passing": "PASS",
+    "QCI-1 regression": "PASS",
+    "Entire repository tests": "FAIL; prior CPU1 numeric gates",
+    "Docs and actual visual/terminal proof": "PASS",
+    "PR created": "FAIL; organization access revoked",
+    "Commercial dataset permission": "NOT OBTAINED; noncommercial research only",
+    "QCI-2 OVERALL": "FAIL; local technical work complete, full repository/PR/release gates pending"
+  }
+}

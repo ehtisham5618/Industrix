@@ -1,0 +1,5 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 -m pytest tests/test_qci1_ingestion.py tests/test_qci1_additional_edges.py tests/test_qci1_decoder_isolation.py tests/test_qci1_acquisition.py -q
+........................................................................ [ 97%]
+..                                                                       [100%]
+74 passed in 8.70s
+Exit code: 0

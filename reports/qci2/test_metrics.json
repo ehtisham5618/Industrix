@@ -1,0 +1,52 @@
+{
+  "samples": 16,
+  "accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "confusion_matrix": [
+    [
+      14,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "normal",
+      "support": 14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "class_id": 1,
+      "class_name": "defect",
+      "support": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "selected_model_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+  "test_evaluations": 1,
+  "classification_target": "Binary image-level mask presence:0 normal,1 defect",
+  "class_mapping": {
+    "0": "normal",
+    "1": "defect"
+  },
+  "numeric_accuracy_target": null,
+  "numeric_latency_sla": null,
+  "offline_verified": true,
+  "external_connection_attempts": 0,
+  "runtime_downloads": 0,
+  "heatmaps_generated": 16,
+  "finite_image_aligned_maps": 16,
+  "degenerate_heatmaps": 0,
+  "all_test_samples_visualized": true,
+  "model_selection_used_test": false
+}

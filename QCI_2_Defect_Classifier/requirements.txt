@@ -1,0 +1,11 @@
+# Already installed locally; no runtime downloads or auto-installations.
+torch==2.10.0
+torchvision==0.25.0
+pydantic>=2.12,<3
+numpy>=2.4,<3
+Pillow>=12,<13
+opencv-python>=4.13
+PyYAML>=6,<7
+psutil>=7,<8
+matplotlib>=3.10
+pytest>=9,<10

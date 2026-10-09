@@ -1,0 +1,19 @@
+{
+  "changed_path_directories": [
+    "C:\\Users\\ehtis\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\cv2\\../../x64/vc17/bin"
+  ],
+  "results": {
+    "native_import_environment": {
+      "exit_code": 0,
+      "stdout": "{\"restored_samples\": 16, \"actual_model_and_cam_verified\": true, \"original_data_used\": false, \"dataset_root\": \"C:\\\\Users\\\\ehtis\\\\Desktop\\\\Textile Defect Detection\\\\QCI_2_Defect_Classifier\\\\runtime\\\\restore_probe_94bfc25\\\\QCI_1_Surface_Defect_Segmentation\\\\runtime\\\\segmentation_dataset\", \"network_attempts\": 0}\n",
+      "stderr": ""
+    },
+    "original_environment": {
+      "exit_code": 0,
+      "stdout": "{\"restored_samples\": 16, \"actual_model_and_cam_verified\": true, \"original_data_used\": false, \"dataset_root\": \"C:\\\\Users\\\\ehtis\\\\Desktop\\\\Textile Defect Detection\\\\QCI_2_Defect_Classifier\\\\runtime\\\\restore_probe_94bfc25\\\\QCI_1_Surface_Defect_Segmentation\\\\runtime\\\\segmentation_dataset\", \"network_attempts\": 0}\n",
+      "stderr": ""
+    }
+  },
+  "interpretation": "Two initial full recovery launcher attempts failed with a controlled native OpenCV error; separate clean recovered-model runs passed. Isolated PATH comparison passed in both cases, so inherited PATH alone is not proven as the cause. Recovery parent now uses only stdlib to avoid unnecessary native-library memory/environment side effects.",
+  "first_full_restore_failure": "{\"stage\": \"prediction\", \"sample_id\": \"Part0.jpg\", \"error_type\": \"error\", \"message\": \"Unknown C++ exception from OpenCV code\"}\nTraceback (most recent call last):\n  File \"C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_2_Defect_Classifier\\runtime\\restore_probe_94bfc25\\QCI_2_Defect_Classifier\\runtime\\restore_validation.py\", line 18, in <module>\n    assert result.status=='SUCCESS' and result.predicted_class_id==reference['prediction']['predicted_class_id']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n\nExit:1"
+}

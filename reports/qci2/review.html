@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>QCI-2 actual classifier proof</title><style>body{font:16px system-ui;color:#17344d;background:#eef3f7;margin:30px}main{max-width:1400px;margin:auto}section{background:white;padding:22px;margin:16px 0;border:1px solid #d8e1eb;border-radius:8px}img{max-width:1140px;width:100%}pre{font:13px Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.note{background:#fff3d6;padding:18px}</style></head><body><main><h1>QCI-2 / Real local classifier and Grad-CAM</h1><section><b>Trained checkpoint + untouched held-out test</b><p>ResNet18 | 31 epochs | best epoch23 | splits302/48/16</p><p>Test accuracy1.0000, macroF11.0000. Only two positive test samples; no production-generalization claim.</p><p>QCI-2 32 passed; QCI-1 74 passed; root 279 passed/2 old CPU1 failures. RSS drift0.0697%.</p></section><div class="note">Local noncommercial review complete. PR/access, commercial permission and prior repository numeric gates pending.</div><section><h2>Actual focused pytest output</h2><pre>Command: &quot;C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe&quot; -X utf8 -m pytest tests/test_qci2_classifier.py tests/test_qci2_dataset_adapter.py tests/test_qci2_registry.py -q --durations=5
+................................                                         [100%]
+============================= slowest 5 durations =============================
+0.81s call     tests/test_qci2_classifier.py::test_eval_determinism_scoped_hooks_and_offline
+0.65s call     tests/test_qci2_classifier.py::test_real_resnet_forward_backward_and_checkpoint_reload
+0.64s setup    tests/test_qci2_classifier.py::test_real_resnet_forward_backward_and_checkpoint_reload
+0.60s call     tests/test_qci2_classifier.py::test_invalid_target_class_is_controlled[2]
+0.59s call     tests/test_qci2_classifier.py::test_corrupt_or_missing_image_returns_failure[missing.png]
+32 passed in 14.09s
+Exit code: 0
+</pre></section><section><h2>Actual held-out confusion matrix</h2><img src="confusion_matrix.png" style="max-width:650px"></section><section><h2>Actual training history</h2><img src="training_curves.png"></section><section><h2>Every test image: source, ground truth, prediction, model heatmap, overlay</h2><img src="classifier_heatmap_sanity_grid.png"></section></main></body></html>

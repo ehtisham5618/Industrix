@@ -1,0 +1,38 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 -u -m QCI_2_Defect_Classifier.evaluate
+{
+  "samples": 16,
+  "accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "confusion_matrix": [
+    [
+      14,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "normal",
+      "support": 14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "class_id": 1,
+      "class_name": "defect",
+      "support": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ]
+}
+Saved every test prediction, genuine Grad-CAM, mask references and failure evidence.
+Exit code: 0

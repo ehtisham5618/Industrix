@@ -1,0 +1,10 @@
+Command: "C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe" -X utf8 -m pytest tests/test_qci2_classifier.py tests/test_qci2_dataset_adapter.py tests/test_qci2_registry.py -q --durations=5
+................................                                         [100%]
+============================= slowest 5 durations =============================
+0.81s call     tests/test_qci2_classifier.py::test_eval_determinism_scoped_hooks_and_offline
+0.65s call     tests/test_qci2_classifier.py::test_real_resnet_forward_backward_and_checkpoint_reload
+0.64s setup    tests/test_qci2_classifier.py::test_real_resnet_forward_backward_and_checkpoint_reload
+0.60s call     tests/test_qci2_classifier.py::test_invalid_target_class_is_controlled[2]
+0.59s call     tests/test_qci2_classifier.py::test_corrupt_or_missing_image_returns_failure[missing.png]
+32 passed in 14.09s
+Exit code: 0

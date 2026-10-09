@@ -1,0 +1,860 @@
+[
+  {
+    "sample_id": "test/kos18/Part0",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part0.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9999300241470337,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9999300241470337
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 6.992248381720856e-05
+        }
+      ],
+      "classifier_latency_ms": 99.20219995547086,
+      "heatmap_latency_ms": 341.4432000136003,
+      "combined_latency_ms": 462.3075999552384,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1269,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\74f1280195fdb0ea_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\74f1280195fdb0ea_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1269,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part1",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part1.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9974668025970459,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9974668025970459
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.002533180406317115
+        }
+      ],
+      "classifier_latency_ms": 123.1936999829486,
+      "heatmap_latency_ms": 318.80310003180057,
+      "combined_latency_ms": 474.3410999653861,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1255,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\7b013e83e000abaf_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\7b013e83e000abaf_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1255,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part2",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part2.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9999645948410034,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9999645948410034
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 3.54616749973502e-05
+        }
+      ],
+      "classifier_latency_ms": 116.7329999152571,
+      "heatmap_latency_ms": 432.7108000870794,
+      "combined_latency_ms": 574.449299951084,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1249,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\b429406591013240_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\b429406591013240_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1249,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part3",
+    "ground_truth": 1,
+    "ground_truth_name": "defect",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part3.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 1,
+      "predicted_class_name": "defect",
+      "confidence": 0.7491212487220764,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.25087878108024597
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.7491212487220764
+        }
+      ],
+      "classifier_latency_ms": 147.9795000050217,
+      "heatmap_latency_ms": 331.32260001730174,
+      "combined_latency_ms": 507.8280000016093,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 1,
+        "target_class_name": "defect",
+        "width": 500,
+        "height": 1253,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\73727289e9c12c35_class1_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\73727289e9c12c35_class1_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1253,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 1
+    },
+    "localization_probe": {
+      "pointing_game_hit": false,
+      "energy_inside_mask": 0.027458446100354195,
+      "method": "Predicted-class explanation; quantized PNG energy. Sparse defect masks and coarse CAM limit conclusions."
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part4",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part4.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9993809461593628,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9993809461593628
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0006190770654939115
+        }
+      ],
+      "classifier_latency_ms": 85.3602000279352,
+      "heatmap_latency_ms": 376.2881000293419,
+      "combined_latency_ms": 483.53780002798885,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1247,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\44562c059a333de4_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\44562c059a333de4_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1247,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part5",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part5.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9999039173126221,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9999039173126221
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 9.602317004464567e-05
+        }
+      ],
+      "classifier_latency_ms": 95.80060001462698,
+      "heatmap_latency_ms": 339.24910007044673,
+      "combined_latency_ms": 463.10699998866767,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1260,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\65dc287ff65d26f3_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\65dc287ff65d26f3_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1260,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part6",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part6.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9995866417884827,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9995866417884827
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0004133915645070374
+        }
+      ],
+      "classifier_latency_ms": 213.04229996167123,
+      "heatmap_latency_ms": 423.5158000374213,
+      "combined_latency_ms": 664.1949999611825,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1267,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\1b86e925ffcb38f8_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\1b86e925ffcb38f8_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1267,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos18/Part7",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part7.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9988462924957275,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9988462924957275
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0011536545353010297
+        }
+      ],
+      "classifier_latency_ms": 197.34760001301765,
+      "heatmap_latency_ms": 499.1224999539554,
+      "combined_latency_ms": 719.6392000187188,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1268,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\23490d8035620c5e_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\23490d8035620c5e_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1268,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part0",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part0.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9991876482963562,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9991876482963562
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0008123124134726822
+        }
+      ],
+      "classifier_latency_ms": 167.79229999519885,
+      "heatmap_latency_ms": 442.3833000473678,
+      "combined_latency_ms": 631.0785999521613,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1257,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\a7a22b417e859213_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\a7a22b417e859213_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1257,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part1",
+    "ground_truth": 1,
+    "ground_truth_name": "defect",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part1.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 1,
+      "predicted_class_name": "defect",
+      "confidence": 1.0,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 1.6509600690844126e-32
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 1.0
+        }
+      ],
+      "classifier_latency_ms": 275.6890000309795,
+      "heatmap_latency_ms": 371.98129994794726,
+      "combined_latency_ms": 684.5674000214785,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 1,
+        "target_class_name": "defect",
+        "width": 500,
+        "height": 1254,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\4cf48450d2eb13d3_class1_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\4cf48450d2eb13d3_class1_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1254,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 1
+    },
+    "localization_probe": {
+      "pointing_game_hit": false,
+      "energy_inside_mask": 0.042444683611392975,
+      "method": "Predicted-class explanation; quantized PNG energy. Sparse defect masks and coarse CAM limit conclusions."
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part2",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part2.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9990466237068176,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9990466237068176
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0009533591219224036
+        }
+      ],
+      "classifier_latency_ms": 117.17380001209676,
+      "heatmap_latency_ms": 335.3224000893533,
+      "combined_latency_ms": 482.91419993620366,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1258,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\f57fb2f756659c36_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\f57fb2f756659c36_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1258,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part3",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part3.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.99994957447052,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.99994957447052
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 5.040996256866492e-05
+        }
+      ],
+      "classifier_latency_ms": 122.28759995196015,
+      "heatmap_latency_ms": 340.2669000206515,
+      "combined_latency_ms": 491.8730000499636,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1266,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\f76484e0925b3596_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\f76484e0925b3596_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1266,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part4",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part4.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9834641814231873,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9834641814231873
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.016535812988877296
+        }
+      ],
+      "classifier_latency_ms": 106.17959999945015,
+      "heatmap_latency_ms": 327.96799996867776,
+      "combined_latency_ms": 463.52670004125684,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1261,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\9a1578fc0678f007_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\9a1578fc0678f007_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1261,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part5",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part5.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9995495676994324,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9995495676994324
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.00045040485565550625
+        }
+      ],
+      "classifier_latency_ms": 123.99150000419468,
+      "heatmap_latency_ms": 385.8421000186354,
+      "combined_latency_ms": 547.9543999535963,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1254,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\6bccb008d2dc0f42_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\6bccb008d2dc0f42_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1254,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part6",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part6.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9998522996902466,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9998522996902466
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.0001476584147894755
+        }
+      ],
+      "classifier_latency_ms": 142.5341999856755,
+      "heatmap_latency_ms": 321.14380004350096,
+      "combined_latency_ms": 483.3068000152707,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1247,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\e38c64b9831369bc_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\e38c64b9831369bc_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1247,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  },
+  {
+    "sample_id": "test/kos43/Part7",
+    "ground_truth": 0,
+    "ground_truth_name": "normal",
+    "prediction": {
+      "status": "SUCCESS",
+      "sample_id": "Part7.jpg",
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "predicted_class_id": 0,
+      "predicted_class_name": "normal",
+      "confidence": 0.9959824085235596,
+      "class_scores": [
+        {
+          "class_id": 0,
+          "class_name": "normal",
+          "score": 0.9959824085235596
+        },
+        {
+          "class_id": 1,
+          "class_name": "defect",
+          "score": 0.004017621278762817
+        }
+      ],
+      "classifier_latency_ms": 97.7596000302583,
+      "heatmap_latency_ms": 365.30870001297444,
+      "combined_latency_ms": 482.5940999435261,
+      "heatmap": {
+        "method": "Grad-CAM",
+        "target_layer": "layer4.1.conv2",
+        "target_class_id": 0,
+        "target_class_name": "normal",
+        "width": 500,
+        "height": 1253,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "degenerate": false,
+        "raw_heatmap_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\799e0d54f0be950f_class0_heatmap.png",
+        "overlay_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\qci2\\heatmaps\\799e0d54f0be950f_class0_overlay.png",
+        "alpha": 0.35
+      },
+      "warnings": [],
+      "error_type": null,
+      "error_message": null
+    },
+    "heatmap_validation": {
+      "width": 500,
+      "height": 1253,
+      "finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "target_class": 0
+    }
+  }
+]
