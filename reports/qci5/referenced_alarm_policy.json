@@ -1,0 +1,35 @@
+{
+  "policy_version": "qci3-loopback-demo-v1",
+  "expected_model_version": "qci2-kolektor-resnet18-v1",
+  "database": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_3_Severity_IoT\\runtime\\demo_ea56e993\\events.db",
+  "rules": {
+    "normal": {
+      "initial": "info",
+      "warning_after_seconds": null,
+      "critical_after_seconds": null,
+      "source_overrides": {}
+    },
+    "defect": {
+      "initial": "warning",
+      "warning_after_seconds": null,
+      "critical_after_seconds": null,
+      "source_overrides": {
+        "demo.critical": "critical"
+      }
+    }
+  },
+  "webhook": {
+    "enabled": true,
+    "url": "http://127.0.0.1:56842/siren",
+    "token_environment": "QCI3_SIREN_TOKEN",
+    "timeout_seconds": 1.0,
+    "attempts": 3,
+    "backoff_seconds": 0.0,
+    "receiver_idempotent": true
+  },
+  "active_capacity": 512,
+  "record_capacity": 10000,
+  "outbox_capacity": 256,
+  "resolved_ttl_seconds": 86400.0,
+  "audit_capacity": 50000
+}

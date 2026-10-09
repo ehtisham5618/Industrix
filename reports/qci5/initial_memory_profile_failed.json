@@ -1,0 +1,58 @@
+{
+  "exports": 500,
+  "warmup": 50,
+  "exports_per_window": 225,
+  "sampling_hz": 20,
+  "start_rss_mib": 58.02734375,
+  "peak_rss_mib": 221.89453125,
+  "end_rss_mib": 206.4140625,
+  "first_mean_rss_mib": 139.24131526708373,
+  "second_mean_rss_mib": 148.08423428585982,
+  "matched_window_drift_percent": 6.35078676311996,
+  "raw_endpoint_change_percent": 255.7186132615281,
+  "strict_less_than_5_percent_pass": false,
+  "handles_start": 270,
+  "handles_end": 269,
+  "sampler_stopped": true,
+  "offline_socket_attempts": 0,
+  "methodology": "Continuous 20 Hz process RSS; 50 warmup exports then two equal 225-export windows; same stored incident, two real images, no inference or PDF-byte cache.",
+  "timings": {
+    "latency_ms": {
+      "count": 450,
+      "mean_ms": 325.17703866689567,
+      "p50_ms": 277.3005999624729,
+      "p95_ms": 532.3817000025883,
+      "max_ms": 1057.2530999779701
+    },
+    "lookup_ms": {
+      "count": 450,
+      "mean_ms": 14.05207444396284,
+      "p50_ms": 13.901400030590594,
+      "p95_ms": 18.11120007187128,
+      "max_ms": 40.418900083750486
+    },
+    "evidence_ms": {
+      "count": 450,
+      "mean_ms": 80.19745711159582,
+      "p50_ms": 69.59840003401041,
+      "p95_ms": 123.15669993404299,
+      "max_ms": 285.70020000915974
+    },
+    "render_ms": {
+      "count": 450,
+      "mean_ms": 215.90001021951645,
+      "p50_ms": 175.4355999873951,
+      "p95_ms": 389.47860000189394,
+      "max_ms": 749.4836999103427
+    },
+    "write_ms": {
+      "count": 450,
+      "mean_ms": 8.092849551596576,
+      "p50_ms": 7.8991500195115805,
+      "p95_ms": 12.495800037868321,
+      "max_ms": 79.25130007788539
+    }
+  },
+  "partial_files": 0,
+  "final_files": 1
+}

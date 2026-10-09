@@ -1,0 +1,91 @@
+{
+  "sample_export": {
+    "status": "SUCCESS",
+    "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+    "output_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_5_Incident_PDF\\runtime\\exports\\QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ_incident_report.pdf",
+    "size_bytes": 250787,
+    "latency_ms": 584.7742999903858,
+    "lookup_ms": 16.49909990373999,
+    "evidence_ms": 136.61649997811764,
+    "render_ms": 402.52340014558285,
+    "write_ms": 7.931999978609383,
+    "sha256": "6e32979bc904174c2198546cac2442c9aa5e23466233f79bfcf772de8a0d6df3",
+    "warnings": [],
+    "report_version": "qci5-report-v1",
+    "error": null
+  },
+  "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+  "sample_pdf": "reports/qci5/sample_incident_report.pdf",
+  "sample_sha256": "6e32979bc904174c2198546cac2442c9aa5e23466233f79bfcf772de8a0d6df3",
+  "pages": 4,
+  "embedded_images": 2,
+  "offline_socket_attempts": 0,
+  "api": {
+    "status": 200,
+    "content_type": "application/pdf",
+    "filename": "attachment; filename=\"QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ_incident_report.pdf\"",
+    "report_version": "qci5-report-v1",
+    "pdf_bytes": 250787,
+    "network": "In-process existing FastAPI route under all-socket-connect prohibition"
+  },
+  "cli": {
+    "status": "SUCCESS",
+    "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+    "output_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_5_Incident_PDF\\runtime\\exports\\QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ_incident_report.pdf",
+    "size_bytes": 250561,
+    "latency_ms": 1019.2854000488296,
+    "lookup_ms": 44.65679998975247,
+    "evidence_ms": 375.9401999413967,
+    "render_ms": 550.1878999639302,
+    "write_ms": 34.927999950014055,
+    "sha256": "fa0bebde726b676524e0bac7ccfd982c3521563be63d4ba5138d34935a989acf",
+    "warnings": [],
+    "report_version": "qci5-report-v1",
+    "error": null
+  },
+  "lineage": {
+    "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+    "database": "QCI_3_Severity_IoT/runtime/demo_ea56e993/events.db",
+    "event_digest": "83f43c4630e9356b2d15ac4018abd366db60399794cd32ad51c31eaa35981eb2",
+    "source_sample_id": "test/kos18/Part3",
+    "evidence": [
+      {
+        "role": "Evidence image",
+        "path": "QCI_1_Surface_Defect_Segmentation/runtime/segmentation_dataset/images/test/kos18/Part3.jpg",
+        "sha256": "73727289e9c12c3594b23982fc215f05970bd89fbb9cfb45d590c2532ae58fd3",
+        "context": "Existing QCI-3 research-demo inference; source sample test/kos18/Part3. Acquisition timestamp unavailable. Original curated KolektorSDD image; noncommercial research/evaluation.  KolektorSDD: ViCoS, University of Ljubljana; Tabernik et al. (2019), DOI 10.1007/s10845-019-01476-x. CC BY-NC-SA 4.0. https://www.vicos.si/resources/kolektorsdd/"
+      },
+      {
+        "role": "Model Attribution Heatmap",
+        "path": "QCI_3_Severity_IoT/runtime/heatmaps/73727289e9c12c35_class1_overlay.png",
+        "sha256": "a406cd083985697903ea19c8ecbfcd6090e949f5bb6195302ceb08943a49f802",
+        "context": "Existing QCI-3 research-demo inference; source sample test/kos18/Part3. Acquisition timestamp unavailable. Grad-CAM overlay, target class defect; attribution is not a ground-truth defect mask. KolektorSDD: ViCoS, University of Ljubljana; Tabernik et al. (2019), DOI 10.1007/s10845-019-01476-x. CC BY-NC-SA 4.0. https://www.vicos.si/resources/kolektorsdd/"
+      }
+    ],
+    "original_event_digest_verified": true,
+    "model_version": "qci2-kolektor-resnet18-v1",
+    "policy_version": "qci3-loopback-demo-v1",
+    "severity": "critical",
+    "state": "resolved",
+    "delivery": "ACKNOWLEDGED",
+    "confidence": 0.7491212487220764,
+    "model_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795"
+  },
+  "generated_at": "2026-10-09T15:28:12.970429+00:00",
+  "execution_sources": {
+    "commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+    "modules": {
+      "QCI_5_Incident_PDF/__init__.py": "d1ba5b771fa7e47cf9e4b406bbb2af0d43f0e2b788ed91809f9d53f2ea324fb5",
+      "QCI_5_Incident_PDF/adapter.py": "a2c26621f5d669ee094907ce9dd44920345d805a79b7c872c8ee0f23c0a7100d",
+      "QCI_5_Incident_PDF/capture_proof.py": "705acdc81bb154bf924c8f0a7dd4bcb6252c5456cd3e041429542b92166b626a",
+      "QCI_5_Incident_PDF/contracts.py": "f25081e35120012868b84884b2604ccd2ea49a785a4a2b231cd41a0d33770e30",
+      "QCI_5_Incident_PDF/demo_server.py": "709e774d5cdee5b3e3fb20d5132144ca9200f12f990e0a40b10a2270be045dc9",
+      "QCI_5_Incident_PDF/demo_ui.py": "a6a477962b159a922d2ddd70e72943f77f5e090f97e566c29f7a40aa9646e003",
+      "QCI_5_Incident_PDF/finish_evidence.py": "229ab271ed069858ac3cb47a4eb386b2b2c3b408f9db4ea1e9cfd059566392d9",
+      "QCI_5_Incident_PDF/offline_backup.py": "199dbc60ce0e89aa1e820aade89334db6146a22cf84a5b67d7b29d94196d6863",
+      "QCI_5_Incident_PDF/record_experiment.py": "fc43d34b728cbc71990b736de5bfe9786f0efdfe162118a6228168b006279c18",
+      "QCI_5_Incident_PDF/service.py": "2e1911698b970b048a28a5c64b305864a8dd5d86a065b68f7776ab9d53995987",
+      "QCI_5_Incident_PDF/verify.py": "fc3ade23d56632514d921c1b2c4925be616883a88598a94f2723c27396c1c309"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "exports": 500,
+  "warmup": 50,
+  "exports_per_window": 225,
+  "sampling_hz": 20,
+  "start_rss_mib": 58.640625,
+  "peak_rss_mib": 81.1328125,
+  "end_rss_mib": 63.0703125,
+  "first_mean_rss_mib": 66.74317427047038,
+  "second_mean_rss_mib": 67.71084968727338,
+  "matched_window_drift_percent": 1.4498492578156257,
+  "raw_endpoint_change_percent": 7.553956834532374,
+  "strict_less_than_5_percent_pass": true,
+  "handles_start": 261,
+  "handles_end": 260,
+  "sampler_stopped": true,
+  "offline_socket_attempts": 0,
+  "methodology": "Continuous 20 Hz process RSS; 50 warmup exports then two equal 225-export windows; same stored incident, two real images, no inference or PDF-byte cache.",
+  "timings": {
+    "latency_ms": {
+      "count": 450,
+      "mean_ms": 483.6199497770415,
+      "p50_ms": 383.46565002575517,
+      "p95_ms": 1022.0032000215724,
+      "max_ms": 3060.641699936241
+    },
+    "lookup_ms": {
+      "count": 450,
+      "mean_ms": 16.92899177937458,
+      "p50_ms": 15.282100008334965,
+      "p95_ms": 26.95019997190684,
+      "max_ms": 147.15750003233552
+    },
+    "evidence_ms": {
+      "count": 450,
+      "mean_ms": 106.74907555777787,
+      "p50_ms": 84.33075004722923,
+      "p95_ms": 210.80449991859496,
+      "max_ms": 696.6973999515176
+    },
+    "render_ms": {
+      "count": 450,
+      "mean_ms": 340.53387622348964,
+      "p50_ms": 262.46595004340634,
+      "p95_ms": 757.595100090839,
+      "max_ms": 2590.655699954368
+    },
+    "write_ms": {
+      "count": 450,
+      "mean_ms": 9.148043557070196,
+      "p50_ms": 8.012000005692244,
+      "p95_ms": 17.996100010350347,
+      "max_ms": 107.99120005685836
+    }
+  },
+  "partial_files": 0,
+  "final_files": 1,
+  "execution_sources": {
+    "commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+    "modules": {
+      "QCI_5_Incident_PDF/__init__.py": "d1ba5b771fa7e47cf9e4b406bbb2af0d43f0e2b788ed91809f9d53f2ea324fb5",
+      "QCI_5_Incident_PDF/adapter.py": "a2c26621f5d669ee094907ce9dd44920345d805a79b7c872c8ee0f23c0a7100d",
+      "QCI_5_Incident_PDF/capture_proof.py": "705acdc81bb154bf924c8f0a7dd4bcb6252c5456cd3e041429542b92166b626a",
+      "QCI_5_Incident_PDF/contracts.py": "f25081e35120012868b84884b2604ccd2ea49a785a4a2b231cd41a0d33770e30",
+      "QCI_5_Incident_PDF/demo_server.py": "709e774d5cdee5b3e3fb20d5132144ca9200f12f990e0a40b10a2270be045dc9",
+      "QCI_5_Incident_PDF/demo_ui.py": "a6a477962b159a922d2ddd70e72943f77f5e090f97e566c29f7a40aa9646e003",
+      "QCI_5_Incident_PDF/finish_evidence.py": "229ab271ed069858ac3cb47a4eb386b2b2c3b408f9db4ea1e9cfd059566392d9",
+      "QCI_5_Incident_PDF/offline_backup.py": "199dbc60ce0e89aa1e820aade89334db6146a22cf84a5b67d7b29d94196d6863",
+      "QCI_5_Incident_PDF/record_experiment.py": "fc43d34b728cbc71990b736de5bfe9786f0efdfe162118a6228168b006279c18",
+      "QCI_5_Incident_PDF/service.py": "2e1911698b970b048a28a5c64b305864a8dd5d86a065b68f7776ab9d53995987",
+      "QCI_5_Incident_PDF/verify.py": "fc3ade23d56632514d921c1b2c4925be616883a88598a94f2723c27396c1c309"
+    }
+  }
+}

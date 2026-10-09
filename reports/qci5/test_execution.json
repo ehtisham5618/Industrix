@@ -1,0 +1,21 @@
+{
+  "targeted": {
+    "returncode": 0,
+    "duration_seconds": 27.857257499941625
+  },
+  "repository": {
+    "returncode": 1,
+    "duration_seconds": 243.23315630003344
+  },
+  "syntax_valid": true,
+  "versions": {
+    "reportlab": "5.0.1",
+    "pypdf": "6.19.0",
+    "Pillow": "12.1.1",
+    "pydantic": "2.12.5",
+    "psutil": "7.2.2",
+    "fastapi": "0.143.0",
+    "starlette": "0.52.1",
+    "streamlit": "1.65.0"
+  }
+}

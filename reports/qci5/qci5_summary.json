@@ -1,0 +1,255 @@
+{
+  "status": "LOCAL_ACCEPTANCE_PASS_GLOBAL_REVIEW_GATES_UNMET",
+  "report_version": "qci5-report-v1",
+  "branch": "feature/sprint2-qci5-incident-pdf",
+  "base": "a11e10a917392a94d05645a0d7a55b5dd70bb9b0",
+  "source_commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+  "sample_incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+  "incident_source": {
+    "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+    "database": "QCI_3_Severity_IoT/runtime/demo_ea56e993/events.db",
+    "event_digest": "83f43c4630e9356b2d15ac4018abd366db60399794cd32ad51c31eaa35981eb2",
+    "source_sample_id": "test/kos18/Part3",
+    "evidence": [
+      {
+        "role": "Evidence image",
+        "path": "QCI_1_Surface_Defect_Segmentation/runtime/segmentation_dataset/images/test/kos18/Part3.jpg",
+        "sha256": "73727289e9c12c3594b23982fc215f05970bd89fbb9cfb45d590c2532ae58fd3",
+        "context": "Existing QCI-3 research-demo inference; source sample test/kos18/Part3. Acquisition timestamp unavailable. Original curated KolektorSDD image; noncommercial research/evaluation.  KolektorSDD: ViCoS, University of Ljubljana; Tabernik et al. (2019), DOI 10.1007/s10845-019-01476-x. CC BY-NC-SA 4.0. https://www.vicos.si/resources/kolektorsdd/"
+      },
+      {
+        "role": "Model Attribution Heatmap",
+        "path": "QCI_3_Severity_IoT/runtime/heatmaps/73727289e9c12c35_class1_overlay.png",
+        "sha256": "a406cd083985697903ea19c8ecbfcd6090e949f5bb6195302ceb08943a49f802",
+        "context": "Existing QCI-3 research-demo inference; source sample test/kos18/Part3. Acquisition timestamp unavailable. Grad-CAM overlay, target class defect; attribution is not a ground-truth defect mask. KolektorSDD: ViCoS, University of Ljubljana; Tabernik et al. (2019), DOI 10.1007/s10845-019-01476-x. CC BY-NC-SA 4.0. https://www.vicos.si/resources/kolektorsdd/"
+      }
+    ],
+    "original_event_digest_verified": true,
+    "model_version": "qci2-kolektor-resnet18-v1",
+    "policy_version": "qci3-loopback-demo-v1",
+    "severity": "critical",
+    "state": "resolved",
+    "delivery": "ACKNOWLEDGED",
+    "confidence": 0.7491212487220764,
+    "model_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795"
+  },
+  "sample_pdf": "reports/qci5/sample_incident_report.pdf",
+  "sample_pdf_bytes": 250787,
+  "sample_pdf_sha256": "6e32979bc904174c2198546cac2442c9aa5e23466233f79bfcf772de8a0d6df3",
+  "pages": 4,
+  "pdf_latency": {
+    "latency_ms": {
+      "count": 450,
+      "mean_ms": 483.6199497770415,
+      "p50_ms": 383.46565002575517,
+      "p95_ms": 1022.0032000215724,
+      "max_ms": 3060.641699936241
+    },
+    "lookup_ms": {
+      "count": 450,
+      "mean_ms": 16.92899177937458,
+      "p50_ms": 15.282100008334965,
+      "p95_ms": 26.95019997190684,
+      "max_ms": 147.15750003233552
+    },
+    "evidence_ms": {
+      "count": 450,
+      "mean_ms": 106.74907555777787,
+      "p50_ms": 84.33075004722923,
+      "p95_ms": 210.80449991859496,
+      "max_ms": 696.6973999515176
+    },
+    "render_ms": {
+      "count": 450,
+      "mean_ms": 340.53387622348964,
+      "p50_ms": 262.46595004340634,
+      "p95_ms": 757.595100090839,
+      "max_ms": 2590.655699954368
+    },
+    "write_ms": {
+      "count": 450,
+      "mean_ms": 9.148043557070196,
+      "p50_ms": 8.012000005692244,
+      "p95_ms": 17.996100010350347,
+      "max_ms": 107.99120005685836
+    }
+  },
+  "memory": {
+    "exports": 500,
+    "warmup": 50,
+    "exports_per_window": 225,
+    "sampling_hz": 20,
+    "start_rss_mib": 58.640625,
+    "peak_rss_mib": 81.1328125,
+    "end_rss_mib": 63.0703125,
+    "first_mean_rss_mib": 66.74317427047038,
+    "second_mean_rss_mib": 67.71084968727338,
+    "matched_window_drift_percent": 1.4498492578156257,
+    "raw_endpoint_change_percent": 7.553956834532374,
+    "strict_less_than_5_percent_pass": true,
+    "handles_start": 261,
+    "handles_end": 260,
+    "sampler_stopped": true,
+    "offline_socket_attempts": 0,
+    "methodology": "Continuous 20 Hz process RSS; 50 warmup exports then two equal 225-export windows; same stored incident, two real images, no inference or PDF-byte cache.",
+    "timings": {
+      "latency_ms": {
+        "count": 450,
+        "mean_ms": 483.6199497770415,
+        "p50_ms": 383.46565002575517,
+        "p95_ms": 1022.0032000215724,
+        "max_ms": 3060.641699936241
+      },
+      "lookup_ms": {
+        "count": 450,
+        "mean_ms": 16.92899177937458,
+        "p50_ms": 15.282100008334965,
+        "p95_ms": 26.95019997190684,
+        "max_ms": 147.15750003233552
+      },
+      "evidence_ms": {
+        "count": 450,
+        "mean_ms": 106.74907555777787,
+        "p50_ms": 84.33075004722923,
+        "p95_ms": 210.80449991859496,
+        "max_ms": 696.6973999515176
+      },
+      "render_ms": {
+        "count": 450,
+        "mean_ms": 340.53387622348964,
+        "p50_ms": 262.46595004340634,
+        "p95_ms": 757.595100090839,
+        "max_ms": 2590.655699954368
+      },
+      "write_ms": {
+        "count": 450,
+        "mean_ms": 9.148043557070196,
+        "p50_ms": 8.012000005692244,
+        "p95_ms": 17.996100010350347,
+        "max_ms": 107.99120005685836
+      }
+    },
+    "partial_files": 0,
+    "final_files": 1,
+    "execution_sources": {
+      "commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+      "modules": {
+        "QCI_5_Incident_PDF/__init__.py": "d1ba5b771fa7e47cf9e4b406bbb2af0d43f0e2b788ed91809f9d53f2ea324fb5",
+        "QCI_5_Incident_PDF/adapter.py": "a2c26621f5d669ee094907ce9dd44920345d805a79b7c872c8ee0f23c0a7100d",
+        "QCI_5_Incident_PDF/capture_proof.py": "705acdc81bb154bf924c8f0a7dd4bcb6252c5456cd3e041429542b92166b626a",
+        "QCI_5_Incident_PDF/contracts.py": "f25081e35120012868b84884b2604ccd2ea49a785a4a2b231cd41a0d33770e30",
+        "QCI_5_Incident_PDF/demo_server.py": "709e774d5cdee5b3e3fb20d5132144ca9200f12f990e0a40b10a2270be045dc9",
+        "QCI_5_Incident_PDF/demo_ui.py": "a6a477962b159a922d2ddd70e72943f77f5e090f97e566c29f7a40aa9646e003",
+        "QCI_5_Incident_PDF/finish_evidence.py": "229ab271ed069858ac3cb47a4eb386b2b2c3b408f9db4ea1e9cfd059566392d9",
+        "QCI_5_Incident_PDF/offline_backup.py": "199dbc60ce0e89aa1e820aade89334db6146a22cf84a5b67d7b29d94196d6863",
+        "QCI_5_Incident_PDF/record_experiment.py": "fc43d34b728cbc71990b736de5bfe9786f0efdfe162118a6228168b006279c18",
+        "QCI_5_Incident_PDF/service.py": "2e1911698b970b048a28a5c64b305864a8dd5d86a065b68f7776ab9d53995987",
+        "QCI_5_Incident_PDF/verify.py": "fc3ade23d56632514d921c1b2c4925be616883a88598a94f2723c27396c1c309"
+      }
+    }
+  },
+  "offline_verified": true,
+  "external_socket_attempts": 0,
+  "ui_download": {
+    "browser": "Fresh headless Microsoft Edge, no existing profile/credentials",
+    "surface": "Live isolated Streamlit harness using Frontend.incidents.incident_history and existing FastAPI /incidents router; not a full inference console",
+    "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+    "download_filename": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ_incident_report.pdf",
+    "download_bytes": 250624,
+    "download_sha256": "69e65149eb431c57565e5a86d83244c8af0f37f37d5907b8ae3454b321c42156",
+    "actual_download_verified": true,
+    "external_page_requests_blocked": [],
+    "api_process_external_tcp_guard": true,
+    "browser_skill_bootstrap": "Failed before setup: kernel assets path not found (os error 3); fresh browser fallback",
+    "screenshot": "reports/qci5/live_download_ui.png"
+  },
+  "tests": {
+    "collected": 42,
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "duration_seconds": 25.28
+  },
+  "repository_tests": {
+    "collected": 439,
+    "passed": 437,
+    "failed": 2,
+    "skipped": 0,
+    "errors": 0,
+    "duration_seconds": 239.94
+  },
+  "syntax_valid": true,
+  "versions": {
+    "reportlab": "5.0.1",
+    "pypdf": "6.19.0",
+    "Pillow": "12.1.1",
+    "pydantic": "2.12.5",
+    "psutil": "7.2.2",
+    "fastapi": "0.143.0",
+    "starlette": "0.52.1",
+    "streamlit": "1.65.0"
+  },
+  "experiment_tracking": {
+    "run_id": "3cc9d33ebb5c40b7af4f2498b36d49c1",
+    "report_version": "qci5-report-v1",
+    "QCI2_model_version": "qci2-kolektor-resnet18-v1",
+    "QCI3_policy_version": "qci3-loopback-demo-v1",
+    "QCI4_policy_version": "qci4-edge-policy-v1",
+    "source_commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+    "sample_event_digest": "83f43c4630e9356b2d15ac4018abd366db60399794cd32ad51c31eaa35981eb2",
+    "memory_drift_percent": 1.4498492578156257,
+    "external_socket_attempts": 0,
+    "local_feature_acceptance": "PASS",
+    "full_repository_cpu_acceptance": "FAIL",
+    "github_delivery": "DEFERRED_USER_LOCAL_ONLY"
+  },
+  "registry_validated": true,
+  "dod": {
+    "Required feature branch used": "PASS",
+    "Existing incident source reused": "PASS",
+    "Pydantic v2 report contracts implemented": "PASS",
+    "ReportLab local generator implemented": "PASS",
+    "No runtime cloud API dependency": "PASS",
+    "Incident metadata rendered correctly": "PASS",
+    "QCI-3 severity rendered correctly": "PASS",
+    "Visual evidence embedded where available": "PASS",
+    "QCI-2 heatmap embedded where available": "PASS",
+    "QCI-4 telemetry included where available": "PASS",
+    "Missing evidence handled gracefully": "PASS",
+    "Corrupted evidence handled gracefully": "PASS",
+    "Operator review/sign-off implemented": "PASS",
+    "No fabricated operator/root-cause/compliance data": "PASS",
+    "CLI export implemented": "PASS",
+    "Local dashboard/API download implemented": "PASS",
+    "Valid PDF output verified": "PASS",
+    "Path traversal protections implemented": "PASS",
+    "Offline PDF generation verified": "PASS",
+    "Performance measured": "PASS",
+    "Memory profile measured": "PASS",
+    "Memory drift <5%": "PASS",
+    "QCI-5 automated tests 100% passing": "PASS",
+    "Documentation completed": "PASS",
+    "Sample incident PDF generated": "PASS",
+    "Proof-of-work generated": "PASS",
+    "Existing version tracking recorded and validated": "PASS",
+    "Whole repository automated tests 100% passing": "FAIL - two inherited CPU1 measured acceptance failures",
+    "PR opened": "FAIL / DEFERRED - user explicitly requires local delivery while organization access is revoked",
+    "QCI-5 local acceptance": "PASS",
+    "QCI-5 OVERALL": "FAIL - complete local feature; whole-repository release and GitHub review gates remain unmet"
+  },
+  "gpu_used": false,
+  "pr": {
+    "status": "DEFERRED_USER_LOCAL_ONLY",
+    "url": null
+  },
+  "visual_qa": {
+    "method": "Poppler page rendering and inspection of every final page plus the actual live UI screenshot",
+    "pages": [
+      "reports/qci5/sample_page-1.png",
+      "reports/qci5/sample_page-2.png",
+      "reports/qci5/sample_page-3.png",
+      "reports/qci5/sample_page-4.png"
+    ]
+  }
+}

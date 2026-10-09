@@ -1,0 +1,15 @@
+{
+  "status": "SUCCESS",
+  "incident_id": "QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ",
+  "output_path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_5_Incident_PDF\\runtime\\exports\\QCI3-WyJkZW1vLmNyaXRpY2FsIiwiYWN0dWFsLTIiXQ_incident_report.pdf",
+  "size_bytes": 250561,
+  "latency_ms": 1019.2854000488296,
+  "lookup_ms": 44.65679998975247,
+  "evidence_ms": 375.9401999413967,
+  "render_ms": 550.1878999639302,
+  "write_ms": 34.927999950014055,
+  "sha256": "fa0bebde726b676524e0bac7ccfd982c3521563be63d4ba5138d34935a989acf",
+  "warnings": [],
+  "report_version": "qci5-report-v1",
+  "error": null
+}

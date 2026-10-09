@@ -1,0 +1,14 @@
+{
+  "run_id": "3cc9d33ebb5c40b7af4f2498b36d49c1",
+  "report_version": "qci5-report-v1",
+  "QCI2_model_version": "qci2-kolektor-resnet18-v1",
+  "QCI3_policy_version": "qci3-loopback-demo-v1",
+  "QCI4_policy_version": "qci4-edge-policy-v1",
+  "source_commit": "703e1c8f5a05ee7d5f8e3ca0606e76a9dcb292b2",
+  "sample_event_digest": "83f43c4630e9356b2d15ac4018abd366db60399794cd32ad51c31eaa35981eb2",
+  "memory_drift_percent": 1.4498492578156257,
+  "external_socket_attempts": 0,
+  "local_feature_acceptance": "PASS",
+  "full_repository_cpu_acceptance": "FAIL",
+  "github_delivery": "DEFERRED_USER_LOCAL_ONLY"
+}

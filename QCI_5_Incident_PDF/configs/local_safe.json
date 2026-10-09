@@ -1,0 +1,7 @@
+{
+  "output_dir": "reports/incidents",
+  "title": "IndusriX Industrial Quality Incident Report",
+  "report_version": "qci5-report-v1",
+  "include_heatmap": true,
+  "include_telemetry": true
+}

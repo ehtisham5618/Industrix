@@ -1,0 +1,22 @@
+{
+  "renderer": "QCI_5_Incident_PDF\\runtime\\poppler\\poppler-26.09.0\\Library\\bin\\pdftoppm.exe",
+  "pdf_sha256": "6e32979bc904174c2198546cac2442c9aa5e23466233f79bfcf772de8a0d6df3",
+  "pages": [
+    {
+      "path": "reports/qci5/sample_page-1.png",
+      "sha256": "97b978885729d47b97b138c7eb389abb28834825a9b2aa16907aebe41da0d2f7"
+    },
+    {
+      "path": "reports/qci5/sample_page-2.png",
+      "sha256": "b89c2dc789b792288f92a9aefbcae8d2473abf5734840b1b3e811d3f61e87c76"
+    },
+    {
+      "path": "reports/qci5/sample_page-3.png",
+      "sha256": "b115d22a87411b40ced03b2384e25ad228e4f8190e856496a539f447a429f61c"
+    },
+    {
+      "path": "reports/qci5/sample_page-4.png",
+      "sha256": "6e9ff9a8c5833077f75a3ba980a7e71a5c29432c158405e0e8f85421ed0118e3"
+    }
+  ]
+}

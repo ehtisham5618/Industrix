@@ -1,0 +1,6 @@
+{
+  "url": "https://github.com/oschwartz10612/poppler-windows/releases/download/v26.09.0-0/Release-26.09.0-0.zip",
+  "sha256": "7a6f256a0ddf7536182246a5733331bf4677cbcc34f4663774947ad34556c8d0",
+  "scope": "local validation renderer only; no runtime PDF download",
+  "source": "https://github.com/oschwartz10612/poppler-windows/releases"
+}

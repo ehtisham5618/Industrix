@@ -1,0 +1,7 @@
+{
+  "surface": "Actual saved test output rendered in local HTML, not an OS terminal",
+  "screenshot": "test_validation_proof.png",
+  "html_sha256": "c582e1dc0749ac8335a0f7624ab1294f2d683c76005abebefa1ab0248aceb611",
+  "screenshot_sha256": "e9299ba090e2424e5782493daec4abd2faae61854fe3ce01fd26e6987ef37e8a",
+  "external_page_requests_blocked": []
+}
