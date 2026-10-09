@@ -1,0 +1,19 @@
+{
+  "git_head_at_start": "a6256908205ea58dcd616503e81b8e01d1decc10",
+  "files": {
+    "QCI_4_Edge_Telemetry/api.py": "301bac1e3cc029e501a51d1d6be324f103488510e1ac3993f3333bd7014f2d1d",
+    "QCI_4_Edge_Telemetry/cloud.py": "5e199ab408e30bd2d6a76f1669ea387cb09cbb0b74ccff6551c8fdfd2abb969e",
+    "QCI_4_Edge_Telemetry/collector.py": "fc5c6377c53ed19e2df692b9b6f0b4cfc4bd0ca6b37b1f7d972eabeef12cd4c8",
+    "QCI_4_Edge_Telemetry/contracts.py": "69efa6f1f5c48e1ac6388943181b87e67bf6f906184b936055f62e99b54a4c86",
+    "QCI_4_Edge_Telemetry/inference.py": "8debe7c1f01b77bdfb3fb1afb1ca09b9df2a39ff1661b359e02508670054ccbb",
+    "QCI_4_Edge_Telemetry/mock_cloud.py": "91f4cd79e87ce0bea88d691e77bc36a4143b75d3a44993f3b35efa5c6cdba701",
+    "QCI_4_Edge_Telemetry/offline_backup.py": "5c02c940b88633187ae3ed6d768a19637bde1bf43a477a7995def570d63948bd",
+    "QCI_4_Edge_Telemetry/record_experiment.py": "7bd08c245a4fc8f382df78756ca347dcbf768c430011f8d1be3beb607bb28f7e",
+    "QCI_4_Edge_Telemetry/spool.py": "cd58c46987bf372ad999b2e64a94261c71bf4f652689d5b0db6e5b520ba9d00d",
+    "QCI_4_Edge_Telemetry/verify.py": "1417a647e7b705f083dc856077ae5b5900986d58acba46c4d87b6837a8724a86",
+    "QCI_4_Edge_Telemetry/__init__.py": "0dee4489f41ff87df79117107f393074af029138eae25f4bbb7d11edfa76df3c",
+    "QCI_2_Defect_Classifier/infer.py": "76d9a4c58b3211efa51e971f5ddd577dccd574cf12e80e398c35033296d40c58",
+    "Backend/main.py": "1f72f5f6db41e5c81209a8e27c5d064da71570ca7d67d316d55974bfbaf6b0c6",
+    "Frontend/qci4.py": "4d5b2d7e27dad5511df5faf41936cc959c26ca3f9cb8e66d9e2d019fb06a0d52"
+  }
+}

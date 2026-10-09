@@ -1,0 +1,12 @@
+{
+  "version": "qci4-edge-policy-v1",
+  "database": "Backend/data/events.db",
+  "alerts_database": "Backend/data/events.db",
+  "sample_interval_seconds": 2,
+  "cloud_enabled": false,
+  "allow_telemetry_sync": false,
+  "allow_event_sync": false,
+  "cloud_base_url": null,
+  "health_path": null,
+  "sync_path": null
+}

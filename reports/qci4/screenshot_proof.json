@@ -1,0 +1,9 @@
+{
+  "browser": "fresh headless Microsoft Edge",
+  "surface": "actual generated review DOM with saved measured status/terminal evidence; not claimed live Streamlit or OS terminal",
+  "html_sha256": "00761c62bf8b212bcbe102d91a40159275c193d4dfd5c5c25c19297014875381",
+  "screenshot_sha256": "4096c637a6e85fdd358384dd3a7c60f50e66829071690463d386f4c4cf1b0df7",
+  "external_page_requests_blocked": [],
+  "user_profile_or_credentials_accessed": false,
+  "in_app_browser_bootstrap": "failed before setup: kernel assets path not found (os error 3)"
+}

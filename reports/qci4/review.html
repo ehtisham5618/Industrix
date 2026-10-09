@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><title>QCI-4 measured local review</title>
+<style>body{font:16px Segoe UI,sans-serif;background:#101a25;color:#edf3fa;margin:36px;max-width:1200px}h1{color:#73d9b3}pre{white-space:pre-wrap;background:#192939;padding:20px;border-radius:10px}table{border-collapse:collapse;width:100%}td,th{padding:12px;border:1px solid #40536b}.pass{color:#73d9b3}.pending{color:#ffca78}</style></head><body>
+<h1>IndusriX · QCI-4 edge telemetry and failover</h1><p class="pass">Local implementation verified · actual model + localhost cloud protocol</p>
+<p class="pending">Unrestricted release gates: inherited CPU failures / revoked GitHub access</p><p>Implementation: a6256908205ea58dcd616503e81b8e01d1decc10 · actual model: qci2-kolektor-resnet18-v1</p><table><tr><th>Actual phase</th><th>Cloud status</th><th>Mode</th><th>Pending</th><th>QCI-2 health</th></tr><tr><td>online</td><td>ONLINE</td><td>CONNECTED</td><td>0</td><td>HEALTHY</td></tr><tr><td>offline</td><td>OFFLINE</td><td>LOCAL_ONLY</td><td>1</td><td>HEALTHY</td></tr><tr><td>queued_during_outage</td><td>OFFLINE</td><td>LOCAL_ONLY</td><td>19</td><td>HEALTHY</td></tr><tr><td>recovering</td><td>RECOVERING</td><td>RECOVERING</td><td>18</td><td>HEALTHY</td></tr><tr><td>restored</td><td>ONLINE</td><td>CONNECTED</td><td>0</td><td>HEALTHY</td></tr></table><h2>Measured evidence</h2><pre>QCI-4 — EOD Update
+Status: local edge telemetry/failover implementation verified; unrestricted release gates unmet.
+Branch: feature/sprint2-qci4-edge-telemetry-failover
+Telemetry: real CPU/RAM/disk/process, QCI-2 and QCI-3 health; default 2s bounded sampler.
+Cloud: disabled by default; metadata opt-in only; strict health/ack/timeouts/retries.
+Outage: 12 fresh local predictions/CAM outputs; local alerts retained.
+Recovery: 18 event summaries, zero duplicate logical delivery; critical/resolved order verified.
+Memory: 1.297255% matched-window drift, strict &lt;5% PASS.
+Tests: QCI-4 49/49 PASS; repository 395/397.
+PR: deferred, access revoked; two local commits with verified cold-clone/runtime backup and future normal push helper.
+Blockers: existing CPU1 size/accuracy gates; no production cloud endpoint/vendor contract supplied (mock validation complete).
+</pre><h2>Actual test output</h2><pre>.................................................                        [100%]
+49 passed in 54.68s
+</pre><h2>Actual saved resource snapshot from API collector measurement</h2><pre>{
+  &quot;cpu_percent&quot;: 100.0,
+  &quot;process_cpu_percent&quot;: 97.7,
+  &quot;ram_used_mb&quot;: 13013.2421875,
+  &quot;ram_percent&quot;: 80.0,
+  &quot;process_rss_mb&quot;: 58.890625,
+  &quot;process_uptime_seconds&quot;: 3.906071186065674,
+  &quot;disk_used_percent&quot;: 96.0,
+  &quot;disk_free_bytes&quot;: 10080579584,
+  &quot;process_threads&quot;: 11,
+  &quot;process_handles&quot;: 242,
+  &quot;units&quot;: &quot;MiB; CPU system %, process % can exceed 100&quot;,
+  &quot;errors&quot;: []
+}</pre></body></html>

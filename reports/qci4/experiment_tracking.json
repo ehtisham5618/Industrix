@@ -1,0 +1,14 @@
+{
+  "run_id": "62c6a3ad5e664279a80a08e9e6c91d17",
+  "telemetry_policy_version": "qci4-edge-policy-v1",
+  "cloud_protocol_version": "qci4-sync-v1",
+  "QCI2_model_version": "qci2-kolektor-resnet18-v1",
+  "QCI3_policy_version": "qci3-research-v1",
+  "model_sha256": "00f626cf837139c3476dd4f2c77b4b0a8faa7e4b368af13936b33ddca838b795",
+  "metadata_only": true,
+  "production_cloud_endpoint_provided": false,
+  "sample_interval_seconds": 2,
+  "memory_drift_percent": 1.29725511276154,
+  "repo_cpu_gates_met": false,
+  "source_commit": "a6256908205ea58dcd616503e81b8e01d1decc10"
+}

@@ -1,0 +1,1 @@
+{"fresh_model_predictions_during_outage": 12, "event_summaries_delivered": 18, "duplicate_logical_deliveries": 0, "failure_detection_ms": 132.89810006972402, "recovery_ms": 2856.931100017391, "observed_inference_mean_change_percent": 140.04259221624113, "owned_workers_stopped": true}

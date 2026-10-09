@@ -1,0 +1,1 @@
+{"cycles": 1300, "matched_window_drift_percent": 1.29725511276154, "strict_less_than_5_percent_pass": true, "logical_items_delivered": 2600, "threads_before": 6, "threads_after": 3, "handles_before": 224, "handles_after": 223}
