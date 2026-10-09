@@ -1,0 +1,16 @@
+{
+  "run_id": "429ed1873350450a94182b6daa6b522d",
+  "source_commit": "3be0bc329b61862c7ceb6e6f3a9c3ce96ce5fa5e",
+  "state_machine_version": "qci3-state-machine-v1",
+  "webhook_policy_version": "qci3-webhook-v1",
+  "model_version": "qci2-kolektor-resnet18-v1",
+  "rules_version": "qci3-research-v1",
+  "demo_policy_version": "qci3-loopback-demo-v1",
+  "dataset_license": "CC BY-NC-SA 4.0",
+  "use_scope": "user-confirmed noncommercial research and evaluation",
+  "memory_drift_percent": 0.3453117981647901,
+  "core_latency_unit": "milliseconds",
+  "duplicate_activations": 0,
+  "hardware_siren_validated": false,
+  "repo_cpu_gates_met": false
+}

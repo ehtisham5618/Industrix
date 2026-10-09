@@ -1,0 +1,1 @@
+{"actual_fresh_classifier_cam": true, "samples": 2, "external_tcp_attempts": 0}

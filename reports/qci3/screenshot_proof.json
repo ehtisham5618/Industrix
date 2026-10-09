@@ -1,0 +1,9 @@
+{
+  "browser": "fresh headless Microsoft Edge",
+  "surface": "actual generated local review HTML; not a claimed live Streamlit or operating-system terminal screenshot",
+  "html_sha256": "d3f7756ddebfeb2a4ae103a43440d87b67973d26c12d2d1e07a7930fe3010ea5",
+  "screenshot_sha256": "5bf60af0fd58350d8703041870845c42071ee43d89d1c9e32938f1238613f84d",
+  "external_page_requests_blocked": [],
+  "in_app_browser_bootstrap": "failed before setup: system cannot find kernel assets (os error 3)",
+  "user_profile_or_credentials_accessed": false
+}

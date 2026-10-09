@@ -1,0 +1,48 @@
+................................FF...................................... [ 20%]
+........................................................................ [ 41%]
+................................................................... [ 60%]
+........................................................................ [ 81%]
+.................................................................        [100%]
+================================== FAILURES ===================================
+___ MeasuredQuantizationAcceptance.test_actual_ir_size_below_6_5_decimal_mb ___
+ESE_CPU1_Quantization\tests\test_quantization.py:92: in test_actual_ir_size_below_6_5_decimal_mb
+    self.assertLess(size,6500000,'Genuine measured size gate; do not suppress this failure')
+E   AssertionError: 11773383 not less than 6500000 : Genuine measured size gate; do not suppress this failure
+_ MeasuredQuantizationAcceptance.test_actual_map_drop_below_one_percentage_point _
+ESE_CPU1_Quantization\tests\test_quantization.py:49: in test_actual_map_drop_below_one_percentage_point
+    self.assertLess((delta['fp32']['map50']-delta['int8']['map50'])*100,1.0)
+E   AssertionError: 1.0255145781941644 not less than 1.0
+============================== warnings summary ===============================
+IFE_UI1_Streamlit_Console/tests/test_console.py::BackendInterfaceTests::test_concurrent_stream_control_rejected_without_duplicate_manager
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:123: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event('shutdown')
+
+IFE_UI1_Streamlit_Console/tests/test_console.py::BackendInterfaceTests::test_concurrent_stream_control_rejected_without_duplicate_manager
+IFE_UI1_Streamlit_Console/tests/test_console.py::BackendInterfaceTests::test_concurrent_stream_control_rejected_without_duplicate_manager
+  C:\Users\ehtis\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py:4495: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)
+
+IFE_UI1_Streamlit_Console/tests/test_console.py::BackendInterfaceTests::test_concurrent_stream_control_rejected_without_duplicate_manager
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:136: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event("startup")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED ESE_CPU1_Quantization/tests/test_quantization.py::MeasuredQuantizationAcceptance::test_actual_ir_size_below_6_5_decimal_mb
+FAILED ESE_CPU1_Quantization/tests/test_quantization.py::MeasuredQuantizationAcceptance::test_actual_map_drop_below_one_percentage_point
+2 failed, 346 passed, 4 warnings, 5 subtests passed in 114.31s (0:01:54)

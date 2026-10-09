@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><title>QCI-3 measured local review</title>
+<style>body{font:16px Segoe UI,sans-serif;background:#101a25;color:#edf3fa;margin:36px;max-width:1200px}h1{color:#73d9b3}pre{white-space:pre-wrap;background:#192939;padding:20px;border-radius:10px}table{border-collapse:collapse;width:100%}td,th{padding:12px;border:1px solid #40536b}.pass{color:#73d9b3}.pending{color:#ffca78}</style></head><body>
+<h1>IndusriX · QCI-3 measured local review</h1><p class="pass">Local research alarm implementation verified · software localhost receiver only</p>
+<p class="pending">Overall acceptance: FAIL · existing CPU gates and revoked GitHub access</p><p>Source commit: 3be0bc329b61862c7ceb6e6f3a9c3ce96ce5fa5e · model: qci2-kolektor-resnet18-v1</p><table><tr><th>Actual demo input</th><th>Tier</th><th>Delivery at local decision</th></tr><tr><td>demo.normal / Part0.jpg</td><td>INFO</td><td>DISABLED</td></tr><tr><td>demo.warning / Part3.jpg</td><td>WARNING</td><td>DISABLED</td></tr><tr><td>demo.critical / Part3.jpg</td><td>CRITICAL</td><td>PENDING</td></tr></table><h2>Measured proof</h2><pre>QCI-3 — EOD Update
+Status: Local research implementation verified; overall release gates unmet.
+Branch: feature/sprint2-qci3-severity-iot-alerts
+Severity: INFO/WARNING/CRITICAL, explicit research policy; monotonic state machine.
+IoT: durable local outbox, bounded retries, 101 actual mock requests,
+100 acknowledged activations, no duplicate activations.
+Offline: external TCP blocked; localhost enabled; no required cloud/GPU.
+Memory: 0.345312% matched-window drift, &lt;5% PASS.
+Tests: QCI-3 67/67 PASS; repository 346/348.
+Dataset: noncommercial research/evaluation confirmed; publisher-license attribution recorded.
+PR: not submitted, access revoked; exactly two local commits and verified future-sync backup.
+Blockers: unchanged dense YOLOv8s CPU size/accuracy/throughput gates; factory rule approval only if later deployed.
+</pre><h2>Actual test terminal output</h2><pre>...................................................................      [100%]
+67 passed in 16.43s
+</pre><h2>Actual receiver JSON</h2><pre>[
+  {
+    &quot;payload&quot;: {
+      &quot;delivery_id&quot;: &quot;b1b1b404-41d9-4919-8828-654e11281eb4&quot;,
+      &quot;source_id&quot;: &quot;demo.critical&quot;,
+      &quot;event_id&quot;: &quot;actual-2&quot;,
+      &quot;sample_id&quot;: &quot;Part3.jpg&quot;,
+      &quot;severity&quot;: &quot;critical&quot;,
+      &quot;action&quot;: &quot;ACTIVATE_SIREN&quot;,
+      &quot;model_version&quot;: &quot;qci2-kolektor-resnet18-v1&quot;,
+      &quot;policy_version&quot;: &quot;qci3-loopback-demo-v1&quot;,
+      &quot;observed_at&quot;: &quot;2026-10-09T12:24:13.157106Z&quot;,
+      &quot;class_name&quot;: &quot;defect&quot;,
+      &quot;confidence&quot;: 0.7491212487220764
+    },
+    &quot;idempotency_key&quot;: &quot;b1b1b404-41d9-4919-8828-654e11281eb4&quot;
+  },
+  {
+    &quot;payload&quot;: {
+      &quot;delivery_id&quot;: &quot;b1b1b404-41d9-4919-8828-654e11281eb4&quot;,
+      &quot;source_id&quot;: &quot;demo.critical&quot;,
+      &quot;event_id&quot;: &quot;actual-2&quot;,
+      &quot;sample_id&quot;: &quot;Part3.jpg&quot;,
+      &quot;severity&quot;: &quot;critical&quot;,
+      &quot;action&quot;: &quot;ACTIVATE_SIREN&quot;,
+      &quot;model_version&quot;: &quot;qci2-kolektor-resnet18-v1&quot;,
+      &quot;policy_version&quot;: &quot;qci3-loopback-demo-v1&quot;,
+      &quot;observed_at&quot;: &quot;2026-10-09T12:24:13.157106Z&quot;,
+      &quot;class_name&quot;: &quot;defect&quot;,
+      &quot;confidence&quot;: 0.7491212487220764
+    },
+    &quot;idempotency_key&quot;: &quot;b1b1b404-41d9-4919-8828-654e11281eb4&quot;
+  }
+]</pre></body></html>

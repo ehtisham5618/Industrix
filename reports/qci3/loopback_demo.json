@@ -1,0 +1,232 @@
+{
+  "real_classifier_results_consumed": true,
+  "model_version": "qci2-kolektor-resnet18-v1",
+  "policy": {
+    "policy_version": "qci3-loopback-demo-v1",
+    "expected_model_version": "qci2-kolektor-resnet18-v1",
+    "database": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\QCI_3_Severity_IoT\\runtime\\demo_ea56e993\\events.db",
+    "rules": {
+      "normal": {
+        "initial": "info",
+        "warning_after_seconds": null,
+        "critical_after_seconds": null,
+        "source_overrides": {}
+      },
+      "defect": {
+        "initial": "warning",
+        "warning_after_seconds": null,
+        "critical_after_seconds": null,
+        "source_overrides": {
+          "demo.critical": "critical"
+        }
+      }
+    },
+    "webhook": {
+      "enabled": true,
+      "url": "http://127.0.0.1:56842/siren",
+      "token_environment": "QCI3_SIREN_TOKEN",
+      "timeout_seconds": 1.0,
+      "attempts": 3,
+      "backoff_seconds": 0.0,
+      "receiver_idempotent": true
+    },
+    "active_capacity": 512,
+    "record_capacity": 10000,
+    "outbox_capacity": 256,
+    "resolved_ttl_seconds": 86400.0,
+    "audit_capacity": 50000
+  },
+  "policy_scope": "explicit software research/demo source override; not factory rule approval",
+  "mock_url": "http://127.0.0.1:56842/siren",
+  "external_tcp_attempts": 0,
+  "physical_internet_disconnected": false,
+  "internet_guard": "process-local external TCP blocked; numeric loopback allowed; not an OS firewall",
+  "requests_received": 101,
+  "acknowledged_activations": 100,
+  "duplicate_inputs": 1020,
+  "duplicate_activations": 0,
+  "http_500_retries": 1,
+  "core_latency": {
+    "samples": 102,
+    "mean_ms": 15.114101962478577,
+    "p95_ms": 18.473200034350157,
+    "min_ms": 11.625800048932433,
+    "max_ms": 83.8586000027135
+  },
+  "http_latency": {
+    "samples": 101,
+    "mean_ms": 14.888900994913339,
+    "p95_ms": 39.031199994497,
+    "min_ms": 2.738200011663139,
+    "max_ms": 138.47760006319731
+  },
+  "worker_dispatch_latency": {
+    "samples": 306,
+    "mean_ms": 17.5751460810478,
+    "p95_ms": 49.830300034955144,
+    "min_ms": 3.2257999991998076,
+    "max_ms": 494.48560003656894
+  },
+  "decision_latency": {
+    "samples": 102,
+    "mean_ms": 0.03312745099595072,
+    "p95_ms": 0.04549999721348286,
+    "min_ms": 0.02319994382560253,
+    "max_ms": 0.06660004146397114
+  },
+  "transition_latency": {
+    "samples": 102,
+    "mean_ms": 0.011815688362819892,
+    "p95_ms": 0.014399993233382702,
+    "min_ms": 0.007600057870149612,
+    "max_ms": 0.028699985705316067
+  },
+  "local_action_latency": {
+    "samples": 102,
+    "mean_ms": 0.7707627385160795,
+    "p95_ms": 0.9073000401258469,
+    "min_ms": 0.31020003370940685,
+    "max_ms": 3.2580000115558505
+  },
+  "first_states": [
+    {
+      "source_id": "demo.normal",
+      "event_id": "actual-0",
+      "sample_id": "Part0.jpg",
+      "state": "info",
+      "severity": "info",
+      "first_seen": "2026-10-09T12:24:12.886432Z",
+      "last_seen": "2026-10-09T12:24:12.886432Z",
+      "last_transition": "2026-10-09T12:24:12.886432Z",
+      "sequence": 0,
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "policy_version": "qci3-loopback-demo-v1",
+      "class_name": "normal",
+      "confidence": 0.9999300241470337,
+      "reason": "normal confirmed; initial severity info.",
+      "actions": [
+        "log",
+        "dashboard_info"
+      ],
+      "delivery": "DISABLED",
+      "delivery_id": null,
+      "delivery_attempts": 0,
+      "last_http_status": null,
+      "last_delivery_error": null,
+      "decision_latency_ms": 0.03130000550299883,
+      "transition_latency_ms": 0.011399970389902592,
+      "local_action_latency_ms": 0.45549997594207525,
+      "duplicate": false
+    },
+    {
+      "source_id": "demo.warning",
+      "event_id": "actual-1",
+      "sample_id": "Part3.jpg",
+      "state": "warning",
+      "severity": "warning",
+      "first_seen": "2026-10-09T12:24:13.011933Z",
+      "last_seen": "2026-10-09T12:24:13.011933Z",
+      "last_transition": "2026-10-09T12:24:13.011933Z",
+      "sequence": 0,
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "policy_version": "qci3-loopback-demo-v1",
+      "class_name": "defect",
+      "confidence": 0.7491212487220764,
+      "reason": "defect confirmed; initial severity warning.",
+      "actions": [
+        "log",
+        "dashboard_warning"
+      ],
+      "delivery": "DISABLED",
+      "delivery_id": null,
+      "delivery_attempts": 0,
+      "last_http_status": null,
+      "last_delivery_error": null,
+      "decision_latency_ms": 0.027499976567924023,
+      "transition_latency_ms": 0.01379998866468668,
+      "local_action_latency_ms": 0.31020003370940685,
+      "duplicate": false
+    },
+    {
+      "source_id": "demo.critical",
+      "event_id": "actual-2",
+      "sample_id": "Part3.jpg",
+      "state": "critical",
+      "severity": "critical",
+      "first_seen": "2026-10-09T12:24:13.157106Z",
+      "last_seen": "2026-10-09T12:24:13.157106Z",
+      "last_transition": "2026-10-09T12:24:13.157106Z",
+      "sequence": 0,
+      "model_version": "qci2-kolektor-resnet18-v1",
+      "policy_version": "qci3-loopback-demo-v1",
+      "class_name": "defect",
+      "confidence": 0.7491212487220764,
+      "reason": "defect matched geofence override demo.critical -> critical.",
+      "actions": [
+        "log",
+        "dashboard_critical",
+        "iot_siren"
+      ],
+      "delivery": "PENDING",
+      "delivery_id": "b1b1b404-41d9-4919-8828-654e11281eb4",
+      "delivery_attempts": 0,
+      "last_http_status": null,
+      "last_delivery_error": null,
+      "decision_latency_ms": 0.03200001083314419,
+      "transition_latency_ms": 0.010899966582655907,
+      "local_action_latency_ms": 0.7354000117629766,
+      "duplicate": false
+    }
+  ],
+  "received_payloads": [
+    {
+      "payload": {
+        "delivery_id": "b1b1b404-41d9-4919-8828-654e11281eb4",
+        "source_id": "demo.critical",
+        "event_id": "actual-2",
+        "sample_id": "Part3.jpg",
+        "severity": "critical",
+        "action": "ACTIVATE_SIREN",
+        "model_version": "qci2-kolektor-resnet18-v1",
+        "policy_version": "qci3-loopback-demo-v1",
+        "observed_at": "2026-10-09T12:24:13.157106Z",
+        "class_name": "defect",
+        "confidence": 0.7491212487220764
+      },
+      "idempotency_key": "b1b1b404-41d9-4919-8828-654e11281eb4"
+    },
+    {
+      "payload": {
+        "delivery_id": "b1b1b404-41d9-4919-8828-654e11281eb4",
+        "source_id": "demo.critical",
+        "event_id": "actual-2",
+        "sample_id": "Part3.jpg",
+        "severity": "critical",
+        "action": "ACTIVATE_SIREN",
+        "model_version": "qci2-kolektor-resnet18-v1",
+        "policy_version": "qci3-loopback-demo-v1",
+        "observed_at": "2026-10-09T12:24:13.157106Z",
+        "class_name": "defect",
+        "confidence": 0.7491212487220764
+      },
+      "idempotency_key": "b1b1b404-41d9-4919-8828-654e11281eb4"
+    },
+    {
+      "payload": {
+        "delivery_id": "56e44a36-33e2-4138-aee5-f20d4b2339f1",
+        "source_id": "demo.critical",
+        "event_id": "actual-3",
+        "sample_id": "Part3.jpg",
+        "severity": "critical",
+        "action": "ACTIVATE_SIREN",
+        "model_version": "qci2-kolektor-resnet18-v1",
+        "policy_version": "qci3-loopback-demo-v1",
+        "observed_at": "2026-10-09T12:24:13.286374Z",
+        "class_name": "defect",
+        "confidence": 0.7491212487220764
+      },
+      "idempotency_key": "56e44a36-33e2-4138-aee5-f20d4b2339f1"
+    }
+  ],
+  "audit_database": "QCI_3_Severity_IoT\\runtime\\demo_ea56e993\\events.db"
+}

@@ -1,0 +1,1 @@
+{"actual_classifier_bridge": true, "requests_received": 101, "acknowledged_activations": 100, "duplicate_activations": 0, "memory_drift_percent": 0.3453117981647901, "memory_pass": true, "core_mean_ms": 23.786589179420844, "core_p95_ms": 31.902599963359535}

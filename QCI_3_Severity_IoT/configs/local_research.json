@@ -1,0 +1,10 @@
+{
+  "policy_version": "qci3-research-v1",
+  "expected_model_version": "qci2-kolektor-resnet18-v1",
+  "database": "Backend/data/events.db",
+  "rules": {
+    "normal": {"initial": "info"},
+    "defect": {"initial": "warning"}
+  },
+  "webhook": {"enabled": false}
+}
