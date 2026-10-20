@@ -1,0 +1,9 @@
+EAP-3 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (local gates pass; GitHub Actions not running on the repo).
+Image: industrix:eap3 (bundled, weights included) = 1,542,234,302 bytes unpacked (1.542 GB) < 1.8 GB limit; gzip 481 MB.
+Weightless runtime image: 1,507,953,786 bytes; weights mounted at /models/best.pt with SHA256 check.
+Stack: python:3.12-slim multi-stage, CPU torch 2.10.0, ultralytics 8.4.24, headless OpenCV, OpenVINO 2026.4.1; non-root uid 10001; read-only capable.
+Tests: container 16/16 PASS (real inference, offline --network none, health, SIGTERM, fail-fast weights); EAP-2 29/29; repository 507 pass / 2 inherited CPU1 failures.
+Fixed: /predict 500 on corrupt upload; missing pi-heif offline; read-only DB path; hung exit on failed startup.
+CI: container job added to model-regression.yml; not executed (Actions inactive on repo).

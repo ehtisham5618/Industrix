@@ -1,0 +1,156 @@
+{
+  "image": "industrix:eap3-runtime",
+  "image_id": "sha256:bfb9968069abc9b35c7b0dbc47e6f58df83036f77f0399b5c9ec5288282e925e",
+  "primary_measurement": "du -sxb / in a fresh --network none container (unpacked image filesystem)",
+  "uncompressed_bytes": 1507953786,
+  "docker_inspect_size_bytes": 453986023,
+  "image_store": "[[\"driver-type\",\"io.containerd.snapshotter.v1\"]]",
+  "uncompressed_gb_decimal": 1.507953786,
+  "uncompressed_gib": 1.4043914023786783,
+  "limit_bytes": 1800000000,
+  "limit_convention": "decimal GB (1.8e9 bytes); stricter than 1.8 GiB",
+  "headroom_bytes": 292046214,
+  "status": "PASS",
+  "layers": [
+    {
+      "size": "0B",
+      "created_by": "CMD [\"uvicorn\" \"Backend.main:api_app\" \"--host\" \"0.0.0.0\" \"--port\" \"8000\" \"--timeout-graceful-shutdown\" \"30\"]"
+    },
+    {
+      "size": "0B",
+      "created_by": "STOPSIGNAL SIGTERM"
+    },
+    {
+      "size": "0B",
+      "created_by": "HEALTHCHECK &{[\"CMD\" \"python\" \"-c\" \"import sys,urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=8).status == 200 els"
+    },
+    {
+      "size": "0B",
+      "created_by": "EXPOSE map[8000/tcp:{}]"
+    },
+    {
+      "size": "0B",
+      "created_by": "USER industrix"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 YOLO_OFFLINE=tru"
+    },
+    {
+      "size": "32.8kB",
+      "created_by": "RUN /bin/sh -c mkdir -p /models /data/snapshots /app/SED_2_Alert_Escalation/runtime  && ln -s /data /app/Backend/data  && chown -R industrix:industrix /data /ap"
+    },
+    {
+      "size": "77.8kB",
+      "created_by": "COPY SED_3_Stress_Testing/ SED_3_Stress_Testing/ # buildkit"
+    },
+    {
+      "size": "90.1kB",
+      "created_by": "COPY SED_2_Alert_Escalation/ SED_2_Alert_Escalation/ # buildkit"
+    },
+    {
+      "size": "111kB",
+      "created_by": "COPY SED_1_Multi_Camera/ SED_1_Multi_Camera/ # buildkit"
+    },
+    {
+      "size": "135kB",
+      "created_by": "COPY QCI_5_Incident_PDF/ QCI_5_Incident_PDF/ # buildkit"
+    },
+    {
+      "size": "168kB",
+      "created_by": "COPY QCI_4_Edge_Telemetry/ QCI_4_Edge_Telemetry/ # buildkit"
+    },
+    {
+      "size": "135kB",
+      "created_by": "COPY QCI_3_Severity_IoT/ QCI_3_Severity_IoT/ # buildkit"
+    },
+    {
+      "size": "156kB",
+      "created_by": "COPY QCI_2_Defect_Classifier/ QCI_2_Defect_Classifier/ # buildkit"
+    },
+    {
+      "size": "180kB",
+      "created_by": "COPY QCI_1_Surface_Defect_Segmentation/ QCI_1_Surface_Defect_Segmentation/ # buildkit"
+    },
+    {
+      "size": "197kB",
+      "created_by": "COPY ESE_CPU3_Soak_Test/ ESE_CPU3_Soak_Test/ # buildkit"
+    },
+    {
+      "size": "135kB",
+      "created_by": "COPY ESE_CPU1_Quantization/ ESE_CPU1_Quantization/ # buildkit"
+    },
+    {
+      "size": "86kB",
+      "created_by": "COPY Confidence_Calibration/ Confidence_Calibration/ # buildkit"
+    },
+    {
+      "size": "340kB",
+      "created_by": "COPY CME_OPT3_ByteTrack/ CME_OPT3_ByteTrack/ # buildkit"
+    },
+    {
+      "size": "57.3kB",
+      "created_by": "COPY Backend/incidents/ Backend/incidents/ # buildkit"
+    },
+    {
+      "size": "20.5kB",
+      "created_by": "COPY Backend/configs/ Backend/configs/ # buildkit"
+    },
+    {
+      "size": "49.2kB",
+      "created_by": "COPY Backend/*.py Backend/ # buildkit"
+    },
+    {
+      "size": "8.19kB",
+      "created_by": "WORKDIR /app"
+    },
+    {
+      "size": "1.43GB",
+      "created_by": "COPY /opt/venv /opt/venv # buildkit"
+    },
+    {
+      "size": "840kB",
+      "created_by": "RUN /bin/sh -c apt-get update  && apt-get install -y --no-install-recommends libgomp1  && rm -rf /var/lib/apt/lists/*  && groupadd --system --gid 10001 industri"
+    },
+    {
+      "size": "0B",
+      "created_by": "CMD [\"python3\"]"
+    },
+    {
+      "size": "16.4kB",
+      "created_by": "RUN /bin/sh -c set -eux;  for src in idle3 pip3 pydoc3 python3 python3-config; do   dst=\"$(echo \"$src\" | tr -d 3)\";   [ -s \"/usr/local/bin/$src\" ];   [ ! -e \"/u"
+    },
+    {
+      "size": "44.9MB",
+      "created_by": "RUN /bin/sh -c set -eux;   savedAptMark=\"$(apt-mark showmanual)\";  apt-get update;  apt-get install -y --no-install-recommends   dpkg-dev   gcc   gnupg   libblu"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV PYTHON_SHA256=fb85a13414b028c49ba18bbd523c2d055a30b56b18b92ce454ea2c51edc656c4"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV PYTHON_VERSION=3.12.12"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305"
+    },
+    {
+      "size": "10.4MB",
+      "created_by": "RUN /bin/sh -c set -eux;  apt-get update;  apt-get install -y --no-install-recommends   ca-certificates   netbase   tzdata  ;  rm -rf /var/lib/apt/lists/* # bui"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV LANG=C.UTF-8"
+    },
+    {
+      "size": "0B",
+      "created_by": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    {
+      "size": "85.3MB",
+      "created_by": "# debian.sh --arch 'amd64' out/ 'bookworm' '@1771804800'"
+    }
+  ]
+}

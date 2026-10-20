@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.13.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 16 items
+
+EAP_3_Lightweight_Docker/tests/test_container.py::test_dockerfile_is_multistage_with_slim_runtime PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_runtime_stage_does_not_copy_weights PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_entrypoint_is_exec_form_on_exposed_port PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_offline_and_fail_fast_environment PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_runtime_requirements_are_pinned_and_cpu_only PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_dockerignore_excludes_non_runtime_content PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_image_size_gate PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_image_runs_as_non_root_without_build_tools PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_image_contents_and_imports PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_health_reports_real_verified_model PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_real_inference_contract_repeat_and_malformed PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_memory_stable_over_repeated_requests container memory growth over 30 requests: +1.20%
+PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_offline_network_none_and_read_only_rootfs PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_clean_stop_on_sigterm PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_runtime_image_fails_clearly_without_weights PASSED
+EAP_3_Lightweight_Docker/tests/test_container.py::test_runtime_image_with_mounted_weights_and_bad_checksum PASSED
+
+======================= 16 passed in 173.70s (0:02:53) ========================

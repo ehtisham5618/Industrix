@@ -1,0 +1,68 @@
+{
+  "task": "EAP-3",
+  "branch": "feature/sprint3-eap3-lightweight-dockerfile",
+  "implementation_commit": "1477bd6c1118dbc909aa8a7d300650ef5d547458",
+  "docker": {
+    "server": "29.7.2",
+    "platform": "linux/amd64",
+    "image_store": "containerd snapshotter (Docker Desktop)"
+  },
+  "images": {
+    "bundled": {
+      "tag": "industrix:eap3",
+      "id": "sha256:cf5cffa19d2d9592464080574171475711cb6f6c127a16864a76bd64158965ac",
+      "unpacked_bytes": 1542234302,
+      "docker_inspect_size_bytes": 484175201,
+      "compressed_gzip_bytes": 481250354,
+      "gate": "PASS",
+      "weights": "included: /models/best.pt (sha256 c4aba081...0061) + OpenVINO INT8 artifact"
+    },
+    "runtime": {
+      "tag": "industrix:eap3-runtime",
+      "id": "sha256:bfb9968069abc9b35c7b0dbc47e6f58df83036f77f0399b5c9ec5288282e925e",
+      "unpacked_bytes": 1507953786,
+      "docker_inspect_size_bytes": 453986023,
+      "gate": "PASS",
+      "weights": "mounted at /models/best.pt"
+    }
+  },
+  "size_limit": {
+    "bytes": 1800000000,
+    "convention": "decimal GB; primary = unpacked filesystem via du -sxb / as uid 0 in a --network none container"
+  },
+  "builder_dependency_check": "dependency layer CACHED in the final build; the uncached build printed: deps ok 2.10.0+cpu 8.4.24",
+  "tests": {
+    "container": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "error": 0
+    },
+    "repository": {
+      "passed": 507,
+      "failed": 2,
+      "skipped": 0,
+      "error": 0
+    },
+    "repository_failures": [
+      "ESE-CPU1 test_actual_ir_size_below_6_5_decimal_mb (inherited)",
+      "ESE-CPU1 test_actual_map_drop_below_one_percentage_point (inherited)"
+    ]
+  },
+  "container_memory_growth_percent_30_requests": 1.2,
+  "offline": {
+    "method": "real /predict inside a --network none --read-only container",
+    "status": "PASS",
+    "physical_disconnect": "NOT VERIFIED"
+  },
+  "ci": {
+    "workflow": ".github/workflows/model-regression.yml job container",
+    "status": "NOT VERIFIED - GitHub Actions has not run on devlogixtechnology/industrix"
+  },
+  "known_limitations": [
+    "Camera videos for /streams/start must be mounted",
+    "QCI-2 classifier weights not bundled",
+    "No physical network disconnection test",
+    "CI container job never executed on GitHub"
+  ]
+}

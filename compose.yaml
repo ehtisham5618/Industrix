@@ -1,0 +1,53 @@
+# EAP-3 local/offline edge-gateway deployment of the IndustriX inference API.
+# Build:  docker compose build        Run:  docker compose up -d
+# Health: curl http://127.0.0.1:8000/health
+services:
+  industrix-api:
+    build:
+      context: .
+      target: bundled            # self-contained: best.pt + OpenVINO INT8 baked in
+    image: industrix:eap3
+    ports:
+      - "127.0.0.1:8000:8000"    # loopback only; put a reverse proxy in front for LAN access
+    environment:
+      INFERENCE_ENGINE: pytorch  # or "openvino" for the ESE-CPU1 INT8 stream engine
+    volumes:
+      - industrix-data:/data     # incident SQLite DB and snapshots survive restarts
+      # Camera video files for /streams/start (paths referenced by CAMERA_CONFIG):
+      # - ./data:/app/data:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=512m
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    stop_grace_period: 35s
+    mem_limit: 3g
+    cpus: 2.0
+
+  # Variant without baked weights: mount a verified checkpoint read-only.
+  industrix-api-mounted:
+    profiles: [mounted]
+    build:
+      context: .
+      target: runtime
+    image: industrix:eap3-runtime
+    ports:
+      - "127.0.0.1:8001:8000"
+    environment:
+      INDUSTRIX_MODEL_SHA256: c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061
+    volumes:
+      - ${INDUSTRIX_MODEL_FILE:-./Backend/best.pt}:/models/best.pt:ro
+      - industrix-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=512m
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    stop_grace_period: 35s
+
+volumes:
+  industrix-data:

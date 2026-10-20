@@ -1,0 +1,7 @@
+SIZE GATE PASS: industrix:eap3 unpacked = 1542234302 bytes (1.542 GB, 1.436 GiB); limit 1800000000 bytes; headroom 257765698 bytes
+docker image inspect .Size = 484175201 bytes (store-dependent; compressed on containerd; not the gate)
+compressed (gzip docker save): 481250354 bytes
+gate bundled exit=0
+SIZE GATE PASS: industrix:eap3-runtime unpacked = 1507953786 bytes (1.508 GB, 1.404 GiB); limit 1800000000 bytes; headroom 292046214 bytes
+docker image inspect .Size = 453986023 bytes (store-dependent; compressed on containerd; not the gate)
+gate runtime exit=0

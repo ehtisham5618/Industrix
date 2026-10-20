@@ -1,0 +1,60 @@
+# EAP-3 build context: only runtime source/config reaches the daemon.
+.git
+.github
+.githooks
+.pytest_cache
+.streamlit
+**/__pycache__
+**/*.pyc
+**/.ipynb_checkpoints
+**/*.ipynb
+**/runtime
+**/backups
+**/tests
+**/venv
+**/.venv
+**/*.log
+**/*.tmp
+.env
+.env.*
+**/*.db
+**/*.db-*
+
+# Training, datasets, notebooks and evidence (not needed to serve inference)
+data
+final_dataset
+Hazard_Expansion
+Training
+Preprocessing
+CME_OPT1_Hard_Negative_Augmentation
+CME_OPT2_Model_Fine_Tuning
+ESE_CPU2_Async_RTSP
+IFE_UI1_Streamlit_Console
+IFE_UI2_Incident_Audit
+IFE_UI3_Demo_Packaging
+EAP_1_LowLight_IR_Robustness
+EAP_2_CI_Model_Regression
+Experiment_Tracking
+Frontend
+docs
+reports
+Confidence_Calibration/benchmark
+Confidence_Calibration/outputs
+Confidence_Calibration/reports
+CME_OPT3_ByteTrack/annotations
+SED_1_Multi_Camera/reports
+SED_3_Stress_Testing/reports
+QCI_*/reports
+**/*.md
+
+# Exported artifacts not used by the service (ONNX FP16 is benchmark-only)
+Backend/weights/onnx_fp16
+Backend/fastapi_endpoint.ipynb
+
+# ESE-CPU1 evidence: keep only the artifact manifest the OpenVINO engine verifies.
+ESE_CPU1_Quantization/reports/*
+!ESE_CPU1_Quantization/reports/artifact_manifest.json
+
+# EAP-3 itself: only the runtime requirements are needed in the image build.
+EAP_3_Lightweight_Docker/*
+!EAP_3_Lightweight_Docker/requirements-runtime.txt

@@ -1,0 +1,108 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.43kB 0.0s done
+#1 DONE 0.1s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.7
+#2 DONE 0.9s
+
+#3 docker-image://docker.io/docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e
+#3 resolve docker.io/docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e 0.1s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/python:3.12.12-slim-bookworm
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 1.36kB done
+#5 DONE 0.0s
+
+#6 [builder 1/5] FROM docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c
+#6 resolve docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 14.31kB 0.1s done
+#7 DONE 0.1s
+
+#8 [runtime  9/20] COPY Confidence_Calibration/ Confidence_Calibration/
+#8 CACHED
+
+#9 [runtime  3/20] COPY --from=builder /opt/venv /opt/venv
+#9 CACHED
+
+#10 [runtime  7/20] COPY Backend/incidents/ Backend/incidents/
+#10 CACHED
+
+#11 [runtime 11/20] COPY ESE_CPU3_Soak_Test/ ESE_CPU3_Soak_Test/
+#11 CACHED
+
+#12 [builder 4/5] COPY EAP_3_Lightweight_Docker/requirements-runtime.txt /tmp/requirements-runtime.txt
+#12 CACHED
+
+#13 [runtime  6/20] COPY Backend/configs/ Backend/configs/
+#13 CACHED
+
+#14 [runtime 12/20] COPY QCI_1_Surface_Defect_Segmentation/ QCI_1_Surface_Defect_Segmentation/
+#14 CACHED
+
+#15 [builder 3/5] RUN python -m venv /opt/venv
+#15 CACHED
+
+#16 [runtime 10/20] COPY ESE_CPU1_Quantization/ ESE_CPU1_Quantization/
+#16 CACHED
+
+#17 [builder 2/5] RUN apt-get update  && apt-get install -y --no-install-recommends build-essential  && rm -rf /var/lib/apt/lists/*
+#17 CACHED
+
+#18 [runtime 14/20] COPY QCI_3_Severity_IoT/ QCI_3_Severity_IoT/
+#18 CACHED
+
+#19 [runtime  2/20] RUN apt-get update  && apt-get install -y --no-install-recommends libgomp1  && rm -rf /var/lib/apt/lists/*  && groupadd --system --gid 10001 industrix  && useradd --system --uid 10001 --gid industrix --home-dir /app --shell /usr/sbin/nologin industrix
+#19 CACHED
+
+#20 [runtime 19/20] COPY SED_3_Stress_Testing/ SED_3_Stress_Testing/
+#20 CACHED
+
+#21 [runtime  5/20] COPY Backend/*.py Backend/
+#21 CACHED
+
+#22 [runtime  8/20] COPY CME_OPT3_ByteTrack/ CME_OPT3_ByteTrack/
+#22 CACHED
+
+#23 [builder 5/5] RUN grep -v '^ultralytics==' /tmp/requirements-runtime.txt > /tmp/requirements-deps.txt  && pip install --no-compile -r /tmp/requirements-deps.txt  && pip install --no-compile --no-deps "$(grep '^ultralytics==' /tmp/requirements-runtime.txt)"  && find /opt/venv -depth -type d -name '__pycache__' -exec rm -rf {} +  && python -c "import torch, torchvision, cv2, ultralytics, openvino, fastapi, reportlab; import importlib.util as u; assert u.find_spec('polars') is None; print('deps ok', torch.__version__, ultralytics.__version__)"
+#23 CACHED
+
+#24 [runtime  4/20] WORKDIR /app
+#24 CACHED
+
+#25 [runtime 13/20] COPY QCI_2_Defect_Classifier/ QCI_2_Defect_Classifier/
+#25 CACHED
+
+#26 [runtime 18/20] COPY SED_2_Alert_Escalation/ SED_2_Alert_Escalation/
+#26 CACHED
+
+#27 [runtime 15/20] COPY QCI_4_Edge_Telemetry/ QCI_4_Edge_Telemetry/
+#27 CACHED
+
+#28 [runtime 16/20] COPY QCI_5_Incident_PDF/ QCI_5_Incident_PDF/
+#28 CACHED
+
+#29 [runtime 17/20] COPY SED_1_Multi_Camera/ SED_1_Multi_Camera/
+#29 CACHED
+
+#30 [runtime 20/20] RUN mkdir -p /models /data/snapshots /app/SED_2_Alert_Escalation/runtime  && ln -s /data /app/Backend/data  && chown -R industrix:industrix /data /app/SED_2_Alert_Escalation/runtime
+#30 CACHED
+
+#31 exporting to image
+#31 exporting layers 0.0s done
+#31 exporting manifest sha256:1416f058b071b0fb4e7ed8f182d11777d0bee61c8df0e1487d681e93ee44c5b8 0.0s done
+#31 exporting config sha256:5572589c117776fc3f80a67d4368e945033c4a5042c30667b7ea40c4deadd507 0.0s done
+#31 exporting attestation manifest sha256:b79f3c488c5d673ec50d6fd52dd3d84b0428464e6c673352bcac0fb1f7c19f2d
+#31 exporting attestation manifest sha256:b79f3c488c5d673ec50d6fd52dd3d84b0428464e6c673352bcac0fb1f7c19f2d 0.0s done
+#31 exporting manifest list sha256:bfb9968069abc9b35c7b0dbc47e6f58df83036f77f0399b5c9ec5288282e925e 0.0s done
+#31 naming to docker.io/library/industrix:eap3-runtime done
+#31 unpacking to docker.io/library/industrix:eap3-runtime 0.0s done
+#31 DONE 0.3s
+runtime exit=0

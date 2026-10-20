@@ -1,0 +1,45 @@
+# EAP-3 container runtime dependencies (CPU inference service only).
+# Derived from the authoritative requirements.txt; versions pinned to the
+# ESE-CPU1 Python 3.12 environment in which the full repository suite passes.
+# Notebooks, Kaggle, Albumentations, Jupyter, MLflow and test tools are excluded.
+# Update this file whenever requirements.txt changes a runtime package.
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.10.0+cpu
+torchvision==0.25.0+cpu
+
+# Ultralytics is installed with --no-deps (see Dockerfile) so that its
+# opencv-python (GUI/X11) requirement is satisfied by the headless build below.
+# polars (an Ultralytics dependency, ~216 MB unpacked) is deliberately omitted: in
+# ultralytics 8.4.24 it is imported lazily only by training (trainer.read_results_csv),
+# benchmarks, label/result plotting, the W&B callback and Results.to_df/to_csv/summary
+# exports. The serving path (YOLO load + predict + ByteTrack) never imports it, and no
+# project runtime module does; EAP-3 container tests exercise that path without it.
+ultralytics==8.4.24
+ultralytics-thop==2.1.6
+opencv-python-headless==4.13.0.92
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.10.8
+pillow==12.1.1
+PyYAML==6.0.3
+requests==2.31.0
+psutil==7.2.2
+lap==0.5.13
+# pi-heif: ultralytics' patched PIL Image.open imports it on ANY open failure (HEIC
+# fallback); without it a corrupt upload raises ModuleNotFoundError (HTTP 500) offline.
+pi-heif==1.4.0
+
+# OpenVINO INT8 stream engine (INFERENCE_ENGINE=openvino, ESE-CPU1/ESE-CPU3)
+openvino==2026.4.1
+
+# FastAPI service, incidents and PDF reporting
+fastapi==0.143.0
+starlette==0.52.1
+uvicorn==0.54.0
+httptools==0.7.1
+websockets==12.0
+python-multipart==0.0.32
+pydantic==2.12.5
+reportlab==5.0.1
+pypdf==6.19.0
