@@ -1,0 +1,11 @@
+EAP-2 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (thresholds undefined; CI never executed on GitHub).
+Branch: feature/sprint3-eap2-ci-model-regression; implementation 960098d (stacked on EAP-1 524d0af).
+Real-model run (local CPU): artifact SHA c4aba081 PASS; 12-class map PASS; real /predict contract PASS; repeat stability PASS; 12/12 golden fixtures match baseline behaviour.
+Quality vs EAP-1 baseline (test, 334 imgs): mAP50 78.20% (+0.03 pp), mAP50-95 49.17% (-0.02 pp), P +0.13 pp, R +0.00 pp. Tolerance UNDEFINED.
+CPU latency mean 493.8 ms / p95 696.1 ms (20 runs, laptop, indicative); RSS growth +0.00% over 20 runs. No SLO -> UNDEFINED.
+Defect found: /predict raises unhandled ValueError on corrupt upload (strict xfail test).
+Tests: EAP-2 28 passed, 1 xfailed (known defect). Registry PASS. Full repository suite not re-run for EAP-2 (no product code changed).
+PR/push: deferred - organization access revoked; two local commits; sync_when_access_returns.ps1.
+GPU/Modal: not used.

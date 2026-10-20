@@ -1,0 +1,33 @@
+Ultralytics 8.4.24  Python-3.14.3 torch-2.10.0+cpu CPU (Intel Core i5-7200U 2.50GHz)
+Model summary (fused): 73 layers, 11,130,228 parameters, 0 gradients, 28.5 GFLOPs
+[34m[1mval: [0mFast image access  (ping: 0.10.0 ms, read: 329.7144.1 MB/s, size: 99.9 KB)
+[K[34m[1mval: [0mScanning C:\Users\ehtis\Desktop\Textile Defect Detection\Hazard_Expansion\content_runtime\combined_dataset_augmented_v3\labels\test.cache... 334 images, 20 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 334/334 63.7Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 1/11 38.5s/it 11.5s<6:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 18% ━━────────── 2/11 26.2s/it 26.5s<3:55[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 27% ━━━───────── 3/11 19.4s/it 38.6s<2:35[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 4/11 17.0s/it 51.7s<1:59[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 45% ━━━━━─────── 5/11 16.0s/it 1:06<1:36[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 6/11 13.9s/it 1:16<1:09[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 7/11 12.6s/it 1:27<50.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 8/11 11.5s/it 1:36<34.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 9/11 10.7s/it 1:46<21.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 91% ━━━━━━━━━━╸─ 10/11 9.6s/it 1:53<9.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 11/11 10.6s/it 1:57
+                   all        334        498      0.729       0.78      0.782      0.492
+Speed: 1.5ms preprocess, 331.1ms inference, 0.0ms loss, 1.4ms postprocess per image
+PASS                 artifact_hash                            SHA256 matches baseline manifest
+PASS                 class_map                                12 classes identical to baseline (ids and names)
+PASS                 predict_api_contract                     real /predict returned 3 contract-valid detections
+PASS                 repeat_inference_stability               identical input re-run within 1e-4 confidence
+UNDEFINED_THRESHOLD  latency_cpu                              mean 493.8 ms, p95 696.1 ms; no approved .pt CPU latency SLO
+UNDEFINED_THRESHOLD  memory_repeated_inference                RSS +0.00% over 20 warmed inferences; no approved gate
+PASS                 golden:00-baekra                         baekra GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:01-color_issues                   color issues GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:02-contamination                  contamination GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:03-cut                            cut GT missed at IoU≥0.5; accepted baseline missed it
+PASS                 golden:04-gray_stitch                    gray stitch GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:05-selvet                         selvet GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:06-stain                          stain GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:07-chemical_hazard                chemical hazard GT missed at IoU≥0.5; accepted baseline missed it
+PASS                 golden:08-fire                           fire GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:09-no_helmet                      no helmet GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:10-smoke                          smoke GT detected at IoU≥0.5; accepted baseline detected it
+PASS                 golden:11-water_leak                     water leak GT detected at IoU≥0.5; accepted baseline detected it
+UNDEFINED_THRESHOLD  min_absolute:map50                       map50=0.781995 Δ +0.0291 pp vs min_absolute 0.72 (CME-OPT2 task acceptance target (CME_OPT2_Model_Fine_Tuning/README.md); not an approved release regression gate); reference target only, not an approved release gate
+UNDEFINED_THRESHOLD  min_absolute:per_class:chemical hazard   per_class:chemical hazard=0.423908 Δ -0.0000 pp vs min_absolute 0.65 (CME-OPT2 task acceptance target; the accepted production model itself measures 0.424); reference target only, not an approved release gate — VIOLATED
+UNDEFINED_THRESHOLD  max_drop_pp:map50                        Measured 0.781995 (Δ +0.0291 pp); no approved threshold (No approved model-regression tolerance exists in the repository)
+UNDEFINED_THRESHOLD  max_drop_pp:map50_95                     Measured 0.491720 (Δ -0.0214 pp); no approved threshold (No approved model-regression tolerance exists in the repository)
+UNDEFINED_THRESHOLD  max_drop_pp:precision                    Measured 0.729311 (Δ +0.1314 pp); no approved threshold (No approved model-regression tolerance exists in the repository)
+UNDEFINED_THRESHOLD  max_drop_pp:recall                       Measured 0.780224 (Δ +0.0020 pp); no approved threshold (No approved model-regression tolerance exists in the repository)
+OVERALL UNDEFINED_THRESHOLD | code PASS | model release UNDEFINED_THRESHOLD
+exit=0

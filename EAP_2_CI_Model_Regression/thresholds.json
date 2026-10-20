@@ -1,0 +1,19 @@
+{
+  "version": "eap2-thresholds-v1",
+  "thresholds": [
+    {"metric": "map50", "kind": "min_absolute", "value": 0.72, "enforce": false,
+     "source": "CME-OPT2 task acceptance target (CME_OPT2_Model_Fine_Tuning/README.md); not an approved release regression gate"},
+    {"metric": "per_class:chemical hazard", "kind": "min_absolute", "value": 0.65, "enforce": false,
+     "source": "CME-OPT2 task acceptance target; the accepted production model itself measures 0.424"},
+    {"metric": "map50", "kind": "max_drop_pp", "value": null, "enforce": false,
+     "source": "No approved model-regression tolerance exists in the repository"},
+    {"metric": "map50_95", "kind": "max_drop_pp", "value": null, "enforce": false,
+     "source": "No approved model-regression tolerance exists in the repository"},
+    {"metric": "precision", "kind": "max_drop_pp", "value": null, "enforce": false,
+     "source": "No approved model-regression tolerance exists in the repository"},
+    {"metric": "recall", "kind": "max_drop_pp", "value": null, "enforce": false,
+     "source": "No approved model-regression tolerance exists in the repository"}
+  ],
+  "latency": {"value_ms": null, "source": "No approved CPU latency SLO for PyTorch .pt inference; ESE-CPU1 gates apply to exported artifacts only"},
+  "memory": {"value_percent": null, "source": "No approved memory-drift gate for this suite; QCI tasks used <5% for their own services"}
+}

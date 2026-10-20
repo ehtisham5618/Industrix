@@ -1,0 +1,181 @@
+{
+  "version": "eap2-golden-v1",
+  "split": "test",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou_match": 0.5,
+  "reference_model": "cme-opt2-focal-cosine-12class-v1",
+  "reference_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "selection": "first test image (sorted by name) containing each class; first annotated box of that class",
+  "expected_source": "human annotation labels; reference_hit = accepted baseline behaviour, not candidate output",
+  "fixtures": [
+    {
+      "id": "00-baekra",
+      "image": "textile_20230712_160746_jpeg_jpg.rf.d66ffca1fb55e7398e54a4a6652fb7c0.jpg",
+      "image_sha256": "8ca8dae06914a0a015da1cfeabf86aa41b7eae9f9207869bd6ccf0f13cf07959",
+      "class_id": 0,
+      "box_xywhn": [
+        0.50146484375,
+        0.5768229166666666,
+        0.9951171875,
+        0.8324652777777778
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "01-color_issues",
+      "image": "textile_20230712_163545_jpeg_jpg.rf.b49b62b825b66056d1306b5974bcb292.jpg",
+      "image_sha256": "1e166e4f0d7d6ad96eafe5b2bac55e1668357bb24abed5db9edd12d659aa9e7f",
+      "class_id": 1,
+      "box_xywhn": [
+        0.5,
+        0.45988612836438925,
+        1.0,
+        0.7675983436853002
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "02-contamination",
+      "image": "textile_IMG-20230906-WA0068_jpg.rf.f13fa05f00f4fcc76655cbf38d530c41.jpg",
+      "image_sha256": "e42c3bf0c4de3fd2e7daf657832b99bf335f9a6d08b9ff61105a9ec9ab1aa4f9",
+      "class_id": 2,
+      "box_xywhn": [
+        0.4712328767123288,
+        0.688911704312115,
+        0.5808219178082191,
+        0.11088295687885011
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "03-cut",
+      "image": "textile_006843_jpg.rf.7d6b35a29774a248e7848185c8764286.jpg",
+      "image_sha256": "4e54ee9a7073962bd0c85f418a2bedb02128628b76123404055e536f75fb4514",
+      "class_id": 3,
+      "box_xywhn": [
+        0.8167578125,
+        0.2459375,
+        0.36083984375,
+        0.13962890625
+      ],
+      "reference_hit": false,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "04-gray_stitch",
+      "image": "textile_00003932_jpg.rf.cabbaf58e5c34db2ffe2df66ad965f44.jpg",
+      "image_sha256": "94336be61ed750704eb28ef1a60a14310b88353082b77df145366d33fdc9dd41",
+      "class_id": 4,
+      "box_xywhn": [
+        0.50222,
+        0.12184,
+        0.99556,
+        0.18372
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "05-selvet",
+      "image": "textile_20230719_100704_jpeg_jpg.rf.a290105e2803a803196dcfe738c44838.jpg",
+      "image_sha256": "032aa0d6087675d6072e2c8d4574f4c30f075ce77d9fe0868996c96550b19e7c",
+      "class_id": 5,
+      "box_xywhn": [
+        0.19979508196721313,
+        0.8311306901615272,
+        0.39549180327868855,
+        0.3377386196769457
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "06-stain",
+      "image": "textile_IMG-20230807-WA0048_jpg.rf.7494e1af4ee242ba532611e669cbac0c.jpg",
+      "image_sha256": "245ca5a1a65d6ec8c642928702ceb7f0eb0f4c7f13a3977007daa61b5eceb029",
+      "class_id": 6,
+      "box_xywhn": [
+        0.42986111111111114,
+        0.6373949579831932,
+        0.06805555555555555,
+        0.046218487394957986
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "07-chemical_hazard",
+      "image": "hazard_Chimney_smoke_smokehazard80_jpg.rf.0e7354d4ddbdfeae4b07f180f4ab63b6.jpg",
+      "image_sha256": "14ba5c4ca978231edcb62385c681d0dbeaf6ccae696f3df48983ea3d028ea144",
+      "class_id": 7,
+      "box_xywhn": [
+        0.44460937500000003,
+        0.357953125,
+        0.8806875,
+        0.71590625
+      ],
+      "reference_hit": false,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "08-fire",
+      "image": "hazard_Fire_hazards_firehazard105_jpg.rf.7761a00d298448d84c4b1b259f5f33ed.jpg",
+      "image_sha256": "6672a8e6190fd7ee90f81665241d42c266b0c79789ff936488a2228b6324ad53",
+      "class_id": 8,
+      "box_xywhn": [
+        0.360796875,
+        0.547578125,
+        0.451703125,
+        0.245734375
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "09-no_helmet",
+      "image": "hazard_No_helmet_nohelmet112_jpg.rf.47deb8535480103ed6ab596e01c9ee4f.jpg",
+      "image_sha256": "54448e92b874fe948f0dcc028eb7bc12f9a83e96ebcf2562732ab36544a955aa",
+      "class_id": 9,
+      "box_xywhn": [
+        0.8423281250000001,
+        0.7421875,
+        0.02840625,
+        0.0411875
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "10-smoke",
+      "image": "hazard_Chimney_smoke_smokehazard108_jpg.rf.eeb38c6cfff9416ee8a69efd13766289.jpg",
+      "image_sha256": "71c88646ca89d26d8d9ad83a04a9338568041e31ac9f6d2d4dfa63e85bc74ff2",
+      "class_id": 10,
+      "box_xywhn": [
+        0.41760937499999995,
+        0.500703125,
+        0.7755625,
+        0.9985781250000001
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    },
+    {
+      "id": "11-water_leak",
+      "image": "hazard_Water_Leaks_water140_jpg.rf.8db415b199e4afd0d2d21f07f537ad78.jpg",
+      "image_sha256": "eff35cf39aa8d13963b7bdb71f011c8d2fbf17d827772bff0b41de9c4eed1437",
+      "class_id": 11,
+      "box_xywhn": [
+        0.501421875,
+        0.64346875,
+        0.835234375,
+        0.7130625
+      ],
+      "reference_hit": true,
+      "provenance": "combined-12class-v3-hardnegative test split; licences per CME-1/CME-OPT1 attributions; internal evaluation use"
+    }
+  ]
+}

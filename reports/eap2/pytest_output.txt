@@ -1,0 +1,75 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.13.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 29 items
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_committed_baseline_is_valid_and_has_exact_class_map PASSED [  3%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_manifest_rejects_invalid_values PASSED [  6%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_missing_baseline_is_not_verified_not_pass PASSED [ 10%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_class_map_change_detected PASSED [ 13%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_artifact_hash_mismatch_and_missing PASSED [ 17%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_valid_predict_payload_and_empty_detections PASSED [ 20%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad0] PASSED [ 24%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad1] PASSED [ 27%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad2] PASSED [ 31%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad3] PASSED [ 34%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad4] PASSED [ 37%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad5] PASSED [ 41%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad6] PASSED [ 44%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad7] PASSED [ 48%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_invalid_detection_rejected[bad8] PASSED [ 51%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_class_name_mismatch_and_out_of_bounds_rejected PASSED [ 55%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_unchanged_candidate_has_zero_delta_and_no_false_pass PASSED [ 58%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_enforced_threshold_violation_fails PASSED [ 62%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_missing_or_invalid_metric_rejected PASSED [ 65%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_dataset_or_settings_mismatch_not_comparable PASSED [ 68%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_overall_status_never_promotes_not_verified PASSED [ 72%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_report_written_atomically PASSED [ 75%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_dataset_fingerprint_detects_label_change PASSED [ 79%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_golden_manifest_is_annotation_based PASSED [ 82%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_eap2_modules_have_no_network_clients PASSED [ 86%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_ci_workflow_runs_gate_tests_without_hiding_failures PASSED [ 89%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract PASSED [ 93%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_api_rejects_corrupt_image_without_crash XFAIL [ 96%]
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_missing_model_gives_not_verified_report PASSED [100%]
+
+============================== warnings summary ===============================
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py: 30 warnings
+  C:\Users\ehtis\AppData\Roaming\Python\Python314\site-packages\fastapi\routing.py:234: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    is_coroutine = asyncio.iscoroutinefunction(dependant.call)
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:127: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event('shutdown')
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\AppData\Roaming\Python\Python314\site-packages\fastapi\applications.py:4495: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:140: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event("startup")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+XFAIL EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_api_rejects_corrupt_image_without_crash - KNOWN DEFECT found by EAP-2: Backend/main.py /predict lets Ultralytics' ValueError escape for a corrupt upload (HTTP 500) instead of a 4xx; fix in the API, then remove
+================= 28 passed, 1 xfailed, 34 warnings in 12.32s =================

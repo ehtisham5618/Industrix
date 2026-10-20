@@ -1,0 +1,86 @@
+{
+  "baseline_id": "eap2-baseline-cme-opt2-v1",
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "architecture": "YOLOv8s",
+  "backend": "Ultralytics PyTorch",
+  "artifact_path": "Backend/best.pt",
+  "artifact_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "class_map": {
+    "0": "baekra",
+    "1": "color issues",
+    "2": "contamination",
+    "3": "cut",
+    "4": "gray stitch",
+    "5": "selvet",
+    "6": "stain",
+    "7": "chemical hazard",
+    "8": "fire",
+    "9": "no helmet",
+    "10": "smoke",
+    "11": "water leak"
+  },
+  "dataset_id": "combined-12class-v3-hardnegative",
+  "dataset_split": "test",
+  "dataset_archive_sha256": "2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5",
+  "dataset_fingerprint": "fd1656ceedb3889677760796a4243e54d83455b126f2d720fa8984ee37f6161b",
+  "dataset_counts": {
+    "images": 334,
+    "objects": 498,
+    "class_objects": {
+      "baekra": 24,
+      "color issues": 21,
+      "contamination": 17,
+      "cut": 47,
+      "gray stitch": 48,
+      "selvet": 58,
+      "stain": 153,
+      "chemical hazard": 4,
+      "fire": 22,
+      "no helmet": 45,
+      "smoke": 51,
+      "water leak": 8
+    }
+  },
+  "evaluation": {
+    "imgsz": 640,
+    "batch": 32,
+    "conf": 0.001,
+    "iou": 0.7
+  },
+  "inference_conf": 0.25,
+  "metrics": {
+    "precision": 0.7279973232380158,
+    "recall": 0.7802040758560692,
+    "map50": 0.7817046947520593,
+    "map50_95": 0.491933834248826
+  },
+  "per_class_ap50": {
+    "baekra": 0.9670000000000003,
+    "color issues": 0.7959356630930488,
+    "contamination": 0.9698148148148149,
+    "cut": 0.6902213392095276,
+    "gray stitch": 0.8243832126167224,
+    "selvet": 0.9212746539669596,
+    "stain": 0.9207038197810358,
+    "chemical hazard": 0.42390853014592933,
+    "fire": 0.6312920478396786,
+    "no helmet": 0.920515306129618,
+    "smoke": 0.5450266926766012,
+    "water leak": 0.7703802567507748
+  },
+  "source": "reports/eap1/remote/baseline_metrics.json (EAP-1 measured run, Modal NVIDIA A10, 2026-10-20)",
+  "measured_environment": {
+    "python": "3.11.12",
+    "torch": "2.10.0+cu128",
+    "ultralytics": "8.4.24",
+    "opencv": "5.0.0",
+    "numpy": "2.4.6",
+    "cuda": "12.8",
+    "gpu": "NVIDIA A10"
+  },
+  "reviewed_by": null,
+  "notes": [
+    "Metrics were measured on GPU; local CPU re-evaluation may differ by small amounts.",
+    "Matches the historical CME-OPT2 test mAP50 0.78156 within 0.0002."
+  ]
+}
