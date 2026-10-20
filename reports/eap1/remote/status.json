@@ -1,0 +1,161 @@
+{
+  "task": "EAP-1",
+  "stages": {
+    "start": {
+      "at": "2026-10-20T17:42:09.309014+00:00"
+    },
+    "inputs_verified": {
+      "at": "2026-10-20T17:42:36.748952+00:00",
+      "baseline_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+      "dataset_zip_sha256": "2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5",
+      "class_names": {
+        "0": "baekra",
+        "1": "color issues",
+        "2": "contamination",
+        "3": "cut",
+        "4": "gray stitch",
+        "5": "selvet",
+        "6": "stain",
+        "7": "chemical hazard",
+        "8": "fire",
+        "9": "no helmet",
+        "10": "smoke",
+        "11": "water leak"
+      }
+    },
+    "dataset_built": {
+      "at": "2026-10-20T17:46:14.500731+00:00",
+      "train_total": 7421,
+      "train_augmented": 1942
+    },
+    "baseline_standard_val": {
+      "at": "2026-10-20T17:46:26.164902+00:00",
+      "map50": 0.7724677860074154,
+      "map50_95": 0.4565853726791384
+    },
+    "baseline_standard": {
+      "at": "2026-10-20T17:46:31.528714+00:00",
+      "map50": 0.7817046947520593,
+      "map50_95": 0.491933834248826
+    },
+    "baseline_natural_dark": {
+      "at": "2026-10-20T17:46:34.584453+00:00",
+      "map50": 0.7018534944155267,
+      "map50_95": 0.381225266825623
+    },
+    "baseline_synthetic_lowlight": {
+      "at": "2026-10-20T17:46:40.101654+00:00",
+      "map50": 0.5862456207071286,
+      "map50_95": 0.33931105763472763
+    },
+    "baseline_synthetic_very_dark": {
+      "at": "2026-10-20T17:46:45.461128+00:00",
+      "map50": 0.10501795488025313,
+      "map50_95": 0.05226408851997907
+    },
+    "baseline_synthetic_cctv": {
+      "at": "2026-10-20T17:46:50.720347+00:00",
+      "map50": 0.5231501428904575,
+      "map50_95": 0.3177485254234254
+    },
+    "baseline_synthetic_ir_style": {
+      "at": "2026-10-20T17:46:56.084036+00:00",
+      "map50": 0.6206685502057846,
+      "map50_95": 0.36304380310708073
+    },
+    "candidate_standard_val": {
+      "at": "2026-10-20T17:57:06.116910+00:00",
+      "map50": 0.7867309948935953,
+      "map50_95": 0.4838382621435347
+    },
+    "candidate_standard": {
+      "at": "2026-10-20T17:57:12.005938+00:00",
+      "map50": 0.7896464161378963,
+      "map50_95": 0.5168183164969296
+    },
+    "candidate_natural_dark": {
+      "at": "2026-10-20T17:57:15.699349+00:00",
+      "map50": 0.7760013644366093,
+      "map50_95": 0.4296000334034325
+    },
+    "candidate_synthetic_lowlight": {
+      "at": "2026-10-20T17:57:22.259980+00:00",
+      "map50": 0.7143484245504927,
+      "map50_95": 0.44212425004168854
+    },
+    "candidate_synthetic_very_dark": {
+      "at": "2026-10-20T17:57:28.502413+00:00",
+      "map50": 0.33091510017616554,
+      "map50_95": 0.17923699438430538
+    },
+    "candidate_synthetic_cctv": {
+      "at": "2026-10-20T17:57:34.880340+00:00",
+      "map50": 0.5956374699968839,
+      "map50_95": 0.36703212222830683
+    },
+    "candidate_synthetic_ir_style": {
+      "at": "2026-10-20T17:57:40.898975+00:00",
+      "map50": 0.7136379012394573,
+      "map50_95": 0.428834451020341
+    },
+    "complete": {
+      "at": "2026-10-20T17:57:40.905563+00:00"
+    }
+  },
+  "training_status": "completed",
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.10.0+cu128",
+    "ultralytics": "8.4.24",
+    "opencv": "5.0.0",
+    "numpy": "2.4.6",
+    "cuda": "12.8",
+    "gpu": "NVIDIA A10"
+  },
+  "training_overrides": {
+    "model": "/opt/eap1/baseline.pt",
+    "data": "/tmp/eap1/eap1_dataset_v1/data.yaml",
+    "project": "/work/runs",
+    "name": "eap1_lowlight_v1",
+    "device": 0,
+    "epochs": 8,
+    "patience": 3,
+    "imgsz": 640,
+    "batch": 16,
+    "optimizer": "SGD",
+    "lr0": 0.002,
+    "lrf": 0.1,
+    "cos_lr": true,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 0.0,
+    "cls": 2.0,
+    "seed": 42,
+    "deterministic": true,
+    "amp": true,
+    "hsv_h": 0.01,
+    "hsv_s": 0.3,
+    "hsv_v": 0.2,
+    "degrees": 0.0,
+    "translate": 0.1,
+    "scale": 0.3,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "mosaic": 0.5,
+    "mixup": 0.0,
+    "close_mosaic": 3,
+    "workers": 8,
+    "plots": true,
+    "save": true,
+    "exist_ok": false
+  },
+  "training_start": "2026-10-20T17:46:56.089456+00:00",
+  "training_end": "2026-10-20T17:56:57.676233+00:00",
+  "training_seconds": 601.5861593770001,
+  "epochs_completed": 8,
+  "epochs_requested": 8,
+  "early_stopped": false,
+  "run_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/runs/eap1_lowlight_v1",
+  "best_sha256": "8e89f06c176a08484bb2ca4b388bcc37bdfbd2e3cfbc200ce42f9ded38b8be71",
+  "last_sha256": "6b60416891a3f54db04d5a7b29682bfcbfdf16b65a87fe15c5f867f2936ff39a"
+}

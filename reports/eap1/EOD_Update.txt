@@ -1,0 +1,12 @@
+EAP-1 — EOD Update
+
+Status: Implementation PASS; model performance NOT VERIFIED (no defined threshold); not production-ready.
+Branch: feature/sprint3-eap1-lowlight-ir-robustness; implementation 15d7bdd.
+Source: cme-opt2-focal-cosine-12class-v1 (Backend/best.pt c4aba081...) unchanged; candidate eap1-lowlight-cctv-12class-v1 (8e89f06c...).
+Training: Modal NVIDIA A10, 8/8 epochs, 10.0 min, focal trainer, SGD lr0 0.002, seed 42.
+Test mAP50-95 delta (pp): standard +2.49; real natural-dark +4.84; syn low-light +10.28; syn very dark +12.70; syn CCTV +4.93; syn IR-style +6.58.
+Regressions >=5pp AP50: water leak standard -8.15; fire/water leak natural-dark (24 imgs); color issues syn CCTV.
+Genuine IR: no annotated data available - NOT VERIFIED. Export/benchmark of candidate: NOT VERIFIED.
+Tests: EAP-1 41/41 PASS; repository 476 pass / 2 skipped / 2 inherited CPU1 failures. Registry PASS.
+PR: deferred - organization access revoked; two local commits; sync_when_access_returns.ps1 to push later.
+GPU: Modal app stopped after completion; no running containers.

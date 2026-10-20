@@ -1,0 +1,117 @@
+{
+  "root": "/tmp/eap1/source",
+  "class_names": {
+    "0": "baekra",
+    "1": "color issues",
+    "2": "contamination",
+    "3": "cut",
+    "4": "gray stitch",
+    "5": "selvet",
+    "6": "stain",
+    "7": "chemical hazard",
+    "8": "fire",
+    "9": "no helmet",
+    "10": "smoke",
+    "11": "water leak"
+  },
+  "splits": {
+    "train": {
+      "images": 5479,
+      "objects": 8520,
+      "background_images": 707,
+      "class_objects": {
+        "baekra": 490,
+        "color issues": 464,
+        "contamination": 338,
+        "cut": 692,
+        "gray stitch": 666,
+        "selvet": 841,
+        "stain": 1997,
+        "chemical hazard": 494,
+        "fire": 501,
+        "no helmet": 869,
+        "smoke": 1014,
+        "water leak": 154
+      },
+      "luma": {
+        "mean": 127.340394574219,
+        "p10": 78.34041521778524,
+        "p50": 131.99406805020155,
+        "min": 8.502196
+      },
+      "luma_below_80": 570,
+      "luma_below_50": 118,
+      "monochrome_images": 29,
+      "augmented_eap1_files": 0
+    },
+    "val": {
+      "images": 777,
+      "objects": 1334,
+      "background_images": 38,
+      "class_objects": {
+        "baekra": 79,
+        "color issues": 30,
+        "contamination": 55,
+        "cut": 102,
+        "gray stitch": 87,
+        "selvet": 121,
+        "stain": 312,
+        "chemical hazard": 53,
+        "fire": 92,
+        "no helmet": 216,
+        "smoke": 154,
+        "water leak": 33
+      },
+      "luma": {
+        "mean": 126.20484680804005,
+        "p10": 71.78381494140625,
+        "p50": 133.7083509131457,
+        "min": 17.989004
+      },
+      "luma_below_80": 95,
+      "luma_below_50": 27,
+      "monochrome_images": 2,
+      "augmented_eap1_files": 0
+    },
+    "test": {
+      "images": 334,
+      "objects": 498,
+      "background_images": 20,
+      "class_objects": {
+        "baekra": 24,
+        "color issues": 21,
+        "contamination": 17,
+        "cut": 47,
+        "gray stitch": 48,
+        "selvet": 58,
+        "stain": 153,
+        "chemical hazard": 4,
+        "fire": 22,
+        "no helmet": 45,
+        "smoke": 51,
+        "water leak": 8
+      },
+      "luma": {
+        "mean": 131.62665214724606,
+        "p10": 94.1336819730004,
+        "p50": 138.2539745135271,
+        "min": 22.038444
+      },
+      "luma_below_80": 24,
+      "luma_below_50": 8,
+      "monochrome_images": 1,
+      "augmented_eap1_files": 0
+    }
+  },
+  "invalid_images": [],
+  "invalid_labels": [],
+  "exact_cross_split_duplicates": [],
+  "exact_within_split_duplicates": 0,
+  "filename_overlap": {
+    "train-val": 0,
+    "train-test": 0,
+    "val-test": 0
+  },
+  "genuine_infrared_images": 0,
+  "genuine_infrared_note": "No source metadata identifies any image as infrared/thermal; monochrome images are counted but are not claimed as infrared."
+}

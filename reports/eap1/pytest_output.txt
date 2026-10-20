@@ -1,0 +1,51 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.13.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 41 items
+
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_valid_dataset_loads PASSED [  2%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_corrupted_image_reported_not_raised PASSED [  4%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[12 0.5 0.5 0.1 0.1-class id] PASSED [  7%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[-1 0.5 0.5 0.1 0.1-class id] PASSED [  9%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[1.5 0.5 0.5 0.1 0.1-class id] PASSED [ 12%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[2 0.5 0.5 0 0.1-non-positive] PASSED [ 14%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[2 0.95 0.5 0.3 0.1-outside] PASSED [ 17%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[2 0.5 0.5 0.1-expected 5] PASSED [ 19%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[2 a 0.5 0.1 0.1-non-numeric] PASSED [ 21%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_malformed_labels_rejected[2 nan 0.5 0.1 0.1-non-finite] PASSED [ 24%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_missing_dataset_has_actionable_error PASSED [ 26%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_cross_split_duplicate_detected PASSED [ 29%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[lowlight] PASSED [ 31%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[uneven_illumination] PASSED [ 34%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[cctv_compression] PASSED [ 36%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[motion_lowlight] PASSED [ 39%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[color_cast_dark] PASSED [ 41%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[synthetic_ir_style0] PASSED [ 43%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[synthetic_lowlight] PASSED [ 46%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[synthetic_very_dark] PASSED [ 48%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[synthetic_cctv] PASSED [ 51%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_degradation_preserves_geometry_and_is_deterministic[synthetic_ir_style1] PASSED [ 53%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_lowlight_profiles_darken[lowlight] PASSED [ 56%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_lowlight_profiles_darken[synthetic_lowlight] PASSED [ 58%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_lowlight_profiles_darken[synthetic_very_dark] PASSED [ 60%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_unknown_profile_and_bad_image_rejected PASSED [ 63%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_synthetic_ir_is_labelled_synthetic PASSED [ 65%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_build_keeps_splits_clean_and_labels_unchanged PASSED [ 68%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_build_refuses_overwrite_and_is_reproducible PASSED [ 70%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_selection_plan_is_deterministic PASSED [ 73%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_report_validation_rejects_missing_or_fabricated_values PASSED [ 75%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_comparison_requires_equivalent_settings PASSED [ 78%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_class_map_mismatch_rejected PASSED [ 80%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_missing_checkpoint_has_actionable_error PASSED [ 82%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_config_class_count_and_source_checkpoint PASSED [ 85%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_production_checkpoint_hash_and_class_map PASSED [ 87%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_candidate_checkpoint_loads_with_same_class_map PASSED [ 90%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_summary_has_no_fabricated_or_successful_interrupted_training PASSED [ 92%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_pipeline_modules_have_no_network_clients PASSED [ 95%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_build_and_audit_make_no_socket_calls PASSED [ 97%]
+EAP_1_LowLight_IR_Robustness/tests/test_eap1.py::test_repeated_degradation_memory_is_bounded PASSED [100%]
+
+============================= 41 passed in 55.01s =============================

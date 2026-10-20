@@ -1,0 +1,5140 @@
+{
+  "task": "EAP-1",
+  "experiment": "eap1-lowlight-cctv-robustness",
+  "version": "v1",
+  "sprint": "Sprint 3",
+  "branch": "feature/sprint3-eap1-lowlight-ir-robustness",
+  "metric_unit": "fraction_0_to_1",
+  "source_checkpoint": {
+    "model_version": "cme-opt2-focal-cosine-12class-v1",
+    "path": "Backend/best.pt",
+    "sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061"
+  },
+  "candidate": {
+    "path": "EAP_1_LowLight_IR_Robustness/runtime/eap1_lowlight_v1/best.pt",
+    "modal": "industirx-eap1:/runs/eap1_lowlight_v1/weights/best.pt",
+    "sha256": "8e89f06c176a08484bb2ca4b388bcc37bdfbd2e3cfbc200ce42f9ded38b8be71"
+  },
+  "dataset": {
+    "version": "combined-12class-v3-hardnegative",
+    "zip_sha256": "2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5",
+    "audit_splits": {
+      "train": {
+        "images": 5479,
+        "objects": 8520,
+        "class_objects": {
+          "baekra": 490,
+          "color issues": 464,
+          "contamination": 338,
+          "cut": 692,
+          "gray stitch": 666,
+          "selvet": 841,
+          "stain": 1997,
+          "chemical hazard": 494,
+          "fire": 501,
+          "no helmet": 869,
+          "smoke": 1014,
+          "water leak": 154
+        },
+        "luma_below_80": 570
+      },
+      "val": {
+        "images": 777,
+        "objects": 1334,
+        "class_objects": {
+          "baekra": 79,
+          "color issues": 30,
+          "contamination": 55,
+          "cut": 102,
+          "gray stitch": 87,
+          "selvet": 121,
+          "stain": 312,
+          "chemical hazard": 53,
+          "fire": 92,
+          "no helmet": 216,
+          "smoke": 154,
+          "water leak": 33
+        },
+        "luma_below_80": 95
+      },
+      "test": {
+        "images": 334,
+        "objects": 498,
+        "class_objects": {
+          "baekra": 24,
+          "color issues": 21,
+          "contamination": 17,
+          "cut": 47,
+          "gray stitch": 48,
+          "selvet": 58,
+          "stain": 153,
+          "chemical hazard": 4,
+          "fire": 22,
+          "no helmet": 45,
+          "smoke": 51,
+          "water leak": 8
+        },
+        "luma_below_80": 24
+      }
+    },
+    "exact_cross_split_duplicates": 0,
+    "near_duplicate_cross_split": {
+      "val": 242,
+      "test": 71
+    },
+    "train_augmented": 1942,
+    "train_total": 7421,
+    "train_profile_counts": {
+      "color_cast_dark": 319,
+      "uneven_illumination": 325,
+      "lowlight": 333,
+      "cctv_compression": 332,
+      "motion_lowlight": 304,
+      "synthetic_ir_style": 329
+    },
+    "eval_domain_images": {
+      "synthetic_lowlight": {
+        "val": 777,
+        "test": 334
+      },
+      "synthetic_very_dark": {
+        "val": 777,
+        "test": 334
+      },
+      "synthetic_cctv": {
+        "val": 777,
+        "test": 334
+      },
+      "synthetic_ir_style": {
+        "val": 777,
+        "test": 334
+      }
+    },
+    "natural_dark_counts": {
+      "val": 95,
+      "test": 24
+    }
+  },
+  "genuine_ir": {
+    "evaluated": false,
+    "available": false,
+    "reason": "No annotated infrared/thermal detection data exists in the repository or local data locations; synthetic IR-style results are appearance simulations only."
+  },
+  "training": {
+    "status": "completed",
+    "start": "2026-10-20T17:46:56.089456+00:00",
+    "end": "2026-10-20T17:56:57.676233+00:00",
+    "seconds": 601.5861593770001,
+    "epochs_completed": 8,
+    "epochs_requested": 8,
+    "early_stopped": false,
+    "best_sha256": "8e89f06c176a08484bb2ca4b388bcc37bdfbd2e3cfbc200ce42f9ded38b8be71",
+    "last_sha256": "6b60416891a3f54db04d5a7b29682bfcbfdf16b65a87fe15c5f867f2936ff39a",
+    "overrides": {
+      "model": "/opt/eap1/baseline.pt",
+      "data": "/tmp/eap1/eap1_dataset_v1/data.yaml",
+      "project": "/work/runs",
+      "name": "eap1_lowlight_v1",
+      "device": 0,
+      "epochs": 8,
+      "patience": 3,
+      "imgsz": 640,
+      "batch": 16,
+      "optimizer": "SGD",
+      "lr0": 0.002,
+      "lrf": 0.1,
+      "cos_lr": true,
+      "momentum": 0.937,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 0.0,
+      "cls": 2.0,
+      "seed": 42,
+      "deterministic": true,
+      "amp": true,
+      "hsv_h": 0.01,
+      "hsv_s": 0.3,
+      "hsv_v": 0.2,
+      "degrees": 0.0,
+      "translate": 0.1,
+      "scale": 0.3,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "mosaic": 0.5,
+      "mixup": 0.0,
+      "close_mosaic": 3,
+      "workers": 8,
+      "plots": true,
+      "save": true,
+      "exist_ok": false
+    },
+    "environment": {
+      "python": "3.11.12",
+      "torch": "2.10.0+cu128",
+      "ultralytics": "8.4.24",
+      "opencv": "5.0.0",
+      "numpy": "2.4.6",
+      "cuda": "12.8",
+      "gpu": "NVIDIA A10"
+    },
+    "local_candidate_sha256_matches": true
+  },
+  "evaluation": {
+    "baseline": {
+      "standard_val": {
+        "split": "val",
+        "data": "/tmp/eap1/source/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.7682683874822729,
+        "recall": 0.7423290714002202,
+        "map50": 0.7724677860074154,
+        "map50_95": 0.4565853726791384,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.8928843612947127,
+            "ap50_95": 0.6661893427066089,
+            "precision": 0.8218930178439046,
+            "recall": 0.8607594936708861
+          },
+          "color issues": {
+            "ap50": 0.6885703957644702,
+            "ap50_95": 0.38382289606376935,
+            "precision": 0.8064844728859573,
+            "recall": 0.6
+          },
+          "contamination": {
+            "ap50": 0.995,
+            "ap50_95": 0.6019858818005257,
+            "precision": 0.9562139918424701,
+            "recall": 1.0
+          },
+          "cut": {
+            "ap50": 0.8718209682020077,
+            "ap50_95": 0.54544045335093,
+            "precision": 0.8432960770504951,
+            "recall": 0.8441596724831507
+          },
+          "gray stitch": {
+            "ap50": 0.8029489783970449,
+            "ap50_95": 0.5441852483402532,
+            "precision": 0.755631117198646,
+            "recall": 0.7108631496743715
+          },
+          "selvet": {
+            "ap50": 0.8915843464691897,
+            "ap50_95": 0.5778118942724682,
+            "precision": 0.7311815674718815,
+            "recall": 0.8677685950413223
+          },
+          "stain": {
+            "ap50": 0.9147414377663194,
+            "ap50_95": 0.5964756683517557,
+            "precision": 0.8952126350217766,
+            "recall": 0.8762214770214759
+          },
+          "chemical hazard": {
+            "ap50": 0.454262986470782,
+            "ap50_95": 0.21903217839208944,
+            "precision": 0.6726458818039831,
+            "recall": 0.4528301886792453
+          },
+          "fire": {
+            "ap50": 0.6392337128765027,
+            "ap50_95": 0.2692866240820232,
+            "precision": 0.6414726551302823,
+            "recall": 0.66123747132782
+          },
+          "no helmet": {
+            "ap50": 0.9021914983602612,
+            "ap50_95": 0.48362772224990974,
+            "precision": 0.851821404415893,
+            "recall": 0.8782646530602134
+          },
+          "smoke": {
+            "ap50": 0.5701433789422463,
+            "ap50_95": 0.2305409394009122,
+            "precision": 0.6172938128255592,
+            "recall": 0.5194805194805194
+          },
+          "water leak": {
+            "ap50": 0.646231367545448,
+            "ap50_95": 0.36062562313841584,
+            "precision": 0.6260740162964268,
+            "recall": 0.6363636363636364
+          }
+        },
+        "counts": {
+          "images": 777,
+          "objects": 1334,
+          "class_objects": {
+            "baekra": 79,
+            "color issues": 30,
+            "contamination": 55,
+            "cut": 102,
+            "gray stitch": 87,
+            "selvet": 121,
+            "stain": 312,
+            "chemical hazard": 53,
+            "fire": 92,
+            "no helmet": 216,
+            "smoke": 154,
+            "water leak": 33
+          }
+        },
+        "confusion_matrix": [
+          [
+            68,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            0,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            55,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            65,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            23
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            107,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            280,
+            0,
+            0,
+            0,
+            0,
+            0,
+            36
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            29,
+            0,
+            0,
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            66,
+            1,
+            0,
+            0,
+            44
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            197,
+            0,
+            0,
+            48
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            92,
+            0,
+            75
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            16
+          ],
+          [
+            11,
+            12,
+            0,
+            12,
+            22,
+            14,
+            32,
+            24,
+            26,
+            18,
+            62,
+            9,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_standard_val_val"
+      },
+      "standard": {
+        "split": "test",
+        "data": "/tmp/eap1/source/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.7279973232380158,
+        "recall": 0.7802040758560692,
+        "map50": 0.7817046947520593,
+        "map50_95": 0.491933834248826,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9670000000000003,
+            "ap50_95": 0.7582790222427387,
+            "precision": 0.9154645061731329,
+            "recall": 1.0
+          },
+          "color issues": {
+            "ap50": 0.7959356630930488,
+            "ap50_95": 0.46295286522202816,
+            "precision": 0.7152129946749306,
+            "recall": 0.8095238095238095
+          },
+          "contamination": {
+            "ap50": 0.9698148148148149,
+            "ap50_95": 0.5382934658228272,
+            "precision": 0.8115047022606192,
+            "recall": 0.9411764705882353
+          },
+          "cut": {
+            "ap50": 0.6902213392095276,
+            "ap50_95": 0.47297939616308626,
+            "precision": 0.6486905264756369,
+            "recall": 0.7446808510638298
+          },
+          "gray stitch": {
+            "ap50": 0.8243832126167224,
+            "ap50_95": 0.5409599882733507,
+            "precision": 0.7708827008331134,
+            "recall": 0.75
+          },
+          "selvet": {
+            "ap50": 0.9212746539669596,
+            "ap50_95": 0.6612375882666589,
+            "precision": 0.6834110868175209,
+            "recall": 0.8793103448275862
+          },
+          "stain": {
+            "ap50": 0.9207038197810358,
+            "ap50_95": 0.5733981067839283,
+            "precision": 0.8433150298467228,
+            "recall": 0.9146301326047599
+          },
+          "chemical hazard": {
+            "ap50": 0.42390853014592933,
+            "ap50_95": 0.29894501883414654,
+            "precision": 0.5111302120480707,
+            "recall": 0.25
+          },
+          "fire": {
+            "ap50": 0.6312920478396786,
+            "ap50_95": 0.28431272789679907,
+            "precision": 0.6886135840269549,
+            "recall": 0.7041459319327223
+          },
+          "no helmet": {
+            "ap50": 0.920515306129618,
+            "ap50_95": 0.5178240476065699,
+            "precision": 0.8458118202843886,
+            "recall": 0.9111111111111111
+          },
+          "smoke": {
+            "ap50": 0.5450266926766012,
+            "ap50_95": 0.2782572878819988,
+            "precision": 0.5334045334192037,
+            "recall": 0.5828702586207748
+          },
+          "water leak": {
+            "ap50": 0.7703802567507748,
+            "ap50_95": 0.5157664959917798,
+            "precision": 0.768526181995896,
+            "recall": 0.875
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            35,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            26
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            141,
+            0,
+            0,
+            0,
+            0,
+            0,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            42,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            32,
+            0,
+            33
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            1
+          ],
+          [
+            0,
+            4,
+            0,
+            11,
+            12,
+            5,
+            12,
+            2,
+            5,
+            3,
+            19,
+            0,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_standard_test"
+      },
+      "natural_dark": {
+        "split": "test",
+        "data": "/tmp/eap1/natural_dark/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.5594501422983943,
+        "recall": 0.8048126882550912,
+        "map50": 0.7018534944155267,
+        "map50_95": 0.381225266825623,
+        "per_class": {
+          "gray stitch": {
+            "ap50": 0.509929143126177,
+            "ap50_95": 0.300593275749674,
+            "precision": 0.6210271922306173,
+            "recall": 0.3333333333333333
+          },
+          "chemical hazard": {
+            "ap50": 0.4975,
+            "ap50_95": 0.1509364406779661,
+            "precision": 0.47383329123135487,
+            "recall": 1.0
+          },
+          "fire": {
+            "ap50": 0.7607410179640718,
+            "ap50_95": 0.2909185024742972,
+            "precision": 0.5317598733120434,
+            "recall": 0.8181818181818182
+          },
+          "no helmet": {
+            "ap50": 0.9119750745378653,
+            "ap50_95": 0.6215908369924648,
+            "precision": 0.6490636973815724,
+            "recall": 0.9285714285714286
+          },
+          "smoke": {
+            "ap50": 0.7009757308650462,
+            "ap50_95": 0.33073890631588065,
+            "precision": 0.5289974928578285,
+            "recall": 0.7487895494439676
+          },
+          "water leak": {
+            "ap50": 0.8300000000000002,
+            "ap50_95": 0.5925736387434555,
+            "precision": 0.5520193067769493,
+            "recall": 1.0
+          }
+        },
+        "counts": {
+          "images": 24,
+          "objects": 59,
+          "class_objects": {
+            "baekra": 0,
+            "color issues": 0,
+            "contamination": 0,
+            "cut": 0,
+            "gray stitch": 6,
+            "selvet": 0,
+            "stain": 0,
+            "chemical hazard": 1,
+            "fire": 11,
+            "no helmet": 14,
+            "smoke": 24,
+            "water leak": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            1,
+            2,
+            1,
+            7,
+            0,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_natural_dark_test"
+      },
+      "synthetic_lowlight": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_lowlight/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.687196368011031,
+        "recall": 0.5534510435459881,
+        "map50": 0.5862456207071286,
+        "map50_95": 0.33931105763472763,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9318462783171524,
+            "ap50_95": 0.6316167893393467,
+            "precision": 0.8524473773021819,
+            "recall": 0.9583333333333334
+          },
+          "color issues": {
+            "ap50": 0.6874364370679272,
+            "ap50_95": 0.3577285541722369,
+            "precision": 0.5005929320326821,
+            "recall": 0.7619047619047619
+          },
+          "contamination": {
+            "ap50": 0.8180269905533063,
+            "ap50_95": 0.39620228376330696,
+            "precision": 1.0,
+            "recall": 0.7026531193143054
+          },
+          "cut": {
+            "ap50": 0.5887076072432906,
+            "ap50_95": 0.3494706884277862,
+            "precision": 0.5834164421557729,
+            "recall": 0.574468085106383
+          },
+          "gray stitch": {
+            "ap50": 0.7937241609057769,
+            "ap50_95": 0.5020620114690176,
+            "precision": 0.7095116220120634,
+            "recall": 0.75
+          },
+          "selvet": {
+            "ap50": 0.835710606682621,
+            "ap50_95": 0.563913744266016,
+            "precision": 0.6295335432429761,
+            "recall": 0.8448275862068966
+          },
+          "stain": {
+            "ap50": 0.7090643896261674,
+            "ap50_95": 0.385060426242475,
+            "precision": 0.8732390015708583,
+            "recall": 0.6470588235294118
+          },
+          "chemical hazard": {
+            "ap50": 0.24567200342726778,
+            "ap50_95": 0.1963334724137631,
+            "precision": 0.6314320935108693,
+            "recall": 0.25
+          },
+          "fire": {
+            "ap50": 0.20892757179345267,
+            "ap50_95": 0.10273555400437166,
+            "precision": 0.3189669351318471,
+            "recall": 0.22727272727272727
+          },
+          "no helmet": {
+            "ap50": 0.6129733978362946,
+            "ap50_95": 0.2932978157218922,
+            "precision": 0.8214506849333334,
+            "recall": 0.5111909162927408
+          },
+          "smoke": {
+            "ap50": 0.17248383284685578,
+            "ap50_95": 0.05429847762433358,
+            "precision": 0.3257657842397864,
+            "recall": 0.17068363892846417
+          },
+          "water leak": {
+            "ap50": 0.4303741721854305,
+            "ap50_95": 0.23901287417218545,
+            "precision": 1.0,
+            "recall": 0.24301953066283127
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            100,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            9,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            5,
+            8,
+            20,
+            11,
+            13,
+            53,
+            2,
+            17,
+            21,
+            42,
+            7,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_synthetic_lowlight_test"
+      },
+      "synthetic_very_dark": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_very_dark/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.5962019174031844,
+        "recall": 0.11187969115206121,
+        "map50": 0.10501795488025313,
+        "map50_95": 0.05226408851997907,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.16252960360255747,
+            "ap50_95": 0.09678730048669279,
+            "precision": 0.2679071507784914,
+            "recall": 0.16666666666666666
+          },
+          "color issues": {
+            "ap50": 0.07652792224289179,
+            "ap50_95": 0.024790228627910714,
+            "precision": 0.1091369319936629,
+            "recall": 0.23809523809523808
+          },
+          "contamination": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "cut": {
+            "ap50": 0.08574769481844144,
+            "ap50_95": 0.03821178817705822,
+            "precision": 0.5138752645469122,
+            "recall": 0.06382978723404255
+          },
+          "gray stitch": {
+            "ap50": 0.4277509765777857,
+            "ap50_95": 0.25632287237574597,
+            "precision": 0.3752103843086367,
+            "recall": 0.5
+          },
+          "selvet": {
+            "ap50": 0.12345625749559422,
+            "ap50_95": 0.06799225416807578,
+            "precision": 0.32851600580855617,
+            "recall": 0.1206896551724138
+          },
+          "stain": {
+            "ap50": 0.0917853215006232,
+            "ap50_95": 0.032488745869311754,
+            "precision": 0.4937194744007394,
+            "recall": 0.0718954248366013
+          },
+          "chemical hazard": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "fire": {
+            "ap50": 0.002118034424170099,
+            "ap50_95": 0.0006561809670038839,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "no helmet": {
+            "ap50": 0.2184459043069591,
+            "ap50_95": 0.09033428352634434,
+            "precision": 0.8210888905727957,
+            "recall": 0.10294814927075265
+          },
+          "smoke": {
+            "ap50": 0.04461508813182973,
+            "ap50_95": 0.005966080310512936,
+            "precision": 0.2449689064284187,
+            "recall": 0.0784313725490196
+          },
+          "water leak": {
+            "ap50": 0.027238655462184874,
+            "ap50_95": 0.013619327731092437,
+            "precision": 1.0,
+            "recall": 0.0
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            3,
+            3,
+            0,
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            17
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            18,
+            18,
+            17,
+            41,
+            30,
+            54,
+            146,
+            3,
+            22,
+            44,
+            50,
+            8,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_synthetic_very_dark_test"
+      },
+      "synthetic_cctv": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_cctv/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.7155930478321514,
+        "recall": 0.4660589025747995,
+        "map50": 0.5231501428904575,
+        "map50_95": 0.3177485254234254,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9355162999185008,
+            "ap50_95": 0.6457626326282859,
+            "precision": 0.8865249906270044,
+            "recall": 0.9583333333333334
+          },
+          "color issues": {
+            "ap50": 0.727392467882875,
+            "ap50_95": 0.4166968298726408,
+            "precision": 0.6902237986939742,
+            "recall": 0.7619047619047619
+          },
+          "contamination": {
+            "ap50": 0.23544171011106357,
+            "ap50_95": 0.08570975330966875,
+            "precision": 0.8672714144776656,
+            "recall": 0.058823529411764705
+          },
+          "cut": {
+            "ap50": 0.5351666476751538,
+            "ap50_95": 0.3536748183895477,
+            "precision": 0.582240418147767,
+            "recall": 0.5319148936170213
+          },
+          "gray stitch": {
+            "ap50": 0.6695247258949747,
+            "ap50_95": 0.41987807995474186,
+            "precision": 0.8159765642535051,
+            "recall": 0.6466585363800434
+          },
+          "selvet": {
+            "ap50": 0.8760680357777486,
+            "ap50_95": 0.5904713473072274,
+            "precision": 0.7571119757751228,
+            "recall": 0.8599249742190482
+          },
+          "stain": {
+            "ap50": 0.4664343559181575,
+            "ap50_95": 0.2751924368931768,
+            "precision": 0.8847741959405682,
+            "recall": 0.32679738562091504
+          },
+          "chemical hazard": {
+            "ap50": 0.2634835722949837,
+            "ap50_95": 0.2234992058237102,
+            "precision": 0.5776933714592905,
+            "recall": 0.25
+          },
+          "fire": {
+            "ap50": 0.3878129838765131,
+            "ap50_95": 0.16236055641303956,
+            "precision": 0.6648111033390858,
+            "recall": 0.3181818181818182
+          },
+          "no helmet": {
+            "ap50": 0.5894621978206628,
+            "ap50_95": 0.2916657800796673,
+            "precision": 0.8772749554855895,
+            "recall": 0.47677757993595365
+          },
+          "smoke": {
+            "ap50": 0.19026170287149338,
+            "ap50_95": 0.07035446944194648,
+            "precision": 0.375470433638608,
+            "recall": 0.1533900182929342
+          },
+          "water leak": {
+            "ap50": 0.4012370146433633,
+            "ap50_95": 0.2777163949674519,
+            "precision": 0.6077433521476356,
+            "recall": 0.25
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            16
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            50,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            22,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            9,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            5,
+            16,
+            21,
+            18,
+            8,
+            102,
+            2,
+            15,
+            23,
+            42,
+            6,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_synthetic_cctv_test"
+      },
+      "synthetic_ir_style": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_ir_style/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.699990218527197,
+        "recall": 0.5578651447066028,
+        "map50": 0.6206685502057846,
+        "map50_95": 0.36304380310708073,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.8194780321932498,
+            "ap50_95": 0.5416321353903798,
+            "precision": 0.6971917391342024,
+            "recall": 0.6666666666666666
+          },
+          "color issues": {
+            "ap50": 0.5559684076762959,
+            "ap50_95": 0.2699858018728298,
+            "precision": 0.6551403351589239,
+            "recall": 0.5238095238095238
+          },
+          "contamination": {
+            "ap50": 0.995,
+            "ap50_95": 0.5721114947059841,
+            "precision": 0.9686047670547877,
+            "recall": 1.0
+          },
+          "cut": {
+            "ap50": 0.6803681219646662,
+            "ap50_95": 0.4264775118793346,
+            "precision": 0.6127727962854669,
+            "recall": 0.6734823997330406
+          },
+          "gray stitch": {
+            "ap50": 0.7639895929105147,
+            "ap50_95": 0.4953572290726213,
+            "precision": 0.6754598589208506,
+            "recall": 0.6875
+          },
+          "selvet": {
+            "ap50": 0.7745763241962833,
+            "ap50_95": 0.48543110469897294,
+            "precision": 0.7580079292324138,
+            "recall": 0.6896551724137931
+          },
+          "stain": {
+            "ap50": 0.7837013450931322,
+            "ap50_95": 0.4074454172854917,
+            "precision": 0.8017789827912714,
+            "recall": 0.6862745098039216
+          },
+          "chemical hazard": {
+            "ap50": 0.465378787878788,
+            "ap50_95": 0.2617124220434816,
+            "precision": 0.615117087202636,
+            "recall": 0.5
+          },
+          "fire": {
+            "ap50": 0.08285584183029436,
+            "ap50_95": 0.04715824313439393,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "no helmet": {
+            "ap50": 0.8021924159528591,
+            "ap50_95": 0.44339048533783554,
+            "precision": 0.8362713663677969,
+            "recall": 0.6444444444444445
+          },
+          "smoke": {
+            "ap50": 0.31993225446902473,
+            "ap50_95": 0.1447882968094844,
+            "precision": 0.41064179649156035,
+            "recall": 0.37254901960784315
+          },
+          "water leak": {
+            "ap50": 0.40458147830430446,
+            "ap50_95": 0.2610354950541585,
+            "precision": 0.36889596368645505,
+            "recall": 0.25
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            16,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            32,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            35,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            109,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            29,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            20,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            8,
+            9,
+            0,
+            15,
+            13,
+            18,
+            43,
+            1,
+            21,
+            16,
+            31,
+            4,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/baseline_synthetic_ir_style_test"
+      }
+    },
+    "candidate": {
+      "standard_val": {
+        "split": "val",
+        "data": "/tmp/eap1/source/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.7785419628665498,
+        "recall": 0.746689383779184,
+        "map50": 0.7867309948935953,
+        "map50_95": 0.4838382621435347,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9055184719960384,
+            "ap50_95": 0.7126667387344944,
+            "precision": 0.8408206175048905,
+            "recall": 0.869260507758016
+          },
+          "color issues": {
+            "ap50": 0.6977500946541704,
+            "ap50_95": 0.4104589051962663,
+            "precision": 0.7797169751962736,
+            "recall": 0.6
+          },
+          "contamination": {
+            "ap50": 0.9920238095238096,
+            "ap50_95": 0.6083265191600525,
+            "precision": 0.9446213780137185,
+            "recall": 0.9818181818181818
+          },
+          "cut": {
+            "ap50": 0.8434343631484313,
+            "ap50_95": 0.5682156310319013,
+            "precision": 0.7910998074064312,
+            "recall": 0.803921568627451
+          },
+          "gray stitch": {
+            "ap50": 0.7805537676994212,
+            "ap50_95": 0.5514314790966555,
+            "precision": 0.7278649188680971,
+            "recall": 0.7071241982599769
+          },
+          "selvet": {
+            "ap50": 0.8991982457186872,
+            "ap50_95": 0.6080140964205795,
+            "precision": 0.8124706390048809,
+            "recall": 0.8677685950413223
+          },
+          "stain": {
+            "ap50": 0.9325311476925285,
+            "ap50_95": 0.6322611742955432,
+            "precision": 0.9065377802294802,
+            "recall": 0.9102564102564102
+          },
+          "chemical hazard": {
+            "ap50": 0.5819645467252811,
+            "ap50_95": 0.27893775034667795,
+            "precision": 0.7271368618373746,
+            "recall": 0.5029175471082697
+          },
+          "fire": {
+            "ap50": 0.646677170817638,
+            "ap50_95": 0.2886428764456281,
+            "precision": 0.6611658153343811,
+            "recall": 0.6413043478260869
+          },
+          "no helmet": {
+            "ap50": 0.8899694419248935,
+            "ap50_95": 0.48440187354822195,
+            "precision": 0.8850421909043527,
+            "recall": 0.8554309650837232
+          },
+          "smoke": {
+            "ap50": 0.5967631260319832,
+            "ap50_95": 0.26258463547746713,
+            "precision": 0.6700296379266576,
+            "recall": 0.5538036169041042
+          },
+          "water leak": {
+            "ap50": 0.6743877527902618,
+            "ap50_95": 0.40011746596892916,
+            "precision": 0.59599693217206,
+            "recall": 0.6666666666666666
+          }
+        },
+        "counts": {
+          "images": 777,
+          "objects": 1334,
+          "class_objects": {
+            "baekra": 79,
+            "color issues": 30,
+            "contamination": 55,
+            "cut": 102,
+            "gray stitch": 87,
+            "selvet": 121,
+            "stain": 312,
+            "chemical hazard": 53,
+            "fire": 92,
+            "no helmet": 216,
+            "smoke": 154,
+            "water leak": 33
+          }
+        },
+        "confusion_matrix": [
+          [
+            70,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            86,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            64,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            106,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            26
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            288,
+            0,
+            0,
+            0,
+            0,
+            0,
+            30
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0,
+            0,
+            12
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            62,
+            1,
+            0,
+            0,
+            30
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            190,
+            0,
+            0,
+            29
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            91,
+            0,
+            48
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            26,
+            15
+          ],
+          [
+            9,
+            12,
+            1,
+            16,
+            23,
+            14,
+            24,
+            22,
+            30,
+            25,
+            63,
+            7,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_standard_val_val"
+      },
+      "standard": {
+        "split": "test",
+        "data": "/tmp/eap1/source/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.8098536971030742,
+        "recall": 0.7622940183374577,
+        "map50": 0.7896464161378963,
+        "map50_95": 0.5168183164969296,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9677564102564105,
+            "ap50_95": 0.7686330016555868,
+            "precision": 0.9228472661965441,
+            "recall": 0.9968900630782012
+          },
+          "color issues": {
+            "ap50": 0.7593364080303854,
+            "ap50_95": 0.452970315788523,
+            "precision": 0.7587903549760012,
+            "recall": 0.7619047619047619
+          },
+          "contamination": {
+            "ap50": 0.975059523809524,
+            "ap50_95": 0.6046487205591465,
+            "precision": 0.8367104389662594,
+            "recall": 0.9411764705882353
+          },
+          "cut": {
+            "ap50": 0.7075041704192375,
+            "ap50_95": 0.5173239369755906,
+            "precision": 0.6627325392242915,
+            "recall": 0.7659574468085106
+          },
+          "gray stitch": {
+            "ap50": 0.8335446081628317,
+            "ap50_95": 0.5984486351220195,
+            "precision": 0.7952127976002109,
+            "recall": 0.7281079006009238
+          },
+          "selvet": {
+            "ap50": 0.9297937907469352,
+            "ap50_95": 0.6864711643492394,
+            "precision": 0.8936645257599478,
+            "recall": 0.896551724137931
+          },
+          "stain": {
+            "ap50": 0.9355042189299456,
+            "ap50_95": 0.6036311074055495,
+            "precision": 0.8698491967236717,
+            "recall": 0.934640522875817
+          },
+          "chemical hazard": {
+            "ap50": 0.5325943168077387,
+            "ap50_95": 0.33470807863903596,
+            "precision": 1.0,
+            "recall": 0.49864206126398636
+          },
+          "fire": {
+            "ap50": 0.5919465486324268,
+            "ap50_95": 0.30577860922675654,
+            "precision": 0.7559040788144396,
+            "recall": 0.5637035163355406
+          },
+          "no helmet": {
+            "ap50": 0.8830271075655938,
+            "ap50_95": 0.4727519490325034,
+            "precision": 0.8770983623436105,
+            "recall": 0.7930725077489833
+          },
+          "smoke": {
+            "ap50": 0.6707732236270603,
+            "ap50_95": 0.373648207472988,
+            "precision": 0.7659797534885752,
+            "recall": 0.6418812447066015
+          },
+          "water leak": {
+            "ap50": 0.6889166666666666,
+            "ap50_95": 0.4828060717362158,
+            "precision": 0.5794550511433388,
+            "recall": 0.625
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            145,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            39,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            36,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            4,
+            1,
+            11,
+            11,
+            6,
+            8,
+            1,
+            8,
+            6,
+            15,
+            2,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_standard_test"
+      },
+      "natural_dark": {
+        "split": "test",
+        "data": "/tmp/eap1/natural_dark/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.6305057726883535,
+        "recall": 0.7261002886002886,
+        "map50": 0.7760013644366093,
+        "map50_95": 0.4296000334034325,
+        "per_class": {
+          "gray stitch": {
+            "ap50": 0.5044835164835166,
+            "ap50_95": 0.30066060690187013,
+            "precision": 0.5241227210006754,
+            "recall": 0.3333333333333333
+          },
+          "chemical hazard": {
+            "ap50": 0.995,
+            "ap50_95": 0.3011184210526316,
+            "precision": 0.6491429792429475,
+            "recall": 1.0
+          },
+          "fire": {
+            "ap50": 0.7030545136052703,
+            "ap50_95": 0.37337165320191645,
+            "precision": 0.69988206077259,
+            "recall": 0.6363636363636364
+          },
+          "no helmet": {
+            "ap50": 0.9048357250755288,
+            "ap50_95": 0.5943482201049222,
+            "precision": 0.7141855836115466,
+            "recall": 0.9285714285714286
+          },
+          "smoke": {
+            "ap50": 0.8286344314553407,
+            "ap50_95": 0.43483344201639734,
+            "precision": 0.7918857295608488,
+            "recall": 0.7916666666666666
+          },
+          "water leak": {
+            "ap50": 0.72,
+            "ap50_95": 0.5732678571428571,
+            "precision": 0.4038155619415126,
+            "recall": 0.6666666666666666
+          }
+        },
+        "counts": {
+          "images": 24,
+          "objects": 59,
+          "class_objects": {
+            "baekra": 0,
+            "color issues": 0,
+            "contamination": 0,
+            "cut": 0,
+            "gray stitch": 6,
+            "selvet": 0,
+            "stain": 0,
+            "chemical hazard": 1,
+            "fire": 11,
+            "no helmet": 14,
+            "smoke": 24,
+            "water leak": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            1,
+            6,
+            1,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_natural_dark_test"
+      },
+      "synthetic_lowlight": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_lowlight/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.726029816267506,
+        "recall": 0.6620013365117774,
+        "map50": 0.7143484245504927,
+        "map50_95": 0.44212425004168854,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.94467265402048,
+            "ap50_95": 0.6940883884706003,
+            "precision": 0.8395533671171799,
+            "recall": 0.9166666666666666
+          },
+          "color issues": {
+            "ap50": 0.8042712693087138,
+            "ap50_95": 0.44110989145599594,
+            "precision": 0.8170012045799342,
+            "recall": 0.8506494823324949
+          },
+          "contamination": {
+            "ap50": 0.906305202661827,
+            "ap50_95": 0.4732562007376586,
+            "precision": 0.8640164249192702,
+            "recall": 0.8235294117647058
+          },
+          "cut": {
+            "ap50": 0.7049855131622227,
+            "ap50_95": 0.47064532795799463,
+            "precision": 0.6360870099287486,
+            "recall": 0.723404255319149
+          },
+          "gray stitch": {
+            "ap50": 0.8255916994732099,
+            "ap50_95": 0.5711613246230511,
+            "precision": 0.7242011360941142,
+            "recall": 0.75
+          },
+          "selvet": {
+            "ap50": 0.9244177895383937,
+            "ap50_95": 0.6510539441972918,
+            "precision": 0.838156321512213,
+            "recall": 0.896551724137931
+          },
+          "stain": {
+            "ap50": 0.8878136996391777,
+            "ap50_95": 0.5273236010235319,
+            "precision": 0.8268140897346294,
+            "recall": 0.8562091503267973
+          },
+          "chemical hazard": {
+            "ap50": 0.37102498618457413,
+            "ap50_95": 0.29599882436471525,
+            "precision": 0.5442773931097051,
+            "recall": 0.25
+          },
+          "fire": {
+            "ap50": 0.4081690877953126,
+            "ap50_95": 0.20333048126497832,
+            "precision": 0.48372063879268806,
+            "recall": 0.3181818181818182
+          },
+          "no helmet": {
+            "ap50": 0.8031225370543305,
+            "ap50_95": 0.3952112960926272,
+            "precision": 0.875087624985002,
+            "recall": 0.6666666666666666
+          },
+          "smoke": {
+            "ap50": 0.4364544854155007,
+            "ap50_95": 0.22058411340500972,
+            "precision": 0.663226252251507,
+            "recall": 0.39215686274509803
+          },
+          "water leak": {
+            "ap50": 0.5553521703521702,
+            "ap50_95": 0.36172760690680766,
+            "precision": 0.60021633218508,
+            "recall": 0.5
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            22,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            20
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            38,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            135,
+            0,
+            0,
+            0,
+            0,
+            0,
+            22
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            19,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            1
+          ],
+          [
+            2,
+            4,
+            3,
+            13,
+            10,
+            6,
+            18,
+            2,
+            13,
+            14,
+            32,
+            3,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_synthetic_lowlight_test"
+      },
+      "synthetic_very_dark": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_very_dark/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.5799722423937779,
+        "recall": 0.32864622958094175,
+        "map50": 0.33091510017616554,
+        "map50_95": 0.17923699438430538,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.56263828577139,
+            "ap50_95": 0.30950894588980915,
+            "precision": 0.544842865141098,
+            "recall": 0.5416666666666666
+          },
+          "color issues": {
+            "ap50": 0.556725032541002,
+            "ap50_95": 0.2405652423937774,
+            "precision": 0.5523520133740407,
+            "recall": 0.6666666666666666
+          },
+          "contamination": {
+            "ap50": 0.12583757765834253,
+            "ap50_95": 0.06089016115700148,
+            "precision": 0.3265785801443203,
+            "recall": 0.08885434515463542
+          },
+          "cut": {
+            "ap50": 0.40567066302070215,
+            "ap50_95": 0.2628682788428559,
+            "precision": 0.646795053875683,
+            "recall": 0.40425531914893614
+          },
+          "gray stitch": {
+            "ap50": 0.6837321898993687,
+            "ap50_95": 0.4175981838042738,
+            "precision": 0.6018200724922076,
+            "recall": 0.6613255156632184
+          },
+          "selvet": {
+            "ap50": 0.5328488858431883,
+            "ap50_95": 0.3035965908998843,
+            "precision": 0.6102074975924571,
+            "recall": 0.5668422480374482
+          },
+          "stain": {
+            "ap50": 0.3020071736421772,
+            "ap50_95": 0.1520347131725063,
+            "precision": 0.42823912399038566,
+            "recall": 0.3660130718954248
+          },
+          "chemical hazard": {
+            "ap50": 0.013013006372139499,
+            "ap50_95": 0.0078078038232836985,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "fire": {
+            "ap50": 0.05431906239973788,
+            "ap50_95": 0.025544194720756717,
+            "precision": 0.12266480686302868,
+            "recall": 0.09090909090909091
+          },
+          "no helmet": {
+            "ap50": 0.2594795688676091,
+            "ap50_95": 0.14088643746461454,
+            "precision": 0.7439174230220295,
+            "recall": 0.17777777777777778
+          },
+          "smoke": {
+            "ap50": 0.11130460194151288,
+            "ap50_95": 0.030602492226148203,
+            "precision": 0.3822494722300838,
+            "recall": 0.13725490196078433
+          },
+          "water leak": {
+            "ap50": 0.3634051541568164,
+            "ap50_95": 0.19894088821675243,
+            "precision": 1.0,
+            "recall": 0.24218915109065176
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            28,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            29
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            11,
+            7,
+            16,
+            32,
+            20,
+            30,
+            102,
+            4,
+            21,
+            39,
+            47,
+            7,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_synthetic_very_dark_test"
+      },
+      "synthetic_cctv": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_cctv/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.669362336127981,
+        "recall": 0.569579703873402,
+        "map50": 0.5956374699968839,
+        "map50_95": 0.36703212222830683,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.9454607843137256,
+            "ap50_95": 0.7101934668075487,
+            "precision": 0.8242050064161754,
+            "recall": 0.9583333333333334
+          },
+          "color issues": {
+            "ap50": 0.6703509003899875,
+            "ap50_95": 0.3675286864770343,
+            "precision": 0.7500113906618583,
+            "recall": 0.7142857142857143
+          },
+          "contamination": {
+            "ap50": 0.3611824891239873,
+            "ap50_95": 0.12183983510766985,
+            "precision": 0.5153341812818716,
+            "recall": 0.29411764705882354
+          },
+          "cut": {
+            "ap50": 0.5792750646637773,
+            "ap50_95": 0.4176377970321348,
+            "precision": 0.6154748495986754,
+            "recall": 0.574468085106383
+          },
+          "gray stitch": {
+            "ap50": 0.7044761912964322,
+            "ap50_95": 0.4701625983221606,
+            "precision": 0.7279672893828298,
+            "recall": 0.7291666666666666
+          },
+          "selvet": {
+            "ap50": 0.9077327070412503,
+            "ap50_95": 0.6168048061006765,
+            "precision": 0.7845528207870702,
+            "recall": 0.8793103448275862
+          },
+          "stain": {
+            "ap50": 0.5970282453811568,
+            "ap50_95": 0.3260976220278395,
+            "precision": 0.6722098600351122,
+            "recall": 0.5359477124183006
+          },
+          "chemical hazard": {
+            "ap50": 0.2814804719104639,
+            "ap50_95": 0.26252780649088464,
+            "precision": 0.5417190998679349,
+            "recall": 0.25
+          },
+          "fire": {
+            "ap50": 0.467052590772735,
+            "ap50_95": 0.23732421617633404,
+            "precision": 0.45695401845583045,
+            "recall": 0.4591618687070083
+          },
+          "no helmet": {
+            "ap50": 0.7322261502295015,
+            "ap50_95": 0.3435145850901432,
+            "precision": 0.8746902493036776,
+            "recall": 0.620515151718045
+          },
+          "smoke": {
+            "ap50": 0.3738539490803555,
+            "ap50_95": 0.16986122461888215,
+            "precision": 0.4825457693893866,
+            "recall": 0.35294117647058826
+          },
+          "water leak": {
+            "ap50": 0.5275300957592339,
+            "ap50_95": 0.36089282248837395,
+            "precision": 0.7866834983553497,
+            "recall": 0.4667087458883741
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            27,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            34,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            80,
+            0,
+            0,
+            0,
+            0,
+            0,
+            30
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            14,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            13,
+            20,
+            14,
+            7,
+            73,
+            2,
+            13,
+            17,
+            37,
+            7,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_synthetic_cctv_test"
+      },
+      "synthetic_ir_style": {
+        "split": "test",
+        "data": "/tmp/eap1/eap1_dataset_v1/domains/synthetic_ir_style/data.yaml",
+        "settings": {
+          "imgsz": 640,
+          "batch": 32,
+          "conf": 0.001,
+          "iou": 0.7
+        },
+        "metric_unit": "fraction_0_to_1",
+        "precision": 0.7096530049832687,
+        "recall": 0.6609635968136538,
+        "map50": 0.7136379012394573,
+        "map50_95": 0.428834451020341,
+        "per_class": {
+          "baekra": {
+            "ap50": 0.8769483937394301,
+            "ap50_95": 0.5976527947125694,
+            "precision": 0.835690207807539,
+            "recall": 0.8333333333333334
+          },
+          "color issues": {
+            "ap50": 0.6400943064214575,
+            "ap50_95": 0.32635272257052983,
+            "precision": 0.743882416423337,
+            "recall": 0.6190476190476191
+          },
+          "contamination": {
+            "ap50": 0.995,
+            "ap50_95": 0.5565182750472899,
+            "precision": 0.8910544138635472,
+            "recall": 1.0
+          },
+          "cut": {
+            "ap50": 0.6862854168487219,
+            "ap50_95": 0.48570451852247876,
+            "precision": 0.6327705677282512,
+            "recall": 0.7446808510638298
+          },
+          "gray stitch": {
+            "ap50": 0.7809429332415355,
+            "ap50_95": 0.5694652875851032,
+            "precision": 0.728133481838048,
+            "recall": 0.7254313061324301
+          },
+          "selvet": {
+            "ap50": 0.8490437169254809,
+            "ap50_95": 0.5631992586888457,
+            "precision": 0.8450372230987415,
+            "recall": 0.7758620689655172
+          },
+          "stain": {
+            "ap50": 0.8470395361791887,
+            "ap50_95": 0.4874014348568333,
+            "precision": 0.7851595955033102,
+            "recall": 0.8431372549019608
+          },
+          "chemical hazard": {
+            "ap50": 0.4309765594519095,
+            "ap50_95": 0.3267392999828332,
+            "precision": 0.41940564455309015,
+            "recall": 0.5
+          },
+          "fire": {
+            "ap50": 0.3044867019554689,
+            "ap50_95": 0.1036253609296672,
+            "precision": 0.3992168601731553,
+            "recall": 0.13636363636363635
+          },
+          "no helmet": {
+            "ap50": 0.8114108223716712,
+            "ap50_95": 0.42357451083030984,
+            "precision": 0.7940971521858962,
+            "recall": 0.7714365726807791
+          },
+          "smoke": {
+            "ap50": 0.5711082459204414,
+            "ap50_95": 0.307662691680065,
+            "precision": 0.5251847754308383,
+            "recall": 0.6072705192747397
+          },
+          "water leak": {
+            "ap50": 0.7703181818181818,
+            "ap50_95": 0.3981172568375667,
+            "precision": 0.9162037211934705,
+            "recall": 0.375
+          }
+        },
+        "counts": {
+          "images": 334,
+          "objects": 498,
+          "class_objects": {
+            "baekra": 24,
+            "color issues": 21,
+            "contamination": 17,
+            "cut": 47,
+            "gray stitch": 48,
+            "selvet": 58,
+            "stain": 153,
+            "chemical hazard": 4,
+            "fire": 22,
+            "no helmet": 45,
+            "smoke": 51,
+            "water leak": 8
+          }
+        },
+        "confusion_matrix": [
+          [
+            20,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            35,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            34,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            12
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            127,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            30,
+            0,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            4,
+            6,
+            0,
+            12,
+            14,
+            13,
+            26,
+            1,
+            19,
+            12,
+            21,
+            4,
+            0
+          ]
+        ],
+        "confusion_labels": [
+          "baekra",
+          "color issues",
+          "contamination",
+          "cut",
+          "gray stitch",
+          "selvet",
+          "stain",
+          "chemical hazard",
+          "fire",
+          "no helmet",
+          "smoke",
+          "water leak",
+          "background"
+        ],
+        "output_dir": "/__modal/volumes/vo-Iped9SvbAuEJVsnZXQUdZQ/evaluations/candidate_synthetic_ir_style_test"
+      }
+    },
+    "comparison": {
+      "standard_val": {
+        "overall": {
+          "precision": 0.010273575384276867,
+          "recall": 0.004360312378963838,
+          "map50": 0.014263208886179934,
+          "map50_95": 0.0272528894643963
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.8928843612947127,
+            "candidate_ap50": 0.9055184719960384,
+            "delta_ap50": 0.012634110701325696
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.454262986470782,
+            "candidate_ap50": 0.5819645467252811,
+            "delta_ap50": 0.12770156025449908
+          },
+          "color issues": {
+            "baseline_ap50": 0.6885703957644702,
+            "candidate_ap50": 0.6977500946541704,
+            "delta_ap50": 0.00917969888970016
+          },
+          "contamination": {
+            "baseline_ap50": 0.995,
+            "candidate_ap50": 0.9920238095238096,
+            "delta_ap50": -0.0029761904761903546
+          },
+          "cut": {
+            "baseline_ap50": 0.8718209682020077,
+            "candidate_ap50": 0.8434343631484313,
+            "delta_ap50": -0.028386605053576375
+          },
+          "fire": {
+            "baseline_ap50": 0.6392337128765027,
+            "candidate_ap50": 0.646677170817638,
+            "delta_ap50": 0.007443457941135323
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.8029489783970449,
+            "candidate_ap50": 0.7805537676994212,
+            "delta_ap50": -0.022395210697623735
+          },
+          "no helmet": {
+            "baseline_ap50": 0.9021914983602612,
+            "candidate_ap50": 0.8899694419248935,
+            "delta_ap50": -0.012222056435367779
+          },
+          "selvet": {
+            "baseline_ap50": 0.8915843464691897,
+            "candidate_ap50": 0.8991982457186872,
+            "delta_ap50": 0.007613899249497513
+          },
+          "smoke": {
+            "baseline_ap50": 0.5701433789422463,
+            "candidate_ap50": 0.5967631260319832,
+            "delta_ap50": 0.02661974708973691
+          },
+          "stain": {
+            "baseline_ap50": 0.9147414377663194,
+            "candidate_ap50": 0.9325311476925285,
+            "delta_ap50": 0.017789709926209096
+          },
+          "water leak": {
+            "baseline_ap50": 0.646231367545448,
+            "candidate_ap50": 0.6743877527902618,
+            "delta_ap50": 0.028156385244813786
+          }
+        }
+      },
+      "standard": {
+        "overall": {
+          "precision": 0.0818563738650584,
+          "recall": -0.017910057518611522,
+          "map50": 0.007941721385837042,
+          "map50_95": 0.02488448224810358
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.9670000000000003,
+            "candidate_ap50": 0.9677564102564105,
+            "delta_ap50": 0.000756410256410156
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.42390853014592933,
+            "candidate_ap50": 0.5325943168077387,
+            "delta_ap50": 0.10868578666180939
+          },
+          "color issues": {
+            "baseline_ap50": 0.7959356630930488,
+            "candidate_ap50": 0.7593364080303854,
+            "delta_ap50": -0.03659925506266337
+          },
+          "contamination": {
+            "baseline_ap50": 0.9698148148148149,
+            "candidate_ap50": 0.975059523809524,
+            "delta_ap50": 0.00524470899470908
+          },
+          "cut": {
+            "baseline_ap50": 0.6902213392095276,
+            "candidate_ap50": 0.7075041704192375,
+            "delta_ap50": 0.01728283120970997
+          },
+          "fire": {
+            "baseline_ap50": 0.6312920478396786,
+            "candidate_ap50": 0.5919465486324268,
+            "delta_ap50": -0.03934549920725183
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.8243832126167224,
+            "candidate_ap50": 0.8335446081628317,
+            "delta_ap50": 0.009161395546109286
+          },
+          "no helmet": {
+            "baseline_ap50": 0.920515306129618,
+            "candidate_ap50": 0.8830271075655938,
+            "delta_ap50": -0.03748819856402419
+          },
+          "selvet": {
+            "baseline_ap50": 0.9212746539669596,
+            "candidate_ap50": 0.9297937907469352,
+            "delta_ap50": 0.008519136779975622
+          },
+          "smoke": {
+            "baseline_ap50": 0.5450266926766012,
+            "candidate_ap50": 0.6707732236270603,
+            "delta_ap50": 0.12574653095045907
+          },
+          "stain": {
+            "baseline_ap50": 0.9207038197810358,
+            "candidate_ap50": 0.9355042189299456,
+            "delta_ap50": 0.014800399148909849
+          },
+          "water leak": {
+            "baseline_ap50": 0.7703802567507748,
+            "candidate_ap50": 0.6889166666666666,
+            "delta_ap50": -0.0814635900841082
+          }
+        }
+      },
+      "natural_dark": {
+        "overall": {
+          "precision": 0.07105563038995921,
+          "recall": -0.07871239965480259,
+          "map50": 0.07414787002108258,
+          "map50_95": 0.04837476657780948
+        },
+        "per_class": {
+          "chemical hazard": {
+            "baseline_ap50": 0.4975,
+            "candidate_ap50": 0.995,
+            "delta_ap50": 0.4975
+          },
+          "fire": {
+            "baseline_ap50": 0.7607410179640718,
+            "candidate_ap50": 0.7030545136052703,
+            "delta_ap50": -0.057686504358801516
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.509929143126177,
+            "candidate_ap50": 0.5044835164835166,
+            "delta_ap50": -0.005445626642660351
+          },
+          "no helmet": {
+            "baseline_ap50": 0.9119750745378653,
+            "candidate_ap50": 0.9048357250755288,
+            "delta_ap50": -0.0071393494623365195
+          },
+          "smoke": {
+            "baseline_ap50": 0.7009757308650462,
+            "candidate_ap50": 0.8286344314553407,
+            "delta_ap50": 0.1276587005902945
+          },
+          "water leak": {
+            "baseline_ap50": 0.8300000000000002,
+            "candidate_ap50": 0.72,
+            "delta_ap50": -0.11000000000000021
+          }
+        }
+      },
+      "synthetic_lowlight": {
+        "overall": {
+          "precision": 0.038833448256474945,
+          "recall": 0.10855029296578933,
+          "map50": 0.12810280384336414,
+          "map50_95": 0.10281319240696091
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.9318462783171524,
+            "candidate_ap50": 0.94467265402048,
+            "delta_ap50": 0.012826375703327564
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.24567200342726778,
+            "candidate_ap50": 0.37102498618457413,
+            "delta_ap50": 0.12535298275730636
+          },
+          "color issues": {
+            "baseline_ap50": 0.6874364370679272,
+            "candidate_ap50": 0.8042712693087138,
+            "delta_ap50": 0.11683483224078661
+          },
+          "contamination": {
+            "baseline_ap50": 0.8180269905533063,
+            "candidate_ap50": 0.906305202661827,
+            "delta_ap50": 0.08827821210852071
+          },
+          "cut": {
+            "baseline_ap50": 0.5887076072432906,
+            "candidate_ap50": 0.7049855131622227,
+            "delta_ap50": 0.11627790591893206
+          },
+          "fire": {
+            "baseline_ap50": 0.20892757179345267,
+            "candidate_ap50": 0.4081690877953126,
+            "delta_ap50": 0.1992415160018599
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.7937241609057769,
+            "candidate_ap50": 0.8255916994732099,
+            "delta_ap50": 0.03186753856743296
+          },
+          "no helmet": {
+            "baseline_ap50": 0.6129733978362946,
+            "candidate_ap50": 0.8031225370543305,
+            "delta_ap50": 0.1901491392180359
+          },
+          "selvet": {
+            "baseline_ap50": 0.835710606682621,
+            "candidate_ap50": 0.9244177895383937,
+            "delta_ap50": 0.08870718285577273
+          },
+          "smoke": {
+            "baseline_ap50": 0.17248383284685578,
+            "candidate_ap50": 0.4364544854155007,
+            "delta_ap50": 0.26397065256864494
+          },
+          "stain": {
+            "baseline_ap50": 0.7090643896261674,
+            "candidate_ap50": 0.8878136996391777,
+            "delta_ap50": 0.1787493100130103
+          },
+          "water leak": {
+            "baseline_ap50": 0.4303741721854305,
+            "candidate_ap50": 0.5553521703521702,
+            "delta_ap50": 0.12497799816673971
+          }
+        }
+      },
+      "synthetic_very_dark": {
+        "overall": {
+          "precision": -0.01622967500940653,
+          "recall": 0.21676653842888055,
+          "map50": 0.22589714529591243,
+          "map50_95": 0.1269729058643263
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.16252960360255747,
+            "candidate_ap50": 0.56263828577139,
+            "delta_ap50": 0.4001086821688325
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.0,
+            "candidate_ap50": 0.013013006372139499,
+            "delta_ap50": 0.013013006372139499
+          },
+          "color issues": {
+            "baseline_ap50": 0.07652792224289179,
+            "candidate_ap50": 0.556725032541002,
+            "delta_ap50": 0.48019711029811024
+          },
+          "contamination": {
+            "baseline_ap50": 0.0,
+            "candidate_ap50": 0.12583757765834253,
+            "delta_ap50": 0.12583757765834253
+          },
+          "cut": {
+            "baseline_ap50": 0.08574769481844144,
+            "candidate_ap50": 0.40567066302070215,
+            "delta_ap50": 0.31992296820226074
+          },
+          "fire": {
+            "baseline_ap50": 0.002118034424170099,
+            "candidate_ap50": 0.05431906239973788,
+            "delta_ap50": 0.05220102797556778
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.4277509765777857,
+            "candidate_ap50": 0.6837321898993687,
+            "delta_ap50": 0.25598121332158297
+          },
+          "no helmet": {
+            "baseline_ap50": 0.2184459043069591,
+            "candidate_ap50": 0.2594795688676091,
+            "delta_ap50": 0.041033664560649996
+          },
+          "selvet": {
+            "baseline_ap50": 0.12345625749559422,
+            "candidate_ap50": 0.5328488858431883,
+            "delta_ap50": 0.40939262834759416
+          },
+          "smoke": {
+            "baseline_ap50": 0.04461508813182973,
+            "candidate_ap50": 0.11130460194151288,
+            "delta_ap50": 0.06668951380968316
+          },
+          "stain": {
+            "baseline_ap50": 0.0917853215006232,
+            "candidate_ap50": 0.3020071736421772,
+            "delta_ap50": 0.21022185214155403
+          },
+          "water leak": {
+            "baseline_ap50": 0.027238655462184874,
+            "candidate_ap50": 0.3634051541568164,
+            "delta_ap50": 0.33616649869463155
+          }
+        }
+      },
+      "synthetic_cctv": {
+        "overall": {
+          "precision": -0.04623071170417037,
+          "recall": 0.10352080129860247,
+          "map50": 0.07248732710642647,
+          "map50_95": 0.049283596804881424
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.9355162999185008,
+            "candidate_ap50": 0.9454607843137256,
+            "delta_ap50": 0.009944484395224773
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.2634835722949837,
+            "candidate_ap50": 0.2814804719104639,
+            "delta_ap50": 0.017996899615480177
+          },
+          "color issues": {
+            "baseline_ap50": 0.727392467882875,
+            "candidate_ap50": 0.6703509003899875,
+            "delta_ap50": -0.05704156749288758
+          },
+          "contamination": {
+            "baseline_ap50": 0.23544171011106357,
+            "candidate_ap50": 0.3611824891239873,
+            "delta_ap50": 0.12574077901292374
+          },
+          "cut": {
+            "baseline_ap50": 0.5351666476751538,
+            "candidate_ap50": 0.5792750646637773,
+            "delta_ap50": 0.044108416988623556
+          },
+          "fire": {
+            "baseline_ap50": 0.3878129838765131,
+            "candidate_ap50": 0.467052590772735,
+            "delta_ap50": 0.07923960689622189
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.6695247258949747,
+            "candidate_ap50": 0.7044761912964322,
+            "delta_ap50": 0.03495146540145755
+          },
+          "no helmet": {
+            "baseline_ap50": 0.5894621978206628,
+            "candidate_ap50": 0.7322261502295015,
+            "delta_ap50": 0.14276395240883877
+          },
+          "selvet": {
+            "baseline_ap50": 0.8760680357777486,
+            "candidate_ap50": 0.9077327070412503,
+            "delta_ap50": 0.0316646712635017
+          },
+          "smoke": {
+            "baseline_ap50": 0.19026170287149338,
+            "candidate_ap50": 0.3738539490803555,
+            "delta_ap50": 0.18359224620886214
+          },
+          "stain": {
+            "baseline_ap50": 0.4664343559181575,
+            "candidate_ap50": 0.5970282453811568,
+            "delta_ap50": 0.13059388946299932
+          },
+          "water leak": {
+            "baseline_ap50": 0.4012370146433633,
+            "candidate_ap50": 0.5275300957592339,
+            "delta_ap50": 0.12629308111587062
+          }
+        }
+      },
+      "synthetic_ir_style": {
+        "overall": {
+          "precision": 0.00966278645607166,
+          "recall": 0.10309845210705104,
+          "map50": 0.09296935103367265,
+          "map50_95": 0.06579064791326028
+        },
+        "per_class": {
+          "baekra": {
+            "baseline_ap50": 0.8194780321932498,
+            "candidate_ap50": 0.8769483937394301,
+            "delta_ap50": 0.05747036154618035
+          },
+          "chemical hazard": {
+            "baseline_ap50": 0.465378787878788,
+            "candidate_ap50": 0.4309765594519095,
+            "delta_ap50": -0.03440222842687851
+          },
+          "color issues": {
+            "baseline_ap50": 0.5559684076762959,
+            "candidate_ap50": 0.6400943064214575,
+            "delta_ap50": 0.08412589874516163
+          },
+          "contamination": {
+            "baseline_ap50": 0.995,
+            "candidate_ap50": 0.995,
+            "delta_ap50": 0.0
+          },
+          "cut": {
+            "baseline_ap50": 0.6803681219646662,
+            "candidate_ap50": 0.6862854168487219,
+            "delta_ap50": 0.005917294884055679
+          },
+          "fire": {
+            "baseline_ap50": 0.08285584183029436,
+            "candidate_ap50": 0.3044867019554689,
+            "delta_ap50": 0.22163086012517452
+          },
+          "gray stitch": {
+            "baseline_ap50": 0.7639895929105147,
+            "candidate_ap50": 0.7809429332415355,
+            "delta_ap50": 0.016953340331020805
+          },
+          "no helmet": {
+            "baseline_ap50": 0.8021924159528591,
+            "candidate_ap50": 0.8114108223716712,
+            "delta_ap50": 0.009218406418812108
+          },
+          "selvet": {
+            "baseline_ap50": 0.7745763241962833,
+            "candidate_ap50": 0.8490437169254809,
+            "delta_ap50": 0.07446739272919756
+          },
+          "smoke": {
+            "baseline_ap50": 0.31993225446902473,
+            "candidate_ap50": 0.5711082459204414,
+            "delta_ap50": 0.25117599145141667
+          },
+          "stain": {
+            "baseline_ap50": 0.7837013450931322,
+            "candidate_ap50": 0.8470395361791887,
+            "delta_ap50": 0.06333819108605654
+          },
+          "water leak": {
+            "baseline_ap50": 0.40458147830430446,
+            "candidate_ap50": 0.7703181818181818,
+            "delta_ap50": 0.3657367035138773
+          }
+        }
+      }
+    }
+  },
+  "map50_95_improved_by_domain": {
+    "standard_val": true,
+    "standard": true,
+    "natural_dark": true,
+    "synthetic_lowlight": true,
+    "synthetic_very_dark": true,
+    "synthetic_cctv": true,
+    "synthetic_ir_style": true
+  },
+  "regressions_ap50_ge_5pp": [
+    {
+      "domain": "standard",
+      "cls": "water leak",
+      "baseline_ap50": 0.7703802567507748,
+      "candidate_ap50": 0.6889166666666666,
+      "delta_ap50": -0.0814635900841082
+    },
+    {
+      "domain": "natural_dark",
+      "cls": "fire",
+      "baseline_ap50": 0.7607410179640718,
+      "candidate_ap50": 0.7030545136052703,
+      "delta_ap50": -0.057686504358801516
+    },
+    {
+      "domain": "natural_dark",
+      "cls": "water leak",
+      "baseline_ap50": 0.8300000000000002,
+      "candidate_ap50": 0.72,
+      "delta_ap50": -0.11000000000000021
+    },
+    {
+      "domain": "synthetic_cctv",
+      "cls": "color issues",
+      "baseline_ap50": 0.727392467882875,
+      "candidate_ap50": 0.6703509003899875,
+      "delta_ap50": -0.05704156749288758
+    }
+  ],
+  "tests": {
+    "collected": 41,
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "error": 0
+  },
+  "repository_tests": {
+    "collected": 480,
+    "passed": 476,
+    "failed": 2,
+    "skipped": 2,
+    "error": 0
+  },
+  "export": {
+    "status": "not_exported",
+    "reason": "Not deployment-validated; CME-OPT2 ONNX/OpenVINO artifacts unchanged"
+  },
+  "dod": {
+    "Repository and Git state preserved": "PASS",
+    "Dataset validation implemented and run": "PASS",
+    "Augmentation pipeline implemented and tested": "PASS",
+    "Baseline evaluated": "PASS",
+    "Fine-tuning completed": "PASS",
+    "Low-light evaluation completed": "PASS",
+    "Genuine IR evaluation completed": "NOT VERIFIED - blocked: no annotated genuine infrared data available locally",
+    "Per-class regression analysis completed": "PASS",
+    "Candidate checkpoint saved and verified": "PASS",
+    "Existing deployment compatibility checked": "PASS - .pt loads in existing Ultralytics backend path; ONNX/OpenVINO NOT re-exported",
+    "OpenVINO/ONNX export revalidated": "NOT VERIFIED - candidate not exported; existing CME-OPT2 artifacts untouched",
+    "Offline requirements verified": "PASS",
+    "Automated tests passed": "PASS",
+    "Documentation and evidence produced": "PASS",
+    "Numerical production acceptance threshold": "NOT VERIFIED - undefined for EAP-1",
+    "PR created": "NOT VERIFIED - deferred: organization repository access revoked; local commits only"
+  },
+  "implementation_status": "PASS",
+  "model_performance_status": "NOT VERIFIED - measured deltas reported; no numerical acceptance threshold defined",
+  "production_readiness_status": "NOT READY - candidate not export/benchmark validated, no genuine IR or real CCTV low-light labels, threshold undefined",
+  "gpu": {
+    "provider": "Modal",
+    "gpu": "NVIDIA A10",
+    "app": "industirx-eap1"
+  }
+}

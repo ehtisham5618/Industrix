@@ -1,0 +1,132 @@
+{
+  "conf": 0.25,
+  "device": "cpu",
+  "examples": [
+    {
+      "domain": "natural_dark",
+      "image": "hazard_Chimney_smoke_smokehazard108_jpg.rf.eeb38c6cfff9416ee8a69efd13766289.jpg",
+      "ground_truth": [
+        "smoke"
+      ],
+      "baseline": [
+        [
+          "smoke",
+          0.712
+        ],
+        [
+          "smoke",
+          0.25
+        ]
+      ],
+      "candidate": [
+        [
+          "smoke",
+          0.801
+        ]
+      ]
+    },
+    {
+      "domain": "natural_dark",
+      "image": "hazard_Chimney_smoke_smokehazard117_jpg.rf.9f01e40012e45dfbe54c3478275e0811.jpg",
+      "ground_truth": [
+        "smoke",
+        "smoke",
+        "smoke"
+      ],
+      "baseline": [
+        [
+          "smoke",
+          0.343
+        ],
+        [
+          "smoke",
+          0.294
+        ],
+        [
+          "smoke",
+          0.265
+        ]
+      ],
+      "candidate": [
+        [
+          "smoke",
+          0.46
+        ],
+        [
+          "smoke",
+          0.253
+        ]
+      ]
+    },
+    {
+      "domain": "natural_dark",
+      "image": "hazard_Chimney_smoke_smokehazard143_jpg.rf.f9dddd10fb76fa18642da34fa23700f2.jpg",
+      "ground_truth": [
+        "smoke",
+        "smoke"
+      ],
+      "baseline": [
+        [
+          "smoke",
+          0.4
+        ],
+        [
+          "smoke",
+          0.275
+        ]
+      ],
+      "candidate": [
+        [
+          "smoke",
+          0.529
+        ],
+        [
+          "smoke",
+          0.416
+        ]
+      ]
+    },
+    {
+      "domain": "synthetic_very_dark",
+      "image": "hazard_Chimney_smoke_smokehazard108_jpg.rf.eeb38c6cfff9416ee8a69efd13766289.jpg",
+      "ground_truth": [
+        "smoke"
+      ],
+      "baseline": [],
+      "candidate": []
+    },
+    {
+      "domain": "synthetic_very_dark",
+      "image": "textile_IMG-20230915-WA0015_jpg.rf.8f21dace1e7151d8605dde97dcc7a296.jpg",
+      "ground_truth": [
+        "stain"
+      ],
+      "baseline": [],
+      "candidate": [
+        [
+          "stain",
+          0.608
+        ]
+      ]
+    },
+    {
+      "domain": "synthetic_very_dark",
+      "image": "textile_welspun_210719101430759_png_jpg.rf.dd94f65dac8e7b9d67122e1d05a53d25.jpg",
+      "ground_truth": [
+        "gray stitch"
+      ],
+      "baseline": [
+        [
+          "gray stitch",
+          0.562
+        ]
+      ],
+      "candidate": [
+        [
+          "gray stitch",
+          0.874
+        ]
+      ]
+    }
+  ]
+}

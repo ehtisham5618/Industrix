@@ -1,0 +1,147 @@
+{
+ "splits": {
+  "train": {
+   "images": 5479,
+   "objects": 8520,
+   "background_images": 707,
+   "class_objects": {
+    "baekra": 490,
+    "color issues": 464,
+    "contamination": 338,
+    "cut": 692,
+    "gray stitch": 666,
+    "selvet": 841,
+    "stain": 1997,
+    "chemical hazard": 494,
+    "fire": 501,
+    "no helmet": 869,
+    "smoke": 1014,
+    "water leak": 154
+   },
+   "luma": {
+    "mean": 127.340394574219,
+    "p10": 78.34041521778524,
+    "p50": 131.99406805020155,
+    "min": 8.502196
+   },
+   "luma_below_80": 570,
+   "luma_below_50": 118,
+   "monochrome_images": 29,
+   "augmented_eap1_files": 0
+  },
+  "val": {
+   "images": 777,
+   "objects": 1334,
+   "background_images": 38,
+   "class_objects": {
+    "baekra": 79,
+    "color issues": 30,
+    "contamination": 55,
+    "cut": 102,
+    "gray stitch": 87,
+    "selvet": 121,
+    "stain": 312,
+    "chemical hazard": 53,
+    "fire": 92,
+    "no helmet": 216,
+    "smoke": 154,
+    "water leak": 33
+   },
+   "luma": {
+    "mean": 126.20484680804005,
+    "p10": 71.78381494140625,
+    "p50": 133.7083509131457,
+    "min": 17.989004
+   },
+   "luma_below_80": 95,
+   "luma_below_50": 27,
+   "monochrome_images": 2,
+   "augmented_eap1_files": 0
+  },
+  "test": {
+   "images": 334,
+   "objects": 498,
+   "background_images": 20,
+   "class_objects": {
+    "baekra": 24,
+    "color issues": 21,
+    "contamination": 17,
+    "cut": 47,
+    "gray stitch": 48,
+    "selvet": 58,
+    "stain": 153,
+    "chemical hazard": 4,
+    "fire": 22,
+    "no helmet": 45,
+    "smoke": 51,
+    "water leak": 8
+   },
+   "luma": {
+    "mean": 131.62665214724606,
+    "p10": 94.1336819730004,
+    "p50": 138.2539745135271,
+    "min": 22.038444
+   },
+   "luma_below_80": 24,
+   "luma_below_50": 8,
+   "monochrome_images": 1,
+   "augmented_eap1_files": 0
+  }
+ },
+ "filename_overlap": {
+  "train-val": 0,
+  "train-test": 0,
+  "val-test": 0
+ },
+ "near_duplicate_cross_split": {
+  "val": {
+   "count": 242,
+   "max_hamming": 4,
+   "examples": [
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard102_jpg.rf.d925c18a17f0d6f4a2d18787fddfd9c2.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard101_jpg.rf.add1a8827edbefe044cf49075a2ede31.jpg",
+     "hamming": 0
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard111_jpg.rf.3ff9ad4f96ff603d2e568dd25061a39e.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard109_jpg.rf.cc62b0b0a7970f216a31d18f538bf59e.jpg",
+     "hamming": 2
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard112_jpg.rf.f093c7befc1efdb589abe2727424942b.jpg",
+     "train_image": "cmeopt1_00032_2734871217.png",
+     "hamming": 2
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard120_jpg.rf.16cb8117faeb4ce907ffcee8d2e3380f.jpg",
+     "train_image": "cmeopt1_00033_600232346.png",
+     "hamming": 0
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard126_jpg.rf.7d06027618314ad369e0cb2eed71da6a.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard124_jpg.rf.a70603b8c05f03a1e9e9e804b8934526.jpg",
+     "hamming": 2
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard136_jpg.rf.b3102f05613c4ee6c56e76a87aa602a4.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard133_jpg.rf.c73cb81102cdcbdeae3bfc1b3ed58654.jpg",
+     "hamming": 0
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard13_jpg.rf.6e13867e77d2a08e2f9b055cb470cb74.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard11_jpg.rf.d3475a7192c85840705c223338aa501d.jpg",
+     "hamming": 2
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard149_jpg.rf.19ce1de426a3cb0c50948e9db694028d.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard147_jpg.rf.67a8e5fa8a0600f89bfee59e50098617.jpg",
+     "hamming": 0
+    },
+    {
+     "eval_image": "hazard_Chimney_smoke_smokehazard14_jpg.rf.ce9e169f86c6a7cabdfde9adf882486b.jpg",
+     "train_image": "hazard_Chimney_smoke_smokehazard240_jpg.rf.2f87522305311dcfca99c28870192a6e.jpg",
+     "hamming": 2
+    },
+
+invalid images 0 invalid labels 0 exact cross-split duplicates 0

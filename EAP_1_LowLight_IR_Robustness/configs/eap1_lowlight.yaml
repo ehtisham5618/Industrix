@@ -1,0 +1,71 @@
+# EAP-1 low-light / CCTV robustness fine-tuning (Sprint 3).
+# All photometric transforms are geometry-preserving: YOLO labels are copied unchanged.
+experiment: eap1-lowlight-cctv-robustness
+version: v1
+seed: 42
+
+source_checkpoint:
+  model_version: cme-opt2-focal-cosine-12class-v1
+  path: Backend/best.pt
+  sha256: c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061
+
+dataset:
+  version: combined-12class-v3-hardnegative
+  local_root: Hazard_Expansion/content_runtime/combined_dataset_augmented_v3
+  modal_volume: industirx-cme-opt2
+  modal_zip: dataset.zip
+  zip_sha256: 2fd9cf17480f25487756f1113a7409e1616a9fd9e22e7347e1fa3b24ff8177e5
+  nc: 12
+
+augmentation:
+  # Fraction of train images that receive exactly one degraded copy (no stacking of copies).
+  train_fraction: 0.35
+  profiles: [lowlight, uneven_illumination, cctv_compression, motion_lowlight, color_cast_dark, synthetic_ir_style]
+
+# Fixed evaluation domains. Synthetic domains are generated deterministically from the
+# original split bytes and are identical for baseline and candidate.
+evaluation:
+  imgsz: 640
+  batch: 32
+  conf: 0.001
+  iou: 0.7
+  natural_dark_luma_max: 80.0
+  domains: [standard, natural_dark, synthetic_lowlight, synthetic_very_dark, synthetic_cctv, synthetic_ir_style]
+
+training:
+  epochs: 8
+  patience: 3
+  imgsz: 640
+  batch: 16
+  optimizer: SGD
+  lr0: 0.002
+  lrf: 0.1
+  cos_lr: true
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 0.0
+  cls: 2.0
+  seed: 42
+  deterministic: true
+  amp: true
+  hsv_h: 0.01
+  hsv_s: 0.3
+  hsv_v: 0.2
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.3
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.5
+  mixup: 0.0
+  close_mosaic: 3
+  workers: 8
+  plots: true
+  save: true
+  exist_ok: false
+
+modal:
+  gpu: A10G
+  timeout_seconds: 3000
+  idle_shutdown_seconds: 600
+  volume: industirx-eap1

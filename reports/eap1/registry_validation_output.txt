@@ -1,0 +1,6 @@
+Registry validation
+- experiments: 27
+- model versions: 9
+- alert policies: 6
+WARNING: CME1-EXP-002: mAP@50 not recorded in available artifacts
+Result: PASS
