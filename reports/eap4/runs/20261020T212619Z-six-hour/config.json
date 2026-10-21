@@ -1,0 +1,33 @@
+{
+  "profile": "six-hour",
+  "target_url": "http://127.0.0.1:8000",
+  "endpoint": "/predict",
+  "health_endpoint": "/health",
+  "duration_seconds": 21600.0,
+  "warmup_seconds": 600.0,
+  "baseline_window_seconds": 1800.0,
+  "end_window_seconds": 1800.0,
+  "request_timeout_seconds": 30.0,
+  "concurrency": 2,
+  "requests_per_second": null,
+  "sample_interval_seconds": 10.0,
+  "report_interval_seconds": 300.0,
+  "seed": 42,
+  "fixtures": [
+    "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\tests\\assets\\ife_ui3_fire.png",
+    "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\tests\\assets\\ife_ui3_textile.png"
+  ],
+  "service_pid": null,
+  "container": null,
+  "allow_remote_target": false,
+  "offline_mode": true,
+  "min_samples_per_window": 3,
+  "thresholds": {
+    "max_memory_drift_percent": 5.0,
+    "memory_ceiling_bytes": null,
+    "max_error_rate": null,
+    "max_p95_latency_ms": null,
+    "max_fd_growth": null,
+    "max_thread_growth": null
+  }
+}

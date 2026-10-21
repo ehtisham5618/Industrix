@@ -1,0 +1,155 @@
+{
+  "task_id": "EAP-4",
+  "branch": "feature/sprint3-eap4-load-test-memory-profile",
+  "implementation_commit": "86b6b46a576750f26a7520283d6b5f5e719bb435",
+  "run_id": "20261020T212619Z-six-hour",
+  "profile_run": "six-hour (21,600 s configured)",
+  "actual_duration_seconds": 14400.003635699977,
+  "six_hour_completed": false,
+  "stop": {
+    "decision": "Run stopped early at the user's request: report the real duration of a 4-hour run instead of the configured 6 hours",
+    "target_elapsed_seconds": 14400,
+    "partial_summary_elapsed_seconds_at_stop": 14400.003635699975,
+    "stopped_at_local": "2026-10-21 06:26:29 +05:00",
+    "action": "Stop-Process -Force on harness PID 11412 (TerminateProcess); partial summary/samples preserved on disk",
+    "service_left_running": true,
+    "reason": "Stopped early by decision to report a 4-hour run; the six-hour requirement is not met"
+  },
+  "primary_status_six_hour_profile": "INTERRUPTED",
+  "four_hour_evaluation_status": "FAIL",
+  "requests": {
+    "total_attempted": 31469,
+    "warmup_attempted": 1068,
+    "steady": {
+      "attempted": 30401,
+      "successful": 30400,
+      "failed": 1,
+      "timeouts": 0,
+      "connection_errors": 1,
+      "error_rate": 3.2893654813986384e-05,
+      "throughput_rps": 2.202970434105829,
+      "status_codes": {
+        "200": 30400
+      }
+    }
+  },
+  "latency_success_ms": {
+    "count": 30400,
+    "mean_ms": 907.6405164638302,
+    "min_ms": 289.2862999578938,
+    "max_ms": 22863.25840000063,
+    "p50_ms": 794.653671037695,
+    "p90_ms": 1497.5570997327145,
+    "p95_ms": 1789.719360978148,
+    "method": "fixed log-bucket histogram, relative error <= 1.0%",
+    "p99_ms": 2408.726622426184
+  },
+  "memory_rss": {
+    "startup_bytes": 387883008.0,
+    "baseline_bytes": 450686976.0,
+    "end_window_bytes": 362889216.0,
+    "absolute_drift_bytes": -87797760.0,
+    "drift_percent": -19.48087357199335,
+    "peak_bytes": 494743552.0,
+    "peak_elapsed_s": 1194.345
+  },
+  "memory_private_bytes": {
+    "baseline_bytes": 593770496.0,
+    "end_window_bytes": 600313856.0,
+    "absolute_drift_bytes": 6543360.0,
+    "drift_percent": 1.1020015383182664,
+    "peak_bytes": 608755712.0,
+    "peak_elapsed_s": 6660.013
+  },
+  "private_bytes_trend": {
+    "leak_suspected": true,
+    "theil_sen_slope_bytes_per_hour": 1513883.155000969,
+    "projected_24h_growth_percent_of_baseline": 6.119063841128149,
+    "rising_window_steps": 5,
+    "window_steps": 5
+  },
+  "private_bytes_window_medians_mb": [
+    595.02,
+    595.65,
+    595.94,
+    598.29,
+    599.58,
+    599.8
+  ],
+  "resources": {
+    "handles": {
+      "baseline_median": 472.0,
+      "end_median": 474,
+      "max": 485,
+      "growth": 2.0
+    },
+    "threads": {
+      "baseline_median": 8.0,
+      "end_median": 8,
+      "max": 15,
+      "growth": 0.0
+    },
+    "children": {
+      "baseline_median": 0.0,
+      "end_median": 0,
+      "max": 0,
+      "growth": 0.0
+    },
+    "process_cpu_percent": {
+      "mean": 248.59302325581396,
+      "max": 270.2,
+      "note": "psutil per-process CPU; 100% = one logical core"
+    },
+    "system_cpu_percent": {
+      "mean": 88.48516713091922,
+      "max": 100.0
+    },
+    "harness_rss_bytes": {
+      "first": 49172480,
+      "last": 52006912,
+      "max": 53682176
+    }
+  },
+  "profiler": {
+    "samples": 1436,
+    "sampling_failures": 0,
+    "restarts": [],
+    "gaps": [],
+    "interval_seconds": 10.0
+  },
+  "gates_four_hour_evaluation": {
+    "run_completed": "PASS",
+    "service_restarts": "PASS",
+    "telemetry_continuity": "PASS",
+    "handle_or_fd_growth": "UNDEFINED_THRESHOLD",
+    "thread_growth": "UNDEFINED_THRESHOLD",
+    "error_rate": "UNDEFINED_THRESHOLD",
+    "p95_latency": "UNDEFINED_THRESHOLD",
+    "memory_drift": "PASS",
+    "memory_ceiling": "UNDEFINED_THRESHOLD",
+    "memory_trend": "PASS",
+    "memory_drift_private_bytes": "PASS",
+    "memory_trend_private_bytes": "FAIL"
+  },
+  "gates_six_hour_profile": {
+    "run_completed": "NOT_VERIFIED",
+    "service_restarts": "PASS",
+    "telemetry_continuity": "PASS",
+    "handle_or_fd_growth": "UNDEFINED_THRESHOLD",
+    "thread_growth": "UNDEFINED_THRESHOLD",
+    "error_rate": "UNDEFINED_THRESHOLD",
+    "p95_latency": "UNDEFINED_THRESHOLD",
+    "memory_drift": "NOT_VERIFIED",
+    "memory_ceiling": "UNDEFINED_THRESHOLD",
+    "memory_trend": "NOT_VERIFIED",
+    "memory_drift_private_bytes": "NOT_VERIFIED",
+    "memory_trend_private_bytes": "FAIL"
+  },
+  "tests": "43 passed",
+  "ci": "load-harness job added; NOT VERIFIED (GitHub Actions has not run on the repository)",
+  "environment": {
+    "cpu": "Intel i5-7200U (2C/4T)",
+    "ram_gb": 15.9,
+    "shared_machine": "Chrome/VS Code open; system CPU mean 88.5%"
+  }
+}

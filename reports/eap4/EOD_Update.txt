@@ -1,0 +1,10 @@
+EAP-4 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED.
+Run: 4-hour load test (14,400 s) of the six-hour profile, stopped early by decision; six-hour requirement NOT met.
+Load: real POST /predict, 2 workers, 30,401 steady requests, 1 connection error (0.0033%), 2.20 req/s.
+Latency (ms): p50 795, p95 1,790, p99 2,409, max 22,863.
+Memory: RSS drift -19.5% (Windows working-set trim). Private bytes +1.10% drift (PASS <5%) but rising in 5/5 windows, +1.51 MB/h, projected +6.1%/24 h -> trend gate FAIL (possible slow leak).
+Resources: handles +2, threads +0, no restarts, 0 telemetry gaps.
+Tests: 43/43 passed incl. real-service smoke. CI job added, not executed (Actions inactive).
+Next: investigate private-bytes growth; complete a full 6-hour (or longer) run; agree SLAs.

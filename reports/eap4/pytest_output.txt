@@ -1,0 +1,53 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.13.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 43 items
+
+EAP_4_Load_Test/tests/test_load_harness.py::test_six_hour_profile_defaults_to_21600_seconds PASSED [  2%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides0] PASSED [  4%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides1] PASSED [  6%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides2] PASSED [  9%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides3] PASSED [ 11%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides4] PASSED [ 13%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides5] PASSED [ 16%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides6] PASSED [ 18%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides7] PASSED [ 20%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides8] PASSED [ 23%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides9] PASSED [ 25%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_invalid_configuration_rejected[overrides10] PASSED [ 27%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_missing_or_invalid_target_rejected[] PASSED [ 30%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_missing_or_invalid_target_rejected[127.0.0.1:8000] PASSED [ 32%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_missing_or_invalid_target_rejected[ftp://127.0.0.1] PASSED [ 34%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_missing_or_invalid_target_rejected[http://] PASSED [ 37%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_offline_mode_refuses_remote_target_and_unknown_profile PASSED [ 39%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_long_run_requires_explicit_confirmation PASSED [ 41%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_histogram_quantiles_within_declared_error PASSED [ 44%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_p99_withheld_for_small_samples_and_counts PASSED [ 46%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_warmup_is_separated_from_steady_state PASSED [ 48%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_drift_gate_is_strict_below_five_percent[1049.0-PASS] PASSED [ 51%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_drift_gate_is_strict_below_five_percent[1050.0-FAIL] PASSED [ 53%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_drift_gate_is_strict_below_five_percent[1100.0-FAIL] PASSED [ 55%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_drift_gate_is_strict_below_five_percent[900.0-PASS] PASSED [ 58%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_zero_missing_or_insufficient_baseline_is_not_verified PASSED [ 60%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_peak_and_independent_ceiling_gate PASSED [ 62%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_interrupted_run_never_passes_drift_or_overall PASSED [ 65%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_trend_flags_sustained_growth_but_not_flat_noise PASSED [ 67%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_private_bytes_catch_leak_hidden_by_working_set_trim PASSED [ 69%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_request_gates_undefined_sla_and_violations PASSED [ 72%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_truncated_sample_line_is_skipped_and_counted PASSED [ 74%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_concurrency_is_bounded_and_successes_counted PASSED [ 76%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_error_and_malformed_responses_classified[500-http_error] PASSED [ 79%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_error_and_malformed_responses_classified[malformed-invalid_response] PASSED [ 81%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_error_and_malformed_responses_classified[bad_contract-invalid_response] PASSED [ 83%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_timeouts_and_connection_errors_classified PASSED [ 86%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_profiler_records_failures_without_raising_and_missing_process PASSED [ 88%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_full_run_persists_partial_and_final_reports PASSED [ 90%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_interrupted_run_is_reported_as_interrupted_with_partial_data PASSED [ 93%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_terminated_run_recovers_from_partial_and_shorter_evaluation_is_labelled PASSED [ 95%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_unhealthy_target_rejected_before_load PASSED [ 97%]
+EAP_4_Load_Test/tests/test_load_harness.py::test_real_service_smoke PASSED [100%]
+
+======================== 43 passed in 69.28s (0:01:09) ========================

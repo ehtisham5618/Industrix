@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-20T21:26:00.109602+00:00",
+  "purpose": "exact harness/service source used for the six-hour run",
+  "base_commit": "32c7a8cab47d81f2642dbe0ad5d6a32c0655aea8",
+  "files": {
+    "EAP_4_Load_Test/analysis.py": "b355b90564f6a57cc2397966bda9f67458561ee03f41c0d0828adb9442865055",
+    "EAP_4_Load_Test/config.py": "5dad05d20d658438f3e317d7fd6e704439a825ae7396d1d0a6f328b785a2ad1d",
+    "EAP_4_Load_Test/loadgen.py": "1957ec2a0a6f0c4a81801ed07e1acf3e9f4966fb17a70a0d6c921c4957915a18",
+    "EAP_4_Load_Test/metrics.py": "705bac00ad7c0c7f9fa3c094b406be999ad3602b7fbd288fe088b716d84dc16f",
+    "EAP_4_Load_Test/profiler.py": "10ab5de7f52e5a8a05c0de4cc412fcb1773378fb92520951a09750f3a7a76804",
+    "EAP_4_Load_Test/report.py": "bd7e783c69061bf840a0744ac30090456af59ebd61ae1d728da5794b494298fd",
+    "EAP_4_Load_Test/run_load_test.py": "cf503482ddc4ff7cba7e25d9bd25eb8cae6e118b24da742df2c83a3d83dd31c2",
+    "Backend/main.py": "ae628ec7eb32d023ff493b3a62682b72df547c2672d1e945c5cb7d83e1eabbe3",
+    "EAP_2_CI_Model_Regression/gate.py": "0d15e3a267830b702db8757ab2ef1a8390addce80f1bfa39fcc15ad7f8a715f2"
+  }
+}

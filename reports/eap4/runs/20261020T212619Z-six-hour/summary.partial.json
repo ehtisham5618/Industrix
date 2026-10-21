@@ -1,0 +1,379 @@
+{
+  "task_id": "EAP-4",
+  "run_id": "20261020T212619Z-six-hour",
+  "status": "INTERRUPTED",
+  "run_state": "RUNNING",
+  "profile": "six-hour",
+  "configured_duration_seconds": 21600.0,
+  "actual_duration_seconds": 14400.003635699977,
+  "started_at": "2026-10-20T21:26:19.814113+00:00",
+  "ended_at": "2026-10-21T01:26:19.918388+00:00",
+  "full_duration_completed": false,
+  "target": "http://127.0.0.1:8000/predict",
+  "effective_config": {
+    "profile": "six-hour",
+    "target_url": "http://127.0.0.1:8000",
+    "endpoint": "/predict",
+    "health_endpoint": "/health",
+    "duration_seconds": 21600.0,
+    "warmup_seconds": 600.0,
+    "baseline_window_seconds": 1800.0,
+    "end_window_seconds": 1800.0,
+    "request_timeout_seconds": 30.0,
+    "concurrency": 2,
+    "requests_per_second": null,
+    "sample_interval_seconds": 10.0,
+    "report_interval_seconds": 300.0,
+    "seed": 42,
+    "fixtures": [
+      "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\tests\\assets\\ife_ui3_fire.png",
+      "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\tests\\assets\\ife_ui3_textile.png"
+    ],
+    "service_pid": null,
+    "container": null,
+    "allow_remote_target": false,
+    "offline_mode": true,
+    "min_samples_per_window": 3,
+    "thresholds": {
+      "max_memory_drift_percent": 5.0,
+      "memory_ceiling_bytes": null,
+      "max_error_rate": null,
+      "max_p95_latency_ms": null,
+      "max_fd_growth": null,
+      "max_thread_growth": null
+    }
+  },
+  "max_in_flight_configured": 2,
+  "max_in_flight_observed": 2,
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "logical_cpus": 4,
+    "physical_cpus": 2,
+    "total_memory_bytes": 17049018368,
+    "target_health": {
+      "status": "ok",
+      "model_loaded": true,
+      "model_path": "Backend\\best.pt",
+      "model_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+      "classes": 12
+    },
+    "git_commit": "32c7a8cab47d81f2642dbe0ad5d6a32c0655aea8"
+  },
+  "request_metrics": {
+    "totals": {
+      "scheduled": 31471,
+      "attempted": 31469,
+      "successful": 31468
+    },
+    "warmup": {
+      "attempted": 1068,
+      "successful": 1068,
+      "failed": 0,
+      "timeouts": 0,
+      "connection_errors": 0,
+      "http_errors": 0,
+      "invalid_responses": 0,
+      "outcomes": {
+        "success": 1068
+      },
+      "status_codes": {
+        "200": 1068
+      },
+      "error_rate": 0.0,
+      "throughput_rps": 1.78,
+      "successful_throughput_rps": 1.78,
+      "latency_all": {
+        "count": 1068,
+        "mean_ms": 1124.6701903555766,
+        "min_ms": 332.7278000069782,
+        "max_ms": 6659.143599914387,
+        "p50_ms": 931.0634283192038,
+        "p90_ms": 1937.2497936973966,
+        "p95_ms": 2408.726622426184,
+        "method": "fixed log-bucket histogram, relative error <= 1.0%",
+        "p99_ms": 3723.8423907275305
+      },
+      "latency_success": {
+        "count": 1068,
+        "mean_ms": 1124.6701903555766,
+        "min_ms": 332.7278000069782,
+        "max_ms": 6659.143599914387,
+        "p50_ms": 931.0634283192038,
+        "p90_ms": 1937.2497936973966,
+        "p95_ms": 2408.726622426184,
+        "method": "fixed log-bucket histogram, relative error <= 1.0%",
+        "p99_ms": 3723.8423907275305
+      }
+    },
+    "steady_state": {
+      "attempted": 30401,
+      "successful": 30400,
+      "failed": 1,
+      "timeouts": 0,
+      "connection_errors": 1,
+      "http_errors": 0,
+      "invalid_responses": 0,
+      "outcomes": {
+        "success": 30400,
+        "connection_error": 1
+      },
+      "status_codes": {
+        "200": 30400
+      },
+      "error_rate": 3.2893654813986384e-05,
+      "throughput_rps": 2.202970434105829,
+      "successful_throughput_rps": 2.2028979703568043,
+      "latency_all": {
+        "count": 30400,
+        "mean_ms": 907.6405164638302,
+        "min_ms": 289.2862999578938,
+        "max_ms": 22863.25840000063,
+        "p50_ms": 794.653671037695,
+        "p90_ms": 1497.5570997327145,
+        "p95_ms": 1789.719360978148,
+        "method": "fixed log-bucket histogram, relative error <= 1.0%",
+        "p99_ms": 2408.726622426184
+      },
+      "latency_success": {
+        "count": 30400,
+        "mean_ms": 907.6405164638302,
+        "min_ms": 289.2862999578938,
+        "max_ms": 22863.25840000063,
+        "p50_ms": 794.653671037695,
+        "p90_ms": 1497.5570997327145,
+        "p95_ms": 1789.719360978148,
+        "method": "fixed log-bucket histogram, relative error <= 1.0%",
+        "p99_ms": 2408.726622426184
+      }
+    }
+  },
+  "memory_metrics": {
+    "measurement": "service process rss (psutil memory_info)",
+    "unit": "bytes",
+    "valid_samples": 1436,
+    "startup_bytes": 387883008.0,
+    "startup_note": "first sample after the harness attached (service already started)",
+    "baseline_window_s": [
+      600.0,
+      2400.0
+    ],
+    "end_window_s": [
+      12600.003635699977,
+      14400.003635699977
+    ],
+    "baseline_samples": 180,
+    "end_window_samples": 179,
+    "aggregation": "median",
+    "baseline_bytes": 450686976.0,
+    "end_window_bytes": 362889216.0,
+    "absolute_drift_bytes": -87797760.0,
+    "drift_percent": -19.48087357199335,
+    "drift_gate": {
+      "name": "memory_drift",
+      "threshold_percent": 5.0,
+      "comparison": "strict <",
+      "status": "NOT_VERIFIED",
+      "reason": "run interrupted at 14400s of 21600s; drift -19.481% covers the partial run only"
+    },
+    "peak_bytes": 494743552.0,
+    "peak_elapsed_s": 1194.345,
+    "peak_minus_baseline_bytes": 44056576.0,
+    "ceiling_gate": {
+      "name": "memory_ceiling",
+      "threshold_bytes": null,
+      "status": "UNDEFINED_THRESHOLD",
+      "reason": "no approved absolute memory ceiling"
+    },
+    "trend": {
+      "evidence_sufficient": true,
+      "leak_suspected": false,
+      "method": "Theil-Sen + OLS slope over post-warm-up RSS; 6 equal rolling windows (medians)",
+      "theil_sen_slope_bytes_per_hour": -24186181.331786703,
+      "ols_slope_bytes_per_hour": -27028107.05761357,
+      "projected_24h_growth_percent_of_baseline": -128.79634488547563,
+      "window_medians": [
+        {
+          "window": 1,
+          "start_s": 602.144,
+          "end_s": 2900.211666666666,
+          "median_bytes": 444557312.0,
+          "samples": 230
+        },
+        {
+          "window": 2,
+          "start_s": 2900.211666666666,
+          "end_s": 5198.279333333333,
+          "median_bytes": 433553408.0,
+          "samples": 229
+        },
+        {
+          "window": 3,
+          "start_s": 5198.279333333333,
+          "end_s": 7496.346999999999,
+          "median_bytes": 356855808.0,
+          "samples": 229
+        },
+        {
+          "window": 4,
+          "start_s": 7496.346999999999,
+          "end_s": 9794.414666666666,
+          "median_bytes": 362807296.0,
+          "samples": 229
+        },
+        {
+          "window": 5,
+          "start_s": 9794.414666666666,
+          "end_s": 12092.482333333333,
+          "median_bytes": 363266048.0,
+          "samples": 229
+        },
+        {
+          "window": 6,
+          "start_s": 12092.482333333333,
+          "end_s": 14390.549999999997,
+          "median_bytes": 362582016.0,
+          "samples": 229
+        }
+      ],
+      "rising_window_steps": 2,
+      "window_steps": 5,
+      "steady_state_growth_bytes": -81975296.0,
+      "peak_elapsed_s": 1194.345,
+      "peak_bytes": 494743552.0,
+      "post_peak_min_bytes": 329400320.0,
+      "rss_vs_completed_requests_pearson": -0.7473618233545973,
+      "rss_growth_bytes_per_1000_requests": -3349804.998738547,
+      "criteria": "leak_suspected if all window steps rise and growth > 1% of baseline, or Theil-Sen slope projects >= 5% of baseline per 24 h",
+      "caveat": "Trend analysis on a single run cannot prove absence of a leak; it flags sustained growth only"
+    }
+  },
+  "resource_metrics": {
+    "handles": {
+      "baseline_median": 472.0,
+      "end_median": 474,
+      "max": 485,
+      "growth": 2.0
+    },
+    "threads": {
+      "baseline_median": 8.0,
+      "end_median": 8,
+      "max": 15,
+      "growth": 0.0
+    },
+    "children": {
+      "baseline_median": 0.0,
+      "end_median": 0,
+      "max": 0,
+      "growth": 0.0
+    },
+    "process_cpu_percent": {
+      "mean": 248.59302325581396,
+      "max": 270.2,
+      "note": "psutil per-process CPU; 100% = one logical core"
+    },
+    "system_cpu_percent": {
+      "mean": 88.48516713091922,
+      "max": 100.0
+    },
+    "harness_rss_bytes": {
+      "first": 49172480,
+      "last": 52006912,
+      "max": 53682176
+    }
+  },
+  "profiler": {
+    "samples": 1436,
+    "sampling_failures": 0,
+    "failures_tail": [],
+    "restarts": [],
+    "gaps": [],
+    "unavailable": {
+      "fds": "Windows: open handles recorded instead of file descriptors",
+      "python_gc_tracemalloc": "Service runs in a separate process; Python GC/allocation stats are not observable externally",
+      "gpu": "CPU deployment; no GPU in use",
+      "container": "Service not run in a container for this run"
+    },
+    "pid": 22088,
+    "interval_seconds": 10.0,
+    "path": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\eap4\\runs\\20261020T212619Z-six-hour\\samples.jsonl"
+  },
+  "corrupt_sample_lines": 0,
+  "acceptance_thresholds": {
+    "max_memory_drift_percent": 5.0,
+    "memory_ceiling_bytes": null,
+    "max_error_rate": null,
+    "max_p95_latency_ms": null,
+    "max_fd_growth": null,
+    "max_thread_growth": null
+  },
+  "checks": [
+    {
+      "name": "run_completed",
+      "status": "NOT_VERIFIED",
+      "reason": "14400s of 21600s; run in progress"
+    },
+    {
+      "name": "memory_drift",
+      "threshold_percent": 5.0,
+      "comparison": "strict <",
+      "status": "NOT_VERIFIED",
+      "reason": "run interrupted at 14400s of 21600s; drift -19.481% covers the partial run only"
+    },
+    {
+      "name": "memory_ceiling",
+      "threshold_bytes": null,
+      "status": "UNDEFINED_THRESHOLD",
+      "reason": "no approved absolute memory ceiling"
+    },
+    {
+      "name": "service_restarts",
+      "status": "PASS",
+      "restarts": 0
+    },
+    {
+      "name": "telemetry_continuity",
+      "status": "PASS",
+      "gaps": 0,
+      "sampling_failures": 0
+    },
+    {
+      "name": "handle_or_fd_growth",
+      "status": "UNDEFINED_THRESHOLD",
+      "measured_growth": 2.0,
+      "reason": "no approved limit"
+    },
+    {
+      "name": "thread_growth",
+      "status": "UNDEFINED_THRESHOLD",
+      "measured_growth": 0.0,
+      "reason": "no approved limit"
+    },
+    {
+      "name": "error_rate",
+      "status": "UNDEFINED_THRESHOLD",
+      "measured": 3.2893654813986384e-05,
+      "reason": "no approved error-rate SLA"
+    },
+    {
+      "name": "p95_latency",
+      "status": "UNDEFINED_THRESHOLD",
+      "measured_ms": 1789.719360978148,
+      "reason": "no approved latency SLA"
+    },
+    {
+      "name": "memory_trend",
+      "status": "NOT_VERIFIED",
+      "reason": "no sustained growth by the declared criteria"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "No approved latency/error-rate SLA: those gates report measurements as UNDEFINED_THRESHOLD",
+    "Client-observed latency includes HTTP/multipart overhead on loopback",
+    "Service Python GC/allocation stats are not observable from a separate process",
+    "Memory trend analysis on one run flags sustained growth; it cannot prove absence of a leak",
+    "Physical network disconnection not exercised; offline means loopback-only target"
+  ]
+}

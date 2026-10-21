@@ -1,0 +1,8 @@
+﻿{
+    "decision":  "Run stopped early at the user\u0027s request: report the real duration of a 4-hour run instead of the configured 6 hours",
+    "target_elapsed_seconds":  14400,
+    "partial_summary_elapsed_seconds_at_stop":  14400.003635699975,
+    "stopped_at_local":  "2026-10-21 06:26:29 +05:00",
+    "action":  "Stop-Process -Force on harness PID 11412 (TerminateProcess); partial summary/samples preserved on disk",
+    "service_left_running":  true
+}
