@@ -1,0 +1,4 @@
+# EAP-5 watchdog runtime dependencies (subset of the repository requirements.txt pins).
+# The monitored services keep their own requirements (requirements.txt, Frontend/requirements.txt).
+pydantic>=2.12,<3
+psutil>=5.9,<8

@@ -1,0 +1,37 @@
+{
+  "runtime_dir": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\eap5\\soak\\runtime",
+  "tick_seconds": 0.5,
+  "event_buffer": 256,
+  "services": [
+    {
+      "name": "soak-service",
+      "command": [
+        "{python}",
+        "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\EAP_5_Watchdog\\tests\\dummy_service.py",
+        "49216",
+        "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\eap5\\soak\\control"
+      ],
+      "cwd": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\reports\\eap5\\soak",
+      "port": 49216,
+      "health": {
+        "kind": "http",
+        "url": "http://127.0.0.1:49216/health",
+        "expect_json_true": "model_loaded",
+        "timeout_seconds": 2
+      },
+      "interval_seconds": 2,
+      "startup_grace_seconds": 10,
+      "stop_timeout_seconds": 10,
+      "restart": {
+        "failure_threshold": 2,
+        "cooldown_seconds": 2,
+        "backoff_initial_seconds": 2,
+        "backoff_multiplier": 2,
+        "backoff_max_seconds": 8,
+        "max_restarts": 100,
+        "window_seconds": 3600,
+        "recovery_timeout_seconds": 20
+      }
+    }
+  ]
+}

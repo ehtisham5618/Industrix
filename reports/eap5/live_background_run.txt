@@ -1,0 +1,14 @@
+$ python -m EAP_5_Watchdog start
+watchdog started in background (pid 8356); status: python -m EAP_5_Watchdog status
+exit=0
+controlled failure: kill watchdog-owned backend pid 13156 at 06:45:32
+killed [13156]
+backend recovered (verified) at 06:45:47
+watchdog pid 8356 running=True uptime 45s events 16/256 owned processes 2
+  backend    healthy      pid=3248 failures=0 restarts_window=1 total_restarts=1 last_ok=2026-10-21T01:45:46.081351+00:00 last_restart=process exited recovery=recovered
+  dashboard  healthy      pid=21396 failures=0 restarts_window=0 total_restarts=0 last_ok=2026-10-21T01:45:42.538663+00:00 last_restart=None recovery=None
+$ python -m EAP_5_Watchdog stop
+watchdog stopped; owned services shut down
+stop exit=0
+port 8000 free
+port 8501 free

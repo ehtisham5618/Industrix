@@ -1,0 +1,128 @@
+{
+  "task": "EAP-5",
+  "branch": "feature/sprint3-eap5-auto-restart-watchdog",
+  "implementation_commit": "2e2ca9d29c471dd9e148d0d6a86d7d1d43b523d8",
+  "monitored_services": {
+    "backend": "uvicorn Backend.main:api_app :8000, GET /health requires model_loaded=true",
+    "dashboard": "streamlit Frontend/app.py :8501, GET /_stcore/health == ok"
+  },
+  "live_recovery_real_services": {
+    "foreground_run": {
+      "killed": "backend pid 20868 (+child 7964)",
+      "restarted_pid": 14456,
+      "detection_to_restart_s": 0.02,
+      "restart_to_verified_recovery_s": 21.3,
+      "dashboard_unaffected": true,
+      "note": "this first run exposed forced (not graceful) stops on Windows; fixed before the background run"
+    },
+    "background_run": {
+      "watchdog_pid": 8356,
+      "killed": "backend pid 13156",
+      "restarted_pid": 3248,
+      "killed_at": "06:45:32 PKT",
+      "verified_recovery_at": "06:45:47 PKT",
+      "stop_modes": {
+        "dashboard": "graceful; exit_code=0",
+        "backend": "graceful; exit_code=3 (0.4 s)"
+      },
+      "ports_free_after_stop": true,
+      "events": "reports/eap5/live_background_watchdog_events.jsonl"
+    }
+  },
+  "soak": {
+    "configured_duration_s": 3600.0,
+    "actual_duration_s": 3595.21,
+    "completed": true,
+    "sample_interval_s": 5.0,
+    "samples": 670,
+    "injected_failures": {
+      "crash": 29,
+      "unhealthy": 29
+    },
+    "restarts": 58,
+    "health_checks": 1803,
+    "recoveries_verified": 58,
+    "recovery_failures": 0,
+    "circuit_opens": 0,
+    "events_buffered_max": 256,
+    "events_buffer_limit": 256,
+    "threads": {
+      "min": 1,
+      "max": 7
+    },
+    "handles": {
+      "first": 53,
+      "last": 151,
+      "max": 153
+    },
+    "children_max": 1,
+    "rss": {
+      "metric": "rss_bytes",
+      "baseline_samples": 111,
+      "end_samples": 112,
+      "threshold_percent": 5.0,
+      "comparison": "strict <",
+      "baseline_bytes": 39469056,
+      "end_bytes": 39784448.0,
+      "absolute_drift_bytes": 315392.0,
+      "drift_percent": 0.7990867579908676,
+      "peak_bytes": 39862272,
+      "theil_sen_bytes_per_hour": 508110.75716736086,
+      "projected_24h_percent": 30.89675661869557,
+      "status": "PASS"
+    },
+    "private_bytes": {
+      "metric": "vms_bytes",
+      "baseline_samples": 111,
+      "end_samples": 112,
+      "threshold_percent": 5.0,
+      "comparison": "strict <",
+      "baseline_bytes": 27041792,
+      "end_bytes": 27041792.0,
+      "absolute_drift_bytes": 0.0,
+      "drift_percent": 0.0,
+      "peak_bytes": 27111424,
+      "theil_sen_bytes_per_hour": 0.0,
+      "projected_24h_percent": 0.0,
+      "status": "PASS"
+    },
+    "watchdog_exit_code": 0,
+    "leftover_service_processes": []
+  },
+  "soak_interpretation": "RSS drift +0.80% and private bytes 0.00% pass the strict <5% gate. RSS window medians rose ~0.3 MB over the first ~50 min then plateaued; private bytes stayed flat; handles 151->151, threads 2->2. The RSS Theil-Sen slope (+0.51 MB/h, projected +30.9%/24 h) would be flagged by the EAP-4 trend criterion, so long-duration memory stability is NOT VERIFIED by this 1-hour run.",
+  "tests": {
+    "windows": {
+      "passed": 38,
+      "failed": 0,
+      "skipped": 0,
+      "error": 0
+    },
+    "linux_container": "37 passed, 1 skipped",
+    "repository": {
+      "passed": 545,
+      "failed": 2,
+      "skipped": 0,
+      "error": 0
+    },
+    "repository_failures": [
+      "ESE-CPU1 size gate (inherited)",
+      "ESE-CPU1 mAP-drop gate (inherited)"
+    ]
+  },
+  "setup": {
+    "windows_ps1": "validate + check (twice, idempotent) PASS",
+    "linux_sh": "sh -n PASS; install/check/repeat/validate PASS in Debian container"
+  },
+  "offline": {
+    "method": "loopback-only health URLs enforced by config; socket guard (non-loopback connect fails) in the real-subprocess test; import inspection",
+    "physical_disconnect": "NOT VERIFIED"
+  },
+  "ci": "watchdog job added; NOT VERIFIED (GitHub Actions has not run on the repository)",
+  "not_verified": [
+    "physical network disconnection",
+    "multi-hour/multi-day memory stability",
+    "real backend/dashboard under the watchdog on Linux",
+    "native service-manager installation (not implemented)",
+    "GitHub Actions run"
+  ]
+}

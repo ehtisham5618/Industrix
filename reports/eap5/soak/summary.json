@@ -1,0 +1,70 @@
+{
+  "task": "EAP-5",
+  "kind": "watchdog resource soak",
+  "configured_duration_s": 3600.0,
+  "actual_duration_s": 3595.21,
+  "completed": true,
+  "warmup_s": 300.0,
+  "window_s": 600.0,
+  "sample_interval_s": 5.0,
+  "samples": 670,
+  "valid_samples": 670,
+  "injected_failures": {
+    "crash": 29,
+    "unhealthy": 29
+  },
+  "restarts": 58,
+  "health_checks": 1803,
+  "recoveries_verified": 58,
+  "recovery_failures": 0,
+  "circuit_opens": 0,
+  "events_buffered_max": 256,
+  "events_buffer_limit": 256,
+  "threads": {
+    "min": 1,
+    "max": 7
+  },
+  "handles": {
+    "first": 53,
+    "last": 151,
+    "max": 153
+  },
+  "children_max": 1,
+  "rss": {
+    "metric": "rss_bytes",
+    "baseline_samples": 111,
+    "end_samples": 112,
+    "threshold_percent": 5.0,
+    "comparison": "strict <",
+    "baseline_bytes": 39469056,
+    "end_bytes": 39784448.0,
+    "absolute_drift_bytes": 315392.0,
+    "drift_percent": 0.7990867579908676,
+    "peak_bytes": 39862272,
+    "theil_sen_bytes_per_hour": 508110.75716736086,
+    "projected_24h_percent": 30.89675661869557,
+    "status": "PASS"
+  },
+  "private_bytes": {
+    "metric": "vms_bytes",
+    "baseline_samples": 111,
+    "end_samples": 112,
+    "threshold_percent": 5.0,
+    "comparison": "strict <",
+    "baseline_bytes": 27041792,
+    "end_bytes": 27041792.0,
+    "absolute_drift_bytes": 0.0,
+    "drift_percent": 0.0,
+    "peak_bytes": 27111424,
+    "theil_sen_bytes_per_hour": 0.0,
+    "projected_24h_percent": 0.0,
+    "status": "PASS"
+  },
+  "watchdog_exit_code": 0,
+  "leftover_service_processes": [],
+  "limitations": [
+    "Watchdog memory only; the supervised service is a disposable stub",
+    "Duration 3595s: not evidence of multi-day stability",
+    "No approved absolute memory ceiling exists"
+  ]
+}

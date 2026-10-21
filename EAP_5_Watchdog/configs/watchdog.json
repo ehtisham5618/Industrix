@@ -1,0 +1,52 @@
+{
+  "version": "eap5-watchdog-v1",
+  "runtime_dir": "{root}/EAP_5_Watchdog/runtime",
+  "tick_seconds": 1.0,
+  "event_buffer": 256,
+  "log_max_bytes": 5000000,
+  "log_backups": 3,
+  "child_log_max_bytes": 20000000,
+  "services": [
+    {
+      "name": "backend",
+      "enabled": true,
+      "command": ["{python}", "-m", "uvicorn", "Backend.main:api_app", "--host", "127.0.0.1", "--port", "8000",
+                  "--timeout-graceful-shutdown", "15"],
+      "cwd": "{root}",
+      "env": {
+        "INDUSTRIX_MODEL_PATH": "Backend/best.pt",
+        "INDUSTRIX_REQUIRE_MODEL": "1",
+        "INDUSTRIX_MODEL_SHA256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+        "YOLO_OFFLINE": "true",
+        "YOLO_AUTOINSTALL": "false",
+        "PYTHONUNBUFFERED": "1"
+      },
+      "port": 8000,
+      "health": {"kind": "http", "url": "http://127.0.0.1:8000/health", "expect_status": 200,
+                 "expect_json_true": "model_loaded", "timeout_seconds": 5},
+      "interval_seconds": 10,
+      "startup_grace_seconds": 90,
+      "stop_timeout_seconds": 25,
+      "restart": {"failure_threshold": 3, "cooldown_seconds": 15, "backoff_initial_seconds": 10,
+                  "backoff_multiplier": 2, "backoff_max_seconds": 300, "max_restarts": 5,
+                  "window_seconds": 3600, "recovery_timeout_seconds": 120}
+    },
+    {
+      "name": "dashboard",
+      "enabled": true,
+      "command": ["{python}", "-m", "streamlit", "run", "Frontend/app.py", "--server.address", "127.0.0.1",
+                  "--server.port", "8501", "--server.headless", "true", "--browser.gatherUsageStats", "false"],
+      "cwd": "{root}",
+      "env": {"BACKEND_URL": "http://127.0.0.1:8000", "PYTHONUNBUFFERED": "1"},
+      "port": 8501,
+      "health": {"kind": "http", "url": "http://127.0.0.1:8501/_stcore/health", "expect_status": 200,
+                 "expect_body": "ok", "timeout_seconds": 5},
+      "interval_seconds": 10,
+      "startup_grace_seconds": 60,
+      "stop_timeout_seconds": 15,
+      "restart": {"failure_threshold": 3, "cooldown_seconds": 15, "backoff_initial_seconds": 10,
+                  "backoff_multiplier": 2, "backoff_max_seconds": 300, "max_restarts": 5,
+                  "window_seconds": 3600, "recovery_timeout_seconds": 90}
+    }
+  ]
+}

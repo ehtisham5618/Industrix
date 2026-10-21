@@ -1,0 +1,95 @@
+Unable to find image 'python:3.12.12-slim-bookworm' locally
+3.12.12-slim-bookworm: Pulling from library/python
+dbeb2af0e7bd: Pulling fs layer
+2e8ff2a71e95: Pulling fs layer
+84a2afebaf4d: Pulling fs layer
+f9f25941dc13: Pulling fs layer
+b5f799b765ea: Download complete
+dbeb2af0e7bd: Download complete
+5f1e92462ded: Download complete
+f9f25941dc13: Download complete
+84a2afebaf4d: Download complete
+2e8ff2a71e95: Download complete
+84a2afebaf4d: Pull complete
+2e8ff2a71e95: Pull complete
+f9f25941dc13: Pull complete
+dbeb2af0e7bd: Pull complete
+Digest: sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c
+Status: Downloaded newer image for python:3.12.12-slim-bookworm
+== uname: Linux 6.6.87.2-microsoft-standard-WSL2 x86_64
+Python 3.12.12
+== setup_watchdog.sh check (INSTALL=1 ALLOW_GLOBAL_INSTALL=1, container-only interpreter)
+Python: /usr/local/bin/python3 (venv=False)
+Successfully installed annotated-types-0.8.0 psutil-7.2.2 pydantic-2.14.1 pydantic-core-2.50.1 typing-extensions-4.16.0 typing-inspection-0.4.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+Watchdog dependencies: OK
+WARNING: backend dependencies missing (see requirements.txt)
+WARNING: dashboard dependencies missing (see Frontend/requirements.txt)
+CHECK OK
+check exit=0
+== setup_watchdog.sh check (repeat, idempotent)
+Python: /usr/local/bin/python3 (venv=False)
+Watchdog dependencies: OK
+WARNING: backend dependencies missing (see requirements.txt)
+WARNING: dashboard dependencies missing (see Frontend/requirements.txt)
+CHECK OK
+repeat exit=0
+== setup_watchdog.sh validate
+Python: /usr/local/bin/python3 (venv=False)
+Watchdog dependencies: OK
+WARNING: backend dependencies missing (see requirements.txt)
+WARNING: dashboard dependencies missing (see Frontend/requirements.txt)
+config /repo/EAP_5_Watchdog/configs/watchdog.json: 2 services; enabled ['backend', 'dashboard']; disabled []
+  - backend: health http http://127.0.0.1:8000/health; every 10.0s; threshold 3; max 5 restarts/3600s; backoff 10.0-300.0s
+  - dashboard: health http http://127.0.0.1:8501/_stcore/health; every 10.0s; threshold 3; max 5 restarts/3600s; backoff 10.0-300.0s
+VALID
+validate exit=0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+== pytest EAP_5_Watchdog/tests (Linux)
+configfile: pytest.ini
+collecting ... collected 38 items
+
+EAP_5_Watchdog/tests/test_watchdog.py::test_shipped_config_is_valid_and_offline PASSED [  2%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value0] PASSED [  5%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value1] PASSED [  7%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value2] PASSED [ 10%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value3] PASSED [ 13%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value4] PASSED [ 15%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value5] PASSED [ 18%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value6] PASSED [ 21%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value7] PASSED [ 23%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value8] PASSED [ 26%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value9] PASSED [ 28%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value10] PASSED [ 31%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value11] PASSED [ 34%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_invalid_service_settings_rejected[bad_value12] PASSED [ 36%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_missing_malformed_and_duplicate_config PASSED [ 39%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_runtime_validation_reports_missing_executable_cwd_and_env PASSED [ 42%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_placeholders_are_limited_and_secrets_redacted PASSED [ 44%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_model_artifact_validation_without_download PASSED [ 47%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_http_health_ok_failure_and_malformed PASSED [ 50%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_health_timeout_is_bounded PASSED [ 52%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_dead_process_is_unhealthy_without_probing PASSED [ 55%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_policy_threshold_cooldown_backoff_cap_and_budget PASSED [ 57%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_healthy_service_is_not_restarted PASSED [ 60%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_startup_grace_and_transient_failures_do_not_restart PASSED [ 63%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_threshold_restart_and_verified_recovery PASSED [ 65%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_failed_recovery_is_recorded_and_backoff_applies PASSED [ 68%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_process_exit_triggers_restart_and_budget_opens_circuit_without_blocking_others PASSED [ 71%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_disabled_and_port_conflict_services_are_not_started PASSED [ 73%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_missing_executable_is_a_config_error_not_a_crash PASSED [ 76%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_events_bounded_status_fields_and_no_secret_values PASSED [ 78%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_locked_status_file_does_not_stop_the_watchdog PASSED [ 81%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_shutdown_stops_only_owned_processes PASSED [ 84%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_instance_lock_blocks_duplicates_and_reclaims_stale PASSED [ 86%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_second_watchdog_run_refuses_without_touching_first PASSED [ 89%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_real_process_crash_unhealthy_restart_budget_and_cleanup PASSED [ 92%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_watchdog_code_has_no_network_clients PASSED [ 94%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_posix_setup_script_syntax PASSED [ 97%]
+EAP_5_Watchdog/tests/test_watchdog.py::test_powershell_setup_script_parses_and_validates_idempotently SKIPPED [100%]
+
+=========================== short test summary info ============================
+SKIPPED [1] EAP_5_Watchdog/tests/test_watchdog.py:498: PowerShell setup script targets Windows
+======================== 37 passed, 1 skipped in 25.68s ========================

@@ -1,0 +1,8 @@
+EAP-5 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (GitHub CI not run; physical offline and long-duration memory not verified).
+Watchdog monitors the real FastAPI backend (/health, model_loaded) and Streamlit dashboard (/_stcore/health), loopback only.
+Live recovery: killed backend restarted and verified healthy by /health (21.3 s foreground; 15 s background); dashboard unaffected; graceful owned-only shutdown.
+Soak 60 min: 58 injected failures -> 58 restarts -> 58 verified recoveries; watchdog RSS +0.80%, private bytes 0.00% (both < 5%); handles/threads flat; event buffer bounded at 256.
+Tests: Windows 38/38; Linux container 37 passed + 1 Windows-only skip; repository 545 pass / 2 inherited CPU1 failures; lint 0.
+Fixed: Windows forced stops, status-file lock crash, log-handle leak.

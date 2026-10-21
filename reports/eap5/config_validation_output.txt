@@ -1,0 +1,5 @@
+config C:\Users\ehtis\Desktop\Textile Defect Detection\EAP_5_Watchdog\configs\watchdog.json: 2 services; enabled ['backend', 'dashboard']; disabled []
+  - backend: health http http://127.0.0.1:8000/health; every 10.0s; threshold 3; max 5 restarts/3600s; backoff 10.0-300.0s
+  - dashboard: health http http://127.0.0.1:8501/_stcore/health; every 10.0s; threshold 3; max 5 restarts/3600s; backoff 10.0-300.0s
+VALID
+validate exit=0

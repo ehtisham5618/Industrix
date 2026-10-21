@@ -1,0 +1,6 @@
+Wed Oct 21 07:01:30 PST 2026
+{"actual_duration_s": 3595.21, "injected_failures": {"crash": 29, "unhealthy": 29}, "restarts": 58, "recoveries_verified": 58, "events_buffered_max": 256, "leftover_service_processes": []}
+RSS: {"metric": "rss_bytes", "baseline_samples": 111, "end_samples": 112, "threshold_percent": 5.0, "comparison": "strict <", "baseline_bytes": 39469056, "end_bytes": 39784448.0, "absolute_drift_bytes": 315392.0, "drift_percent": 0.7990867579908676, "peak_bytes": 39862272, "theil_sen_bytes_per_hour": 508110.75716736086, "projected_24h_percent": 30.89675661869557, "status": "PASS"}
+private bytes: {"metric": "vms_bytes", "baseline_samples": 111, "end_samples": 112, "threshold_percent": 5.0, "comparison": "strict <", "baseline_bytes": 27041792, "end_bytes": 27041792.0, "absolute_drift_bytes": 0.0, "drift_percent": 0.0, "peak_bytes": 27111424, "theil_sen_bytes_per_hour": 0.0, "projected_24h_percent": 0.0, "status": "PASS"}
+exit=0
+Wed Oct 21 08:01:31 PST 2026
