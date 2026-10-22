@@ -1,0 +1,45 @@
+{
+  "task": "FDD-3",
+  "branch": "feature/sprint4-fdd3-production-runbook-deployment-handoff",
+  "baseline_commit": "94d1a75",
+  "implementation_commit": "b91bbe594c9d0f4c8ef8ef0582521fdf24a7294a",
+  "documents": [
+    "docs/deployment/PRODUCTION_RUNBOOK.md",
+    "docs/deployment/DEPLOYMENT_GUIDE.md",
+    "docs/deployment/TROUBLESHOOTING.md",
+    "docs/deployment/ROLLBACK_AND_RECOVERY.md",
+    "docs/deployment/DEPLOYMENT_HANDOFF.md"
+  ],
+  "tools": [
+    "FDD_3_Deployment_Handoff/validate_deployment.py",
+    "FDD_3_Deployment_Handoff/smoke_test.py"
+  ],
+  "quickstart_validated": {
+    "interpreter": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe",
+    "preflight": "PASS (24 checks)",
+    "start": "PASS (watchdog background)",
+    "readiness": "both services healthy after 23 s",
+    "smoke": "PASS (6/6)",
+    "shutdown": "graceful in 2 s; dashboard exit 0, backend exit 3 (graceful); ports 8000/8501 freed"
+  },
+  "rollback_backup_check": "sqlite online backup: integrity ok, 12 tables, 1003 rows identical (temporary copy)",
+  "tests": {
+    "fdd3": "17 passed",
+    "repository": "644 passed, 2 failed (baseline ESE-CPU1 INT8 gates), 12 skipped"
+  },
+  "doc_code_consistency": [
+    "every runtime env var documented",
+    "documented endpoints exist in OpenAPI",
+    "referenced modules/scripts/paths exist",
+    "doc links resolve"
+  ],
+  "not_verified": [
+    "physical offline",
+    "Linux native services",
+    "container in this task (image deleted; EAP-3 evidence)",
+    "GPU",
+    "target hardware",
+    "GitHub Actions",
+    "memory stability (EAP-4 open)"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "result": "PASS",
+  "python": "C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe",
+  "checks": [
+    {
+      "name": "python_version",
+      "status": "PASS",
+      "detail": "3.12.9 at C:\\Users\\ehtis\\Desktop\\Textile Defect Detection\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe (need >= 3.11)",
+      "required": true
+    },
+    {
+      "name": "import:fastapi",
+      "status": "PASS",
+      "detail": "0.143.0",
+      "required": true
+    },
+    {
+      "name": "import:uvicorn",
+      "status": "PASS",
+      "detail": "0.54.0",
+      "required": true
+    },
+    {
+      "name": "import:pydantic",
+      "status": "PASS",
+      "detail": "2.12.5",
+      "required": true
+    },
+    {
+      "name": "import:torch",
+      "status": "PASS",
+      "detail": "2.10.0+cpu",
+      "required": true
+    },
+    {
+      "name": "import:ultralytics",
+      "status": "PASS",
+      "detail": "8.4.24",
+      "required": true
+    },
+    {
+      "name": "import:cv2",
+      "status": "PASS",
+      "detail": "5.0.0",
+      "required": true
+    },
+    {
+      "name": "import:numpy",
+      "status": "PASS",
+      "detail": "2.4.6",
+      "required": true
+    },
+    {
+      "name": "import:psutil",
+      "status": "PASS",
+      "detail": "7.2.2",
+      "required": true
+    },
+    {
+      "name": "import:yaml",
+      "status": "PASS",
+      "detail": "6.0.3",
+      "required": true
+    },
+    {
+      "name": "import:reportlab",
+      "status": "PASS",
+      "detail": "5.0.1",
+      "required": true
+    },
+    {
+      "name": "import:pypdf",
+      "status": "PASS",
+      "detail": "6.19.0",
+      "required": true
+    },
+    {
+      "name": "import:streamlit",
+      "status": "PASS",
+      "detail": "1.65.0",
+      "required": false
+    },
+    {
+      "name": "import:openvino",
+      "status": "PASS",
+      "detail": "2026.4.1-22982-e213a147257-releases/2026/4",
+      "required": false
+    },
+    {
+      "name": "model_artifact",
+      "status": "PASS",
+      "detail": "Backend\\best.pt 22,498,282 bytes, SHA256 verified",
+      "required": true
+    },
+    {
+      "name": "openvino_int8_export",
+      "status": "PASS",
+      "detail": "present (needed only for INFERENCE_ENGINE=openvino)",
+      "required": false
+    },
+    {
+      "name": "watchdog_config",
+      "status": "PASS",
+      "detail": "watchdog.json: services ['backend', 'dashboard']",
+      "required": true
+    },
+    {
+      "name": "taxonomy_consistency",
+      "status": "PASS",
+      "detail": "manifest matches model configs",
+      "required": true
+    },
+    {
+      "name": "camera_config",
+      "status": "PASS",
+      "detail": "3_cameras.json: 3 camera entries (sources must be mounted/reachable)",
+      "required": false
+    },
+    {
+      "name": "port:8000",
+      "status": "PASS",
+      "detail": "free",
+      "required": true
+    },
+    {
+      "name": "port:8501",
+      "status": "PASS",
+      "detail": "free",
+      "required": true
+    },
+    {
+      "name": "writable:Backend\\data",
+      "status": "PASS",
+      "detail": "writable",
+      "required": true
+    },
+    {
+      "name": "writable:EAP_5_Watchdog\\runtime",
+      "status": "PASS",
+      "detail": "writable",
+      "required": true
+    },
+    {
+      "name": "disk_free",
+      "status": "PASS",
+      "detail": "7.2 GB free (planning minimum 5 GB; incident growth not yet benchmarked)",
+      "required": false
+    }
+  ]
+}

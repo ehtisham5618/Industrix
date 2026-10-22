@@ -1,0 +1,9 @@
+$ python -m FDD_3_Deployment_Handoff.smoke_test
+PASS  backend_health                   HTTP 200; model_loaded=True classes=12
+PASS  predict_valid_image              3 detections, contract valid
+PASS  predict_rejects_corrupt_upload   HTTP 400
+PASS  system_status                    HTTP 200
+PASS  incidents_api                    HTTP 200
+PASS  dashboard_health                 HTTP 200 body=b'ok'
+SMOKE: PASS (6/6 passed)
+exit=0

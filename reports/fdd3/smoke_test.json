@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "backend_health",
+      "status": "PASS",
+      "detail": "HTTP 200; model_loaded=True classes=12"
+    },
+    {
+      "check": "predict_valid_image",
+      "status": "PASS",
+      "detail": "3 detections, contract valid"
+    },
+    {
+      "check": "predict_rejects_corrupt_upload",
+      "status": "PASS",
+      "detail": "HTTP 400"
+    },
+    {
+      "check": "system_status",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "check": "incidents_api",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "check": "dashboard_health",
+      "status": "PASS",
+      "detail": "HTTP 200 body=b'ok'"
+    }
+  ]
+}

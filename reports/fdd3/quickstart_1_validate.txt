@@ -1,0 +1,27 @@
+$ python -m FDD_3_Deployment_Handoff.validate_deployment --expect-ports-free
+PASS  python_version               3.12.9 at C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe (need >= 3.11)
+PASS  import:fastapi               0.143.0
+PASS  import:uvicorn               0.54.0
+PASS  import:pydantic              2.12.5
+PASS  import:torch                 2.10.0+cpu
+PASS  import:ultralytics           8.4.24
+PASS  import:cv2                   5.0.0
+PASS  import:numpy                 2.4.6
+PASS  import:psutil                7.2.2
+PASS  import:yaml                  6.0.3
+PASS  import:reportlab             5.0.1
+PASS  import:pypdf                 6.19.0
+PASS  import:streamlit             1.65.0
+PASS  import:openvino              2026.4.1-22982-e213a147257-releases/2026/4
+PASS  model_artifact               Backend\best.pt 22,498,282 bytes, SHA256 verified
+PASS  openvino_int8_export         present (needed only for INFERENCE_ENGINE=openvino)
+PASS  watchdog_config              watchdog.json: services ['backend', 'dashboard']
+PASS  taxonomy_consistency         manifest matches model configs
+PASS  camera_config                3_cameras.json: 3 camera entries (sources must be mounted/reachable)
+PASS  port:8000                    free
+PASS  port:8501                    free
+PASS  writable:Backend\data        writable
+PASS  writable:EAP_5_Watchdog\runtime writable
+PASS  disk_free                    7.2 GB free (planning minimum 5 GB; incident growth not yet benchmarked)
+RESULT: PASS (24 checks, 0 required failures, 0 warnings)
+exit=0

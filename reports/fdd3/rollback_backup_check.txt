@@ -1,0 +1,4 @@
+# Rollback §2 backup step, executed into a temporary folder (live DB untouched)
+source integrity ok tables 12 rows 1003
+backup integrity ok tables 12 rows 1003
+exit=0

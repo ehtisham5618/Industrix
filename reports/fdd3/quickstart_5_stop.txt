@@ -1,0 +1,28 @@
+$ python -m EAP_5_Watchdog stop
+22:32:07
+watchdog stopped; owned services shut down
+exit=0
+22:32:09
+pid 6388 gone
+pid 23760 gone
+pid 15324 gone
+port 8000 free
+port 8501 free
+--- stop events:
+{"ts":"2026-10-22T17:32:08.455619+00:00","monotonic_s":34.969,"event":"process_stopped","service":"dashboard","state":"healthy","reason":"watchdog shutdown: stop file","outcome":"graceful; exit_code=0","pid":15324,"restart_count_w
+{"ts":"2026-10-22T17:32:08.866927+00:00","monotonic_s":35.375,"event":"process_stopped","service":"backend","state":"healthy","reason":"watchdog shutdown: stop file","outcome":"graceful; exit_code=3","pid":23760,"restart_count_win
+{"ts":"2026-10-22T17:32:08.866927+00:00","monotonic_s":35.375,"event":"watchdog_stopped","reason":"stop file"}
+--- runtime files:
+EAP_5_Watchdog/runtime:
+logs
+soak_smoke
+status.json
+tests
+watchdog.console.log
+watchdog.jsonl
+
+EAP_5_Watchdog/runtime/logs:
+backend.out.log
+backend.out.log.1
+dashboard.out.log
+dashboard.out.log.1

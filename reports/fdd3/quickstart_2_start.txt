@@ -1,0 +1,4 @@
+$ python -m EAP_5_Watchdog start
+22:31:31
+watchdog started in background (pid 23616); status: python -m EAP_5_Watchdog status
+exit=0

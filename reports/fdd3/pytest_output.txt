@@ -1,0 +1,56 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 17 items
+
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_missing_and_mismatched_model_fail_clearly PASSED [  5%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_import_failures_are_reported_not_raised PASSED [ 11%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_port_check_detects_listener PASSED [ 17%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_unwritable_directory_is_a_failure PASSED [ 23%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_validator_cli_exit_codes_and_json PASSED [ 29%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_validator_never_prints_secret_values PASSED [ 35%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_checks_detect_each_failure[ok-failing0] PASSED [ 41%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_checks_detect_each_failure[no_model-failing1] PASSED [ 47%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_checks_detect_each_failure[bad_class-failing2] PASSED [ 52%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_checks_detect_each_failure[accepts_garbage-failing3] PASSED [ 58%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_handles_unreachable_and_timeouts_and_refuses_remote PASSED [ 64%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_smoke_contract_validation PASSED [ 70%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_every_runtime_environment_variable_is_documented PASSED [ 76%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_variables_exist_in_code PASSED [ 82%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_endpoints_exist_in_the_api PASSED [ 88%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_referenced_modules_scripts_and_paths_exist PASSED [ 94%]
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_runbook_package_has_required_sections PASSED [100%]
+
+============================== warnings summary ===============================
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_endpoints_exist_in_the_api
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:127: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event('shutdown')
+
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_endpoints_exist_in_the_api
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_endpoints_exist_in_the_api
+  C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Lib\site-packages\fastapi\applications.py:4745: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)  # ty: ignore[deprecated]
+
+FDD_3_Deployment_Handoff/tests/test_fdd3.py::test_documented_endpoints_exist_in_the_api
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:167: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event("startup")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 17 passed, 4 warnings in 18.10s =======================

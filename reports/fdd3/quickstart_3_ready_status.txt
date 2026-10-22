@@ -1,0 +1,5 @@
+ready at 22:31:54
+$ python -m EAP_5_Watchdog status
+watchdog pid 6388 running=True uptime 21s events 9/256 owned processes 2
+  backend    healthy      pid=23760 failures=0 restarts_window=0 total_restarts=0 last_ok=2026-10-22T17:31:53.856163+00:00 last_restart=None recovery=None
+  dashboard  healthy      pid=15324 failures=0 restarts_window=0 total_restarts=0 last_ok=2026-10-22T17:31:53.859161+00:00 last_restart=None recovery=None
