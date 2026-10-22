@@ -1,0 +1,79 @@
+{
+  "task": "FDD-2",
+  "measured_at": "2026-10-22T17:18:07.780262+00:00",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "total_ram_bytes": 17049018368,
+    "available_ram_bytes": 4371001344,
+    "python": "3.12.9",
+    "cpu_freq_mhz_reported": 2712.0,
+    "torch_version": "2.10.0+cpu",
+    "ultralytics_version": "8.4.24",
+    "cv2_version": "5.0.0",
+    "numpy_version": "2.4.6",
+    "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+    "onnxruntime_version": "1.24.4",
+    "cuda_available": false,
+    "gpu": null
+  },
+  "artifacts": {
+    "pytorch_fp32": {
+      "path": "Backend\\best.pt",
+      "present": true,
+      "bytes": 22498282,
+      "sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061"
+    },
+    "onnx_fp16": {
+      "path": "Backend\\weights\\onnx_fp16\\best_fp16.onnx",
+      "present": true,
+      "bytes": 22409010,
+      "sha256": "076395d62f8af1e386891de20ae0c0b417938346bfd90a922f8ece92afefdddf"
+    },
+    "openvino_int8_xml": {
+      "path": "Backend\\weights\\openvino_int8\\model.xml",
+      "present": true,
+      "bytes": 470147,
+      "sha256": "3f47534f9f4c1f7ae69979e311a91c89decff27034e9d3a71c2af70c01c1d40a"
+    },
+    "openvino_int8_bin": {
+      "path": "Backend\\weights\\openvino_int8\\model.bin",
+      "present": true,
+      "bytes": 11303236,
+      "sha256": "ec2d1de0ac55791c88f12f3f501bf1f97e01218270486557051c3256481359aa"
+    }
+  },
+  "fixtures": [
+    "tests\\assets\\ife_ui3_fire.png",
+    "tests\\assets\\ife_ui3_textile.png"
+  ],
+  "note": "Measured on this host only; not a target-device benchmark. Host may be shared (see system_cpu_percent).",
+  "system_cpu_percent_at_start": 24.7,
+  "results": [
+    {
+      "backend": "openvino_int8",
+      "measured": true,
+      "iterations": 100,
+      "warmup": 5,
+      "model_load_seconds": 1.226,
+      "rss_before_load_bytes": 248287232,
+      "rss_after_load_bytes": 319012864,
+      "model_load_rss_delta_bytes": 70725632,
+      "peak_rss_during_inference_bytes": 336437248,
+      "latency_ms": {
+        "mean": 338.4606849984266,
+        "p50": 291.07829998247325,
+        "p95": 510.1511999964714,
+        "p99": 771.4088999200612,
+        "min": 205.4785001091659,
+        "max": 1895.2611999120563
+      },
+      "throughput_images_per_s": 2.9539639982861443,
+      "process_cpu_cores_used": 1.5748320565863008,
+      "latency_definition": "single image, batch 1, imgsz 640, full predict call (preprocess + inference + NMS), warm"
+    }
+  ]
+}

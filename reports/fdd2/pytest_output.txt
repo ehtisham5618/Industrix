@@ -1,0 +1,30 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 21 items
+
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_manifest_parses_and_matches_every_authoritative_source PASSED [  4%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_detector_namespace_is_exactly_the_model_classes PASSED [  9%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_namespaces_are_independent PASSED [ 14%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_alert_thresholds_and_severity_are_references_not_inventions PASSED [ 19%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_every_class_is_documented_in_the_markdown_spec PASSED [ 23%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-unique and contiguous] PASSED [ 28%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-unique] PASSED [ 33%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-None] PASSED [ 38%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-definition] PASSED [ 42%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-at least 20] PASSED [ 47%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-unsupported taxonomy schema] PASSED [ 52%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-taxonomy_version] PASSED [ 57%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-model_id values must be unique] PASSED [ 61%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_malformed_manifests_are_rejected[<lambda>-domain] PASSED [ 66%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_renamed_class_and_unknown_model_fail_clearly PASSED [ 71%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_threshold_drift_is_detected PASSED [ 76%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_hardware_guide_has_required_sections_and_labels PASSED [ 80%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_guide_artifact_facts_match_the_repository PASSED [ 85%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_probe_output_reports_real_host_workload_and_method[hardware_probe_openvino_int8] PASSED [ 90%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_probe_output_reports_real_host_workload_and_method[hardware_probe_pytorch_fp32] PASSED [ 95%]
+FDD_2_Hardware_Taxonomy/tests/test_fdd2.py::test_probe_records_unavailable_backend_without_inventing_numbers PASSED [100%]
+
+============================= 21 passed in 1.54s ==============================

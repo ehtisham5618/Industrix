@@ -1,0 +1,81 @@
+{
+  "task": "FDD-2",
+  "branch": "feature/sprint4-fdd2-hardware-sizing-hazard-taxonomy",
+  "implementation_commit": "338c0569477bf81e7e534651cf39780527f0f8ec",
+  "deliverables": [
+    "docs/deployment/HARDWARE_SIZING_GUIDE.md",
+    "docs/specifications/HAZARD_TAXONOMY.md",
+    "docs/specifications/hazard_taxonomy.v1.json",
+    "FDD_2_Hardware_Taxonomy/taxonomy.py",
+    "FDD_2_Hardware_Taxonomy/hardware_probe.py",
+    "FDD_2_Hardware_Taxonomy/tests/test_fdd2.py"
+  ],
+  "taxonomy": {
+    "version": "1.0.0",
+    "namespaces": {
+      "industrix-detector": 12,
+      "qci2-surface-classifier": 2
+    },
+    "consistency": "CONSISTENT",
+    "sources_checked": [
+      "Hazard_Expansion/configs/12class_data.yaml",
+      "ESE_CPU1_Quantization/common.py:NAMES",
+      "EAP-2 baseline manifest",
+      "Backend/weights/openvino_int8/metadata.yaml (local)",
+      "calibrated_thresholds.yaml",
+      "SED-2 severity_rules.yaml",
+      "QCI-2 CLASSES"
+    ],
+    "open_conflicts": [
+      "C-1 chemical hazard positives mostly from the Water Leaks source family",
+      "C-2 baekra/gray stitch/selvet definitions pending",
+      "C-3 no textile alerting policy",
+      "C-4 QCI-2 production role undecided"
+    ]
+  },
+  "hardware_probe": {
+    "pytorch_fp32": {
+      "iterations": 100,
+      "warmup": 5,
+      "latency_ms": {
+        "mean": 444.4,
+        "p50": 388.3,
+        "p95": 778.1,
+        "p99": 1287.2,
+        "min": 245.2,
+        "max": 1334.7
+      },
+      "throughput_images_per_s": 2.25,
+      "model_load_rss_delta_mb": 131.2,
+      "peak_rss_mb": 457.0
+    },
+    "openvino_int8": {
+      "iterations": 100,
+      "warmup": 5,
+      "latency_ms": {
+        "mean": 338.5,
+        "p50": 291.1,
+        "p95": 510.2,
+        "p99": 771.4,
+        "min": 205.5,
+        "max": 1895.3
+      },
+      "throughput_images_per_s": 2.95,
+      "model_load_rss_delta_mb": 70.7,
+      "peak_rss_mb": 336.4
+    }
+  },
+  "probe_host": "Intel i5-7200U 2C/4T, 15.9 GB RAM, Windows 11, no GPU, shared laptop",
+  "tests": {
+    "fdd2": "21 passed",
+    "repository": "627 passed, 2 failed (baseline ESE-CPU1 INT8 gates), 12 skipped"
+  },
+  "not_verified": [
+    "target edge hardware (no device available)",
+    "GPU/CUDA path",
+    "physical offline",
+    "dashboard RSS",
+    "incident storage growth rate",
+    "GitHub Actions run"
+  ]
+}

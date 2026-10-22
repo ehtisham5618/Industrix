@@ -1,0 +1,8 @@
+FDD-2 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (specs + validation done; target hardware and taxonomy decisions open).
+Delivered: Hardware Sizing Guide (measured vs estimate vs not benchmarked; 4 profiles; benchmark procedure) and Hazard Taxonomy 1.0.0 (JSON manifest + spec) for the 12-class detector and separate QCI-2 classifier.
+Taxonomy validator: CONSISTENT with data config, class constants, EAP-2 baseline, OpenVINO metadata, thresholds and SED-2 severity rules.
+Probe on i5-7200U: PyTorch FP32 p50 388 ms / p95 778 ms, 2.25 img/s, peak 457 MB; OpenVINO INT8 p50 291 ms / p95 510 ms, 2.95 img/s, peak 336 MB.
+Tests: FDD-2 21/21; repository 627 pass / 2 baseline CPU1 failures.
+Open: chemical vs water annotation conflict (C-1), pending textile definitions, no target device or GPU benchmark, no SLAs.

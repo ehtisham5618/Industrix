@@ -1,0 +1,4 @@
+industrix-detector (cme-opt2-focal-cosine-12class-v1): 12 classes 0=baekra, 1=color issues, 2=contamination, 3=cut, 4=gray stitch, 5=selvet, 6=stain, 7=chemical hazard, 8=fire, 9=no helmet, 10=smoke, 11=water leak
+qci2-surface-classifier (qci2-kolektor-resnet18-v1): 2 classes 0=normal, 1=defect
+taxonomy 1.0.0: CONSISTENT
+exit=0
