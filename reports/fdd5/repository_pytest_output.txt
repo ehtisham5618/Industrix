@@ -1,0 +1,76 @@
+........................................................................ [ 10%]
+.............................ssssssssss................................. [ 20%]
+.........s.............................................FF............... [ 30%]
+....s................................................................... [ 41%]
+........................................................................ [ 51%]
+........................................................................ [ 61%]
+........................................................................ [ 72%]
+................................................................... [ 81%]
+........................................................................ [ 92%]
+......................................................                   [100%]
+================================== FAILURES ===================================
+___ MeasuredQuantizationAcceptance.test_actual_ir_size_below_6_5_decimal_mb ___
+
+self = <ESE_CPU1_Quantization.tests.test_quantization.MeasuredQuantizationAcceptance testMethod=test_actual_ir_size_below_6_5_decimal_mb>
+
+    def test_actual_ir_size_below_6_5_decimal_mb(self):
+        directory=ROOT/'Backend/weights/openvino_int8'
+        size=sum((directory/name).stat().st_size for name in ('model.xml','model.bin'))
+>       self.assertLess(size,6500000,'Genuine measured size gate; do not suppress this failure')
+E       AssertionError: 11773383 not less than 6500000 : Genuine measured size gate; do not suppress this failure
+
+ESE_CPU1_Quantization\tests\test_quantization.py:92: AssertionError
+_ MeasuredQuantizationAcceptance.test_actual_map_drop_below_one_percentage_point _
+
+self = <ESE_CPU1_Quantization.tests.test_quantization.MeasuredQuantizationAcceptance testMethod=test_actual_map_drop_below_one_percentage_point>
+
+    def test_actual_map_drop_below_one_percentage_point(self):
+        delta=self.report['accuracy']
+>       self.assertLess((delta['fp32']['map50']-delta['int8']['map50'])*100,1.0)
+E       AssertionError: 1.0255145781941644 not less than 1.0
+
+ESE_CPU1_Quantization\tests\test_quantization.py:49: AssertionError
+============================== warnings summary ===============================
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:127: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event('shutdown')
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Lib\site-packages\fastapi\applications.py:4745: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)  # ty: ignore[deprecated]
+
+EAP_2_CI_Model_Regression/tests/test_regression_gate.py::test_real_model_hash_class_map_and_predict_contract
+  C:\Users\ehtis\Desktop\Textile Defect Detection\Backend\main.py:167: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @api_app.on_event("startup")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:102: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:109: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:117: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:192: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:201: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:219: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:235: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:257: Docker daemon or image industrix:eap3 unavailable; container checks NOT VERIFIED
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:272: Docker daemon or image industrix:eap3-runtime unavailable
+SKIPPED [1] EAP_3_Lightweight_Docker\tests\test_container.py:279: Docker daemon or image industrix:eap3-runtime unavailable
+SKIPPED [1] EAP_4_Load_Test\tests\test_load_harness.py:385: set EAP4_TARGET_URL to smoke-test the real service
+SKIPPED [1] FDD_1_Release_Regression\tests\test_release_regression.py:137: set FDD1_BACKEND_URL to render against a live backend
+2 failed, 683 passed, 12 skipped, 4 warnings, 5 subtests passed in 317.50s (0:05:17)

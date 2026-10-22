@@ -1,0 +1,64 @@
+[A] PASS         python_version                           3.12.9 at <repo>\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe (need >= 3.11)
+[A] PASS         import:fastapi                           0.143.0
+[A] PASS         import:uvicorn                           0.54.0
+[A] PASS         import:pydantic                          2.12.5
+[A] PASS         import:torch                             2.10.0+cpu
+[A] PASS         import:ultralytics                       8.4.24
+[A] PASS         import:cv2                               5.0.0
+[A] PASS         import:numpy                             2.4.6
+[A] PASS         import:psutil                            7.2.2
+[A] PASS         import:yaml                              6.0.3
+[A] PASS         import:reportlab                         5.0.1
+[A] PASS         import:pypdf                             6.19.0
+[A] PASS         import:streamlit                         1.65.0
+[A] PASS         import:openvino                          2026.4.1-22982-e213a147257-releases/2026/4
+[A] PASS         model_artifact                           Backend\best.pt 22,498,282 bytes, SHA256 verified
+[A] PASS         openvino_int8_export                     present (needed only for INFERENCE_ENGINE=openvino)
+[A] PASS         watchdog_config                          watchdog.json: services ['backend', 'dashboard']
+[A] PASS         taxonomy_consistency                     manifest matches model configs
+[A] PASS         camera_config                            3_cameras.json: 3 camera entries (sources must be mounted/reachable)
+[A] PASS         port:8000                                free
+[A] PASS         port:8501                                free
+[A] PASS         writable:Backend\data                    writable
+[A] PASS         writable:EAP_5_Watchdog\runtime          writable
+[A] PASS         disk_free                                6.4 GB free (planning minimum 5 GB; incident growth not yet benchmarked)
+[A] PASS         import:playwright                        available (UI rehearsal and FDD-4 recording)
+[A] PASS         browser:msedge                           Microsoft Edge found
+[A] PASS         sample:textile                           tests/assets/ife_ui3_textile.png 1,248,187 bytes
+[A] PASS         sample:hazard                            tests/assets/ife_ui3_fire.png 678,237 bytes
+[A] PASS         recording:ffmpeg                         ffmpeg/ffprobe on PATH (needed only to record; the live demo does not use it)
+[B] PASS         startup:services_healthy                 backend /health model_loaded and dashboard /_stcore/health ok after 31.0 s
+[B] PASS         smoke:backend_health                     HTTP 200; model_loaded=True classes=12
+[B] PASS         smoke:predict_valid_image                3 detections, contract valid
+[B] PASS         smoke:predict_rejects_corrupt_upload     HTTP 400
+[B] PASS         smoke:system_status                      HTTP 200
+[B] PASS         smoke:incidents_api                      HTTP 200
+[B] PASS         smoke:dashboard_health                   HTTP 200 body=b'ok'
+[C] PASS         C2:dashboard_opens                       Industrial Vision Console rendered with live monitor controls
+[C] PASS         C3:textile_inference                     dashboard [('baekra', '95.0%')] in 2.53 s click-to-results (UI-observed); direct /predict HTTP 200  in 0.83 s
+[C] PASS         C3:textile_dashboard_matches_backend     dashboard [('baekra', '95.0%')] vs backend [('baekra', '95.0%')]
+[C] PASS         C4:hazard_inference                      dashboard [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')] in 1.0 s click-to-results (UI-observed); direct /predict HTTP 200  in 0.73 s
+[C] PASS         C4:hazard_dashboard_matches_backend      dashboard [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')] vs backend [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')]
+[C] PASS         C5:incident_history_panel                panel rendered; /incidents HTTP 200 ; ? incidents listed by the API
+[D] PASS         D1:dashboard_backend_unreachable         error shown for http://127.0.0.1:62626; app kept running; reload restored http://127.0.0.1:8000: True
+[C] PASS         offline:browser_requests                 0 non-loopback browser requests blocked: []
+[D] PASS         D2:corrupt_png_rejected                  HTTP 400 b'{"detail":"Uploaded file is not a readable image."}' 
+[D] PASS         D3:text_file_rejected                    HTTP 400 b'{"detail":"Uploaded file is not a readable image."}' 
+[D] PASS         D4:malformed_request_rejected            empty multipart body -> HTTP 422 
+[D] PASS         D5:client_timeout_reported               1 ms client timeout -> TimeoutError: timed out (no crash)
+[D] PASS         D5b:backend_healthy_after_bad_requests   HTTP 200
+[D] PASS         D6:missing_model_detected                missing <repo>\FDD_5_Dry_Run\runtime\fdd5-m4qnvznk\missing_best.pt: provision the verified best.pt (weights are not in Git, never downloaded)
+[D] PASS         D7:backend_start_refused_without_model   watchdog validate exit 1: hreshold 3; max 5 restarts/3600s; backoff 10.0-300.0s
+  PROBLEM: [backend] local model file missing: <repo>\FDD_5_Dry_Run\ru
+[D] PASS         D8:missing_config_value_reported         watchdog validate exit 2: IG INVALID: 1 validation error for WatchdogConfig
+services
+  Field required [type=missing, input_value={'version': 'eap5-wat
+[D] PASS         D9:recording_prerequisite_missing        recorder preflight refuses: preflight failed: ffmpeg not found on PATH (install ffmpeg; it is not downloaded automatically); ffprobe not found on PATH
+[D] PASS         D10:readiness_probe_unreachable_backend  http://127.0.0.1:50779/health -> URLError: timed out
+[D] PASS         D11:backend_crash_auto_restart           killed backend PID; watchdog restarted it (new PID) and services were healthy after 14.2 s; /predict HTTP 200 3 detections ; restart reason 'process e
+[D] PASS         D12:graceful_stop                        watchdog stop exit 0; ports 8000/8501 free
+[D] PASS         D12:restart:services_healthy             backend /health model_loaded and dashboard /_stcore/health ok after 12.1 s
+[D] PASS         D12:restart_smoke                        6/6 smoke checks passed after a clean restart
+[D] PASS         D12:final:graceful_stop                  watchdog stop exit 0; ports 8000/8501 free
+REHEARSAL: READY — report <repo>\reports\fdd5\rehearsal\rehearsal_20261022T182146Z.json
+exit 0

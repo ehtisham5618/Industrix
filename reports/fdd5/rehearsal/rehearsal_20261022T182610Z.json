@@ -1,0 +1,895 @@
+{
+  "task": "FDD-5",
+  "started_at": "2026-10-22T18:26:10+00:00",
+  "finished_at": "2026-10-22T18:28:34+00:00",
+  "git_revision": "689d30b+uncommitted",
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9",
+    "cpu": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "cpu_count": "4"
+  },
+  "checks": [
+    {
+      "stage": "A",
+      "name": "python_version",
+      "status": "PASS",
+      "required": true,
+      "detail": "3.12.9 at <repo>\\ESE_CPU1_Quantization\\runtime\\venv\\Scripts\\python.exe (need >= 3.11)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:fastapi",
+      "status": "PASS",
+      "required": true,
+      "detail": "0.143.0",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:uvicorn",
+      "status": "PASS",
+      "required": true,
+      "detail": "0.54.0",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:pydantic",
+      "status": "PASS",
+      "required": true,
+      "detail": "2.12.5",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:torch",
+      "status": "PASS",
+      "required": true,
+      "detail": "2.10.0+cpu",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:ultralytics",
+      "status": "PASS",
+      "required": true,
+      "detail": "8.4.24",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:cv2",
+      "status": "PASS",
+      "required": true,
+      "detail": "5.0.0",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:numpy",
+      "status": "PASS",
+      "required": true,
+      "detail": "2.4.6",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:psutil",
+      "status": "PASS",
+      "required": true,
+      "detail": "7.2.2",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:yaml",
+      "status": "PASS",
+      "required": true,
+      "detail": "6.0.3",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:reportlab",
+      "status": "PASS",
+      "required": true,
+      "detail": "5.0.1",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:pypdf",
+      "status": "PASS",
+      "required": true,
+      "detail": "6.19.0",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:streamlit",
+      "status": "PASS",
+      "required": false,
+      "detail": "1.65.0",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:openvino",
+      "status": "PASS",
+      "required": false,
+      "detail": "2026.4.1-22982-e213a147257-releases/2026/4",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "model_artifact",
+      "status": "PASS",
+      "required": true,
+      "detail": "Backend\\best.pt 22,498,282 bytes, SHA256 verified",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "openvino_int8_export",
+      "status": "PASS",
+      "required": false,
+      "detail": "present (needed only for INFERENCE_ENGINE=openvino)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "watchdog_config",
+      "status": "PASS",
+      "required": true,
+      "detail": "watchdog.json: services ['backend', 'dashboard']",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "taxonomy_consistency",
+      "status": "PASS",
+      "required": true,
+      "detail": "manifest matches model configs",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "camera_config",
+      "status": "PASS",
+      "required": false,
+      "detail": "3_cameras.json: 3 camera entries (sources must be mounted/reachable)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "port:8000",
+      "status": "PASS",
+      "required": true,
+      "detail": "free",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "port:8501",
+      "status": "PASS",
+      "required": true,
+      "detail": "free",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "writable:Backend\\data",
+      "status": "PASS",
+      "required": true,
+      "detail": "writable",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "writable:EAP_5_Watchdog\\runtime",
+      "status": "PASS",
+      "required": true,
+      "detail": "writable",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "disk_free",
+      "status": "PASS",
+      "required": false,
+      "detail": "6.3 GB free (planning minimum 5 GB; incident growth not yet benchmarked)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "import:playwright",
+      "status": "PASS",
+      "required": true,
+      "detail": "available (UI rehearsal and FDD-4 recording)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "browser:msedge",
+      "status": "PASS",
+      "required": true,
+      "detail": "Microsoft Edge found",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "sample:textile",
+      "status": "PASS",
+      "required": true,
+      "detail": "tests/assets/ife_ui3_textile.png 1,248,187 bytes",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "sample:hazard",
+      "status": "PASS",
+      "required": true,
+      "detail": "tests/assets/ife_ui3_fire.png 678,237 bytes",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "A",
+      "name": "recording:ffmpeg",
+      "status": "PASS",
+      "required": false,
+      "detail": "ffmpeg/ffprobe on PATH (needed only to record; the live demo does not use it)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "startup:services_healthy",
+      "status": "PASS",
+      "required": true,
+      "detail": "backend /health model_loaded and dashboard /_stcore/health ok after 20.4 s",
+      "seconds": 22.2,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:backend_health",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 200; model_loaded=True classes=12",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:predict_valid_image",
+      "status": "PASS",
+      "required": true,
+      "detail": "3 detections, contract valid",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:predict_rejects_corrupt_upload",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 400",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:system_status",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 200",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:incidents_api",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 200",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "B",
+      "name": "smoke:dashboard_health",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 200 body=b'ok'",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "C",
+      "name": "C2:dashboard_opens",
+      "status": "PASS",
+      "required": true,
+      "detail": "Industrial Vision Console rendered with live monitor controls",
+      "seconds": null,
+      "evidence": [
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c2_dashboard.png"
+      ]
+    },
+    {
+      "stage": "C",
+      "name": "C3:textile_inference",
+      "status": "PASS",
+      "required": true,
+      "detail": "dashboard [('baekra', '95.0%')] in 2.69 s click-to-results (UI-observed); direct /predict HTTP 200  in 0.8 s",
+      "seconds": 2.69,
+      "evidence": [
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c3_textile_annotated.png",
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c3_textile_table.png"
+      ]
+    },
+    {
+      "stage": "C",
+      "name": "C3:textile_dashboard_matches_backend",
+      "status": "PASS",
+      "required": true,
+      "detail": "dashboard [('baekra', '95.0%')] vs backend [('baekra', '95.0%')]",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "C",
+      "name": "C4:hazard_inference",
+      "status": "PASS",
+      "required": true,
+      "detail": "dashboard [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')] in 1.03 s click-to-results (UI-observed); direct /predict HTTP 200  in 0.69 s",
+      "seconds": 1.03,
+      "evidence": [
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c4_hazard_annotated.png",
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c4_hazard_table.png"
+      ]
+    },
+    {
+      "stage": "C",
+      "name": "C4:hazard_dashboard_matches_backend",
+      "status": "PASS",
+      "required": true,
+      "detail": "dashboard [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')] vs backend [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')]",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "C",
+      "name": "C5:incident_history_panel",
+      "status": "PASS",
+      "required": true,
+      "detail": "panel rendered; /incidents HTTP 200 ; 0 hazard and 0 quality incidents in the local store; logging_failures=0",
+      "seconds": null,
+      "evidence": [
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/c5_incident_history.png"
+      ]
+    },
+    {
+      "stage": "D",
+      "name": "D1:dashboard_backend_unreachable",
+      "status": "PASS",
+      "required": true,
+      "detail": "error shown for http://127.0.0.1:56488; app kept running; reload restored http://127.0.0.1:8000: True",
+      "seconds": null,
+      "evidence": [
+        "reports/fdd5/rehearsal/evidence_20261022T182610Z/d_dashboard_backend_unavailable.png"
+      ]
+    },
+    {
+      "stage": "C",
+      "name": "offline:browser_requests",
+      "status": "PASS",
+      "required": true,
+      "detail": "0 non-loopback browser requests blocked: []",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D2:corrupt_png_rejected",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 400 b'{\"detail\":\"Uploaded file is not a readable image.\"}' ",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D3:text_file_rejected",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 400 b'{\"detail\":\"Uploaded file is not a readable image.\"}' ",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D4:malformed_request_rejected",
+      "status": "PASS",
+      "required": true,
+      "detail": "empty multipart body -> HTTP 422 ",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D5:client_timeout_reported",
+      "status": "PASS",
+      "required": true,
+      "detail": "1 ms client timeout -> TimeoutError: timed out (no crash)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D5b:backend_healthy_after_bad_requests",
+      "status": "PASS",
+      "required": true,
+      "detail": "HTTP 200",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D6:missing_model_detected",
+      "status": "PASS",
+      "required": true,
+      "detail": "missing <repo>\\FDD_5_Dry_Run\\runtime\\fdd5-a24t2jap\\missing_best.pt: provision the verified best.pt (weights are not in Git, never downloaded)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D7:backend_start_refused_without_model",
+      "status": "PASS",
+      "required": true,
+      "detail": "watchdog validate exit 1: hreshold 3; max 5 restarts/3600s; backoff 10.0-300.0s\n  PROBLEM: [backend] local model file missing: <repo>\\FDD_5_Dry_Run\\runtime\\fdd5-a24t2jap\\missing_best.pt (weights are not downloaded)\nINVALID (1 problems)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D8:missing_config_value_reported",
+      "status": "PASS",
+      "required": true,
+      "detail": "watchdog validate exit 2: IG INVALID: 1 validation error for WatchdogConfig\nservices\n  Field required [type=missing, input_value={'version': 'eap5-watchdo...og_max_bytes': 20000000}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D9:recording_prerequisite_missing",
+      "status": "PASS",
+      "required": true,
+      "detail": "recorder preflight refuses: preflight failed: ffmpeg not found on PATH (install ffmpeg; it is not downloaded automatically); ffprobe not found on PATH (install ffmpeg; it is not downloaded automatically)",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D10:readiness_probe_unreachable_backend",
+      "status": "PASS",
+      "required": true,
+      "detail": "http://127.0.0.1:60336/health -> URLError: timed out",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D11:backend_crash_auto_restart",
+      "status": "PASS",
+      "required": true,
+      "detail": "killed backend PID; watchdog restarted it (new PID) and services were healthy after 12.0 s; /predict HTTP 200 3 detections ; restart reason 'process exited'",
+      "seconds": 13.1,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D12:graceful_stop",
+      "status": "PASS",
+      "required": true,
+      "detail": "watchdog stop exit 0; ports 8000/8501 free",
+      "seconds": 18.4,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D12:restart:services_healthy",
+      "status": "PASS",
+      "required": true,
+      "detail": "backend /health model_loaded and dashboard /_stcore/health ok after 20.2 s",
+      "seconds": 22.1,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D12:restart_smoke",
+      "status": "PASS",
+      "required": true,
+      "detail": "6/6 smoke checks passed after a clean restart",
+      "seconds": null,
+      "evidence": []
+    },
+    {
+      "stage": "D",
+      "name": "D12:final:graceful_stop",
+      "status": "PASS",
+      "required": true,
+      "detail": "watchdog stop exit 0; ports 8000/8501 free",
+      "seconds": 3.8,
+      "evidence": []
+    }
+  ],
+  "resources": {
+    "method": "psutil every 2 s: RSS summed over the watchdog-owned backend process tree; system CPU",
+    "samples": 52,
+    "duration_s": 106.7,
+    "backend_rss_mib": {
+      "first": 31.8,
+      "last": 421.1,
+      "min": 31.8,
+      "max": 460.0
+    },
+    "cpu_system_percent": {
+      "mean": 58.3,
+      "max": 100.0
+    },
+    "memory_drift_5pct": "NOT VERIFIED: a rehearsal of minutes with a backend restart is not a drift measurement (see EAP-4 for the long-run profile)",
+    "series": [
+      {
+        "t": 2.0,
+        "backend_pid": 20232,
+        "backend_rss_mib": 31.8,
+        "cpu_system": 0.0
+      },
+      {
+        "t": 4.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 68.7,
+        "cpu_system": 75.4
+      },
+      {
+        "t": 6.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 141.5,
+        "cpu_system": 88.5
+      },
+      {
+        "t": 8.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 217.6,
+        "cpu_system": 82.6
+      },
+      {
+        "t": 10.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 235.0,
+        "cpu_system": 82.6
+      },
+      {
+        "t": 12.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 275.9,
+        "cpu_system": 62.2
+      },
+      {
+        "t": 14.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 309.4,
+        "cpu_system": 70.9
+      },
+      {
+        "t": 16.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 374.2,
+        "cpu_system": 26.4
+      },
+      {
+        "t": 18.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 374.2,
+        "cpu_system": 40.1
+      },
+      {
+        "t": 20.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 374.2,
+        "cpu_system": 21.8
+      },
+      {
+        "t": 22.3,
+        "backend_pid": 20232,
+        "backend_rss_mib": 376.1,
+        "cpu_system": 20.3
+      },
+      {
+        "t": 24.3,
+        "backend_pid": 20232,
+        "backend_rss_mib": 412.7,
+        "cpu_system": 84.3
+      },
+      {
+        "t": 26.5,
+        "backend_pid": 20232,
+        "backend_rss_mib": 412.8,
+        "cpu_system": 70.4
+      },
+      {
+        "t": 28.6,
+        "backend_pid": 20232,
+        "backend_rss_mib": 412.9,
+        "cpu_system": 100.0
+      },
+      {
+        "t": 30.7,
+        "backend_pid": 20232,
+        "backend_rss_mib": 413.0,
+        "cpu_system": 90.6
+      },
+      {
+        "t": 32.9,
+        "backend_pid": 20232,
+        "backend_rss_mib": 432.0,
+        "cpu_system": 85.1
+      },
+      {
+        "t": 34.9,
+        "backend_pid": 20232,
+        "backend_rss_mib": 432.6,
+        "cpu_system": 83.4
+      },
+      {
+        "t": 37.0,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.5,
+        "cpu_system": 63.1
+      },
+      {
+        "t": 39.0,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.5,
+        "cpu_system": 96.6
+      },
+      {
+        "t": 41.0,
+        "backend_pid": 20232,
+        "backend_rss_mib": 440.7,
+        "cpu_system": 94.3
+      },
+      {
+        "t": 43.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 440.7,
+        "cpu_system": 62.9
+      },
+      {
+        "t": 45.5,
+        "backend_pid": 20232,
+        "backend_rss_mib": 428.7,
+        "cpu_system": 90.8
+      },
+      {
+        "t": 47.6,
+        "backend_pid": 20232,
+        "backend_rss_mib": 428.8,
+        "cpu_system": 66.1
+      },
+      {
+        "t": 49.6,
+        "backend_pid": 20232,
+        "backend_rss_mib": 460.0,
+        "cpu_system": 67.4
+      },
+      {
+        "t": 51.7,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 74.8
+      },
+      {
+        "t": 53.7,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 75.7
+      },
+      {
+        "t": 55.8,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.9,
+        "cpu_system": 24.6
+      },
+      {
+        "t": 57.8,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.9,
+        "cpu_system": 45.1
+      },
+      {
+        "t": 59.8,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.9,
+        "cpu_system": 69.8
+      },
+      {
+        "t": 61.8,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 55.9
+      },
+      {
+        "t": 63.9,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 43.6
+      },
+      {
+        "t": 65.9,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 35.0
+      },
+      {
+        "t": 68.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 72.7
+      },
+      {
+        "t": 70.1,
+        "backend_pid": 20232,
+        "backend_rss_mib": 433.8,
+        "cpu_system": 66.3
+      },
+      {
+        "t": 72.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 432.7,
+        "cpu_system": 50.1
+      },
+      {
+        "t": 74.2,
+        "backend_pid": 20232,
+        "backend_rss_mib": 435.0,
+        "cpu_system": 71.1
+      },
+      {
+        "t": 76.3,
+        "backend_pid": 20232,
+        "backend_rss_mib": 435.0,
+        "cpu_system": 46.8
+      },
+      {
+        "t": 78.3,
+        "backend_pid": 7972,
+        "backend_rss_mib": 50.3,
+        "cpu_system": 73.7
+      },
+      {
+        "t": 80.3,
+        "backend_pid": 7972,
+        "backend_rss_mib": 144.7,
+        "cpu_system": 47.7
+      },
+      {
+        "t": 82.4,
+        "backend_pid": 7972,
+        "backend_rss_mib": 221.4,
+        "cpu_system": 73.8
+      },
+      {
+        "t": 84.4,
+        "backend_pid": 7972,
+        "backend_rss_mib": 249.1,
+        "cpu_system": 67.7
+      },
+      {
+        "t": 86.5,
+        "backend_pid": 7972,
+        "backend_rss_mib": 303.0,
+        "cpu_system": 41.9
+      },
+      {
+        "t": 88.5,
+        "backend_pid": 7972,
+        "backend_rss_mib": 376.0,
+        "cpu_system": 53.8
+      },
+      {
+        "t": 90.5,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 79.3
+      },
+      {
+        "t": 92.6,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 69.4
+      },
+      {
+        "t": 94.6,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 11.9
+      },
+      {
+        "t": 96.6,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 22.4
+      },
+      {
+        "t": 98.6,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 23.7
+      },
+      {
+        "t": 100.6,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 26.6
+      },
+      {
+        "t": 102.7,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 30.0
+      },
+      {
+        "t": 104.7,
+        "backend_pid": 7972,
+        "backend_rss_mib": 421.1,
+        "cpu_system": 28.5
+      },
+      {
+        "t": 106.7,
+        "backend_pid": 7972,
+        "backend_rss_mib": null,
+        "cpu_system": 23.1
+      }
+    ]
+  },
+  "offline": {
+    "browser_non_loopback_requests_blocked": 0,
+    "backend_non_loopback_connections": [],
+    "env": "watchdog starts the backend with YOLO_OFFLINE=true, YOLO_AUTOINSTALL=false",
+    "physical_network_isolation": "NOT VERIFIED: the network adapter was not disabled"
+  },
+  "readiness": "READY",
+  "notes": []
+}

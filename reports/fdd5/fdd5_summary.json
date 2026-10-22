@@ -1,0 +1,72 @@
+{
+  "task": "FDD-5",
+  "readiness": "READY",
+  "report": "reports/fdd5/rehearsal/rehearsal_20261022T182610Z.json",
+  "started_at": "2026-10-22T18:26:10+00:00",
+  "finished_at": "2026-10-22T18:28:34+00:00",
+  "revision": "689d30b + FDD-5 working tree (committed unchanged as 5b55d7d)",
+  "checks": {
+    "total": 59,
+    "by_status": {
+      "PASS": 59,
+      "FAIL": 0,
+      "BLOCKED": 0,
+      "NOT VERIFIED": 0
+    }
+  },
+  "timings_s": {
+    "startup:services_healthy": 22.2,
+    "C3:textile_inference": 2.69,
+    "C4:hazard_inference": 1.03,
+    "D11:backend_crash_auto_restart": 13.1,
+    "D12:graceful_stop": 18.4,
+    "D12:restart:services_healthy": 22.1,
+    "D12:final:graceful_stop": 3.8
+  },
+  "inference": {
+    "C3:textile_dashboard_matches_backend": "dashboard [('baekra', '95.0%')] vs backend [('baekra', '95.0%')]",
+    "C4:hazard_dashboard_matches_backend": "dashboard [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')] vs backend [('fire', '81.7%'), ('smoke', '40.0%'), ('smoke', '32.5%')]"
+  },
+  "resources": {
+    "method": "psutil every 2 s: RSS summed over the watchdog-owned backend process tree; system CPU",
+    "samples": 52,
+    "duration_s": 106.7,
+    "backend_rss_mib": {
+      "first": 31.8,
+      "last": 421.1,
+      "min": 31.8,
+      "max": 460.0
+    },
+    "cpu_system_percent": {
+      "mean": 58.3,
+      "max": 100.0
+    },
+    "memory_drift_5pct": "NOT VERIFIED: a rehearsal of minutes with a backend restart is not a drift measurement (see EAP-4 for the long-run profile)"
+  },
+  "offline": {
+    "browser_non_loopback_requests_blocked": 0,
+    "backend_non_loopback_connections": [],
+    "env": "watchdog starts the backend with YOLO_OFFLINE=true, YOLO_AUTOINSTALL=false",
+    "physical_network_isolation": "NOT VERIFIED: the network adapter was not disabled"
+  },
+  "runs": [
+    {
+      "file": "reports/fdd5/rehearsal_run1_superseded_20261022T182146Z.json",
+      "log": "reports/fdd5/rehearsal_terminal_run1.txt",
+      "readiness": "READY",
+      "status": "superseded: RSS sampled the venv launcher PID (about 5 MiB) instead of the interpreter; incident count detail printed '?'; code fixed, rehearsal rerun"
+    },
+    {
+      "file": "reports/fdd5/rehearsal/rehearsal_20261022T182610Z.json",
+      "log": "reports/fdd5/rehearsal_terminal.txt",
+      "readiness": "READY",
+      "status": "final"
+    }
+  ],
+  "not_verified": [
+    "physical network isolation",
+    "memory drift < 5% (a ~2.5-minute rehearsal with a restart cannot measure it)",
+    "a human presenter walk-through on the Demo Day laptop/projector",
+    "GitHub Actions (never run on this repo)"
+  ]
+}

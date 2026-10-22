@@ -15,6 +15,7 @@ ESCALATION_TEST_TYPES = {"alert_escalation"}
 STRESS_TEST_TYPES = {"stress_test", "cpu_soak_test"}
 TEMPORAL_TRACKING_TYPES = {"temporal_tracking"}
 DATASET_EXPERIMENT_TYPES = {"dataset_augmentation"}
+LOCAL_WEIGHT_SUFFIXES = {".pt", ".pth", ".onnx", ".bin", ".xml"}
 FRONTEND_INTEGRATION_TYPES = {"frontend_integration", "incident_logging_and_reporting", "end_to_end_demo", "edge_telemetry_failover", "local_incident_pdf"}
 
 
@@ -100,7 +101,13 @@ def validate(root: Path) -> int:
                 errors.append(f'{run_id}: classifier missing from model registry')
             for field in ('best_weight_uri','dataset_version','git_commit','source_script','status'):
                 if is_missing(row.get(field)):errors.append(f'{run_id}: classifier run missing {field}')
-            check_file_reference(root,row.get('best_weight_uri',''),errors,run_id)
+            weight_errors: list[str] = []
+            check_file_reference(root,row.get('best_weight_uri',''),weight_errors,run_id)
+            if weight_errors and Path(row['best_weight_uri'].split(';',1)[0].strip()).suffix.lower() in LOCAL_WEIGHT_SUFFIXES:
+                # Weights are local-only (git-ignored); absent on a clean checkout such as hosted CI.
+                warnings.extend(f"{msg} (local-only weight, NOT_VERIFIED here)" for msg in weight_errors)
+            else:
+                errors.extend(weight_errors)
             check_file_reference(root,row.get('source_script',''),errors,run_id)
         if row["experiment_type"] in CALIBRATION_EXPERIMENT_TYPES:
             if row["model_version"] not in model_versions:

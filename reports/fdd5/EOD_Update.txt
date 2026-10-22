@@ -1,0 +1,21 @@
+FDD-5: EOD Update
+
+Status: IMPLEMENTED, REVIEW BLOCKED. The dry run is done and READY; CI has never run on the repo, physical offline is untested, and there has been no human presenter walk-through yet.
+
+Dry run (2026-10-22, 23:26-23:28 PKT): python -m FDD_5_Dry_Run.rehearse gave READY with 59/59 checks PASS.
+- Services healthy in 22.2 s; smoke test 6/6.
+- Dashboard results equal the backend: textile baekra 95.0%; fire 81.7%, smoke 40.0% and 32.5%.
+- 12 failure-recovery scenarios passed, including a backend crash with watchdog auto-restart (healthy in 12.0 s) and a clean stop/restart (healthy in 20.2 s, smoke 6/6).
+- 0 non-loopback requests or sockets.
+
+Run 1 was superseded: it measured the venv launcher's memory instead of the interpreter. Fixed and rerun.
+
+Tests: FDD-5 21/21. Full suite: 683 passed, 2 failed (pre-existing ESE-CPU1 INT8 gates), 12 skipped.
+
+Not verified:
+- physical network isolation
+- memory drift < 5%
+- a human walk-through on the Demo Day laptop
+- GitHub Actions
+
+Next: on the Demo Day laptop, run the rehearsal once with the network physically disconnected.

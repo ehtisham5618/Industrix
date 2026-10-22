@@ -1,0 +1,30 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 21 items
+
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_classification[statuses0-INCOMPLETE] PASSED [  4%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_classification[statuses1-READY] PASSED [  9%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_classification[statuses2-NOT READY] PASSED [ 14%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_classification[statuses3-NOT READY] PASSED [ 19%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_classification[statuses4-NOT READY] PASSED [ 23%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_optional_checks_do_not_block_readiness PASSED [ 28%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_report_contract_round_trips_and_rejects_unknown_status PASSED [ 33%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_report_paths_are_redacted PASSED  [ 38%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_safe_report_path_never_overwrites PASSED [ 42%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_results_table_parsing_and_backend_comparison PASSED [ 47%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_wait_until_success_timeout_and_exceptions PASSED [ 52%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_status_file_errors_mean_not_healthy PASSED [ 57%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_readiness_probe_against_real_local_server_and_dead_port PASSED [ 61%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_busy_ports_are_refused_without_touching_processes PASSED [ 66%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_services_are_stopped_when_interrupted PASSED [ 71%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_preflight_failure_starts_nothing PASSED [ 76%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_free_port_is_bindable PASSED      [ 80%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_offline_guard_and_no_cloud_clients PASSED [ 85%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_only_watchdog_owned_backend_is_killed PASSED [ 90%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_documented_commands_exist PASSED  [ 95%]
+FDD_5_Dry_Run/tests/test_fdd5.py::test_latest_rehearsal_report_is_consistent PASSED [100%]
+
+============================= 21 passed in 3.87s ==============================
