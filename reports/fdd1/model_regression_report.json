@@ -1,0 +1,376 @@
+{
+  "suite": "EAP-2",
+  "status": "UNDEFINED_THRESHOLD",
+  "code_status": "PASS",
+  "model_release_status": "UNDEFINED_THRESHOLD",
+  "model_id": "cme-opt2-focal-cosine-12class-v1",
+  "model_version": "cme-opt2-focal-cosine-12class-v1",
+  "model_sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061",
+  "baseline_id": "eap2-baseline-cme-opt2-v1",
+  "dataset_fingerprint": "fd1656ceedb3889677760796a4243e54d83455b126f2d720fa8984ee37f6161b",
+  "checks": [
+    {
+      "name": "artifact_hash",
+      "category": "artifact",
+      "status": "PASS",
+      "detail": "SHA256 matches baseline manifest",
+      "measured": {
+        "sha256": "c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061"
+      }
+    },
+    {
+      "name": "class_map",
+      "category": "artifact",
+      "status": "PASS",
+      "detail": "12 classes identical to baseline (ids and names)",
+      "measured": {
+        "load_ms": 85.92800004407763
+      }
+    },
+    {
+      "name": "predict_api_contract",
+      "category": "inference",
+      "status": "PASS",
+      "detail": "real /predict returned 3 contract-valid detections",
+      "measured": {
+        "classes": [
+          "fire",
+          "smoke"
+        ]
+      }
+    },
+    {
+      "name": "repeat_inference_stability",
+      "category": "inference",
+      "status": "PASS",
+      "detail": "identical input re-run within 1e-4 confidence",
+      "measured": null
+    },
+    {
+      "name": "latency_cpu",
+      "category": "performance",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "mean 406.6 ms, p95 517.1 ms; no approved .pt CPU latency SLO",
+      "measured": {
+        "runs": 20,
+        "warmup": 3,
+        "mean_ms": 406.5642600180581,
+        "p50_ms": 392.4799499800429,
+        "p95_ms": 517.0580749982037,
+        "max_ms": 520.7816001493484,
+        "imgsz": 640,
+        "batch": 1,
+        "backend": "PyTorch CPU",
+        "note": "CI/developer-machine measurement; not a deployment-gateway benchmark; 20 samples make p95 indicative only"
+      }
+    },
+    {
+      "name": "memory_repeated_inference",
+      "category": "performance",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "RSS +0.06% over 20 warmed inferences; no approved gate",
+      "measured": {
+        "rss_before_mb": 467.357696,
+        "rss_after_mb": 467.636224,
+        "growth_percent": 0.05959632255633167,
+        "runs": 20
+      }
+    },
+    {
+      "name": "golden:00-baekra",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "baekra GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:01-color_issues",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "color issues GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:02-contamination",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "contamination GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:03-cut",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "cut GT missed at IoU\u22650.5; accepted baseline missed it",
+      "measured": {
+        "hit": false,
+        "reference_hit": false
+      }
+    },
+    {
+      "name": "golden:04-gray_stitch",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "gray stitch GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:05-selvet",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "selvet GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:06-stain",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "stain GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:07-chemical_hazard",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "chemical hazard GT missed at IoU\u22650.5; accepted baseline missed it",
+      "measured": {
+        "hit": false,
+        "reference_hit": false
+      }
+    },
+    {
+      "name": "golden:08-fire",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "fire GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:09-no_helmet",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "no helmet GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:10-smoke",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "smoke GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "golden:11-water_leak",
+      "category": "quality",
+      "status": "PASS",
+      "detail": "water leak GT detected at IoU\u22650.5; accepted baseline detected it",
+      "measured": {
+        "hit": true,
+        "reference_hit": true
+      }
+    },
+    {
+      "name": "min_absolute:map50",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "map50=0.781995 \u0394 +0.0291 pp vs min_absolute 0.72 (CME-OPT2 task acceptance target (CME_OPT2_Model_Fine_Tuning/README.md); not an approved release regression gate); reference target only, not an approved release gate",
+      "measured": {
+        "value": 0.7819953253357151,
+        "delta_pp": 0.029063
+      }
+    },
+    {
+      "name": "min_absolute:per_class:chemical hazard",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "per_class:chemical hazard=0.423908 \u0394 -0.0000 pp vs min_absolute 0.65 (CME-OPT2 task acceptance target; the accepted production model itself measures 0.424); reference target only, not an approved release gate \u2014 VIOLATED",
+      "measured": {
+        "value": 0.4239083145600664,
+        "delta_pp": -2.2e-05
+      }
+    },
+    {
+      "name": "max_drop_pp:map50",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "Measured 0.781995 (\u0394 +0.0291 pp); no approved threshold (No approved model-regression tolerance exists in the repository)",
+      "measured": {
+        "value": 0.7819953253357151,
+        "delta_pp": 0.029063
+      }
+    },
+    {
+      "name": "max_drop_pp:map50_95",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "Measured 0.491720 (\u0394 -0.0214 pp); no approved threshold (No approved model-regression tolerance exists in the repository)",
+      "measured": {
+        "value": 0.4917199666882641,
+        "delta_pp": -0.021387
+      }
+    },
+    {
+      "name": "max_drop_pp:precision",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "Measured 0.729311 (\u0394 +0.1314 pp); no approved threshold (No approved model-regression tolerance exists in the repository)",
+      "measured": {
+        "value": 0.7293111176548043,
+        "delta_pp": 0.131379
+      }
+    },
+    {
+      "name": "max_drop_pp:recall",
+      "category": "quality",
+      "status": "UNDEFINED_THRESHOLD",
+      "detail": "Measured 0.780224 (\u0394 +0.0020 pp); no approved threshold (No approved model-regression tolerance exists in the repository)",
+      "measured": {
+        "value": 0.7802242886192703,
+        "delta_pp": 0.002021
+      }
+    }
+  ],
+  "metrics": {
+    "measured": {
+      "precision": 0.7293111176548043,
+      "recall": 0.7802242886192703,
+      "map50": 0.7819953253357151,
+      "map50_95": 0.4917199666882641
+    },
+    "delta_pp": {
+      "precision": 0.131379,
+      "recall": 0.002021,
+      "map50": 0.029063,
+      "map50_95": -0.021387
+    },
+    "per_class_delta_pp": {
+      "baekra": 0.0,
+      "color issues": 0.000456,
+      "contamination": 0.0,
+      "cut": 0.070439,
+      "gray stitch": 0.345632,
+      "selvet": 0.001342,
+      "stain": -0.115382,
+      "chemical hazard": -2.2e-05,
+      "fire": 5.3e-05,
+      "no helmet": 0.00529,
+      "smoke": 0.042467,
+      "water leak": -0.001518
+    },
+    "evaluation_seconds": 120.34604009985924,
+    "baseline": {
+      "precision": 0.7279973232380158,
+      "recall": 0.7802040758560692,
+      "map50": 0.7817046947520593,
+      "map50_95": 0.491933834248826
+    }
+  },
+  "regressions": [
+    {
+      "metric": "per_class:chemical hazard",
+      "kind": "min_absolute",
+      "threshold": 0.65,
+      "value": 0.4239083145600664,
+      "delta_pp": -2.2e-05,
+      "source": "CME-OPT2 task acceptance target; the accepted production model itself measures 0.424",
+      "enforced": false
+    }
+  ],
+  "thresholds": {
+    "version": "eap2-thresholds-v1",
+    "thresholds": [
+      {
+        "metric": "map50",
+        "kind": "min_absolute",
+        "value": 0.72,
+        "enforce": false,
+        "source": "CME-OPT2 task acceptance target (CME_OPT2_Model_Fine_Tuning/README.md); not an approved release regression gate"
+      },
+      {
+        "metric": "per_class:chemical hazard",
+        "kind": "min_absolute",
+        "value": 0.65,
+        "enforce": false,
+        "source": "CME-OPT2 task acceptance target; the accepted production model itself measures 0.424"
+      },
+      {
+        "metric": "map50",
+        "kind": "max_drop_pp",
+        "value": null,
+        "enforce": false,
+        "source": "No approved model-regression tolerance exists in the repository"
+      },
+      {
+        "metric": "map50_95",
+        "kind": "max_drop_pp",
+        "value": null,
+        "enforce": false,
+        "source": "No approved model-regression tolerance exists in the repository"
+      },
+      {
+        "metric": "precision",
+        "kind": "max_drop_pp",
+        "value": null,
+        "enforce": false,
+        "source": "No approved model-regression tolerance exists in the repository"
+      },
+      {
+        "metric": "recall",
+        "kind": "max_drop_pp",
+        "value": null,
+        "enforce": false,
+        "source": "No approved model-regression tolerance exists in the repository"
+      }
+    ],
+    "latency": {
+      "value_ms": null,
+      "source": "No approved CPU latency SLO for PyTorch .pt inference; ESE-CPU1 gates apply to exported artifacts only"
+    },
+    "memory": {
+      "value_percent": null,
+      "source": "No approved memory-drift gate for this suite; QCI tasks used <5% for their own services"
+    }
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.10.0+cpu",
+    "ultralytics": "8.4.24",
+    "pydantic": "2.12.5",
+    "device": "cpu",
+    "model_path": "Backend\\best.pt"
+  },
+  "limitations": [
+    "No approved model-regression tolerance or CPU latency/memory SLO exists; those checks report UNDEFINED_THRESHOLD.",
+    "CI runners do not receive model weights or the dataset (not stored in Git); CI runs code/contract/gate tests only.",
+    "Physical network disconnection was not performed; offline checks are automated socket guards only.",
+    "CPU evaluation may differ slightly from the GPU-measured baseline; deltas are reported, not hidden."
+  ]
+}

@@ -1,0 +1,15 @@
+Thu Oct 22 21:58:19 PST 2026
+BASELINE_FAILURE  full_test_suite                      all
+PASS              model_regression                     inference
+PASS              live_stack_startup                   watchdog+backend+dashboard
+PASS              live_predict_contract                backend+inference
+PASS              live_corrupt_upload                  backend+preprocessing
+PASS              live_service_endpoints               backend+incidents+dashboard
+PASS              live_dashboard_render                dashboard
+NOT_VERIFIED      load_and_memory_smoke                backend (resource)
+PASS              no_unexpected_restarts_during_gate   watchdog
+PASS              clean_shutdown                       watchdog
+NOT_VERIFIED      physical_offline                     system
+OVERALL PASS_WITH_EXCEPTIONS -> C:\Users\ehtis\Desktop\Textile Defect Detection\reports\fdd1\release_regression.json
+exit=0
+Thu Oct 22 22:09:37 PST 2026

@@ -1,0 +1,8 @@
+FDD-1 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (no new regressions; release blockers remain).
+Freeze baseline 9759dc0; FDD-1 adds tests, release-gate runner, CI job and docs only (no app/model/dependency changes).
+Baseline suite 593 pass / 2 fail / 11 skip; candidate 606 pass / 2 fail / 12 skip — both failures are pre-existing ESE-CPU1 INT8 gates.
+Release gate: model regression PASS (mAP50 78.20%, +0.03 pp); live backend+dashboard under watchdog PASS; /predict contract PASS; corrupt upload 400; endpoints 200; dashboard render PASS; clean shutdown PASS.
+Load smoke 180 s: 321 requests, 0 errors, p50 860 ms, p95 2,097 ms; private bytes +7.5% (short, NOT VERIFIED) — consistent with EAP-4 memory-growth blocker.
+Blockers: backend memory growth, CPU1 INT8 gates, Docker tests blocked, CI never run, no SLAs, no physical offline test.
