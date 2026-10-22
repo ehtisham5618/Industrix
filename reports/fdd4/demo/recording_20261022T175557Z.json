@@ -1,0 +1,136 @@
+{
+  "task": "FDD-4",
+  "recorded_at": "20261022T175557Z",
+  "video": "reports\\fdd4\\demo\\industrix_demo_20261022T175557Z.mp4",
+  "sha256": "f9d95691dcda9df0707d2d47a79b5580d636631de45036a5311138cfb7c3fec3",
+  "verification": {
+    "exists": true,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "30/1",
+    "duration_s": 132.37,
+    "audio": false,
+    "size_bytes": 5354545,
+    "decodes_cleanly": true,
+    "ok": true
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "title": "IndustriX",
+      "start_s": 0.0,
+      "end_s": 6.38,
+      "observed": {}
+    },
+    {
+      "scene": 2,
+      "title": "What this demo shows",
+      "start_s": 6.38,
+      "end_s": 14.42,
+      "observed": {}
+    },
+    {
+      "scene": 3,
+      "title": "Operator dashboard",
+      "start_s": 14.42,
+      "end_s": 27.28,
+      "observed": {}
+    },
+    {
+      "scene": 4,
+      "title": "Textile defect inspection",
+      "start_s": 27.28,
+      "end_s": 32.41,
+      "observed": {}
+    },
+    {
+      "scene": 5,
+      "title": "Textile sample: live inference",
+      "start_s": 32.41,
+      "end_s": 59.14,
+      "observed": {
+        "click_to_results_s": 6.19,
+        "count_text": "Defects detected: 1",
+        "table_text": "Defect\n\n\t\n\nConfidence\n\n\n\n\nbaekra\n\n\t\n\n95.0%"
+      }
+    },
+    {
+      "scene": 6,
+      "title": "Industrial safety",
+      "start_s": 59.14,
+      "end_s": 64.23,
+      "observed": {}
+    },
+    {
+      "scene": 7,
+      "title": "Fire sample: live inference",
+      "start_s": 64.23,
+      "end_s": 84.97,
+      "observed": {
+        "click_to_results_s": 2.8,
+        "count_text": "Defects detected: 3",
+        "table_text": "Defect\n\n\t\n\nConfidence\n\n\n\n\nfire\n\n\t\n\n81.7%\n\n\n\n\nsmoke\n\n\t\n\n40.0%\n\n\n\n\nsmoke\n\n\t\n\n32.5%"
+      }
+    },
+    {
+      "scene": 8,
+      "title": "Local API",
+      "start_s": 84.97,
+      "end_s": 89.06,
+      "observed": {}
+    },
+    {
+      "scene": 9,
+      "title": "GET /health",
+      "start_s": 89.06,
+      "end_s": 95.22,
+      "observed": {
+        "page_text": "{\"status\":\"ok\",\"model_loaded\":true,\"model_path\":\"Backend\\\\best.pt\",\"model_sha256\":\"c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061\",\"classes\":12}"
+      }
+    },
+    {
+      "scene": 10,
+      "title": "GET /system/status",
+      "start_s": 95.22,
+      "end_s": 102.34,
+      "observed": {
+        "page_text": "{\"server_time\":1792691869.2619658,\"engine\":{\"name\":\"Idle\",\"precision\":null,\"device\":null,\"active\":false},\"telemetry\":{\"timestamp\":1792691869.2569597,\"cpu_system_percent\":76.8,\"cpu_process_percent\":1.2,\"process_rss_mb\":424.3359375,\"memory_units\":\"MiB; process RSS\",\"cpu_metric\":\"System CPU utilization\",\"aggregate_evaluated_fps\":0,\"camera_evaluated_fps\":{},\"fps_metric\":\"Completed evaluated frames/sec"
+      }
+    },
+    {
+      "scene": 11,
+      "title": "Incident history",
+      "start_s": 102.34,
+      "end_s": 119.55,
+      "observed": {}
+    },
+    {
+      "scene": 12,
+      "title": "IndustriX",
+      "start_s": 119.55,
+      "end_s": 127.64,
+      "observed": {}
+    }
+  ],
+  "external_requests_blocked": [],
+  "keyframes": [
+    "reports/fdd4/demo/frame_scene01.png",
+    "reports/fdd4/demo/frame_scene02.png",
+    "reports/fdd4/demo/frame_scene03.png",
+    "reports/fdd4/demo/frame_scene04.png",
+    "reports/fdd4/demo/frame_scene05.png",
+    "reports/fdd4/demo/frame_scene06.png",
+    "reports/fdd4/demo/frame_scene07.png",
+    "reports/fdd4/demo/frame_scene08.png",
+    "reports/fdd4/demo/frame_scene09.png",
+    "reports/fdd4/demo/frame_scene10.png",
+    "reports/fdd4/demo/frame_scene11.png",
+    "reports/fdd4/demo/frame_scene12.png"
+  ],
+  "raw_capture": "FDD_4_Demo\\runtime\\20261022T175557Z\\raw_capture.webm",
+  "method": "Playwright headless Microsoft Edge, live 1920x1080 page recording of the real dashboard; ffmpeg H.264 transcode at 30 fps; no speed-up, no edited detections; caption cards are local HTML",
+  "scene_time_basis": "recorder clock (seconds since the page opened); the video timeline drifts from it by about -2 s to +5 s across the take, so scene times are approximate in the video",
+  "services_start_to_healthy_s_note": "not recorded for this take: the recorder build used for take 3 measured this value after the recording ended (226.0 s, wrong); the recorder now reports healthy_after_watchdog_start_s",
+  "keyframe_method": "take 3: extracted with ffmpeg at video times 2s, 10s, 22s, 30s, 52s, 64s, 84s, 89s, 94s, 102s, 110s, 128s chosen by inspecting 2-second contact strips of the video; later takes save live page screenshots per scene"
+}

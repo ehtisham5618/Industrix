@@ -1,0 +1,9 @@
+FDD-4 — EOD Update
+
+Status: IMPLEMENTED — REVIEW BLOCKED (video recorded, verified and committed; CI never run, no voice narration, physical offline untested).
+Final video: reports/fdd4/demo/industrix_demo_20261022T175557Z.mp4 — 132.4 s, 1920x1080, H.264 30 fps, 5.35 MB, no audio, decodes cleanly.
+Real product scenes: dashboard; textile inference baekra 95.0%; fire inference fire 81.7% / smoke 40.0% / 32.5%; /health; /system/status; incident history (local only, cloud disabled).
+Recorder: python -m FDD_4_Demo.record_demo (watchdog start/stop, Playwright Edge 1080p capture, offline guard with 0 blocked requests, ffmpeg export + verification, never overwrites).
+Takes: 1 superseded (/docs blank offline), 2 failed cleanly (render race fixed), 3 final.
+Tests: FDD-4 18/18; full suite 661 passed, 2 failed (pre-existing ESE-CPU1 INT8 baseline gates), 12 skipped.
+Correction: take-3 startup time was mis-measured (226.0 s after recording end) and is not reported; keyframes re-picked from the video because the recorder clock drifts -2 to +5 s from the video; the recorder now saves live per-scene screenshots (not yet exercised by a full take).

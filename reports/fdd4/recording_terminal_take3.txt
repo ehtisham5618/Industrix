@@ -1,0 +1,32 @@
+Thu Oct 22 22:55:56 PST 2026
+preflight ok: 12 scenes, tools {'ffmpeg': 'C:\\ffmpeg\\bin\\ffmpeg.EXE', 'ffprobe': 'C:\\ffmpeg\\bin\\ffprobe.EXE'}
+scene 1: IndustriX 0.0-6.38s 
+scene 2: What this demo shows 6.38-14.42s 
+scene 3: Operator dashboard 14.42-27.28s 
+scene 4: Textile defect inspection 27.28-32.41s 
+scene 5: Textile sample: live inference 32.41-59.14s {'click_to_results_s': 6.19, 'count_text': 'Defects detected: 1', 'table_text': 'Defect\n\n\t\n\nConfidence\n\n\n\n\nbaekra\n\n\t\n\n95.0%'}
+scene 6: Industrial safety 59.14-64.23s 
+scene 7: Fire sample: live inference 64.23-84.97s {'click_to_results_s': 2.8, 'count_text': 'Defects detected: 3', 'table_text': 'Defect\n\n\t\n\nConfidence\n\n\n\n\nfire\n\n\t\n\n81.7%\n\n\n\n\nsmoke\n\n\t\n\n40.0%\n\n\n\n\nsmoke\n\n\t\n\n32.5%'}
+scene 8: Local API 84.97-89.06s 
+scene 9: GET /health 89.06-95.22s {'page_text': '{"status":"ok","model_loaded":true,"model_path":"Backend\\\\best.pt","model_sha256":"c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061","classes":12}'}
+scene 10: GET /system/status 95.22-102.34s {'page_text': '{"server_time":1792691869.2619658,"engine":{"name":"Idle","precision":null,"device":null,"active":false},"telemetry":{"timestamp":1792691869.2569597,"cpu_system_percent":76.8,"cpu_process_percent":1.2,"process_rss_mb":424.3359375,"memory_units":"MiB; process RSS","cpu_metric":"System CPU utilization","aggregate_evaluated_fps":0,"camera_evaluated_fps":{},"fps_metric":"Completed evaluated frames/sec'}
+scene 11: Incident history 102.34-119.55s 
+scene 12: IndustriX 119.55-127.64s 
+{
+ "video": "reports\\fdd4\\demo\\industrix_demo_20261022T175557Z.mp4",
+ "verification": {
+  "exists": true,
+  "width": 1920,
+  "height": 1080,
+  "codec": "h264",
+  "fps": "30/1",
+  "duration_s": 132.37,
+  "audio": false,
+  "size_bytes": 5354545,
+  "decodes_cleanly": true,
+  "ok": true
+ },
+ "blocked": 0
+}
+exit=0
+Thu Oct 22 22:59:59 PST 2026

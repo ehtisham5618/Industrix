@@ -1,0 +1,134 @@
+{
+  "task": "FDD-4",
+  "recorded_at": "20261022T174723Z",
+  "video": "reports\\fdd4\\demo\\industrix_demo_20261022T174723Z.mp4",
+  "sha256": "04aa633849e4f7f24dacfbbc784b5d3c5479a4f89e472ea72177967c2217e3a9",
+  "verification": {
+    "exists": true,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "30/1",
+    "duration_s": 133.03,
+    "audio": false,
+    "size_bytes": 4468959,
+    "decodes_cleanly": true,
+    "ok": true
+  },
+  "services_start_to_healthy_s": 264.8,
+  "scenes": [
+    {
+      "scene": 1,
+      "title": "IndustriX",
+      "start_s": 0.0,
+      "end_s": 6.28,
+      "observed": {}
+    },
+    {
+      "scene": 2,
+      "title": "What this demo shows",
+      "start_s": 6.28,
+      "end_s": 14.34,
+      "observed": {}
+    },
+    {
+      "scene": 3,
+      "title": "Operator dashboard",
+      "start_s": 14.34,
+      "end_s": 26.91,
+      "observed": {}
+    },
+    {
+      "scene": 4,
+      "title": "Textile defect inspection",
+      "start_s": 26.91,
+      "end_s": 32.0,
+      "observed": {}
+    },
+    {
+      "scene": 5,
+      "title": "Textile sample: live inference",
+      "start_s": 32.0,
+      "end_s": 54.42,
+      "observed": {
+        "click_to_results_s": 7.03,
+        "count_text": "Defects detected: 1"
+      }
+    },
+    {
+      "scene": 6,
+      "title": "Industrial safety",
+      "start_s": 54.42,
+      "end_s": 59.59,
+      "observed": {}
+    },
+    {
+      "scene": 7,
+      "title": "Fire sample: live inference",
+      "start_s": 59.59,
+      "end_s": 92.3,
+      "observed": {
+        "click_to_results_s": 4.53,
+        "count_text": "Defects detected: 3"
+      }
+    },
+    {
+      "scene": 8,
+      "title": "Local API",
+      "start_s": 92.3,
+      "end_s": 96.47,
+      "observed": {}
+    },
+    {
+      "scene": 9,
+      "title": "GET /health",
+      "start_s": 96.47,
+      "end_s": 102.61,
+      "observed": {
+        "page_text": "{\"status\":\"ok\",\"model_loaded\":true,\"model_path\":\"Backend\\\\best.pt\",\"model_sha256\":\"c4aba081f6357e23a7370a5f7cf98eff2c6faa0c4c20a2d4dcb8bcabdd490061\",\"classes\":12}"
+      }
+    },
+    {
+      "scene": 10,
+      "title": "API reference",
+      "start_s": 102.61,
+      "end_s": 109.72,
+      "observed": {}
+    },
+    {
+      "scene": 11,
+      "title": "Incident history",
+      "start_s": 109.72,
+      "end_s": 121.44,
+      "observed": {}
+    },
+    {
+      "scene": 12,
+      "title": "IndustriX",
+      "start_s": 121.44,
+      "end_s": 129.66,
+      "observed": {}
+    }
+  ],
+  "external_requests_blocked": [
+    "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css",
+    "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js",
+    "https://fastapi.tiangolo.com/img/favicon.png"
+  ],
+  "keyframes": [
+    "reports\\fdd4\\demo\\frame_scene01.png",
+    "reports\\fdd4\\demo\\frame_scene02.png",
+    "reports\\fdd4\\demo\\frame_scene03.png",
+    "reports\\fdd4\\demo\\frame_scene04.png",
+    "reports\\fdd4\\demo\\frame_scene05.png",
+    "reports\\fdd4\\demo\\frame_scene06.png",
+    "reports\\fdd4\\demo\\frame_scene07.png",
+    "reports\\fdd4\\demo\\frame_scene08.png",
+    "reports\\fdd4\\demo\\frame_scene09.png",
+    "reports\\fdd4\\demo\\frame_scene10.png",
+    "reports\\fdd4\\demo\\frame_scene11.png",
+    "reports\\fdd4\\demo\\frame_scene12.png"
+  ],
+  "raw_capture": "FDD_4_Demo\\runtime\\20261022T174723Z\\raw_capture.webm",
+  "method": "Playwright headless Microsoft Edge, live 1920x1080 page recording of the real dashboard; ffmpeg H.264 transcode at 30 fps; no speed-up, no edited detections; caption cards are local HTML"
+}

@@ -1,0 +1,43 @@
+{
+  "product": "IndustriX",
+  "version": "fdd4-demo-v1",
+  "resolution": [1920, 1080],
+  "fps": 30,
+  "assets": {
+    "textile_sample": "tests/assets/ife_ui3_textile.png",
+    "hazard_sample": "tests/assets/ife_ui3_fire.png"
+  },
+  "base_urls": {"backend": "http://127.0.0.1:8000", "dashboard": "http://127.0.0.1:8501"},
+  "scenes": [
+    {"id": "title", "kind": "card", "title": "IndustriX", "kicker": "Product demo",
+     "lines": ["AI-assisted textile defect inspection and industrial safety monitoring", "Running locally on a CPU laptop: no cloud inference"],
+     "hold_seconds": 6},
+    {"id": "about", "kind": "card", "title": "What this demo shows",
+     "lines": ["The real operator dashboard and FastAPI backend, started by the IndustriX watchdog",
+               "Live inference by the 12-class YOLOv8s detector on bundled sample images",
+               "The local API health check and incident history",
+               "Recorded in real time: nothing is sped up and no detections are edited"],
+     "hold_seconds": 8},
+    {"id": "dashboard", "kind": "dashboard", "title": "Operator dashboard", "hold_seconds": 7},
+    {"id": "textile_card", "kind": "card", "title": "Textile defect inspection",
+     "lines": ["Uploading a fabric sample to the dashboard", "The backend runs the detector and returns classes, confidences and boxes"],
+     "hold_seconds": 5},
+    {"id": "textile_inference", "kind": "inference", "title": "Textile sample: live inference", "asset": "textile_sample", "hold_seconds": 9},
+    {"id": "hazard_card", "kind": "card", "title": "Industrial safety",
+     "lines": ["The same detector also covers fire, smoke, water leak, chemical hazard and no-helmet classes",
+               "A detection is a model prediction, not a confirmed incident"],
+     "hold_seconds": 5},
+    {"id": "hazard_inference", "kind": "inference", "title": "Fire sample: live inference", "asset": "hazard_sample", "hold_seconds": 9},
+    {"id": "api_card", "kind": "card", "title": "Local API",
+     "lines": ["Health, readiness and system status are served on 127.0.0.1", "The model checksum is verified at startup"],
+     "hold_seconds": 4},
+    {"id": "health", "kind": "url", "title": "GET /health", "target": "backend", "path": "/health", "capture_text": true, "hold_seconds": 6},
+    {"id": "system_status", "kind": "url", "title": "GET /system/status", "target": "backend", "path": "/system/status", "capture_text": true, "hold_seconds": 7},
+    {"id": "incidents", "kind": "incidents", "title": "Incident history", "anchor_text": "Incident History", "hold_seconds": 7},
+    {"id": "closing", "kind": "card", "title": "IndustriX", "kicker": "Shown in this demo",
+     "lines": ["Real-time dashboard inference for textile defects and safety hazards",
+               "Local-only operation with a supervised backend and dashboard",
+               "Predictions require operator review; performance targets are not claimed in this video"],
+     "hold_seconds": 8}
+  ]
+}

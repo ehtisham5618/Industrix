@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\ehtis\Desktop\Textile Defect Detection\ESE_CPU1_Quantization\runtime\venv\Scripts\python.exe
+rootdir: C:\Users\ehtis\Desktop\Textile Defect Detection
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 18 items
+
+FDD_4_Demo/tests/test_fdd4.py::test_shipped_manifest_is_valid_and_assets_exist PASSED [  5%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-1920x1080] PASSED [ 11%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-fps] PASSED [ 16%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-unique] PASSED [ 22%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-unknown asset] PASSED [ 27%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-hold_seconds] PASSED [ 33%]
+FDD_4_Demo/tests/test_fdd4.py::test_invalid_manifests_rejected[<lambda>-missing 'scenes'] PASSED [ 38%]
+FDD_4_Demo/tests/test_fdd4.py::test_missing_and_malformed_manifest PASSED [ 44%]
+FDD_4_Demo/tests/test_fdd4.py::test_preflight_reports_missing_tools_and_assets PASSED [ 50%]
+FDD_4_Demo/tests/test_fdd4.py::test_dry_run_exit_codes PASSED            [ 55%]
+FDD_4_Demo/tests/test_fdd4.py::test_output_names_are_safe_and_never_overwrite PASSED [ 61%]
+FDD_4_Demo/tests/test_fdd4.py::test_caption_cards_escape_text PASSED     [ 66%]
+FDD_4_Demo/tests/test_fdd4.py::test_verify_accepts_valid_export_and_rejects_wrong_resolution PASSED [ 72%]
+FDD_4_Demo/tests/test_fdd4.py::test_corrupt_export_raises_clear_error PASSED [ 77%]
+FDD_4_Demo/tests/test_fdd4.py::test_recorder_blocks_non_loopback_requests_and_has_no_cloud_clients PASSED [ 83%]
+FDD_4_Demo/tests/test_fdd4.py::test_scene_kinds_are_all_implemented PASSED [ 88%]
+FDD_4_Demo/tests/test_fdd4.py::test_final_recording_evidence_is_consistent PASSED [ 94%]
+FDD_4_Demo/tests/test_fdd4.py::test_every_scene_saves_a_live_keyframe_and_startup_is_measured_before_recording PASSED [100%]
+
+============================= 18 passed in 6.19s ==============================
